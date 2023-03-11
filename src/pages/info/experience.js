@@ -1,15 +1,17 @@
 
-import styles from '../info.module.css';
+import Projects from './experience/projects';
+import InfoStyles from '../info.module.css';
+import styles from './experience.module.css'
+
 
 export default function Experience() {
+
 	
 	return (
-			<div id="experience" className={styles.section} > 
+			<div id="experience" className={`${InfoStyles.section} ${styles.container}`} > 
 				<h4> Experience </h4>
-				<ul>
-					<li> 학교 </li>
-					<li> 프로젝트들 </li>
-				</ul>
+
+				<Projects />
 			</div>
 		);
 }

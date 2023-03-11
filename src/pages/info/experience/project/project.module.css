@@ -1,0 +1,39 @@
+.img{
+	height: 50%;
+	object-fit: cover;
+	transform: translateY(-25%);
+	flex-grow: 1;
+}
+
+.title{
+	font-weight: bold;
+	transform: translateY(-50%);
+	flex-grow: 1.5;
+}
+
+.description {
+	max-height: 2rem;
+	font-size : 0.8rem;
+	transform: translateY(-30%);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	flex-grow: 0.5;
+}
+.tags {
+	display: flex;
+	justify-content: center;
+	transform: translateY(-50%);
+	flex-grow: 1;
+}
+.tags > * {
+	margin : 0.2rem;
+}
+
+.term {
+	transform: translateY(-50%);
+	color : #888;
+	font-weight: bold;
+	font-size: 0.6rem;
+	flex-grow: 1;
+	margin-bottom: 0.2rem;
+}

@@ -1,0 +1,33 @@
+.project_container{
+	height: 25vw;
+	width : 25vw;
+	max-width: 250px;
+	max-height: 250px;
+	min-width: 200px;
+	min-height: 200px;
+	margin: 0 1.5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	
+/*	border: #eee solid 1px;*/
+	border-radius:  3em;
+	overflow: hidden;
+
+
+	box-shadow: 00px 0px 20px rgba(0,0,0, 0.3);
+
+}
+.projects_container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	width: 80vw;
+	height: 30vw;
+	min-height: 250px;
+
+	overflow-x: scroll;
+}
