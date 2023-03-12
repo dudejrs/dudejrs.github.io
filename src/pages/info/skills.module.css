@@ -1,0 +1,15 @@
+.skills_container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.mainStack {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	width : 50%;
+	min-width: 200px;
+}
+

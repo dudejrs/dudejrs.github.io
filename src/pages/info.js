@@ -2,7 +2,7 @@
 import styles from './info.module.css';
 import Introduction from './info/introduction';
 import Experience from './info/experience';
-import Techstack from './info/techstack';
+import Skills from './info/skills';
 import Loadmap from './info/loadmap';
 
 export default function Info() {
@@ -12,7 +12,7 @@ export default function Info() {
 			<h3>Info</h3>
 			<Introduction />
 			<Experience />
-			<Techstack />
+			<Skills />
 			<Loadmap />
 		</div>
 		);
