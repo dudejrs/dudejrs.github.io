@@ -1,0 +1,40 @@
+.trackline{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style: none;
+}
+.track {
+	margin-right: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	align-items: center;
+	justify-content: center;
+}
+.trackName {
+	color : #eee;
+	font-weight: bold;
+	font-size: 0.8rem;
+	text-align: center;
+}
+.trackName:hover{
+	color: blue;
+}
+.trackImg{
+	width: 5rem;
+}
+
+.track_title{
+	width: 5rem;
+	border:  #ddd solid 1px;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+
+	font-weight: bold;
+	color: black;
+	text-align: center;
+
+}
+
+
