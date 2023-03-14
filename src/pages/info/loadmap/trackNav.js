@@ -3,19 +3,19 @@ import loadMapStyles from './loadmap.module.css';
 import styles from './trackNav.module.css'
 
 
-export default function TrackNav({track, onClick}) {
+export default function TrackNav({title, onClick}) {
 	
-		const titles = ["JavaScript","Java","DBMS","Backend","DevOps","Data Scientist", "Graphic"];
+		const trackLists = ["JavaScript","Java","DBMS","Backend","DevOps","Data Scientist", "Graphic"];
 
 	return (
 			<ul className={styles.trackNav}>
 				<li><img src="img/loadmap/mac_icon.png" className={`${styles.img} ${styles.trackNavCloseTap} `}/></li>
 				{
-					titles.map(title =>{
+					trackLists.map(t =>{
 						let style = `${styles.trackNavItem} `;
-						if (track && title == track)
+						if (title && t == title)
 							style += `${styles.bold}`
-						return (<li className={style} onClick={()=>onClick(title)}>{title}</li>);
+						return (<li className={style} onClick={()=>onClick(t)}>{t}</li>);
 					})
 				}
 				
