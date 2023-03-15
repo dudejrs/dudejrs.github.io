@@ -7,11 +7,17 @@ export default function Project({
 	title,
 	description,
 	tags,
-	term
+	term,
+	onClick,
+	isClicked,
+	index
 }) {
 	return (
 
-			<div className={className}>
+			<div className={(isClicked)? `${className}` : `${className} ${styles.container}`}>
+				{
+					isClicked || <img className={styles.icon} src="img/experience/extend_icon2.png" onClick={()=>onClick(index)}/>
+				}
 				<img className={styles.img} src={src}/>
 				<span className={styles.title}> {title} </span>
 				<p className={styles.description}>{description}</p>
