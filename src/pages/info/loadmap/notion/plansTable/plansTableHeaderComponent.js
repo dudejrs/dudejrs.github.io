@@ -21,17 +21,8 @@ const typeToSvgComponent = {
 }
 
 
-export default function PlansTableHeaderComponent({name, type, width, index, onMouseUp, onMouseDown, onMouseMove, onDragLeave}){
+export default function PlansTableHeaderComponent({name, type, width, index, onDrag, onDragLeave}){
 
-
-	const handleRef = useRef(null);
-
-	useEffect(()=>{
-	
-		handleRef.current && handleRef.current.addEventListener("mousedown", onMouseDown);
-		handleRef.current && handleRef.current.addEventListener("mouseup", onMouseUp);
-
-	},[handleRef]);
 
 	
 	return(
@@ -42,7 +33,7 @@ export default function PlansTableHeaderComponent({name, type, width, index, onM
 					}
 				</svg>
 				<span>{name}</span>
-				<div className={styles.columnHandle} ref={handleRef} onDrag={(e)=>{onMouseMove(e,index);}} onDragEnd={onDragLeave} ></div>
+				<div className={styles.columnHandle} onDrag={(e)=>{onDrag(e,index);}} onDragEnd={onDragLeave} ></div>
 			</div>
 				
 			);

@@ -12,24 +12,8 @@ export default function PlansTableHeader({columns, types, widths, setWidthByInde
 
 	const [draged, setDragged] = useState(false);
 
-	const onMouseUp = useCallback(()=>{
-		if(draged){
-				console.log("dragg finished");
 
-			return;
-		}
-		console.log("key up");
-
-	}, [draged]);
-
-	const onMouseDown = useCallback((e,index)=> {
-		console.log(".....down.....");	
-		setDragged(false);
-		e.target.focus();
-	})
-
-
-	const onMouseMove = useCallback((e, index)=>{	
+	const onDrag = useCallback((e, index)=>{	
 
 		let start = e.target.parentElement.getBoundingClientRect().x
 
@@ -55,7 +39,7 @@ export default function PlansTableHeader({columns, types, widths, setWidthByInde
 
 					{
 						Array(7).fill(1).map((_,i)=> {
-							return (<PlansTableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i} onMouseUp={onMouseUp} onMouseDown={onMouseDown} onMouseMove={onMouseMove} onDragLeave={onDragLeave}/>);
+							return (<PlansTableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i}   onDrag={onDrag} onDragLeave={onDragLeave}/>);
 						})
 					}
 
