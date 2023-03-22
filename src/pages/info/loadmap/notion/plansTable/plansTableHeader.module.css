@@ -1,0 +1,30 @@
+.typesTitle, .typesMultipleSelect, .typesRollup, .typesCheckbox, .typesFormula {
+	width: 16px;
+	height: 16px;
+	display: block;
+	fill: rgb(55, 53, 47);
+	flex-shrink: 0;
+	backface-visibility: hidden;
+}
+
+
+.column {
+	position : relative;
+}
+
+.columnHandle{
+	position: absolute;
+	height: 100%;
+	right: 0;
+	width: 10px;
+}
+
+.columnHandle:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+	cursor: col-resize;
+}
+
+.dragging {
+	background-color: blue;
+	cursor: col-resize;
+}

@@ -74,7 +74,7 @@ export default function Projects() {
 						tags={project["tags"]}
 						term={project["term"]}
 						isClicked={isClicked}
-						onClick = {handleClick}
+						onClick = {handleClick	}
 						index={index}
 						/>)
 				} )

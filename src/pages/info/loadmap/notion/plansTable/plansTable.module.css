@@ -1,0 +1,26 @@
+.column {
+	border-right: 1px solid rgba(55, 53, 47, 1);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 0.8rem;
+
+	height: 2rem;
+
+	padding: 0 8px;
+}
+.column > svg{
+	margin-right: 6px;
+}
+
+.row{
+	display: flex;
+	border-bottom:  1px solid rgba(55, 53, 47, 1);
+}
+
+.label{
+	min-width: 6px;
+}
+

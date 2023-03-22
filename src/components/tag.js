@@ -2,10 +2,10 @@
 import styles from './tag.module.css'
 
 
-export default function Tag({ name }) {
+export default function Tag({ name, className }) {
 	return (
-		<span className={styles.tag}>
+		<div className={`${styles.tag} ${className}`}>
 		{ name }
-		</span>
+		</div>
 	)
 }

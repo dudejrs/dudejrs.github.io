@@ -5,7 +5,7 @@ import styles from './trackNav.module.css'
 
 export default function TrackNav({title, onClick}) {
 	
-		const trackLists = ["JavaScript","Java","DBMS","Backend","DevOps","Data Scientist", "Graphic"];
+		const trackLists = ["Javascript","Java","DBMS","Backend","DevOps","Data Scientist", "Graphic"];
 
 	return (
 			<ul className={styles.trackNav}>
@@ -15,7 +15,7 @@ export default function TrackNav({title, onClick}) {
 						let style = `${styles.trackNavItem} `;
 						if (title && t == title)
 							style += `${styles.bold}`
-						return (<li className={style} onClick={()=>onClick(t)}>{t}</li>);
+						return (<li key={t} className={style} onClick={()=>onClick(t)}>{t}</li>);
 					})
 				}
 				

@@ -59,6 +59,7 @@
 }
 .tags > * {
 	margin : 0.2rem;
+	height: 1rem;
 }
 
 .term {

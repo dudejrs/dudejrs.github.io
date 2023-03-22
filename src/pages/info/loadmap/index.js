@@ -9,23 +9,22 @@ import TrackDetailView from './trackDetailView'
 
 
 const trackListMap = {
-	"JavaScript" : ["JavaScript","Node.js","React.js", "Next.js"],
+	"Javascript" : ["Javascript","Node.js","React.js", "Next.js"],
 	"Java" : ["Spring Boot", "Spring", "JPA"],
 	"DBMS" : ["SQLD","MySQL", "MongoDB", "GraphQL", "SQLP"],
 	"Backend" : ["Kafka", "Redis"],
-	"DevOps" : ["리눅스 마스터 1급", "Doker", "Kubernetices", "AWS자격증", "Lpic자격증"],
-	"Data Scientist" : ["ADsP","빅데이터 분석기사"],
+	"DevOps" : ["리눅스마스터", "Doker", "Kubernetices", "AWS자격증", "Lpic자격증"],
+	"Data Scientist" : ["ADsP","빅데이터분석기사"],
 	"Graphic" :["OpenGL", "WebGL", "Three.js", "D3.js"]
 }
 
 export default function Loadmap() {
 	
-	const [trackList, setTrackList] = useState("JavaScript");
+	const [trackList, setTrackList] = useState("Javascript");
 	const [track, setTrack] = useState("");
 	const [isOpened, setIsOpend] = useState(false);
 
 	useEffect(()=>{
-		console.log('hello');
 	},[track])
 
 	const openDetailView = useCallback((title, makeOpen)=>{
@@ -44,7 +43,6 @@ export default function Loadmap() {
 						<TrackList	title={trackList} tracks={trackListMap[trackList]} onClick={openDetailView}/>
 						{ isOpened ? <TrackDetailView name={track} onClick={setIsOpend}/> : <></>}
 						
-						{/*<NotionContainer />*/}
 						
 					</div>
 				</div>

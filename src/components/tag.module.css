@@ -2,8 +2,10 @@
 	background-color: skyblue;
 	color: white;
 	font-weight: bold;
-	font-size: 0.6rem;
+	font-size: 0.8rem;
 	padding: 0.2rem;
 	border-radius: 0.4em;
-	height: 1rem;
+	height: wrap-content;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }

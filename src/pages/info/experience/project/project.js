@@ -24,7 +24,7 @@ export default function Project({
 				<div className={styles.tags}> 
 					{
 						tags.split(' ').map((tag)=>
-							<Tag name={tag} />)
+							<Tag name={tag} key={tag}/>)
 					}
 				</div>
 				<span className={styles.term}>{term}</span>
