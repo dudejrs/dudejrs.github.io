@@ -1,13 +1,10 @@
 import {useEffect, useState, useCallback} from 'react';
 
 import PlanTable from './planTable';
-import SideContent from './sideContent'
+
+import SidePeekContainer from '../../../../components/sidePeekContainer';
 
 import styles from './notionContainer.module.css'
-
-
-import 'react-notion/src/styles.css';
-import 'prismjs/themes/prism-tomorrow.css';
 
 
 
@@ -21,9 +18,8 @@ export default function NotionContainer({name}) {
 	});
 		
 	return (
-			<div className={`notion ${styles.container}`} id= "notionContainer">  
+			<SidePeekContainer id="notionContainer" className={`${styles.container}`} sideContent={<div>hello world</div>} active={active} close={()=>{setActive(false);}}>  
 				<PlanTable name={name} openSideContent={openSideContent}/>
-				{ target && <SideContent> </SideContent> }
-			</div>
+			</SidePeekContainer>
 		);
 }
