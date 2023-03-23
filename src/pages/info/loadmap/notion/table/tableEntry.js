@@ -2,10 +2,11 @@ import {useEffect} from 'react';
 
 import Checkbox from '../../../../../components/checkbox';
 import Tag from '../../../../../components/tag';
+import TitleComponent from './titleComponent'
 
-import tableStyles from './plansTable.module.css';
+import tableStyles from './table.module.css';
 
-export default function PlanContainer({plan, columns, types, widths}){
+export default function TableEntry({data, columns, types, widths, titleOnClick}){
 
 	return (
 
@@ -17,16 +18,19 @@ export default function PlanContainer({plan, columns, types, widths}){
 
 					if(types[i] == "multiselect") 
 						return (<div className={tableStyles.column} style={{ width : `${widths[i]}px` }}>
-								{plan[column].map(
+								{data[column].map(
 								tag => (<Tag name= {tag}/ >))}
 								</div>
 								);
 					if(types[i] == "checkbox")
 						return ( <div className={`${tableStyles.column}`} style={{width : `${widths[i]}px`}}>
-									<Checkbox value={plan[column]} />
+									<Checkbox value={data[column]} />
 								</div>);
+
+					if(types[i]=="title")
+						return (<TitleComponent title={data[column]} width={widths[i]} onClick={titleOnClick}/>);
 					
-					return (<div className={tableStyles.column} style={{ width : widths[i] }}>{plan[column]}</div>);
+					return (<div className={tableStyles.column} style={{ width : widths[i] }}>{data[column]}</div>);
 
 				})
 			}

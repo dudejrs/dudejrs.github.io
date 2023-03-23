@@ -1,14 +1,13 @@
 import {useCallback, useState} from 'react';
 
-import PlansTableHeaderComponent from './plansTableHeaderComponent';
+import TableHeaderComponent from './tableHeaderComponent';
 
-import styles from './plansTableHeader.module.css';
-import tableStyles from './plansTable.module.css';
-import tableHeaderStyles from './plansTableHeader.module.css';
-
+import styles from './tableHeader.module.css';
+import tableStyles from './table.module.css';
 
 
-export default function PlansTableHeader({columns, types, widths, setWidthByIndex }){
+
+export default function TableHeader({columns, types, widths, setWidthByIndex }){
 
 	const [draged, setDragged] = useState(false);
 
@@ -21,14 +20,12 @@ export default function PlansTableHeader({columns, types, widths, setWidthByInde
 		setDragged(true);
 		setWidthByIndex(index,e.clientX - start);	
 
-		e.target.classList.add(`${tableHeaderStyles.dragging}`);
 
 		
 	});
 
 	const onDragLeave = useCallback((e)=> {
 		console.log('a');
-		e.target.classList.remove(`${tableHeaderStyles.dragging}`);
 	});
 
 
@@ -39,7 +36,7 @@ export default function PlansTableHeader({columns, types, widths, setWidthByInde
 
 					{
 						Array(7).fill(1).map((_,i)=> {
-							return (<PlansTableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i}   onDrag={onDrag} onDragLeave={onDragLeave}/>);
+							return (<TableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i}   onDrag={onDrag} onDragLeave={onDragLeave}/>);
 						})
 					}
 

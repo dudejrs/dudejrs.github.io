@@ -1,7 +1,6 @@
 
-import {useState, useRef, useEffect} from 'react';
-import styles from './plansTableHeader.module.css';
-import tableStyles from './plansTable.module.css';
+import styles from './tableHeader.module.css';
+import tableStyles from './table.module.css';
 
 
 const typeToClass = {
@@ -21,7 +20,7 @@ const typeToSvgComponent = {
 }
 
 
-export default function PlansTableHeaderComponent({name, type, width, index, onDrag, onDragLeave}){
+export default function TableHeaderComponent({name, type, width, index, onDrag, onDragLeave}){
 
 
 	

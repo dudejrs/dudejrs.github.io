@@ -1,0 +1,47 @@
+import {useEffect, useState, useCallback} from 'react';
+
+import TableEntry from './tableEntry'
+import TableHeader from './tableHeader'
+
+
+
+
+export default function Table({columns, types, data, titleOnClick}) {
+	
+	const [widths, setWidths] = useState([]);
+
+
+	useEffect(()=>{
+ 		setWidthsByTableContainerSize();
+	},[]);
+
+	const makeTableWidths = (amount) =>{
+		let newWidths = new Array(columns.length);
+		newWidths.fill(amount);
+		return newWidths;
+	}
+
+
+	const setWidthsByTableContainerSize = useCallback(()=>{
+		const parent_width = document.querySelector("#notionContainer").offsetWidth
+		
+		setWidths(makeTableWidths(parent_width/(columns.length+1)));
+
+	},[widths])
+
+	const setWidthByIndex = useCallback((index, amount)=>{
+		setWidths(widths.map((width, i)=>{
+			if(i == index) return amount;
+			else return width;
+		} ));
+	})
+	
+	return (
+			<div >  
+				<TableHeader columns={columns} types={types} widths={widths} setWidthByIndex={setWidthByIndex}/>
+				{data.map(datum => {
+					return (<TableEntry columns={columns} types={types} data={datum} key={datum.id} widths={widths} titleOnClick={titleOnClick}/>);
+				})}
+			</div>
+		);
+}
