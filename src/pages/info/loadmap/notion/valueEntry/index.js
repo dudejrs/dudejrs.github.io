@@ -14,7 +14,7 @@ const mapToComponent = ( type, data )=>{
 }
 
 
-export default function Entry({data, className, type, style}){
+export default function ValueEntry({data, className, type, style}){
 	
 
 	return(

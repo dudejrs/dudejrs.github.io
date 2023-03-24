@@ -1,0 +1,54 @@
+.container{
+	display: flex;
+	flex-direction: column;
+}
+
+.component{
+	display: flex;
+	justify-content: space-between;
+	order: 2;
+
+}
+.key{
+	width: 10rem;
+	padding: 0.25rem;
+}
+.value{
+	flex-grow: 1;
+	padding: 0.25rem;
+}
+
+.hoveringbox{
+}
+.hoveringbox:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* componens */
+.title{
+	order: 1;
+}
+.multiselect, .checkbox, .rollup{}
+
+
+/* keys */
+.title_key {
+	display: none;
+}
+
+.multiselect_key, .checkbox_key, .rollup_key{}
+
+/* values */
+.title_value {
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin: 0.5rem 0.25rem;
+}
+
+.multiselect_value {
+	display: flex;
+
+}
+
+.checkbox_value, .rollup_value{}
