@@ -35,7 +35,6 @@ async function getPlansFromIds(ids){
 function refineData(rawData){
 	const result = {};
 
-	console.log(rawData);
 	result["id"]= rawData["id"];
 	result["title"] = rawData["properties"]["Name"]["title"][0]["plain_text"]
 	if(rawData["properties"]["남은 시간"]["rollup"]["array"][0]){
@@ -61,6 +60,10 @@ export function getPlans(category){
 				console.log(error);
 				return Promise.resolve([])
 			});
+}
+
+export function getPlanById(id){
+	return getPlan(id);
 }
 
 

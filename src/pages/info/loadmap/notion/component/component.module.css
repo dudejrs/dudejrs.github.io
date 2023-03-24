@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+}
+
+
+.typesTitle, .typesMultipleSelect, .typesRollup, .typesCheckbox, .typesFormula {
+
+	height: 1.25em;
+
+	display: block;
+	fill: rgb(55, 53, 47);
+	flex-shrink: 0;
+	backface-visibility: hidden;
+	margin-right: 0.5em;
+}
+
+.undefined {
+	display: none;
+}

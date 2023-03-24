@@ -28,7 +28,7 @@ export default function TableEntry({data, columns, types, widths, titleOnClick})
 								</div>);
 
 					if(types[i]=="title")
-						return (<TitleComponent title={data[column]} width={widths[i]} onClick={titleOnClick}/>);
+						return (<TitleComponent title={data[column]} width={widths[i]} onClick={()=>{titleOnClick(data)}}/>);
 					
 					return (<div className={tableStyles.column} style={{ width : widths[i] }}>{data[column]}</div>);
 

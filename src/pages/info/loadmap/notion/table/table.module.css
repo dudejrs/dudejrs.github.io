@@ -11,9 +11,6 @@
 
 	padding: 0 8px;
 }
-.column > svg{
-	margin-right: 6px;
-}
 
 .row{
 	display: flex;
