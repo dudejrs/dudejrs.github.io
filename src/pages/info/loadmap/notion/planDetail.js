@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react';
 
 import {getPlanById} from '../../../../domain/plans';
-import Detail from './detail'
+import Detail from '../../../../notion/detail'
 
 import styles from './planDetail.module.css'
 

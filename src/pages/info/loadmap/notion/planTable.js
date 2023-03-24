@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
 
-import Table from './table'
+import Table from '../../../../notion/table'
 
 import {getPlans} from '../../../../domain/plans';
 

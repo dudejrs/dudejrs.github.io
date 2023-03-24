@@ -1,4 +1,4 @@
-import Tag from '../../../../../components/tag'
+import Tag from '../../components/tag'
 
 
 export default function MultiSelect({data}){
