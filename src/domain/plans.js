@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 
+
 function getIdsFromCategroy(category){
 	return axios.get('/data/categories.json')
 			.then(({data})=>{
