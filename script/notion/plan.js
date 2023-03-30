@@ -24,11 +24,10 @@ async function getPlans(notion,tags,dirPath,secret){
 
 	
 	categories = {}
-	let detailedPlanList = [];
 
 	results.forEach(async(result)=>{
-		const list = await refinePlan(result, categories, secret);
-		saveResult(result, dirPath);
+		const output = await refinePlan(result, categories, secret);
+		saveResult(output, dirPath);
 	});
 
 
@@ -38,28 +37,45 @@ async function getPlans(notion,tags,dirPath,secret){
 
 async function refinePlan(result, categories, secret){
 
+		
+
 		result["properties"]["Tag"]["multi_select"].forEach((tag)=>{
 			const tag_name = tag["name"];
 
 			if( !categories[tag_name] ) categories[tag_name] = [];
 			categories[tag_name].push(result["id"]);
-		})
-
-
-		// "완료율"" "단위계획 수"
-		result["properties"]["완료율"] = await getProperty(result["id"], result["properties"]["완료율"]["id"], secret).then(({data})=>{
-			return data["results"]
-		});;
-		
-		// result["properties"]["단위계획 수"] = await getProperty(result["id"], result["properties"]["단위계획 수"]["id"], secret);
-
-		result["properties"]["단위계획"] = await getProperty(result["id"], result["properties"]["단위계획"]["id"], secret).then(({data})=>{
-			return data["results"];
 		});
 
-		return result["properties"]["단위계획"].map((item)=> item["relation"]["id"]);
-}
+		const output = {};
 
+		output["id"] = result.id;
+
+		Object.keys(result["properties"]).forEach((key)=> {
+			output[key] = result["properties"][key];
+		});
+
+
+		output["title"] = result["properties"]["Name"]["title"][0]["plain_text"]
+		if(result["properties"]["남은 시간"]["rollup"]["array"][0]){
+			output["남은 시간"] = result["properties"]["남은 시간"]["rollup"]["array"][0]["formula"]["string"];
+		}
+		output["Tag"] = result["properties"]["Tag"]["multi_select"].map((item)=>item["name"]);
+		output["완료"] = (result["properties"]["완료"]["checkbox"])? "true" : "false";
+		output["장기/단기"] = result["properties"]["장기/단기"]["multi_select"].map((item)=>item["name"]);
+
+		output["완료율"] = await getProperty(result["id"], result["properties"]["완료율"]["id"], secret).then(({data})=>{
+			return data["results"][0]["formula"]["string"];
+		});;
+		
+		// output["properties"]["단위계획 수"] = await getProperty(result["id"], result["properties"]["단위계획 수"]["id"], secret);
+
+		output["단위계획"] = (await getProperty(result["id"], result["properties"]["단위계획"]["id"], secret).then(({data})=>{
+			return data["results"];
+		})).map((item) => item["relation"]["id"]);
+
+
+		return output;
+}
 
 function saveResult(result, dirPath){
 	const file_path= `${dirPath}/${result.id}.json`;

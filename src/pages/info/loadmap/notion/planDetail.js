@@ -22,7 +22,7 @@ export default function PlanDetail({target, children}){
 
 	useEffect(()=>{
 
-		getPlanById(target)
+		getPlanById(target, Object.keys(types))
 			.then((plan)=> {
 				setPlan(plan);
 				console.log(plan);

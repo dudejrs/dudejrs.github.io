@@ -21,19 +21,33 @@ const notion = new Client({
 });
 
 
-try{
-	// fs.rmdirSync(planDirPath,{recursive : true }, (err)=>{console.log(err)});
-	fs.rmdirSync(detailedPlanDirPath, {recursive:true}, (err)=>{console.log(err)});
-} catch (error) {
+const fetchPlans= ()=>{
+	try{
+		fs.rmdirSync(planDirPath,{recursive : true }, (err)=>{console.log(err)});
+	} catch (error) {
 
-} finally{
+	} finally{
 
-	// fs.mkdirSync(planDirPath ,(err)=>{console.log(err)});
-	fs.mkdirSync(detailedPlanDirPath ,(err)=>{console.log(err)});
+		fs.mkdirSync(planDirPath ,(err)=>{console.log(err)});
+	}
+
+	getPlans(notion, tags, planDirPath, process.env.notion_integration_secret);
 }
 
 
-// getPlans(notion, tags, planDirPath, process.env.notion_integration_secret);
+const fetchDetailedPlans= ()=>{
+	try{
+		fs.rmdirSync(detailedPlanDirPath, {recursive:true}, (err)=>{console.log(err)});
+	} catch (error) {
+	} finally{
+		fs.mkdirSync(detailedPlanDirPath ,(err)=>{console.log(err)});
+	}
 
-console.log(getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, planFilterList, process.env.notion_integration_secret));
 
+	getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, planFilterList, process.env.notion_integration_secret);
+
+}
+
+
+fetchPlans();
+// fetchDetailedPlans();

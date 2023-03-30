@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 
 import Table from '../../../../notion/table'
 
+
 import {getPlans} from '../../../../domain/plans';
 
 
@@ -17,11 +18,16 @@ export default function PlanTable({name, openSideContent}) {
 	const [isloaded , setIsloaded] = useState(false) ;
 
 	useEffect(()=>{
-		  getPlans(name)
+
+		  getPlans(name, columns)
 		 	.then((p) => {
-		 		setPlans(p);
-		 		setIsloaded(true);
+		 		console.log("getPlans_", p);
+		 		if(p){
+			 		setPlans(p);
+			 		setIsloaded(true);
+		 		}
 		 	});
+
 
 	},[]);
 
