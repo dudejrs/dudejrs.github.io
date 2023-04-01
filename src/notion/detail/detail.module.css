@@ -9,6 +9,9 @@
 	order: 2;
 
 }
+.children {
+	order: 3;
+}
 .key{
 	width: 10rem;
 	padding: 0.25rem;

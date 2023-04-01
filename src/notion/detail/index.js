@@ -1,3 +1,4 @@
+import React, {useCallback} from 'react';
 
 import Component from '../component'
 import ValueEntry from '../valueEntry'
@@ -12,6 +13,14 @@ export default function Detail ({ className, children, data, filterList, types }
 		return !filterList.some((f)=>(key == f));
 	}
 
+	const renderChild = useCallback(()=>{
+		return React.Children.map(children, (child)=>{
+			return React.cloneElement(child, {
+				data : data
+			})
+		});
+	});
+
 	return (
 		<div className={`${styles.container} ${className}`}>	
 			{
@@ -23,7 +32,9 @@ export default function Detail ({ className, children, data, filterList, types }
 						</div>);
 				})
 			}
-			{children}
+			<div className={styles.children}>
+				{renderChild()}
+			</div>
 		</div>
 	);
 }

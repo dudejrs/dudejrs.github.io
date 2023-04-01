@@ -2,7 +2,8 @@
 import {useState, useEffect} from 'react';
 
 import {getPlanById} from '../../../../domain/plans';
-import Detail from '../../../../notion/detail'
+import Detail from '../../../../notion/detail';
+import DetailedPlanTable from './detailedPlanTable';
 
 import styles from './planDetail.module.css'
 
@@ -25,21 +26,27 @@ export default function PlanDetail({target, children}){
 		getPlanById(target, Object.keys(types))
 			.then((plan)=> {
 				setPlan(plan);
-				console.log(plan);
 			})
 
 	},[]);
+
 
 
 	const isContainFilter = (key ,filterList) => {
 		return !filterList.some((f)=>(key == f));
 	}
 	return (
-
-		Object.keys(plan) && (
+		<>
+		{ Object.keys(plan) && (
 			<Detail className={styles.container} data={plan} filterList={["id"]} types={types}>
+				<DetailedPlanTable />
 			</Detail>
 			)
+		}
+		{
+			children
+		}	
+		</>
 
 	);
 }

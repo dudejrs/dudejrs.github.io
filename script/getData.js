@@ -49,5 +49,5 @@ const fetchDetailedPlans= ()=>{
 }
 
 
-fetchPlans();
-// fetchDetailedPlans();
+// fetchPlans();
+fetchDetailedPlans();

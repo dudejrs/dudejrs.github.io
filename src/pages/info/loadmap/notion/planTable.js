@@ -21,7 +21,6 @@ export default function PlanTable({name, openSideContent}) {
 
 		  getPlans(name, columns)
 		 	.then((p) => {
-		 		console.log("getPlans_", p);
 		 		if(p){
 			 		setPlans(p);
 			 		setIsloaded(true);

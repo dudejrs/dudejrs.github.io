@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {getPage} = require('./index');
+const {getPage, getProperty} = require('./index');
 
 function filterFile(file, filterList){
 
@@ -19,9 +19,32 @@ function uniqueList(list){
 }
 
 
+
+// const columns = ["Done","날짜","Date","진행상태","세부계획"];
+// const types = ["checkbox","rollup","date","select","title"];
+
+async function refineData(data, secret){
+	const output = {};
+
+	output["id"] = data["id"];
+
+	Object.keys(data["properties"]).forEach((key) => {
+		output[key] = data["properties"][key];
+	});
+
+	output["Done"] = data["properties"]["Done"]["checkbox"];
+	output["날짜"] = await getProperty(data["id"], data["properties"]["날짜"]["id"],secret)
+		.then(({data})=> {return data["results"]["formula"];})
+	output["Date"] = data["properties"]["Date"]["date"];
+	output["진행상태"] = (data["properties"]["진행상태"]["select"])? data["properties"]["진행상태"]["select"]["name"] : null;
+	output["세부계획"] = data["properties"]["세부계획"]["title"][0]["plain_text"];
+
+	return output;
+}
+
 async function getDetailedPlan(id, secret){
-	let {data} = await getPage(id, secret);
-	return data;
+	return await getPage(id, secret)
+		.then(({data})=>refineData(data, secret));
 }
 
 function getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, filterList, secret){
@@ -32,14 +55,13 @@ function getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, filterList,
 
 	for (const file of files){
 		const plan = fileToPlan(file,planDirPath);
-		if(plan['properties']['단위계획']) list.push(...plan['properties']['단위계획']);
+		if(plan['단위계획']) list.push(...plan['단위계획']);
 	}
 
-	let idList = uniqueList(list.map(item => item['relation']['id']));
+	let idList = uniqueList(list);
 
 	idList.forEach(async(id)=>{
 		let detailedPlan = await getDetailedPlan(id, secret); 
-		console.log(detailedPlan);
 		saveDetailedPlan(id, detailedPlan, detailedPlanDirPath);
 	});
 

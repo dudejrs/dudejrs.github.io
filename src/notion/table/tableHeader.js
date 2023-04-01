@@ -16,7 +16,6 @@ export default function TableHeader({columns, types, widths, setWidthByIndex }){
 
 		let start = e.target.parentElement.getBoundingClientRect().x
 
-		console.log("dragged");
 		setDragged(true);
 		setWidthByIndex(index,e.clientX - start);	
 
@@ -35,7 +34,7 @@ export default function TableHeader({columns, types, widths, setWidthByIndex }){
 					</label>
 
 					{
-						Array(7).fill(1).map((_,i)=> {
+						Array(columns.length).fill(1).map((_,i)=> {
 							return (<TableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i}   onDrag={onDrag} onDragLeave={onDragLeave}/>);
 						})
 					}

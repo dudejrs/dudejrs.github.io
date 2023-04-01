@@ -1,5 +1,6 @@
 import axios from 'axios';
-import {planDir} from './index.js'
+import {planDir} from './index'
+import {filterData} from './util';
 
 function getIdsFromCategroy(category){
 	return axios.get(`${planDir}/categories.json`)
@@ -19,24 +20,6 @@ async function getPlan(id, fields){
 					});
 }
 
-function filterData(data, fields){
-
-	if(!fields){
-		return data;
-	}
-	
-	const output = {};
-	
-	output["id"] = data["id"];
-
-	fields.forEach((field)=>{
-		if(field == "단위계획 수") return; /* 추후 수정 */
-		if(data[field]) output[field] = data[field];
-	});
-
-	return output;
-}
-
 async function getPlansFromIds(ids, fields){
 	const result = [] 
 	
@@ -49,8 +32,8 @@ async function getPlansFromIds(ids, fields){
 }
 
 
-export function getDetailedPlanList(id){
-	return axios.get(`${planDir}/${id}.json`).then
+export  async function getDetailedPlanList(id){
+	return  await getPlan(id, ['단위계획'])
 }
 
 export function getPlans(category, fields){

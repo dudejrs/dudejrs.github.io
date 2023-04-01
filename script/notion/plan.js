@@ -73,7 +73,6 @@ async function refinePlan(result, categories, secret){
 			return data["results"];
 		})).map((item) => item["relation"]["id"]);
 
-
 		return output;
 }
 
