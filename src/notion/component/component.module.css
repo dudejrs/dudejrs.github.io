@@ -3,7 +3,8 @@
 }
 
 
-.typesTitle, .typesMultipleSelect, .typesRollup, .typesCheckbox, .typesFormula, .typesSelect {
+.typesTitle, .typesMultipleSelect, .typesRollup, .typesCheckbox, 
+.typesFormula, .typesSelect,.typesDate {
 
 	height: 1.25em;
 
