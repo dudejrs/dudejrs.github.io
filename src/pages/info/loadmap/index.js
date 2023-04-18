@@ -10,11 +10,11 @@ import TrackDetailView from './trackDetailView'
 
 const trackListMap = {
 	"Javascript" : ["Javascript","Node.js","React.js", "Next.js"],
-	"Java" : ["Spring Boot", "Spring", "JPA"],
-	"DBMS" : ["SQLD","MySQL", "MongoDB", "GraphQL", "SQLP"],
-	"Backend" : ["Kafka", "Redis"],
-	"DevOps" : ["리눅스마스터", "Doker", "Kubernetices", "AWS자격증", "Lpic자격증"],
-	"Data Scientist" : ["ADsP","빅데이터분석기사"],
+	"Java" : ["Java","Spring Boot", "Spring", "JPA", "Spring WebFlux"],
+	"DBMS" : ["SQL","Oracle","MySQL", "MongoDB", "GraphQL"],
+	"Backend" : ["Backend", "Kafka", "Redis"],
+	"DevOps" : ["Linux", "Doker", "Kubernetices", "AWS자격증"],
+	"Data Scientist" : ["Python","ADsP","빅데이터분석기사"],
 	"Graphic" :["OpenGL", "WebGL", "Three.js", "D3.js"]
 }
 

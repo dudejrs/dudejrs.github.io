@@ -26,9 +26,9 @@ const randomBackground = ()=>{
 	return backgroundClassNames[Math.floor(Math.random() * backgroundClassNames.length)];
 }
 
-export default function Tag({ name }) {
+export default function Tag({ name, className }) {
 	return (
-		<div className={`${styles.tag} ${styles[getColor(name)]}`}>
+		<div className={`${styles.tag} ${styles[getColor(name)]} ${className}`}>
 		{ name }
 		</div>
 	)

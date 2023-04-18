@@ -5,16 +5,17 @@ import Checkbox from './checkbox';
 
 
 const mapToComponent = ( type, data )=>{
-	
+	if(!data)
+		return (<></>)
 	if(type == "multiselect")
 		return (< Multiselect data={data} />);
 	if(type == "checkbox")
 		return (<Checkbox data={data} />);
 	if(type == "date")
 		return (<>{data.start}</>);
-	if(type == "select")
+	if(type == "select" )
 		return (<Select data={data}/>);
-	else 
+	else
 		return (<>{data}</>);
 }
 
