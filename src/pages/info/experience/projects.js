@@ -18,7 +18,6 @@ const data = [
 		{
 			title : "자연어 처리",
 			src : "",
-			// src : "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80",
 			description : "수정중 입니다...",
 			tags : "Python",
 			term : "2021.01 ~ 2021.02"
