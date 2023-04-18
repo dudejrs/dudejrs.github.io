@@ -11,6 +11,9 @@ export default function DetailedProject({
 	onClick,
 	isClicked
 }) {
+
+	if(!src) src = "img/experience/default_background.png";
+
 	return (
 			<div className={`${className} ${styles.container}` }>
 				<img className={styles.icon} src="img/experience/exit_icon2.png" onClick={()=>onClick(false)}/>

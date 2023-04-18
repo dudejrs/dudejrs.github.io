@@ -3,10 +3,8 @@ import loadMapStyles from './loadmap.module.css';
 import styles from './trackNav.module.css'
 
 
-export default function TrackNav({title, onClick}) {
+export default function TrackNav({title, onClick, trackLists}) {
 	
-		const trackLists = ["Javascript","Java","DBMS","Backend","DevOps","Data Scientist", "Graphic"];
-
 	return (
 			<ul className={styles.trackNav}>
 				<li><img src="img/loadmap/mac_icon.png" className={`${styles.img} ${styles.trackNavCloseTap} `}/></li>

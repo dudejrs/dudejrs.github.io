@@ -12,13 +12,19 @@ export default function Project({
 	isClicked,
 	index
 }) {
+
+	if(!src) src = "img/experience/default_background.png";
+
+
+
 	return (
 
 			<div className={(isClicked)? `${className}` : `${className} ${styles.container}`}>
 				{
 					isClicked || <img className={styles.icon} src="img/experience/extend_icon2.png" onClick={()=>onClick(index)}/>
 				}
-				<img className={styles.img} src={src}/>
+				
+				<img className={styles.img} src={src}/>	
 				<span className={styles.title}> {title} </span>
 				<p className={styles.description}>{description}</p>
 				<div className={styles.tags}> 

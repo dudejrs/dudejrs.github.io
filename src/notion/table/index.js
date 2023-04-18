@@ -21,7 +21,6 @@ export default function Table({columns,  types, data, titleOnClick, ratio}) {
 	},[]);
 
 	const makeTableWidths = (amount) =>{
-		console.log(ratio)
 		let newWidths = new Array(columns.length).fill(1);
 		newWidths = newWidths.map((_,i)=> {return amount * ratio[i]});
 		return newWidths;

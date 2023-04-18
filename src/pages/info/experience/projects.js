@@ -17,14 +17,15 @@ const data = [
 		},
 		{
 			title : "자연어 처리",
-			src : "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80",
+			src : "",
+			// src : "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80",
 			description : "수정중 입니다...",
 			tags : "Python",
 			term : "2021.01 ~ 2021.02"
 		},
 		{
 			title : "WearOS 기반 주식 어플리케이션 개발",
-			src : "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80",
+			src : "img/experience/wear_os_application.png",
 			description : "수정중 입니다...",
 			tags : "Kotlin Node.js Python",
 			term : "2021.05 ~ 2021.06"

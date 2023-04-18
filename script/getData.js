@@ -14,7 +14,7 @@ const detailedPlanDirPath = 'public/data/detailedPlan'
 
 const planFilterList = ['categories.json']
 
-const tags = ["Java","Spring", "Spring Boot", "Frontend", "Node.js", "Javascript", "Backend", "빅데이터분석기사", "Data Scientist", "SQLP", "DBMS Administrator", "OpenGL", "Graphics", "React.js", "리눅스마스터", "Linux", "DevOps"];
+const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
 
 const notion = new Client({
 	auth : process.env.notion_integration_secret
