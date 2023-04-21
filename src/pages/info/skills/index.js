@@ -1,9 +1,9 @@
 
-import MainStackItem from './skills/mainStackItem'
-import SubStackItem from './skills/subStackItem'
+import MainStackItem from './mainStackItem'
+import SubStackItem from './subStackItem'
 
-import infoStyles from '../info.module.css';
-import styles from './skills.module.css';
+import infoStyles from '../../info.module.css';
+import styles from './index.module.css';
 
 export default function Skills() {
 	

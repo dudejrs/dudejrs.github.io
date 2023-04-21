@@ -1,5 +1,5 @@
 
-import SkillsStyles from '../skills.module.css';
+import SkillsStyles from './index.module.css';
 import styles from './subStackItem.module.css';
 
 export default function SubStackItem({title, items}) {

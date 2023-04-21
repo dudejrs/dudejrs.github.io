@@ -1,7 +1,7 @@
 
 import SubStackItem from './subStackItem';
 
-import SkillsStyles from '../skills.module.css';
+import SkillsStyles from './index.module.css';
 import styles from './mainStackItem.module.css';
 
 export default function MainStackItem({children, title, items}) {
