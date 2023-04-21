@@ -8,10 +8,9 @@ export default function TrackList({title, tracks, onClick}){
 			<>  
 				<ul className={styles.trackline}>
 
-					{/*<li className={styles.track_title}>{title}</li>*/}
 					{
-						tracks.map((track)=>
-							(<li> 
+						tracks.map((track, index)=>
+							(<li key={index}> 
 								<a href="/info#load-map" className={styles.track} onClick={()=>{onClick(track);}}>
 									<img src="img/loadmap/folder.png" className={styles.trackImg}/>
 									<TestComponent> <span className={styles.trackName}>{track}</span> </TestComponent> 

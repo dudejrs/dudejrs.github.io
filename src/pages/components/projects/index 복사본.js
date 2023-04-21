@@ -3,44 +3,12 @@ import {useState, useCallback} from 'react';
 
 import Project from './project/project';
 import DetailedProject from './project/detailedProject'
-import styles from './projects.module.css';
+import styles from './index.module.css';
 
 
 
-const data = [
-		{
-			title : "멀티플렉스 영화관 사이트 구현",
-			src : "img/experience/multiplex_reservation copy.png",
-			description : "데이터베이스 과목 실습 과제로 Node.js Express 프레임워크와 MySQL을 이용하여 구현한 웹 앱 사이트입니다.",
-			tags : "Node.js Mysql React.js",
-			term : "2019.10 ~ 2019.12"
-		},
-		{
-			title : "자연어 처리",
-			src : "",
-			description : "수정중 입니다...",
-			tags : "Python",
-			term : "2021.01 ~ 2021.02"
-		},
-		{
-			title : "WearOS 기반 주식 어플리케이션 개발",
-			src : "img/experience/wear_os_application.png",
-			description : "수정중 입니다...",
-			tags : "Kotlin Node.js Python",
-			term : "2021.05 ~ 2021.06"
-		},
-		{
-			title : "",
-			src : "",
-			description : "",
-			tags : "",
-			term : ""
-		},
 
-	];
-
-
-export default function Projects() {
+export default function Projects({data}) {
 
 	const [isClicked, setIsClicked] = useState(false);
 	const [target, setTarget] = useState(0);
@@ -54,8 +22,8 @@ export default function Projects() {
 	return (
 			<div className={styles.projects_container}> 
 			{
-				data.map( (project, index)=> {
-					if(!project.title || (isClicked && target != index)) return (<></>)
+				 Array.isArray(data) && data.map( (project, index)=> {
+					if(!project.title || (isClicked && target != index)) return (<div key={index}/>)
 					
 					if(isClicked) return (<DetailedProject className={styles.project_container_clicked} 
 						src= {project["src"]}
@@ -65,6 +33,7 @@ export default function Projects() {
 						term={project["term"]}
 						isClicked={isClicked}
 						onClick = {setIsClicked}
+						key={project["title"]}
 						/>);
 
 					return (<Project className={styles.project_container} 
@@ -76,6 +45,7 @@ export default function Projects() {
 						isClicked={isClicked}
 						onClick = {handleClick	}
 						index={index}
+						key={project["title"]}
 						/>)
 				} )
 			}

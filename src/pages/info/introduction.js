@@ -1,5 +1,5 @@
 
-import InfoStyles from '../info.module.css';
+import InfoStyles from './index.module.css';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import styles from './introduction.module.css'

@@ -10,8 +10,8 @@ export default function SubStackItem({title, items}) {
 				title && <li className={styles.subStackTitle}> {title}</li>
 			}
 			{
-				items&& items.map(item =>
-					<li className={styles.item}> {item} </li>
+				items&& items.map((item, index) =>
+					<li className={styles.item} key={index}> {item} </li>
 				)
 			}
 		</ul>

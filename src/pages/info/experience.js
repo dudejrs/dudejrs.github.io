@@ -1,17 +1,17 @@
 
-import Projects from './experience/projects';
-import InfoStyles from '../info.module.css';
+
+import Projects from '../components/projects';
+
+import InfoStyles from './index.module.css';
 import styles from './experience.module.css'
 
 
-export default function Experience() {
+export default function Experience({projects}) {
 
-	
 	return (
 			<div id="experience" className={`${InfoStyles.section} ${styles.container}`} > 
 				<h4> Experience </h4>
-
-				<Projects />
+				<Projects data={projects}/>
 			</div>
 		);
 }
