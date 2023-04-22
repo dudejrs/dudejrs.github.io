@@ -1,6 +1,5 @@
 .App {
   min-height: 100vh;
-  padding : 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +12,7 @@
 }
 
 #content {
+  padding : 0 5vw;
   flex-grow: 5;
 }
 

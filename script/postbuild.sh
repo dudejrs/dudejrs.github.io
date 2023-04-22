@@ -1,4 +1,4 @@
-page_names=("info" "pages")
+page_names=("info" "projects")
 
 for i in ${page_names[@]}
 do 
