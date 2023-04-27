@@ -1,7 +1,12 @@
 .container {
-	padding: 0.5em 5em;
+	border-bottom: 1px solid #ddd;
+	position: absolute;
+}
+
+.main_container {
+	padding: 0.5em 5em 0;
 	width: 100vw;
-	height: 4em;
+	min-height: 4.5em;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -10,15 +15,27 @@
 	align-items: center;
 }
 
+.sub_container {
+	min-height: 2em;
+	width: 100vw;
+	padding: 0rem 5rem;
+	color: #ccc;
+	font-weight: bold;
+}
+
 .container a {
 	text-decoration: none;
 }
 
-.container a:visited{
+.main_container a:visited{
 	color : #000;
 }
 
-.container > * {
+.sub_container a:visited{
+	color : #ccc;
+}
+
+.main_container > * {
 	margin: 0 1em ;
 }
 

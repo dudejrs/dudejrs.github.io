@@ -1,21 +1,56 @@
+import {useState, useCallback} from 'react';
 import {NavLink} from 'react-router-dom';
-import styles from './index.module.css';
-import Contact from './contact';
-import Name from './name';
 
-export default function NavigationBar({navigationList}){
+import Contact from './contact';
+import Title from './title';
+import NavigationLinks from './navigationLinks';
+import NavigationSubLinks from './navigationSubLinks';
+import NavigationLinkItem from './navigationLinkItem'
+
+import styles from './index.module.css';
+
+export default function NavigationBar({title, navigationList}){
+		
+	const [isClicked, setIsClicked] = useState(false);
+	const [sublinks, setSublinks]= useState(undefined);
+	let timerID;
+
+	const onMouseOver = useCallback((s)=>{		
+		
+		if(timerID && sublinks){
+			clearTimeout(timerID);
+			return;
+		}
+
+		setIsClicked(true);	
+		setSublinks(s);
+		});
 	
+	const onMouseOut = useCallback(()=>{
+		if(timerID) clearTimeout(timerID);
+		timerID = setTimeout(()=>{
+			setIsClicked(false);
+			setSublinks(undefined);
+			timerID = undefined;
+		},1000);
+	})
+
 	return (
-		<div className={styles.container}>
-			<Name />
-			<div className={styles.links}>
-				{
-					Array.isArray(navigationList) && navigationList.map((item, i)=>
-						(<NavLink to={`${item.link}`} key={i} className={({isActive})=> isActive? `${styles.active}`: ''}> {item.name} </NavLink>)
-					)
-				}
+		<div className={styles.container}> 
+			<div className={styles.main_container}>
+				<Title title={title}/>
+				<NavigationLinks links= {navigationList} 
+					onMouseOver={onMouseOver} 
+					onMouseOut={onMouseOut}/>
+				<Contact />
 			</div>
-			<Contact />
-		</div>
+			{
+				isClicked && Array.isArray(sublinks) && 
+					<NavigationSubLinks links={sublinks}  
+						onMouseOver={onMouseOver}
+						onMouseOut={onMouseOut}
+					/> 
+			}
+		</div> 
 	);
 }

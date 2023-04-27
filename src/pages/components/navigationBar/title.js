@@ -2,11 +2,11 @@ import {Link} from 'react-router-dom';
 
 
 
-export default function Name(){
+export default function Title({title}){
 		return (
 			<Link to="/">
 				<h2>
-					Kim Deok Young
+					{title}
 				</h2>
 			</Link>
 			);

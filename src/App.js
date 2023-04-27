@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import Info from './pages/info'
@@ -13,7 +13,17 @@ const navigationList = [
   },
   {
     name : "Projects",
-    link : "/projects"
+    link : "/projects",
+    sublist : [
+        {
+          name : "Cenema",
+          link : "/projects/cenema"
+        },
+        {
+          name : "WearOS",
+          link : "/projects/WearOS"
+        }
+      ]
   }
 
 ];
@@ -22,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <div id="header">
-        <NavigaionBar navigationList={navigationList} />
+        <NavigaionBar title={"dudejrs"} navigationList={navigationList} />
       </div>
       <div id="content">
         <Pages />
