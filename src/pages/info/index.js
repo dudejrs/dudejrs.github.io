@@ -6,6 +6,13 @@ import Loadmap from '../components/loadmap';
 
 import styles from './index.module.css';
 
+
+
+const markdown_content = `
+> 안녕하세요. 웹 프로그래머를 희망하여 정진하고있는 개발자 지망생입니다. 
+`;
+
+
 const skills = [{
 	title : "Backend",
 	items : [
@@ -74,8 +81,7 @@ export default function Info() {
 	
 	return (
 		<div className={styles.content}> 
-			<h3>Info</h3>
-			<Introduction />
+			<Introduction className={styles.section} markdown_content={markdown_content}/>
 			<Experience projects={projects}/>
 			<Skills className={styles.section} skills={skills}/>
 			<Loadmap className={styles.section} trackLists={trackLists} trackListMap={trackListMap}/>

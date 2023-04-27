@@ -1,19 +1,14 @@
-
-import InfoStyles from './index.module.css';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import styles from './introduction.module.css'
 
 
-export default function Introduction() {
+export default function Introduction({className, markdown_content}) {
 	
-const content = `
-> 안녕하세요. 웹 프로그래머를 희망하여 정진하고있는 김덕영입니다. 
-	`;
 
 	return (
-			<div id="introduction" className={`${InfoStyles.section} ${styles.info_container}`}>
-				<ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
+			<div id="introduction" className={`${styles.info_container} ${className}`}>
+				<ReactMarkdown children={markdown_content} remarkPlugins={[remarkGfm]} />
 				<div className={styles.contact_container}>
 					<a href="https://dudejrs.tistory.com/" >
 						<img className={styles.contact_img} src={'img/contact/tistory.svg'}/>

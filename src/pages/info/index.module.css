@@ -7,4 +7,5 @@
 .section {
 	min-height: 50vh;
 	border : solid #eeeeee 3px;
+	margin-bottom: 5rem;
 }
