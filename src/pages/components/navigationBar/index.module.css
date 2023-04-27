@@ -13,6 +13,7 @@
 	background-color: #fff;
 	justify-content: space-between;
 	align-items: center;
+	color : #000;
 }
 
 .sub_container {
@@ -21,6 +22,8 @@
 	padding: 0rem 5rem;
 	color: #ccc;
 	font-weight: bold;
+	background-color: rgba(250,250,250,0.5);
+	align-items: center;
 }
 
 .container a {
