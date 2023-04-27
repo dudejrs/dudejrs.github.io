@@ -69,7 +69,7 @@ const trackListMap = {
 	"DBMS" : ["SQL","Oracle","MySQL", "MongoDB", "GraphQL"],
 	"Backend" : ["Basic", "Backend", "Kafka", "Redis"],
 	"DevOps" : ["Linux", "Docker", "Kubernetices", "AWS"],
-	"Data Science" : ["Python","Data Science"],
+	"Data Science" : ["Python","Tesnorflow","Pytorch", "Data Science", "Scrapping/Crawling"],
 	"Graphics" :["OpenGL", "WebGL", "Three.js", "D3.js"]
 }
 
