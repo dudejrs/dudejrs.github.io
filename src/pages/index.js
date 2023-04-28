@@ -12,14 +12,18 @@ function Pages() {
           <Route path="" element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="portfolio">
+          <Route path="" element={<div> 준비중입니다... </div>}/>        
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
-          <Route path="" element={<div> 준비중입니다.. </div>}/>        
         </Route>
         <Route path="test">
+          <Route path="" element={<div> 준비중입니다... </div>}/>        
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
-          <Route path="" element={<div> 준비중입니다.. </div>}/>        
         </Route>
-        <Route path="/" default element={<div> 준비중입니다.. </div>}/>
+        <Route path="practice">
+          <Route path=""  element={<div>준비중입니다... </div>} />
+          <Route path="*" default element={<div>준비중입니다..</div>} />
+        </Route>
+        <Route path="*" default element={<div> 준비중입니다.. </div>}/>
       </Routes>
 
   );

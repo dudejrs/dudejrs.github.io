@@ -22,8 +22,13 @@ const navigationList = [
         {
           name : "WearOS",
           link : "/projects/WearOS"
-        }
+        },
+
       ]
+  },
+  {
+    name : "Practice",
+    link : "/practice"
   }
 
 ];
