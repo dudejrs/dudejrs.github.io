@@ -1,0 +1,15 @@
+.picker {
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 0.4rem;
+	margin: 0 0.4rem 0 0.2rem;
+	background-color: red;
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-weight: bold;
+	margin: 0.4rem 0 ;
+}

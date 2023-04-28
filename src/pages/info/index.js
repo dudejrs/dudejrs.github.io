@@ -17,19 +17,24 @@ const skills = [{
 	title : "Backend",
 	items : [
 
-			{ title : "Framework", items : ["Node.js", "Spring & Spring Boot"]},
-			{ title : "Database", items : ["Oracle", "MySQL"]},
-			{ title : "Infra", items : ["Linux", "Aws"]}
+			{ title : "Framework", items : ["Node.js", "Spring & Spring Boot"], levels : [1,1]},
+			{ title : "Database", items : ["Oracle", "MySQL"], levels : [1,0]},
+			{ title : "Infra", items : ["Linux", "Aws"], levels : [1,0]}
 
 ]
 },{
 	title : "Frontend",
-	items : ["Html+Css", "React.js"]
+	items : ["Html+Css", "React.js"],
+	levels : [2,1]
 },{
 	title : "Programing Language",
-	items : ["Javascript", "Java", "C++", "Python"]
+	items : ["Javascript", "Java", "C++", "Python"],
+	levels : [2, 2, 2, 1]
 
 }];
+
+const levelDescriptions = ["사용 경험이 있음", "학습하고 있는 중임", "활용 경험이 많음" , "사용이 자유로움" ]
+const colors = ["#d2d2d2","#b3d8e7","#80bed7","#4da4c7"]
 
 const projects = [
 		{
@@ -83,7 +88,7 @@ export default function Info() {
 		<div className={styles.content}> 
 			<Introduction className={styles.section} markdown_content={markdown_content}/>
 			<Experience projects={projects}/>
-			<Skills className={styles.section} skills={skills}/>
+			<Skills className={styles.section} skills={skills} levelDescriptions={levelDescriptions} colors= {colors}/>
 			<Loadmap className={styles.section} trackLists={trackLists} trackListMap={trackListMap}/>
 		</div>
 		);
