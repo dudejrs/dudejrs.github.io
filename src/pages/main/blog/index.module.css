@@ -1,0 +1,28 @@
+.container{
+	display: flex;
+
+	flex-direction: column;
+	justify-content: space-between;
+
+	min-width: 10rem;
+}
+
+.title {
+
+	font-weight: bolder;
+	color: #555555;
+}
+
+.content{
+	display: block;
+	overflow: hidden;
+
+	white-space: normal;
+	text-overflow: ellipsis;
+	line-height: 1.2rem;
+	height: 6rem;
+}
+
+.date {
+
+}

@@ -1,0 +1,19 @@
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.item{
+	display: flex;
+	flex-direction: column;
+	
+	width: 12rem;
+	height: 12rem;
+	overflow: hidden;
+
+	position: relative;
+
+
+}

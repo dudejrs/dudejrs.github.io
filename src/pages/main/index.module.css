@@ -1,9 +1,30 @@
-.container{
-	width: 100vw;
-	color: red;
-	
+.container{	
+	width: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	justify-content: space-between;
+}
+.carousell {
+	width: 100%;
+	height: 50vh;
+	background-color: #efefef;
+}
+.section{
+	width: 48%;
+	min-width: 600px;
+	flex-grow: 1;
+	margin-bottom: 1.5rem;
+	overflow-y: hidden;
+/*	border :1px solid red;*/
+}
+
+.githubStats {
+	overflow-x: scroll;
+}
+
+.githubStats > img{
+	min-width: 500px;
+	width : 100%;
 }

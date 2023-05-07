@@ -19,6 +19,7 @@ function Pages() {
         </Route>
         <Route path="test">
           <Route path="" element={<div> 준비중입니다... </div>}/>        
+          <Route path="  " element={<div> 준비중입니다... </div>}/>        
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="practice">
