@@ -40,30 +40,38 @@ const projects = [
 		{
 			title : "멀티플렉스 영화관 사이트 구현",
 			src : "img/experience/multiplex_reservation copy.png",
-			description : "데이터베이스 과목 실습 과제로 Node.js Express 프레임워크와 MySQL을 이용하여 구현한 웹 앱 사이트입니다.",
-			tags : "Node.js Mysql React.js",
-			term : "2019.10 ~ 2019.12"
-		},
-		{
-			title : "자연어 처리",
-			src : "",
-			description : "수정중 입니다...",
-			tags : "Python",
-			term : "2021.01 ~ 2021.02"
+			description : "Node.js Express 프레임워크와 MySQL을 이용하여 구현한 웹 앱 사이트입니다.",
+			detailedDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in mauris in arcu viverra volutpat. Donec sed faucibus libero. Sed porta risus et sollicitudin scelerisque. Duis erat magna, hendrerit id interdum semper, venenatis auctor eros.",
+			tags : "Node.js Mysql",
+			term : "2019.10 ~ 2019.12",
+			page : "projects/cenema"
 		},
 		{
 			title : "WearOS 기반 주식 어플리케이션 개발",
 			src : "img/experience/wear_os_application.png",
-			description : "수정중 입니다...",
+			description : "WearOS기반 주식 어플리케이션 프로토타입과 웹 서비스 개발 프로젝트입니다.",
+			detailedDescription : "KB증권 공모전에 제출했던 WearOS기반 주식 어플리케이션과 어플리케이션을 위한 서비스 개발 프로젝트입니다. Android WearOS 디자인 가이드라인을 따라 주식 어플리케이션 UI를 설계하고, MVVM패턴에 맞게 어플리케이션을 구현하였습니다. 또한 어플리케이션이 동작하기 위한 실시간 주식 정보 스크래퍼 서버와 주식 api서버를 구현하였습니다.",
 			tags : "Kotlin Node.js Python",
-			term : "2021.05 ~ 2021.06"
+			term : "2021.05 ~ 2021.06",
+			page : "/projects/WearOS"
+		},
+		{
+			title : "자연어 전처리 실습",
+			src : "",
+			description : "수집된 텍스트의 word2vec 및 토픽모델링 등의 자연어 전처리 실습입니다.",
+			detailedDescription : "(주)와이즈넛 겨울인턴십 프로젝트에서 진행한, 수집된 텍스트의 word2vec 및 토픽모델링등의 자연어 전처리 실습 입니다.",
+			tags : "Python",
+			term : "2021.01 ~ 2021.02",
+			page : "projects/"
 		},
 		{
 			title : "",
 			src : "",
 			description : "",
+			detailedDescription : "",
 			tags : "",
-			term : ""
+			term : "",
+			page : ""
 		},
 
 ];

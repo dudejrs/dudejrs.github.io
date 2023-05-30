@@ -1,7 +1,7 @@
 import {useState, useCallback} from 'react';
 
 
-import Project from './project/project';
+import Project from './project';
 import DetailedProject from './project/detailedProject'
 import styles from './index.module.css';
 
@@ -28,7 +28,8 @@ export default function Projects({data}) {
 					if(isClicked) return (<DetailedProject className={styles.project_container_clicked} 
 						src= {project["src"]}
 						title={project["title"]} 
-						description={project["description"]}
+						description={project["detailedDescription"]}
+						page={project["page"]}
 						tags={project["tags"]}
 						term={project["term"]}
 						isClicked={isClicked}

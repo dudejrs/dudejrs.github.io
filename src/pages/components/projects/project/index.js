@@ -1,4 +1,4 @@
-import styles from './project.module.css'
+import styles from './index.module.css'
 import Tag from '../../../../components/tag'
 
 export default function Project({
