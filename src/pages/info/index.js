@@ -88,6 +88,7 @@ const trackListMap = {
 
 const trackLists = ["Javascript","Java","DBMS","Backend","DevOps","Data Science", "Graphics"];
 
+const updateDate  = "2023.08.08"
 
 
 export default function Info() {
@@ -97,7 +98,7 @@ export default function Info() {
 			<Introduction className={styles.section} markdown_content={markdown_content}/>
 			<Experience projects={projects}/>
 			<Skills className={styles.section} skills={skills} levelDescriptions={levelDescriptions} colors= {colors}/>
-			<Loadmap className={styles.section} trackLists={trackLists} trackListMap={trackListMap}/>
+			<Loadmap className={styles.section} trackLists={trackLists} trackListMap={trackListMap} updateDate={updateDate}/>
 		</div>
 		);
 }

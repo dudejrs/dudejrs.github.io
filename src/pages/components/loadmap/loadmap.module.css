@@ -26,3 +26,10 @@
 	min-height: 400px;
 
 }
+.footer {
+	color : #838383;
+	font-size: 0.8rem;
+	font-weight: bold;
+	align-self: flex-end;
+	transform: translate(-0.5rem,-0.5rem);
+}

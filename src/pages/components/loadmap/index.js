@@ -7,7 +7,7 @@ import TrackNav from './trackNav'
 import TrackDetailView from './trackDetailView'
 
 
-export default function Loadmap({className, trackListMap, trackLists }) {
+export default function Loadmap({className, trackListMap, trackLists, updateDate }) {
 	
 	const [trackList, setTrackList] = useState("Javascript");
 	const [track, setTrack] = useState("");
@@ -31,9 +31,8 @@ export default function Loadmap({className, trackListMap, trackLists }) {
 					<div className={styles.content}>
 						<TrackList	title={trackList} tracks={trackListMap[trackList]} onClick={openDetailView}/>
 						{ isOpened ? <TrackDetailView name={track} onClick={setIsOpend}/> : <></>}
-						
-						
 					</div>
+					<div className={styles.footer}>update : {updateDate}</div>
 				</div>
 
 			</div>
