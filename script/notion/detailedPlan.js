@@ -61,8 +61,12 @@ function getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, filterList,
 	let idList = uniqueList(list);
 
 	idList.forEach(async(id)=>{
-		let detailedPlan = await getDetailedPlan(id, secret); 
-		saveDetailedPlan(id, detailedPlan, detailedPlanDirPath);
+		try {
+			let detailedPlan = await getDetailedPlan(id, secret); 
+			saveDetailedPlan(id, detailedPlan, detailedPlanDirPath);
+		}catch(err){
+			console.log(err);
+		}
 	});
 
 }

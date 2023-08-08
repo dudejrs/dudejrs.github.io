@@ -9,7 +9,8 @@ import NavigaionBar from './pages/components/navigationBar';
 const navigationList = [
   {
     name : "Info",
-    link : "/info"
+    link : "/info",
+    visible : true
   },
   {
     name : "Projects",
@@ -24,11 +25,13 @@ const navigationList = [
           link : "/projects/WearOS"
         },
 
-      ]
+      ],
+    visible : false
   },
   {
     name : "Practice",
-    link : "/practice"
+    link : "/practice",
+    visible : false
   }
 
 ];
