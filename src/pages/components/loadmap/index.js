@@ -32,7 +32,7 @@ export default function Loadmap({className, trackListMap, trackLists, updateDate
 						<TrackList	title={trackList} tracks={trackListMap[trackList]} onClick={openDetailView}/>
 						{ isOpened ? <TrackDetailView name={track} onClick={setIsOpend}/> : <></>}
 					</div>
-					<div className={styles.footer}>update : {updateDate}</div>
+					{ updateDate && <div className={styles.footer}>update : {updateDate}</div>}
 				</div>
 
 			</div>
