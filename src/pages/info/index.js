@@ -4,9 +4,11 @@ import Experience from './experience';
 import Skills from '../components/skills';
 import Loadmap from '../components/loadmap';
 
+import {useEffect, useState} from 'react'
+
 import styles from './index.module.css';
 
-
+import {getPlansUpdatedDate} from '../../domain/plans';
 
 const markdown_content = `
 > 안녕하세요. 웹 프로그래머를 희망하여 정진하고있는 개발자 지망생입니다. 
@@ -88,10 +90,16 @@ const trackListMap = {
 
 const trackLists = ["Javascript","Java","DBMS","Backend","DevOps","Data Science", "Graphics"];
 
-const updateDate  = "2023.08.08"
 
 
 export default function Info() {
+
+	const [updateDate, setUpdateDate] = useState("201213213")
+
+	useEffect(()=>{
+		getPlansUpdatedDate()
+			.then((data)=> setUpdateDate(data));
+	},[]);
 	
 	return (
 		<div className={styles.content}> 

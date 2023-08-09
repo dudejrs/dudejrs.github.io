@@ -51,4 +51,8 @@ export function getPlanById(id, fields){
 	return getPlan(id, fields);
 }
 
-
+export async function getPlansUpdatedDate(){
+	return await axios.get(`${planDir}/meta.json`)
+					.then(({data})=>{return data['updated']});
+	;
+}

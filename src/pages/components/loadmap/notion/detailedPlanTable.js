@@ -24,7 +24,6 @@ export default function DetailedPlanTable ({data}){
 				.then((data)=>{
 					getDetailedPlans(data["단위계획"], columns)
 						.then((data)=>{
-							console.log(data);
 							setDetailedPlan(data);
 							setLoaded(true);
 						});
