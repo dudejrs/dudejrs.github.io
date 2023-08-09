@@ -11,6 +11,7 @@ require('dotenv').config();
 
 const planDirPath = 'public/data/plan';
 const detailedPlanDirPath = 'public/data/detailedPlan'
+const planMetaDataPath = `${planDirPath}/meta.json`
 
 const planFilterList = ['categories.json']
 
@@ -32,6 +33,7 @@ const fetchPlans= ()=>{
 	}
 
 	getPlans(notion, tags, planDirPath, process.env.notion_integration_secret);
+	wrtieMetaData();
 }
 
 
@@ -45,9 +47,22 @@ const fetchDetailedPlans= ()=>{
 
 
 	getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, planFilterList, process.env.notion_integration_secret);
+	wrtieMetaData();
+}
 
+
+const wrtieMetaData = ()=>{
+	const currentDateString = new Date(Date.now()).toISOString();
+	try {
+		origin = JSON.parse(fs.readFileSync(planMetaDataPath));
+		origin.updated = currentDateString.slice(0,10)
+		fs.writeFileSync(planMetaDataPath, JSON.stringify(origin));
+	}catch (error) {
+		console.log(error);
+	}
 }
 
 
 // fetchPlans();
-fetchDetailedPlans();
+// fetchDetailedPlans();
+wrtieMetaData();
