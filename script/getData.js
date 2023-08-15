@@ -69,5 +69,5 @@ const wrtieMetaData = ()=>{
 
 
 // fetchPlans();
-fetchDetailedPlansPlans();
+fetchDetailedPlans();
 // wrtieMetaData();
