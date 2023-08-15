@@ -60,9 +60,14 @@ const wrtieMetaData = ()=>{
 	}catch (error) {
 		console.log(error);
 	}
+	finally{
+		origin = {}
+		origin.updated = currentDateString.slice(0,10)
+		fs.writeFileSync(planMetaDataPath, JSON.stringify(origin));
+	}
 }
 
 
 // fetchPlans();
-// fetchDetailedPlans();
-wrtieMetaData();
+fetchDetailedPlansPlans();
+// wrtieMetaData();
