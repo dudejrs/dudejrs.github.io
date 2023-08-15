@@ -43,7 +43,7 @@ const projects = [
 			title : "멀티플렉스 영화관 사이트 구현",
 			src : "img/experience/multiplex_reservation copy.png",
 			description : "Node.js Express 프레임워크와 MySQL을 이용하여 구현한 웹 앱 사이트입니다.",
-			detailedDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in mauris in arcu viverra volutpat. Donec sed faucibus libero. Sed porta risus et sollicitudin scelerisque. Duis erat magna, hendrerit id interdum semper, venenatis auctor eros.",
+			detailedDescription : "데이터베이스 과목 실습 과제로, 멀티플렉스 예매사이트를 참고하여 데이터 모델링을 진행하였고,  Node.js Express 프레임워크와 MySQL을 이용하여 구현한 웹 앱 사이트입니다.",
 			tags : "Node.js Mysql",
 			term : "2019.10 ~ 2019.12",
 			page : "projects/cenema"
