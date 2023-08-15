@@ -54,6 +54,11 @@
 	color: inherit;
 }
 
+.title > a:hover{
+	text-decoration: none;
+	color: red;
+}
+
 
 .description {
 	display: flex;
