@@ -18,7 +18,7 @@ async function getPlans(notion,tags,dirPath,secret){
 
 
 	const {results} = await notion.databases.query({
-		database_id : process.env.notion_database_id,	
+		database_id : process.env.notion_plan_database_id,	
 		filter : filter
 	});
 

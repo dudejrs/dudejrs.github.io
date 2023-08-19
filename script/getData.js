@@ -33,7 +33,7 @@ const fetchPlans= ()=>{
 	}
 
 	getPlans(notion, tags, planDirPath, process.env.notion_integration_secret);
-	wrtieMetaData();
+	writeMetaData();
 }
 
 
@@ -47,11 +47,11 @@ const fetchDetailedPlans= ()=>{
 
 
 	getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, planFilterList, process.env.notion_integration_secret);
-	wrtieMetaData();
+	writeMetaData();
 }
 
 
-const wrtieMetaData = ()=>{
+const writeMetaData = ()=>{
 	const currentDateString = new Date(Date.now()).toISOString();
 	try {
 		origin = JSON.parse(fs.readFileSync(planMetaDataPath));
@@ -68,6 +68,6 @@ const wrtieMetaData = ()=>{
 }
 
 
-// fetchPlans();
-fetchDetailedPlans();
-// wrtieMetaData();
+fetchPlans();
+// fetchDetailedPlans();
+// writeMetaData();
