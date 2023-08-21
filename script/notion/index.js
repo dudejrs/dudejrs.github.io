@@ -25,7 +25,7 @@ async function getProperty(pageId, propertyId, secret){
 			"Authorization" : `Bearer ${secret}`,
 			"Notion-Version" : '2022-06-28'
 		}
-	})
+	});
 }
 
 module.exports = {getDatabase, getPage, getProperty} 

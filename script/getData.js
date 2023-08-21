@@ -5,6 +5,8 @@ const fs = require('fs');
 const {getDatabase, getPage} = require('./notion');
 const {getPlans} = require('./notion/plan');
 const {getDetailedPlansFromPlans} = require('./notion/detailedPlan')
+const {getTotalProblems} = require("./notion/codingPractice");
+
 
 require('dotenv').config();
 
@@ -16,7 +18,7 @@ const planMetaDataPath = `${planDirPath}/meta.json`
 const planFilterList = ['categories.json']
 
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
-
+const langauges = ["Python","Javascript","C++","Java"]
 const notion = new Client({
 	auth : process.env.notion_integration_secret
 });
@@ -68,6 +70,12 @@ const writeMetaData = ()=>{
 }
 
 
-fetchPlans();
+const test = ()=>{
+	console.log(getTotalProblems(notion, langauges));
+}
+
+test();
+
+// fetchPlans();
 // fetchDetailedPlans();
 // writeMetaData();
