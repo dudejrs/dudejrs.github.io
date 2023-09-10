@@ -1,9 +1,37 @@
+@font-face {
+  font-family: "font";
+  src: url("../public/font/NotoSansKR-VariableFont_wght.ttf") format('truetype');
+
+}
+
+@font-face {
+  font-family: "font";
+  src: url('../public/font/Roboto-Bold.ttf') format('truetype');
+  unicode-range: U+0020-007E;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "font";
+  src: url('../public/font/Roboto-Medium.ttf') format('truetype');
+  unicode-range: U+0020-007E;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "font";
+  src: url('../public/font/Roboto-Regular.ttf') format('truetype');
+  unicode-range: U+0020-007E;
+  font-weight: 400;
+}
+
+
 .App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  font-family: font;
+  font-weight: 500;
 }
 
 .App > div {
