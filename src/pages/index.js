@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import Info from './info';
 import Main from './main';
 import Programming from './programming';
+import CodingTest from './components/codingTest';
 
 function Pages() {
   return (
@@ -20,6 +21,7 @@ function Pages() {
         </Route>
         <Route path="test">
           <Route path="programming" element={<Programming />}/>
+          <Route path="cote" element={<CodingTest />}/>
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="practice">

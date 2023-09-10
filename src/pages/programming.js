@@ -1,4 +1,8 @@
 
+import {useState, useEffect} from 'react'
+
+import { getTest, getTotal } from '../domain/codingPractice'
+
 import styles from './programming.css'
 import * as d3 from "d3";
 
