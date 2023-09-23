@@ -26,4 +26,4 @@ export async function getTest(){
 	return '12345';
 }
 
-export default {getTest, getTotal}
+export default {getTest, getTotal, getAggregationByProblem, getAggreagationByCategories}

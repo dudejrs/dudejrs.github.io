@@ -5,29 +5,36 @@ import { getTotal,
 getAggreagationByCategories, 
 getAggregationByProblem } from '../../../domain/codingPractice'
 
+import TotalCount from './counts/totalCount';
+import AggregationByCategories from './aggregationByCategories'
+import SomeCountAndRepetition from './counts/someCountAndRepititon'
+import SomeCount from './counts/someCount'
+
 import styles from './index.module.css'
 
 export default function CodingTest(){
 
 
-	const [total, setTotal] = useState('135');
-	
+	const [total, setTotal] = useState({});
+	const [aggregationByCategories, setAggregationByCategories] = useState([])
+	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python']
+
+
 	useEffect(()=>{
 		getTotal().then((t)=>{
 			setTotal(t);
 		})
 
 		getAggreagationByCategories().then((t)=>{
-			console.log(t)
+			setAggregationByCategories(t)
 		})
 	}, []);
 
 
 	return (
-		<div className={`${styles.totalContainer} `}>
-			<div
-				className ={styles.totalContainerItem}> <b> 총 푼 문제수 : </b> <span> {total.count} </span> </div>
-			<div className={styles.totalContainerItem}> <b> 총 반복수 : </b> <span> {total.repetition}</span> </div>
+		<div>
+			<TotalCount className={styles.countContainer} total = {total} />
+			<AggregationByCategories data= {aggregationByCategories} programmingLanguages={programmingLanguages} />			
 		</div>
 		);
 }

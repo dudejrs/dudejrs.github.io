@@ -1,13 +1,16 @@
-.totalContainer {
-	width: 10rem;
+.countContainer {
+	width: 15rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.totalContainerItem{
-	width: 100%;
+.subCountContainer {
+	width: 13rem;
+	padding: 0 0 0 2rem;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 
 }
+
