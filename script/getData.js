@@ -88,5 +88,5 @@ const writeMetaData = (dirPath)=>{
 
 // fetchPlans();
 // fetchDetailedPlans();
-fetchCodingPractice();
+// fetchCodingPractice();
 

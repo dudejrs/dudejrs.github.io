@@ -55,10 +55,8 @@ async function refinePlan(result, categories, secret){
 		});
 
 
-		output["title"] = result["properties"]["Name"]["title"][0]["plain_text"]
-		if(result["properties"]["남은 시간"]["rollup"]["array"][0]){
-			output["남은 시간"] = result["properties"]["남은 시간"]["rollup"]["array"][0]["formula"]["string"];
-		}
+		output["title"] = result["properties"]["Name"]["title"][0]["plain_text"];
+		output["남은 시간"] = "0";
 		output["Tag"] = result["properties"]["Tag"]["multi_select"].map((item)=>item["name"]);
 		output["완료"] = (result["properties"]["완료"]["checkbox"])? "true" : "false";
 		output["장기/단기"] = result["properties"]["장기/단기"]["multi_select"].map((item)=>item["name"]);
