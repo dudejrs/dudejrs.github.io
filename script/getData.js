@@ -84,15 +84,29 @@ const writeMetaData = (dirPath)=>{
 }
 
 
-function test() {
-	// console.log(getAggregationByCategories(notion, langauges, process.env.notion_integration_secret))
-	fetchCodingPractice()
+const fetchRoutine= ()=>{
+
+	switch(process.argv[2]){
+		case "plan":
+			fetchPlans();
+			fetchDetailedPlans();
+			break;
+		case "detailedPlan" :
+			fetchDetailedPlans();
+			break;
+		case "cote":
+			fetchCodingPractice();
+			break;
+		case "all" :
+			fetchPlans();
+			fetchDetailedPlans();
+			fetchCodingPractice();
+			break;
+		default :
+			break;
+	}
+
 }
 
-
-// fetchPlans();
-// fetchDetailedPlans();
-// fetchCodingPractice();
-test()
-
+fetchRoutine();
 
