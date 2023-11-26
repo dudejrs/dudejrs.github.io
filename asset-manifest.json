@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.02a45861.css",
+    "main.css": "/static/css/main.f8f8632a.css",
     "main.js": "/static/js/main.f3347af8.js",
     "static/js/787.f587e8d5.chunk.js": "/static/js/787.f587e8d5.chunk.js",
     "static/media/NotoSansKR-VariableFont_wght.ttf": "/static/media/NotoSansKR-VariableFont_wght.33752a94ca5252213de8.ttf",
@@ -8,12 +8,12 @@
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
     "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
     "index.html": "/index.html",
-    "main.02a45861.css.map": "/static/css/main.02a45861.css.map",
+    "main.f8f8632a.css.map": "/static/css/main.f8f8632a.css.map",
     "main.f3347af8.js.map": "/static/js/main.f3347af8.js.map",
     "787.f587e8d5.chunk.js.map": "/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02a45861.css",
+    "static/css/main.f8f8632a.css",
     "static/js/main.f3347af8.js"
   ]
 }
