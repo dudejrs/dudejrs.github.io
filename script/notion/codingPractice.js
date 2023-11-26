@@ -78,7 +78,7 @@ async function getAggregationByCategories(notion, langauges, secret){
 async function refineAggregation(result, langauges, secret){
 
 	const pageId = result["id"];
-	const countID = result["properties"]["count"]["id"];
+	const countID = result["properties"]["Problem_"]["id"];
 	const repetitioniId = result["properties"]["Repetition_"]["id"];
 	
 	const name = result["properties"]["Name"]["title"][0]["plain_text"];
