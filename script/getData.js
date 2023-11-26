@@ -5,7 +5,7 @@ const fs = require('fs');
 const {getDatabase, getPage} = require('./notion');
 const {getPlans} = require('./notion/plan');
 const {getDetailedPlansFromPlans} = require('./notion/detailedPlan')
-const {getCodingPracticeAggregation} = require("./notion/codingPractice");
+const {getCodingPracticeAggregation, getAggregationByCategories} = require("./notion/codingPractice");
 
 
 require('dotenv').config();
@@ -62,7 +62,7 @@ const fetchCodingPractice = ()=>{
 	}finally {
 		fs.mkdirSync(codingPracticeDirPath ,(err)=>{console.log(err)});
 	}
-	getCodingPracticeAggregation(notion, langauges, codingPracticeDirPath);
+	getCodingPracticeAggregation(notion, langauges, codingPracticeDirPath, process.env.notion_integration_secret);
 	writeMetaData(codingPracticeDirPath);
 }
 
@@ -84,9 +84,15 @@ const writeMetaData = (dirPath)=>{
 }
 
 
+function test() {
+	// console.log(getAggregationByCategories(notion, langauges, process.env.notion_integration_secret))
+	fetchCodingPractice()
+}
 
 
 // fetchPlans();
 // fetchDetailedPlans();
 // fetchCodingPractice();
+test()
+
 

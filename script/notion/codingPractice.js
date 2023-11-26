@@ -1,9 +1,9 @@
 const {getProperty} = require('./index.js'); 
 const fs = require('fs');
 
-async function getCodingPracticeAggregation(notion, langauges, dirPath){
+async function getCodingPracticeAggregation(notion, langauges, dirPath, secret){
 	let totalProblem = await getTotalProblems(notion, langauges);
-	let aggregationByCategries = await getAggregationByCategories(notion, langauges);
+	let aggregationByCategries = await getAggregationByCategories(notion, langauges, secret);
 	let aggregationByProblemType = await getAggregationByProblemType(notion, langauges);
 
 	fs.writeFile(`${dirPath}/totalProblem.json`, JSON.stringify(totalProblem), (err)=>{console.log(err);});
@@ -47,7 +47,7 @@ async function getTotalProblems(notion, langauges) {
 	return {count, repetition};
 }
 
-async function getAggregationByCategories(notion, langauges){
+async function getAggregationByCategories(notion, langauges, secret){
 
 	let has_more_ = true;
 
@@ -63,23 +63,39 @@ async function getAggregationByCategories(notion, langauges){
 		has_more_ = has_more;
 		results_ = results_.concat(results)
 	}
+	
+	let results = [];
 
-	results_= results_.map((result)=> refineAggregation(result, langauges));
+	for(let i =0; i<results_.length; i++){
+		let result = await refineAggregation(results_[i], langauges, secret);
+		results.push(result);
+	}
 
-	return results_;
+	return results;
 }
 
 
-function refineAggregation(result, langauges){
+async function refineAggregation(result, langauges, secret){
 
-
-	const name = result["properties"]["Name"]["title"][0]["plain_text"]
-	const count = result["properties"]["count"]["formula"]["number"]
-	const repetition = result["properties"]["Repetition"]["rollup"]["number"]
+	const pageId = result["id"];
+	const countID = result["properties"]["count"]["id"];
+	const repetitioniId = result["properties"]["Repetition_"]["id"];
+	
+	const name = result["properties"]["Name"]["title"][0]["plain_text"];
+	const count = await getProperty(pageId, countID, secret)
+							.then(({data})=> data["formula"]["number"]);
+	const repetition = await getProperty(pageId, repetitioniId, secret)
+							.then(({data})=> data["formula"]["number"])
 
 	const r = {name, count, repetition}
+	for(let i=0; i< langauges.length; i++){
+		let langauge = langauges[i];
+		let langaugeId = result["properties"][langauge+"_"]["id"];
+		r[langauge]  = await getProperty(pageId, langaugeId, secret)
+							.then(({data})=> data["formula"]["number"]);
 
-	langauges.forEach((langauge) => r[langauge] = result["properties"][langauge]["rollup"]["number"]);
+	}
+
 
 	return r;
 }
@@ -139,4 +155,7 @@ function aggregateResult(result, countByTypes, langauges){
 	
 }
 
-module.exports = {getCodingPracticeAggregation}
+module.exports = {getCodingPracticeAggregation, getAggregationByCategories}
+
+
+
