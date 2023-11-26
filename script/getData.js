@@ -13,7 +13,6 @@ require('dotenv').config();
 
 const planDirPath = 'public/data/plan';
 const detailedPlanDirPath = 'public/data/detailedPlan'
-const planMetaDataPath = `${planDirPath}/meta.json`
 const codingPracticeDirPath = 'public/data/codingPractice'
 
 const planFilterList = ['categories.json']
@@ -29,9 +28,9 @@ const notion = new Client({
 
 const fetchPlans= ()=>{
 	try{
-		fs.rmdirSync(planDirPath,{recursive : true }, (err)=>{console.log(err)});
+		fs.rmSync(planDirPath,{recursive : true }, (err)=>{console.log(err)});
 	} catch (error) {
-
+		console.log(error)
 	} finally{
 
 		fs.mkdirSync(planDirPath ,(err)=>{console.log(err)});
@@ -44,8 +43,9 @@ const fetchPlans= ()=>{
 
 const fetchDetailedPlans= ()=>{
 	try{
-		fs.rmdirSync(detailedPlanDirPath, {recursive:true}, (err)=>{console.log(err)});
+		fs.rmSync(detailedPlanDirPath, {recursive:true}, (err)=>{console.log(err)});
 	} catch (error) {
+		console.log(error);
 	} finally{
 		fs.mkdirSync(detailedPlanDirPath ,(err)=>{console.log(err)});
 	}
@@ -55,14 +55,15 @@ const fetchDetailedPlans= ()=>{
 	writeMetaData(detailedPlanDirPath);
 }
 
-const fetchCodingPractice = ()=>{
+const fetchCodingPractice = async ()=>{
 	try {
-		fs.rmdirSync(codingPracticeDirPath, {recursive:true}, (err)=>{console.log(err)})
+		fs.rmSync(codingPracticeDirPath, {recursive:true}, (err)=>{console.log(err)})
 	}catch(error){
+		console.log(error);
 	}finally {
 		fs.mkdirSync(codingPracticeDirPath ,(err)=>{console.log(err)});
 	}
-	getCodingPracticeAggregation(notion, langauges, codingPracticeDirPath, process.env.notion_integration_secret);
+	await getCodingPracticeAggregation(notion, langauges, codingPracticeDirPath, process.env.notion_integration_secret);
 	writeMetaData(codingPracticeDirPath);
 }
 
@@ -70,18 +71,17 @@ const writeMetaData = (dirPath)=>{
 	const currentDateString = new Date(Date.now()).toISOString();
 	const metaDataPath = `${dirPath}/meta.json`
 	try {
-		origin = JSON.parse(fs.readFileSync(metaDataPath));
+		let origin = {}
+		if(fs.existsSync(metaDataPath)){
+			origin = JSON.parse(fs.readFileSync(metaDataPath));
+		}
 		origin.updated = currentDateString.slice(0,10)
-		fs.writeFileSync(metaDataPath, JSON.stringify(origin));
+		fs.writeFileSync(metaDataPath, JSON.stringify(origin), {flag :'w'});
 	}catch (error) {
 		console.log(error);
 	}
-	finally{
-		origin = {}
-		origin.updated = currentDateString.slice(0,10)
-		fs.writeFileSync(metaDataPath, JSON.stringify(origin));
-	}
 }
+
 
 
 const fetchRoutine= ()=>{

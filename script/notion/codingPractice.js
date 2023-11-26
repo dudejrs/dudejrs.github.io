@@ -10,6 +10,7 @@ async function getCodingPracticeAggregation(notion, langauges, dirPath, secret){
 	fs.writeFile(`${dirPath}/aggregationByCategries.json`, JSON.stringify(aggregationByCategries), (err)=>{console.log(err);});
 	fs.writeFile(`${dirPath}/aggregationByProblemType.json`, JSON.stringify(aggregationByProblemType), (err)=>{console.log(err);});
 
+	
 }
 
 
