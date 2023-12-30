@@ -1,0 +1,32 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 25mm 1cm 0px 1cm;
+}
+
+.item {
+	padding-bottom: 4mm;
+}
+
+.name {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.introduction {
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+.introductionItem{
+	width: 100%;
+	margin: 0px;
+	overflow: hidden;
+	text-overflow: clip;
+}
+

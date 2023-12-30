@@ -4,6 +4,7 @@ import Info from './info';
 import Main from './main';
 import Programming from './programming';
 import CodingTest from './components/codingTest';
+import Resume from './resume';
 
 function Pages() {
   return (
@@ -17,6 +18,10 @@ function Pages() {
         </Route>
         <Route path="portfolio">
           <Route path="" element={<div> 준비중입니다... </div>}/>        
+          <Route path="*" default element={<div> 준비중입니다.. </div>}/>
+        </Route>
+        <Route path="resume">
+          <Route path="" element={<Resume />}/>        
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="test">

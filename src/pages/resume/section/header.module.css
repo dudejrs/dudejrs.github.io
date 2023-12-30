@@ -1,0 +1,8 @@
+.container {
+	border-bottom: 0.5pt solid rgba(102,102,102,0.4);
+	padding-bottom: 2mm;
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 2mm;
+	padding-left: 2mm;
+}

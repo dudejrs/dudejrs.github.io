@@ -1,0 +1,22 @@
+.container{
+	display: flex;
+	font-size: 15px;
+}
+
+.duration{
+	color: #999999;
+	font-weight: 700;
+	margin-right: 10mm;
+
+}
+
+.careerName{
+	color: #666666;
+	font-weight: 700;
+
+}
+
+.careerLevel{
+	color: #999999;
+
+}
