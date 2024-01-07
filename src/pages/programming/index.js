@@ -18,7 +18,7 @@ export default function Programming(){
 		<div>
 			<LinePlot data={data} width={400} height={400} margin={{top: 20, right : 20, bottom : 20, left : 20 }} />
 			<DonutChart width={400} height={400} data={[1,2,3,4,5]} radius={150} />
-			<PercentageBox width={400} height={400} data={[0,1]}/>
+			<PercentageBox width={400} height={50}  padding={10} data={[10, 20, 30, 40, 50]}/>
 		</div>
 		);
 }

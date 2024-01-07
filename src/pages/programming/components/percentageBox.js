@@ -1,14 +1,45 @@
 
 import * as d3 from "d3";
 
-export default function ({children, data, className, width, height}){
-	
-	// const x = d3.scaleLinear()
-	// 		.domain([d3.min(data), d3.max(data)])
-	// 		.range([0, width])
+
+
+function stackElement(data){
+
+	let ret = []
+	let acc = 0
+
+	for (let d of data) {
+		acc += d
+		ret.push(acc)
+	}
+
+	return ret
+}
+
+export default function ({children, className, data, width, height, padding = 10, color}){
+
+	const x = d3.scaleLinear()
+			.domain([0, d3.sum(data)])
+			.range([padding , width - padding])
+
+	const x_ = d3.scaleLinear()
+				.domain([0,d3.sum(data)])
+				.range([0, width - 2 * padding])
+
+	const y = height - 2*padding
+	const stack = stackElement(data)
+
+	if (!color){
+		color = d3.scaleOrdinal(d3.schemeTableau10)
+	}
 
 	return (
-		<svg className={`${className}`}>
+		<svg className={`${className}`} width={width} height={height}>
+			<g>
+				{
+					stack.map((d,i) => (<rect key={i} x={x(d) - x_(data[i])} y ={padding} height={y} width={x_(data[i])} fill={color(i)}/>))
+				}
+			</g>
 			{children}
 		</svg>
 	);
