@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 
-import Checkbox from '../../components/checkbox';
-import Tag from '../../components/tag';
+import Checkbox from '../../components';
+import {Tag} from '../../components';
 
 import ValueEntry from '../valueEntry';	
 import TitleComponent from './titleComponent'

@@ -1,6 +1,6 @@
 
 import NotionContainer from './notion/notionContainer'
-import Modal from '../../../components/modal'
+import {Modal} from '../../../components'
 
 import styles from './trackDetailView.module.css'
 

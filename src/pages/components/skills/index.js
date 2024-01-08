@@ -8,7 +8,6 @@ import styles from './index.module.css';
 
 export default function Skills({className, skills, colors, levelDescriptions}) {
 
-	console.log(levelDescriptions);
 
 	return (
 			<div id="tech-stack" className={`${className} ${styles.skills_container}`}> 

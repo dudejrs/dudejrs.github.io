@@ -1,4 +1,4 @@
-import Tag from '../../components/tag'
+import {Tag} from '../../components'
 import styles from './index.module.css'
 
 export default function MultiSelect({data}){

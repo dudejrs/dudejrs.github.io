@@ -2,7 +2,7 @@ import {useEffect, useState, useCallback} from 'react';
 
 import PlanTable from './planTable';
 import PlanDetail from './planDetail';
-import SidePeekContainer from '../../../../components/sidePeekContainer';
+import { SidePeekContainer } from '../../../../components';
 
 import styles from './notionContainer.module.css'
 

@@ -1,5 +1,5 @@
 import styles from './index.module.css'
-import Tag from '../../../../components/tag'
+import {Tag} from '../../../../components'
 
 export default function Project({
 	className,

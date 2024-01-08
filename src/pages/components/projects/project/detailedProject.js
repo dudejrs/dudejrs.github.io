@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from 'react'
 import styles from './detailedProject.module.css'
-import Tag from '../../../../components/tag'
+import {Tag} from '../../../../components'
 
 export default function DetailedProject({
 	className,

@@ -1,4 +1,4 @@
-import Tag from '../../components/tag'
+import {Tag} from '../../components'
 
 
 export default function Select({data}){
