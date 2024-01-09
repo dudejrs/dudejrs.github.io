@@ -1,4 +1,4 @@
-import { Checkbox, Modal, SidePeekContainer, Tag } from './ui'
+import { Checkbox, Modal, SidePeekContainer, Tag, Tooltip } from './ui'
 
 
-export { Checkbox, Modal, SidePeekContainer, Tag }
+export { Checkbox, Modal, SidePeekContainer, Tag, Tooltip }

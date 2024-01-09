@@ -1,0 +1,9 @@
+.container {
+	position: absolute;
+}
+
+
+.bubble {
+	fill:#666;
+	stroke-width:0px;
+}
