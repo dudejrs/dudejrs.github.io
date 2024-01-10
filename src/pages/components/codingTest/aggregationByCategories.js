@@ -11,14 +11,16 @@ export default function AggregationByCategories({className, data, programmingLan
 			<div className={`${styles.totalContainer} `}>
 				{
 					data 
-					&& data.map(category => 
+					&& data.map((category,i) => 
 						(<SomeCountAndRepetition className={styles.countContainer} 
+							key={i}
 							data={category}>
 							{
-								programmingLanguages.map(lang=>
+								programmingLanguages.map((lang,i)=>
 									<SomeCount 
 										className={styles.subCountContainer}
 										name={lang} 
+										key={i}
 										count={category[lang]}/>
 									) 
 							}

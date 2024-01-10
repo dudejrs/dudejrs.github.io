@@ -3,7 +3,9 @@ import {useState, useEffect} from 'react'
 
 import { getTotal, 
 getAggreagationByCategories, 
-getAggregationByProblem } from '../../../domain/codingPractice'
+getAggregationByProblem,
+getAggregationByProgrammingLanguages,
+getTotalCountByProgrammingLanguages } from '../../../domain/codingPractice'
 
 import TotalCount from './counts/totalCount';
 import AggregationByCategories from './aggregationByCategories'
@@ -12,11 +14,14 @@ import SomeCount from './counts/someCount'
 
 import styles from './index.module.css'
 
+
 export default function CodingTest(){
 
 
 	const [total, setTotal] = useState({});
 	const [aggregationByCategories, setAggregationByCategories] = useState([])
+	const [aggregationByLanguage, setAggregationByLanguage] = useState([])
+	const [totalCountByLangauges, setTotalCountByLanguages] = useState([])
 	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python']
 
 
@@ -28,6 +33,18 @@ export default function CodingTest(){
 		getAggreagationByCategories().then((t)=>{
 			setAggregationByCategories(t)
 		})
+
+		getAggregationByProgrammingLanguages(programmingLanguages).then(t => {
+			setAggregationByLanguage(t)
+			console.log(t)
+		})
+
+		getTotalCountByProgrammingLanguages(programmingLanguages).then(t => {
+			console.log(t)
+			setTotalCountByLanguages(t)
+		})
+
+
 	}, []);
 
 
@@ -35,6 +52,7 @@ export default function CodingTest(){
 		<div>
 			<TotalCount className={styles.countContainer} total = {total} />
 			<AggregationByCategories data= {aggregationByCategories} programmingLanguages={programmingLanguages} />			
+			{/*<AggreagationBylanguage data={aggregationByCategories} programmingLanguages={programmingLanguages}/>*/}
 		</div>
 		);
 }

@@ -1,6 +1,48 @@
 import axios from 'axios'
 import {codingPracticeDir}from './index'
 
+
+function calculateAggregationByProgrammingLanguagesFrom(data, programmingLanguages){
+	const ret = [];
+	const map = new Map();
+
+	programmingLanguages.forEach((language)=> { 
+		map.set(language, ret.length)
+		ret.push({ language : language});
+	})
+
+	for (let d of data){
+		let name = d['name']
+		for (let language of programmingLanguages){
+			let i = map.get(language)
+			ret[i][name] = d[language]
+		}
+	}
+
+	return ret
+}
+
+
+function refineAggregationByCategoriesToLagnaugesTotalCount(data, programmingLanguages){
+	const ret = [];
+	const map = new Map();
+
+	programmingLanguages.forEach((language)=> { 
+		map.set(language, ret.length)
+		ret.push({ language : language, count : 0});
+	})
+
+	for (let d of data){
+		let name = d['name']
+		for (let language of programmingLanguages){
+			let i = map.get(language)
+			ret[i]['count'] += d[language]
+		}
+	}
+
+	return ret
+}
+
 export async function getTotal() {
 
 	return await axios.get(`${codingPracticeDir}/totalProblem.json`)
@@ -20,6 +62,20 @@ export async function getAggregationByProblem() {
 		.then(({data}) => {
 			return data
 		})	
+}
+
+export async function getAggregationByProgrammingLanguages(programmingLanguages){
+	return await axios.get(`${codingPracticeDir}/aggregationByCategries.json`)
+		.then(({data})=> {
+			return calculateAggregationByProgrammingLanguagesFrom(data, programmingLanguages)
+		})
+}
+
+export async function getTotalCountByProgrammingLanguages(programmingLanguages){
+		return await axios.get(`${codingPracticeDir}/aggregationByCategries.json`)
+		.then(({data})=> {
+			return refineAggregationByCategoriesToLagnaugesTotalCount(data, programmingLanguages)
+		})
 }
 
 export async function getTest(){
