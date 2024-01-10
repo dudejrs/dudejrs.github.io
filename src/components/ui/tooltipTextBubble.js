@@ -88,14 +88,14 @@ function TooltipBottom({width, height, children}){
 	const totalHeight = boxHeight + tailHeight;
 
 	return(
-		<div className={`${styles.container}`} style={{bottom : `-0.8rem`, left : `0.75rem`, transform: `translate(-${width/2}px, 0)`, width : `${width}px`} }>
+		<div className={`${styles.container}`} style={{bottom : 0, left : '0.75rem', transform: `translate(-${width/2}px, ${height}px)`, height : `${height}px`} }>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${totalWidth} ${totalHeight}`} className={`${styles.bubble}`} width={`${width}px`}>
 				<g>
 					<rect y={tailHeight} width={`${totalWidth}`} height={`${boxHeight}`} rx="30"/>
-					<polygon  points={`${totalWidth/2} 0 ${totalWidth/2} 0 81.93 23.72 118.82 23.72 ${totalWidth/2} 0`}/>
+					<polygon  points={`${totalWidth/2} 0 ${totalWidth/2} 0 ${totalWidth/2-tailWidth/2} ${tailHeight} ${totalWidth/2 + tailWidth/2} ${tailHeight} ${totalWidth/2} 0`}/>
 				</g>
 			</svg>
-			<div>
+			<div style={{position : 'absolute',  top : 0, width : `${width}px`, height : `${height * 0.70}px`, padding : '0.5rem', boxSizing : "border-box"}}>
 				{children}
 			</div>
 		</div>
@@ -110,7 +110,9 @@ export default function({width, height, children, position}){
 	const widthpx = width.split('px')[0];
 	const heightpx = height.split('px')[0];
 
-
+	if(widthpx == 0 || heightpx == 0){
+		return (<div></div>)
+	}
 
 
 	if(position == "top"){
