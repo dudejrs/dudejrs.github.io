@@ -5,6 +5,7 @@ import Main from './main';
 import Programming from './programming';
 import CodingTest from './components/codingTest';
 import Resume from './resume';
+import Component from './components'
 
 function Pages() {
   return (
@@ -27,6 +28,7 @@ function Pages() {
         <Route path="test">
           <Route path="programming" element={<Programming />}/>
           <Route path="cote" element={<CodingTest />}/>
+          <Route path="components" element= {<Component />}/>
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="practice">

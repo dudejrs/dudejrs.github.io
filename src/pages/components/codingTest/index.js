@@ -36,14 +36,11 @@ export default function CodingTest(){
 
 		getAggregationByProgrammingLanguages(programmingLanguages).then(t => {
 			setAggregationByLanguage(t)
-			console.log(t)
 		})
 
 		getTotalCountByProgrammingLanguages(programmingLanguages).then(t => {
-			console.log(t)
 			setTotalCountByLanguages(t)
 		})
-
 
 	}, []);
 

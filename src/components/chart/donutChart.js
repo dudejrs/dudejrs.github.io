@@ -2,10 +2,16 @@
 import * as d3 from "d3";
 
 
-export default function({className, children, data, width, height, radius, color}){
+export default function({className, children, data, width, height, radius, colors, colorFunc}){
 	
-	if (!color){
-		color = d3.scaleOrdinal(d3.schemeTableau10)
+	if (!colors && !colorFunc){
+		colorFunc = d3.scaleOrdinal(d3.schemeTableau10)
+	}
+
+	if(colors && !colorFunc){
+		colorFunc = (i)=>{
+			return colors[i]
+		}
 	}
 
 	const arc = d3.arc()
@@ -21,7 +27,7 @@ export default function({className, children, data, width, height, radius, color
 		<svg className={`${className}`} width={width} height={height}>
 			<g transform={`translate(${width/2}, ${height/2})`} >
 				{
-					pie(data).map((d,i) => (<path key={i} fill={color(i)}  d={arc(d)} />))
+					pie(data).map((d,i) => (<path key={i} fill={colorFunc(i)}  d={arc(d)} />))
 				}
 			</g>
 
