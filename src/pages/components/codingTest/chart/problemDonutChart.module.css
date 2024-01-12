@@ -4,6 +4,7 @@
 	padding: 1rem;
 	border: 1px solid #eee;
 	width : 30%;
+	min-width: 400px;
 	justify-content: space-between;
 	align-items: center;
 	box-sizing: border-box;
@@ -15,6 +16,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
+	max-width: 150px;
+	flex-grow: 1;
 }
 
 .title {

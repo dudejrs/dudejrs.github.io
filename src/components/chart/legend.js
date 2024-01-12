@@ -25,9 +25,6 @@ export default function Legend({className, descriptions, colors, rem}){
 		rem = 0.8;
 	}
 
-	console.log(rem)
-
-
 	return (
 		<div className={className}>
 			{
