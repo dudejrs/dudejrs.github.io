@@ -1,0 +1,13 @@
+.itemContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+	min-width: 100px;
+}
+
+.itemLanguage {
+}
+
+.itemCount {
+	color : #aaa;
+}

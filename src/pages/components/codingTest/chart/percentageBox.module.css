@@ -1,0 +1,16 @@
+.container {
+	flex-direction: column;
+}
+
+.legend {
+	width : 80%;
+	justify-content: space-around;
+	flex-direction: row !important;
+	flex-wrap : wrap;
+}
+
+.title {
+	margin : 0;
+	font-size : 0.9rem;
+	text-align: center;
+}

@@ -4,18 +4,9 @@ import {getTotalCountByProgrammingLanguages} from '../../../../domain/codingPrac
 
 import {DonutChart} from '../../../../components/chart';
 import Legend from './legend'
+import Box from './box'
 
-import styles from './problemDonutChart.module.css'
-
-
-function genterateItems(item){
-	return ( 
-		<div className={`${styles.itemContainer}`}>
-			<span className={`${styles.itemLanguage}`}>{item["language"]}</span>
-			<span className= {`${styles.itemCount}`}>{item["count"]}</span>
-		</div>
-		)
-}
+import styles from './donutChart.module.css'
 
 
 export default function ({width, height, radius, data, items, title, rem=0.4, programmingLanguages, colors}) {
@@ -25,12 +16,12 @@ export default function ({width, height, radius, data, items, title, rem=0.4, pr
 	}
 
 	return (
-		<div className={`${styles.container}`}>
+		<Box className={`${styles.container}`}>
 			<DonutChart width={150} height={150} data={data} radius={50} colors={colors}/>
 			<div className={`${styles.subcontainer}`}>
 				<h4 className={`${styles.title }`}> {title} </h4>
 				<Legend items={items} colors={colors} className={styles.legend} rem={0.4} />
 			</div>
-		</div>
+		</Box>
 		);
 }

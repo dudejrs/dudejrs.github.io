@@ -4,7 +4,7 @@ import {getAggregationByProgrammingLanguages} from '../../../../domain/codingPra
 
 import Legend from './legend'
 
-import styles from './problemDonutChart.module.css'
+import styles from './legendItem.module.css'
 import DonutChart from './donutChart'
 
 

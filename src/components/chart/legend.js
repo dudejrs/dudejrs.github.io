@@ -26,7 +26,7 @@ export default function Legend({className, descriptions, colors, rem}){
 	}
 
 	return (
-		<div className={className}>
+		<div className={`${styles.container} ${className}`}>
 			{
 				descriptions && descriptions.map((item, index)=> 
 					<div className={`${styles.item}`} key={index} style={itemStyle(rem)}> 

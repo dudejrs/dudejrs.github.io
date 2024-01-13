@@ -1,5 +1,6 @@
 
 import ProblemDonutChart from './problemDonutChart'
+import ProblemPercentageBox from './problemPercentageBox'
 import LangaugeDonutChart from './languageDonutChart'
 
-export {ProblemDonutChart, LangaugeDonutChart};
+export {ProblemDonutChart, ProblemPercentageBox, LangaugeDonutChart};
