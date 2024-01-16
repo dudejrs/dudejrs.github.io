@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react'
 import * as d3 from "d3";
 
 
-export default function Programming({data, width, height, margin, children, color}){
+export default function ({data, width, height, margin, children, color}){
 
 	if(!color){
 		color = "#565656"

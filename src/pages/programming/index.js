@@ -1,6 +1,3 @@
-
-
-import {DonutChart, LinePlot, PercentageBox} from '../../components/chart'
 import {ProblemDonutChart, LangaugeDonutChart,
 		ProblemPercentageBox} from '../components/codingTest/chart'
 	
