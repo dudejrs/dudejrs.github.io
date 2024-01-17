@@ -1,19 +1,5 @@
 import * as d3 from "d3"
 
-const data_ = [{ 
-		a : 100,
-		b : 200,
-		c : 300,
-		d : 400,
-		e : 500
-	},{ 
-		a : 500,
-		b : 400,
-		c : 300,
-		d : 200,
-		e : 100
-	}];
-
 function getValues(data, keys){
 	let ret = []
 
@@ -83,9 +69,10 @@ function getCoord(data, keys, cx, cy, angles, radiusFunc){
 	});
 }
 
-export default function({width, height, data = data_, 
+export default function({width, height, data, 
 		lower = 0, ntick = 5, margin={top: 0, right:0, left: 0, bottom: 0},
-		colorFunc, colors
+		colorFunc, colors, lineColor = 'black', tickColor = 'black',
+		keyColor = 'black'
 	}){
 
 	const keys = Object.keys(data[0])
@@ -98,13 +85,13 @@ export default function({width, height, data = data_,
 
 	const radiusFunc = d3.scaleLinear()
 						.domain([0, ticks[ticks.length-1]])
-						.range([0, radius * 0.925])
+						.range([0, radius * 0.8])
 	const lineFunc = d3.line()
 						.x(d => d.x)
 						.y(d => d.y)
 
-	const vertexes = getVertexes(width/2, height/2, angles, radius * 0.925);
-	const vertexes_ = getVertexes(width/2, height/2, angles, radius);
+	const vertexes = getVertexes(width/2, height/2, angles, radius * 0.8);
+	const vertexes_ = getVertexes(width/2, height/2, angles, radius * 0.9);
 
 	const coords = data.map(d => getCoord(d, keys, width/2, height/2, angles, radiusFunc))
 
@@ -122,19 +109,19 @@ export default function({width, height, data = data_,
 		<svg width={width} height={height}>
 			<g transform={`translate(${margin.left},${margin.top})`}>
 				{
-					vertexes.map(vertex => (<line x1={width/2} y1={height/2} x2={vertex.x} y2={vertex.y} stroke={'black'} srotkeWidth={'1.5'} opacity={0.3}/>)) 
+					vertexes.map(vertex => (<line x1={width/2} y1={height/2} x2={vertex.x} y2={vertex.y} stroke={lineColor} srotkeWidth={'0.5'} opacity={0.5}/>)) 
 				}
 				{
-					ticks.map(tick => (<circle cx={width/2} cy={height/2} r={radiusFunc(tick)} fill={'None'} stroke={'black'} opacity={0.3} />))
+					ticks.map(tick => (<circle cx={width/2} cy={height/2} r={radiusFunc(tick)} fill={'None'} stroke={lineColor} opacity={0.5} />))
 				}
 				{
-					coords.map((d, i)=> (<path  class={'araPath'} d={lineFunc(d)} strokeWidth={1.5} fill={colorFunc(i)} opacity={0.4}/>))
+					coords.map((d, i)=> (<path  class={'areaPath'} d={lineFunc(d)} strokeWidth={1.5} fill={colorFunc(i)} opacity={0.5}/>))
 				}
 				{
-					ticks.map((tick) => (<text x={width/2 + 5} y={height/2-radiusFunc(tick)} textAnchor={'start'} fill={'black'} fontSize={`0.7em`}> {tick}</text>))
+					ticks.map((tick) => (<text x={width/2 + 5} y={height/2-radiusFunc(tick)} textAnchor={'start'} fill={tickColor} fontSize={`0.7em`}> {tick}</text>))
 				}
 				{
-					vertexes_.map((vertex,i) => (<text x={vertex.x} y={vertex.y} textAnchor={'middle'} fill={'black'}> {keys[i]}</text>) )
+					vertexes_.map((vertex,i) => (<text x={vertex.x} y={vertex.y} textAnchor={'middle'} fill={keyColor}> {keys[i]}</text>) )
 				}
 			</g>
 		</svg>
