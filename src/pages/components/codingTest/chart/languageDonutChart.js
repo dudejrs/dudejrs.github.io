@@ -2,10 +2,9 @@ import {useState, useEffect} from 'react'
 
 import {getAggregationByProgrammingLanguages} from '../../../../domain/codingPractice'
 
-import Legend from './legend'
+import DonutChart from './donutChart'
 
 import styles from './legendItem.module.css'
-import DonutChart from './donutChart'
 
 
 function genterateItems(data){
@@ -52,6 +51,9 @@ export default function ({language, categories, colors}) {
 	},[])
 
 	return (
-		<DonutChart title={<>카테고리 별 <br/> 풀은 문제의 수 ({language})</>} data= {data} items= {items} programmingLanguages={[]} colors={colors}/>
+		<DonutChart title={<>카테고리 별 <br/> 풀은 문제의 수 ({language})</>} 
+					data= {data} items= {items} 
+					programmingLanguages={[]} 
+					colors={colors} />
 		);
 }

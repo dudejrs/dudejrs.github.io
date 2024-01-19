@@ -12,7 +12,7 @@ export default function NavigationLinks({links, onMouseOver, onMouseOut}){
 					Array.isArray(links) && 
 						links.map((item, i)=>
 						(
-							item.visible ? <NavigationLinkItem item = {item} i={i} key={i} onMouseOver={onMouseOver} onMouseOut={onMouseOut}/> : <></>
+							item.visible && <NavigationLinkItem item = {item} i={i} key={i} onMouseOver={onMouseOver} onMouseOut={onMouseOut}/> 
 						)
 					)
 				}

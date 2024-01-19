@@ -11,3 +11,8 @@
 .itemCount {
 	color : #aaa;
 }
+
+.Compact {
+	min-width: 80px;
+	margin-right: 10px;
+}

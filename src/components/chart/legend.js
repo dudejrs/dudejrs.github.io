@@ -30,7 +30,7 @@ export default function Legend({className, descriptions, colors, rem}){
 			{
 				descriptions && descriptions.map((item, index)=> 
 					<div className={`${styles.item}`} key={index} style={itemStyle(rem)}> 
-						<div className={`${styles.picker}`} style={pickerStyle(colors[index], rem)}></div>
+						<div className={`${styles.picker}`} style={pickerStyle(colors[index % colors.length], rem)}></div>
 						{item}
 					</div>
 					)

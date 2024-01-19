@@ -25,25 +25,26 @@ function getUnit(n){
 	return ret;
 }
 
-function calculateTicks(data, ntick, lower){
+function calculateTicks(data, ntick, lower, upper){
 
 	const keys = Object.keys(data[0])
 
-	const max = Math.max(...data.map(d=> Math.max(...getValues(d, keys))));
-	const unit = getUnit(max)
+	if(upper == 0){
+		const max = Math.max(...data.map(d=> Math.max(...getValues(d, keys))));
+		const unit = getUnit(max)
 
-	const upper = unit * Math.ceil(max / unit)
+		upper = unit * Math.ceil(max / unit)
+	}
 	const interval = Math.floor((upper - lower) / (ntick - 1))
 
 
 	let ret = []
-	let cur = lower;
-	while( upper > cur){
+	let cur = lower
+	for(let i=0; i<ntick; i++){	
 		ret.push(cur)
 		cur += interval
 	}
 
-	ret.push(upper)
 
 	return ret;
 }
@@ -57,43 +58,76 @@ function getVertexes(cx, cy, angles, radius){
 	})
 }
 
-function getCoord(data, keys, cx, cy, angles, radiusFunc){
+function getCoord(data, keys, cx, cy, angles, radiusFunc, maxRadius){
 
 	let values = getValues(data, keys);
 
+
 	return values.map( (v,i) => {
+		let r = Math.min(radiusFunc(v), maxRadius);
+
 		return {
-				"x" : cx + radiusFunc(v) * Math.cos(angles[i]),
-				"y" : cy + radiusFunc(v) * Math.sin(angles[i])
+				"x" : cx + r * Math.cos(angles[i]),
+				"y" : cy + r * Math.sin(angles[i])
 		}
 	});
 }
 
-export default function({width, height, data, 
-		lower = 0, ntick = 5, margin={top: 0, right:0, left: 0, bottom: 0},
+function bisect(func, target){
+
+	let mid;
+	let lo = 0, hi =1;
+
+	for(let i=0; i<100; i++){
+		mid = (lo+hi)/2;
+		if (func(mid) > target){
+			hi = mid
+		} else {
+			lo = mid
+		}
+	}
+
+	return hi
+}
+
+export default function({width, height, 
+		data, ticks,
+		lower = 0, upper=0, ntick=5, margin={top: 0, right:0, left: 0, bottom: 0},
 		colorFunc, colors, lineColor = 'black', tickColor = 'black',
+		ratio = 0.8, textRatio = 0.9, 
 		keyColor = 'black'
 	}){
 
 	const keys = Object.keys(data[0])
 	const radius = calculateRadius(width, height, margin);
-	const ticks = calculateTicks(data, ntick, lower)
+	
+	if(!ticks){
+		ticks = calculateTicks(data, ntick, lower, upper)
+	}
 
 
-	const angles = Array.from(Array(5).keys()).map((i) => (Math.PI / 2) + (2 * Math.PI * i / keys.length))
+	const angles = Array.from(Array(keys.length).keys()).map((i) => (Math.PI / 2) + (2 * Math.PI * i / keys.length))
 	
 
-	const radiusFunc = d3.scaleLinear()
-						.domain([0, ticks[ticks.length-1]])
-						.range([0, radius * 0.8])
+	const interpolateFunc = d3.piecewise(ticks)
+	const positionFunc =  v => bisect(interpolateFunc, v)
+	const linear = d3.scaleLinear()
+			.range([0, radius * ratio * 0.9])
+
+	const radiusFunc =  v => {
+		return linear(positionFunc(v));
+		}
+
+
 	const lineFunc = d3.line()
 						.x(d => d.x)
 						.y(d => d.y)
 
-	const vertexes = getVertexes(width/2, height/2, angles, radius * 0.8);
-	const vertexes_ = getVertexes(width/2, height/2, angles, radius * 0.9);
+	const vertexes = getVertexes(width/2, height/2, angles, radius * ratio);
+	const vertexes_ = getVertexes(width/2, height/2, angles, radius * textRatio);
 
-	const coords = data.map(d => getCoord(d, keys, width/2, height/2, angles, radiusFunc))
+	const coords = data.map(d => getCoord(d, keys, width/2, height/2, angles, radiusFunc, radius * ratio))
+
 
 	if (!colors && !colorFunc){
 		colorFunc = d3.scaleOrdinal(d3.schemeTableau10)
@@ -101,27 +135,33 @@ export default function({width, height, data,
 
 	if(colors && !colorFunc){
 		colorFunc = (i)=>{
-			return colors[i]
+			return colors[i % colors.length]
 		}
 	}
+
+	coords[0].push({...coords[0][0]})
+	console.log(coords[0])
 
 	return (
 		<svg width={width} height={height}>
 			<g transform={`translate(${margin.left},${margin.top})`}>
 				{
-					vertexes.map(vertex => (<line x1={width/2} y1={height/2} x2={vertex.x} y2={vertex.y} stroke={lineColor} srotkeWidth={'0.5'} opacity={0.5}/>)) 
+					vertexes.map((vertex,i) => (<line x1={width/2} y1={height/2} x2={vertex.x} y2={vertex.y} stroke={lineColor} strokeWidth={'0.5'} opacity={0.5} key={i} />)) 
 				}
 				{
-					ticks.map(tick => (<circle cx={width/2} cy={height/2} r={radiusFunc(tick)} fill={'None'} stroke={lineColor} opacity={0.5} />))
+					ticks.map((tick, i) => (<circle cx={width/2} cy={height/2} r={radiusFunc(tick)} fill={'None'} stroke={lineColor} opacity={0.5} key={i}/>))
 				}
 				{
-					coords.map((d, i)=> (<path  class={'areaPath'} d={lineFunc(d)} strokeWidth={1.5} fill={colorFunc(i)} opacity={0.5}/>))
+					coords.map((d, i)=> (<path  d={lineFunc(d)} stroke={"None"} fill={colorFunc(i)} opacity={0.5} key={i}/>))
 				}
 				{
-					ticks.map((tick) => (<text x={width/2 + 5} y={height/2-radiusFunc(tick)} textAnchor={'start'} fill={tickColor} fontSize={`0.7em`}> {tick}</text>))
+					coords.map((d, i)=> (<path d={lineFunc(d)} stroke={colorFunc(i)} strokeWidth={1} fill={'None'} opacity={0.8} key={i}/>))
 				}
 				{
-					vertexes_.map((vertex,i) => (<text x={vertex.x} y={vertex.y} textAnchor={'middle'} fill={keyColor}> {keys[i]}</text>) )
+					ticks.map((tick, i ) => (<text x={width/2 + 5} y={height/2-radiusFunc(tick)} textAnchor={'start'} fill={tickColor} fontSize={`0.7em`} key={i}> {tick}</text>))
+				}
+				{
+					vertexes_.map((vertex,i) => (<text x={vertex.x} y={vertex.y} textAnchor={'middle'} fill={keyColor} key={i} fontSize={`0.8em`} fontWeight={'700'}> {keys[i]}</text>) )
 				}
 			</g>
 		</svg>
