@@ -43,6 +43,21 @@ function refineAggregationByCategoriesToLagnaugesTotalCount(data, programmingLan
 	return ret
 }
 
+function refineTotalCountByProgrammingType(data, fields, types){
+	const ret = []
+	const map = new Map();
+
+	for(let type of types){
+		let d = {'name' : type}
+		for(let field of fields){
+			d[field] = data[type][field]
+		}
+		ret.push(d)
+	}
+
+	return ret
+}
+
 export async function getTotal() {
 
 	return await axios.get(`${codingPracticeDir}/totalProblem.json`)
@@ -76,6 +91,13 @@ export async function getTotalCountByProgrammingLanguages(programmingLanguages){
 		.then(({data})=> {
 			return refineAggregationByCategoriesToLagnaugesTotalCount(data, programmingLanguages)
 		})
+}
+
+export async function getFieldsByProgrammingType(fields, types){
+	return await axios.get(`${codingPracticeDir}/aggregationByProblemType.json`)
+			.then(({data})=> {
+				return refineTotalCountByProgrammingType(data, fields, types);
+			});
 }
 
 export async function getTest(){

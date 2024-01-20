@@ -135,7 +135,7 @@ export default function({width, height,
 
 	if(colors && !colorFunc){
 		colorFunc = (i)=>{
-			return colors[i % colors.length]
+			return colors[i % colors.length]	
 		}
 	}
 

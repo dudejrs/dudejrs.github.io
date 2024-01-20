@@ -5,7 +5,8 @@ import { getTotal,
 getAggreagationByCategories, 
 getAggregationByProblem,
 getAggregationByProgrammingLanguages,
-getTotalCountByProgrammingLanguages } from '../../../domain/codingPractice'
+getTotalCountByProgrammingLanguages,
+getFieldsByProgrammingType } from '../../../domain/codingPractice'
 
 import TotalCount from './counts/totalCount';
 import AggregationByCategories from './aggregationByCategories'
@@ -36,12 +37,15 @@ export default function CodingTest(){
 
 		getAggregationByProgrammingLanguages(programmingLanguages).then(t => {
 			setAggregationByLanguage(t)
-			console.log(t)
 		})
 
 		getTotalCountByProgrammingLanguages(programmingLanguages).then(t => {
 			setTotalCountByLanguages(t)
 		})
+
+		getFieldsByProgrammingType(['count'], ['Greedy', 'BFS', 'DFS', '완전탐색']).then( t => {
+			console.log(t)
+		});
 
 	}, []);
 
