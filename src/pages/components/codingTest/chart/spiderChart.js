@@ -11,7 +11,7 @@ export default function({data, title, items,
 					}){
 
 	if(!colors){
-		colors = ["#80bed7"];
+		colors = ["#80bed7", "#EBB171", "#DE71EB", "#ACEB71"];
 	}
 
 	return (
@@ -24,7 +24,7 @@ export default function({data, title, items,
 						ratio={ratio} textRatio={textRatio}
 						lineColor={'#898989'} tickColor={'#888'} keyColor={'#666'}
 			/>
-			{ items && <Legend items={items} colors={colors} className={styles.legend} rem={0.4} />}
+			{ items && <Legend items={items} colors={["#aaa"]} className={styles.legend} rem={0.4} />}
 		</Box>
 		)
 }

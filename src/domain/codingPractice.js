@@ -45,7 +45,6 @@ function refineAggregationByCategoriesToLagnaugesTotalCount(data, programmingLan
 
 function refineTotalCountByProgrammingType(data, fields, types){
 	const ret = []
-	const map = new Map();
 
 	for(let type of types){
 		let d = {'name' : type}
@@ -100,8 +99,13 @@ export async function getFieldsByProgrammingType(fields, types){
 			});
 }
 
+export async function getProblemTypes(){
+	return await axios.get(`${codingPracticeDir}/aggregationByProblemType.json`)
+		.then(({data}) => {
+			return Object.keys(data)
+		});
+}
+
 export async function getTest(){
 	return '12345';
 }
-
-export default {getTest, getTotal, getAggregationByProblem, getAggreagationByCategories}

@@ -140,7 +140,6 @@ export default function({width, height,
 	}
 
 	coords[0].push({...coords[0][0]})
-	console.log(coords[0])
 
 	return (
 		<svg width={width} height={height}>
