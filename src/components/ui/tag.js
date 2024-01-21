@@ -26,9 +26,9 @@ const randomBackground = ()=>{
 	return backgroundClassNames[Math.floor(Math.random() * backgroundClassNames.length)];
 }
 
-export default function Tag({ name, className }) {
+export default function Tag({ name, className, onClick}) {
 	return (
-		<div className={`${styles.tag} ${styles[getColor(name)]} ${className}`}>
+		<div className={`${styles.tag} ${styles[getColor(name)]} ${className ? className : ''}`} onClick={onClick}>
 		{ name }
 		</div>
 	)

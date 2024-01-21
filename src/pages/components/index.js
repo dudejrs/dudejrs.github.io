@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 
-import {Tooltip} from '../../components'
+import {Tooltip, Tag, Dropdown, DropdownTagList} from '../../components'
 import {DonutChart, LinePlot, PercentageBox, SpiderChart} from '../../components/chart'
 
 	
@@ -10,7 +10,12 @@ export default function(){
 		<div>
 		<div>
 			<h3>ui</h3>
+			<Tag name={'tag'} />
 			<Tooltip />
+			<Dropdown width={'100px'} content={'Hello World!'}>
+				Drop down
+			</Dropdown>
+			<DropdownTagList names={['tag1','tag2','tag3']} tags={['tag1']}/>
 		</div>
 		<div>
 			<h3>chart</h3>
