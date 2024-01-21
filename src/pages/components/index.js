@@ -15,7 +15,7 @@ export default function(){
 			<Dropdown width={'100px'} content={'Hello World!'}>
 				Drop down
 			</Dropdown>
-			<DropdownTagList names={['tag1','tag2','tag3']} tags={['tag1']}/>
+			<DropdownTagList width={'100px'} names={['tag1','tag2','tag3']} tags={['tag1']}/>
 		</div>
 		<div>
 			<h3>chart</h3>

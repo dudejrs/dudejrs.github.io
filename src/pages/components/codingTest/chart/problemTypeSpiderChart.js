@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react'
 
+import {DropdownTagList} from '../../../../components';
+
 import {getFieldsByProgrammingType, getProblemTypes} from '../../../../domain/codingPractice'
 
 import SpiderChart from './spiderChart'
@@ -36,20 +38,25 @@ export default function({type='count', types, fields}){
 
 
 	const [data, setData] = useState([{}])
+	const [types_, setTypes] = useState([])
+	const [allTypes, setAllTypes] = useState([])
 
 	useEffect(()=>{
-		getFieldsByProgrammingType(fields, types)
-		.then(d=> {setData(refineData(d, fields))
-		})
-
+		setTypes([...types])
 		getProblemTypes()
-		.then(d=> console.log(d))
+		.then(d=> setAllTypes(d))
 	},[]);
 
 	useEffect(()=>{
-	}, [data])
+		getFieldsByProgrammingType(fields, types_)
+				.then(d=> {setData(refineData(d, fields))
+				})
+	},[types_])
 
 	return (<SpiderChart width={300} height={300} 
 					data={data} title={getTitle(type)}
-					ratio={0.5} textRatio={0.7}  />)
+					ratio={0.5} textRatio={0.7} >
+					{ allTypes.length && <DropdownTagList names={allTypes} tags={types_} callback={setTypes}/> }
+			</SpiderChart>
+			)
 }

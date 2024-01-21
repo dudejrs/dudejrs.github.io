@@ -4,7 +4,7 @@ import Dropdown from './index'
 import TagList from './taglist'
 
 
-export default function({className, names, tags=[] }){
+export default function({className, width, names=[], tags=[], callback}){
 
 	const [tags_, setTags] = useState([])
 	const [names_, setNames]  = useState([])
@@ -24,11 +24,12 @@ export default function({className, names, tags=[] }){
 
 	useEffect(()=>{
 		setNames(names.filter(name => !tags_.includes(name)))
+		callback && callback(tags_)
 	}, [tags_])
 
 
 	return (
-			<Dropdown content={<TagList names={tags_} onTagClick={deSelect}/>}>
+			<Dropdown width={width} content={<TagList names={tags_} onTagClick={deSelect}/>}>
 				<TagList names={names_} onTagClick={select}/>
 			</Dropdown>
 		);

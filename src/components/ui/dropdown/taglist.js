@@ -9,7 +9,7 @@ export default function({ names, defaults=[], onTagClick }){
 	return (
 	<div className={`${styles.container}`}>
 		{ names.map((name, i) => 	
-			<Tag name={name} key={i} onClick={(e)=> {
+			<Tag name={name} key={i} onClick={(e) => {
 				onTagClick && onTagClick(name)}
 			}/>
 		)}	
