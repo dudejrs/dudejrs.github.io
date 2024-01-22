@@ -3,5 +3,6 @@ import LinePlot from './linePlot'
 import PercentageBox from './percentageBox'
 import Legend from './legend'
 import SpiderChart from './spiderChart'
+import AxisBottom from './axisBottom'
 
-export { DonutChart, LinePlot , PercentageBox, Legend, SpiderChart }
+export { DonutChart, LinePlot , PercentageBox, Legend, SpiderChart, AxisBottom }

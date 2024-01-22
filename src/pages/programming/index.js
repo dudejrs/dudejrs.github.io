@@ -1,6 +1,6 @@
 import {ProblemDonutChart, LangaugeDonutChart,
 		ProblemPercentageBox, LangaugeSpiderChart,
-		ProblemTypeSpiderChart} from '../components/codingTest/chart'
+		ProblemTypeSpiderChart, ProblemLineChart} from '../components/codingTest/chart'
 	
 export default function(){
 
@@ -28,6 +28,9 @@ export default function(){
 				<ProblemTypeSpiderChart types={types} fields={['count']}/>
 				<ProblemTypeSpiderChart type='repetition' types={types} fields={['repetition']}/>
 				<ProblemTypeSpiderChart types={types} fields={['C++','Java','Python', 'Javascript']}/>
+			</div>
+			<div>
+				<ProblemLineChart />
 			</div>
 		</div>
 		);
