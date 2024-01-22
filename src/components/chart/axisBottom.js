@@ -14,28 +14,32 @@ function getScale(type, data, margin, width) {
 	}
 }
 
-function getAxis(tickformat, x, data){
-	let ticks
-	switch(tickformat){
-		case 'day' : 
-			ticks = d3.timeDays(data[0], data[data.length-1])
+function getAxis(type, tickformat, x, data){
+	let ticks;
 
-			return d3.axisBottom(x).tickValues(ticks)
-					.tickFormat(x.tickFormat("%A %d"))
-		
-		case 'week' :
-			ticks = d3.timeWeeks(data[0], data[data.length-1])
+	if (type == 'time'){
+		switch(tickformat){
+			case 'day' : 
+				ticks = d3.timeDays(data[0], data[data.length-1])
 
-			return d3.axisBottom(x).tickValues(ticks)
-						.tickFormat(x.tickFormat("%b %d"))
-		case 'month' : 
-			ticks = d3.timeMonths(data[0], data[data.length-1])
-			return d3.axisBottom(x).tickValues(ticks)
-				.tickFormat(x.tickFormat("%b"))
+				return d3.axisBottom(x).tickValues(ticks)
+						.tickFormat(x.tickFormat("%A %d"))
+			
+			case 'week' :
+				ticks = d3.timeWeeks(data[0], data[data.length-1])
 
-		default :
-			return d3.axisBottom(x).ticks(data.length);
+				return d3.axisBottom(x).tickValues(ticks)
+							.tickFormat(x.tickFormat("%b %d"))
+			case 'month' : 
+				ticks = d3.timeMonths(data[0], data[data.length-1])
+				return d3.axisBottom(x).tickValues(ticks)
+					.tickFormat(x.tickFormat("%b"))
+
+			default :
+		}
 	}
+
+	return d3.axisBottom(x).ticks(data.length);
 }
 
 export default function({className, type, color='black', data, width, height, tickformat,
@@ -47,10 +51,10 @@ export default function({className, type, color='black', data, width, height, ti
 	if(hideLine){
 		offset = -height;
 	}
-
+	
 	const gx = useRef();
 	const x = getScale(type, data, margin, width)
-	const axis = getAxis(tickformat, x, data)
+	const axis = getAxis(type, tickformat, x, data)
 					.offset(offset)
 					.tickSizeInner(inner)
 					.tickSizeOuter(outer)
@@ -62,8 +66,8 @@ export default function({className, type, color='black', data, width, height, ti
 	},[])
 
 	return (
-		<svg className={`${styles.container}`} width={width} height={height}>
-			<g ref={gx} />
+		<svg className={`${styles.container} ${className}`} width={width} height={height}>
+			<g ref={gx} className={`${styles.container} ${className}`}/>
 		</svg>
 		);
 }

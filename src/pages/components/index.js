@@ -6,7 +6,7 @@ import {DonutChart, LinePlot, PercentageBox, SpiderChart, AxisBottom} from '../.
 	
 export default function(){
 
-	const testTime = [new Date(2010, 0, 1),new Date(2010, 0, 7) ,new Date(2010, 2, 14)]
+	const testTime = [new Date(2010, 0, 1) ,new Date(2010, 2, 14)]
 
 	return (
 		<div>
