@@ -1,4 +1,4 @@
-import {LinePlot, AxisBottom} from '../../../../components/chart';
+import {LinePlot, AxisBottom, AxisLeft} from '../../../../components/chart';
 import Box from './box'
 
 import styles from './lineChart.module.css'
@@ -30,8 +30,10 @@ export default function({data, axisData, title, width=400, height=220,
 
 	return (
 		<Box width={width+'px'} height={height+'px'} className={`${styles.container} ${className}`}>
+			<h4 className={`${styles.title}`}>{title}</h4>
 			<div className={`${styles.subContainer}`}>
-				<h4 className={`${styles.title}`}>{title}</h4>
+				<AxisLeft data={data} width={axis.left} height={contentHeight} className={`${styles.axisLeft}`} 
+					margin={{top: 20, bottom: 20}} nticks={3} padding={5} hideLine={true}/>
 				<LinePlot data={data} width={contentWidth} height={contentHeight} margin={margin} />
 				{
 					axisData && axisData.length && axis.bottom &&

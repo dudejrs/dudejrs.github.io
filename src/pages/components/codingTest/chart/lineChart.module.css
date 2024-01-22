@@ -1,6 +1,8 @@
 .container {
 	width: 100%;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 .title {
 	margin-top : 0;
@@ -11,6 +13,9 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
-	justify-content: center;
+}
+.axisLeft {
+	position: absolute;
+	left : 0;
+	transform: translate(-100%, 0);
 }

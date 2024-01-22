@@ -8,7 +8,6 @@ import styles from './axis.module.css'
 
 export default function({data, width, height, nticks = 3,
 	margin={top:0, right:0, left:0, bottom:0},
-	color='black',
 	offset=0,padding=0, inner=6, outer=6,
 	className,
 	hideLine=false

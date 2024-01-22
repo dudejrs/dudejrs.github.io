@@ -26,11 +26,9 @@ export default function(){
 			<PercentageBox width={210} height={30}  padding={7.5} data={[10, 20, 30, 40, 50]}/>
 			<SpiderChart width={200} height={200} data={[{a : 1, b : 2, c : 3, d : 4},{a : 2, b : 3, c : 4, d : 1}]}/>
 			<AxisLeft data={[10,20,30,40,50]} width={50} height={200} 
-				margin={{top: 20, right : 0, bottom : 20, left : 0 }}
-				hideLine={true}/>
+				margin={{top: 20, right : 0, bottom : 20, left : 0 }}/>
 			<AxisBottom data={testTime} type={'time'} tickformat={'week'} 
-				width={1000} height={50} margin={{top: 0, right : 20, bottom : 0, left : 20 }} 
-				hideLine={true}/>
+				width={1000} height={50} margin={{top: 0, right : 20, bottom : 0, left : 20 }} />
 		</div>
 		</div>
 		);

@@ -16,13 +16,13 @@ const defaultAxis = {
 }
 
 
-export default function({width=1000, heigth}){
+export default function({width=1000, height}){
 	return (
 			<LineChart data={[1,2,3,4,5,6,7,8,9,10]} 
 						axisData={[new Date(2010, 0, 1),new Date(2010, 0, 7) ,new Date(2010, 2, 14)]}
 						title={'시간별 총 푼 문제 수'}
-						width={1000}
-						axis={{ bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'week'}}
+						width={1000} height={height}
+						axis={{ left:50, bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'week'}}
 			/>
 		)
 }

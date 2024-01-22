@@ -30,7 +30,7 @@ export default function(){
 				<ProblemTypeSpiderChart types={types} fields={['C++','Java','Python', 'Javascript']}/>
 			</div>
 			<div>
-				<ProblemLineChart />
+				<ProblemLineChart height={500} />
 			</div>
 		</div>
 		);

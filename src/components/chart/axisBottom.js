@@ -42,7 +42,7 @@ function getAxis(type, tickformat, x, data){
 	return d3.axisBottom(x).ticks(data.length);
 }
 
-export default function({className, type, color='black', data, width, height, tickformat,
+export default function({className, type, data, width, height, tickformat,
 	margin={top:0, right:0, left:0, bottom:0}, 
 	outer=6, inner=6, padding=10, offset=0,
 	hideLine=false
