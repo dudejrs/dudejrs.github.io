@@ -1,7 +1,7 @@
 import * as d3 from 'd3'
 import {useRef, useEffect} from 'react'
 
-import styles from './axisBottom.module.css'
+import styles from './axis.module.css'
 
 function getScale(type, data, margin, width) {
 	switch(type){
@@ -47,10 +47,6 @@ export default function({className, type, color='black', data, width, height, ti
 	outer=6, inner=6, padding=10, offset=0,
 	hideLine=false
 	}){
-
-	if(hideLine){
-		offset = -height;
-	}
 	
 	const gx = useRef();
 	const x = getScale(type, data, margin, width)
@@ -62,7 +58,13 @@ export default function({className, type, color='black', data, width, height, ti
 
 
 	useEffect(()=>{
-		d3.select(gx.current).call(axis)
+		let group = d3.select(gx.current)
+			.call(axis)
+
+		if(hideLine){
+			group.select(".domain")
+				.attr("stroke-width",0)
+		}
 	},[])
 
 	return (
