@@ -5,11 +5,10 @@ const fs = require('fs');
 const {getDatabase, getPage} = require('./notion');
 const {getPlans} = require('./notion/plan');
 const {getDetailedPlansFromPlans} = require('./notion/detailedPlan')
-const {getCodingPracticeAggregation, getAggregationByCategories} = require("./notion/codingPractice");
-
+const {getCodingPracticeAggregation, getAggregationByCategories, logging} = require("./notion/codingPractice");
+const {cleanDirExcept, writeMetaData} = require('./util')
 
 require('dotenv').config();
-
 
 const planDirPath = 'public/data/plan';
 const detailedPlanDirPath = 'public/data/detailedPlan'
@@ -19,7 +18,7 @@ const planFilterList = ['categories.json']
 
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
 
-const langauges = ["Python","Javascript","C++","Java"]
+const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin"]
 
 const notion = new Client({
 	auth : process.env.notion_integration_secret
@@ -28,27 +27,21 @@ const notion = new Client({
 
 const fetchPlans= ()=>{
 	try{
-		fs.rmSync(planDirPath,{recursive : true }, (err)=>{console.log(err)});
+		cleanDirExcept(planDirPath, ['meta.json'])	
 	} catch (error) {
 		console.log(error)
-	} finally{
-
-		fs.mkdirSync(planDirPath ,(err)=>{console.log(err)});
-	}
+	} 
 
 	getPlans(notion, tags, planDirPath, process.env.notion_integration_secret);
 	writeMetaData(planDirPath);
 }
 
-
 const fetchDetailedPlans= ()=>{
 	try{
-		fs.rmSync(detailedPlanDirPath, {recursive:true}, (err)=>{console.log(err)});
+		cleanDirExcept(detailedPlanDirPath, ['meta.json'])
 	} catch (error) {
 		console.log(error);
-	} finally{
-		fs.mkdirSync(detailedPlanDirPath ,(err)=>{console.log(err)});
-	}
+	} 
 
 
 	getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, planFilterList, process.env.notion_integration_secret);
@@ -57,39 +50,20 @@ const fetchDetailedPlans= ()=>{
 
 const fetchCodingPractice = async ()=>{
 	try {
-		fs.rmSync(codingPracticeDirPath, {recursive:true}, (err)=>{console.log(err)})
+		cleanDirExcept(codingPracticeDirPath,['meta.json'])
 	}catch(error){
 		console.log(error);
-	}finally {
-		fs.mkdirSync(codingPracticeDirPath ,(err)=>{console.log(err)});
 	}
 	await getCodingPracticeAggregation(notion, langauges, codingPracticeDirPath, process.env.notion_integration_secret);
 	writeMetaData(codingPracticeDirPath);
 }
 
-const writeMetaData = (dirPath)=>{
-	const currentDateString = new Date(Date.now()).toISOString();
-	const metaDataPath = `${dirPath}/meta.json`
-	try {
-		let origin = {}
-		if(fs.existsSync(metaDataPath)){
-			origin = JSON.parse(fs.readFileSync(metaDataPath));
-		}
-		origin.updated = currentDateString.slice(0,10)
-		fs.writeFileSync(metaDataPath, JSON.stringify(origin), {flag :'w'});
-	}catch (error) {
-		console.log(error);
-	}
-}
-
-
-
-const fetchRoutine= ()=>{
+const fetchRoutine=  ()=>{
 
 	switch(process.argv[2]){
 		case "plan":
 			fetchPlans();
-			fetchDetailedPlans();
+			// fetchDetailedPlans();
 			break;
 		case "detailedPlan" :
 			fetchDetailedPlans();
@@ -101,6 +75,8 @@ const fetchRoutine= ()=>{
 			fetchPlans();
 			fetchDetailedPlans();
 			fetchCodingPractice();
+			break;
+		case "test" :
 			break;
 		default :
 			break;

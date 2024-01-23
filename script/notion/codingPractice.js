@@ -10,10 +10,7 @@ async function getCodingPracticeAggregation(notion, langauges, dirPath, secret){
 	fs.writeFile(`${dirPath}/aggregationByCategries.json`, JSON.stringify(aggregationByCategries), (err)=>{console.log(err);});
 	fs.writeFile(`${dirPath}/aggregationByProblemType.json`, JSON.stringify(aggregationByProblemType), (err)=>{console.log(err);});
 
-
 }
-
-
 
 async function getTotalProblems(notion, langauges) {
 
@@ -98,7 +95,6 @@ async function refineAggregation(result, langauges, secret){
 
 	}
 
-
 	return r;
 }
 
@@ -156,8 +152,14 @@ function aggregateResult(result, countByTypes, langauges){
 	});
 	
 }
+function logging(dirPath){
 
-module.exports = {getCodingPracticeAggregation, getAggregationByCategories}
+	console.log("Hello World")
+
+	return;
+}
+
+module.exports = {getCodingPracticeAggregation, getAggregationByCategories, logging}
 
 
 
