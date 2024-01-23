@@ -25,3 +25,9 @@ yarn-error.log*
 
 ## secret
 .env
+
+
+
+############## custom ############
+public/data_
+public/data/test/

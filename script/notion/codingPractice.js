@@ -6,10 +6,15 @@ async function getCodingPracticeAggregation(notion, langauges, dirPath, secret){
 	let aggregationByCategries = await getAggregationByCategories(notion, langauges, secret);
 	let aggregationByProblemType = await getAggregationByProblemType(notion, langauges);
 
-	fs.writeFile(`${dirPath}/totalProblem.json`, JSON.stringify(totalProblem), (err)=>{console.log(err);});
-	fs.writeFile(`${dirPath}/aggregationByCategries.json`, JSON.stringify(aggregationByCategries), (err)=>{console.log(err);});
-	fs.writeFile(`${dirPath}/aggregationByProblemType.json`, JSON.stringify(aggregationByProblemType), (err)=>{console.log(err);});
+	fs.writeFileSync(`${dirPath}/totalProblem.json`, JSON.stringify(totalProblem), (err)=>{console.log(err);});
+	console.log(`[write] ${dirPath}/totalProblem.json`)
+	fs.writeFileSync(`${dirPath}/aggregationByCategries.json`, JSON.stringify(aggregationByCategries), (err)=>{console.log(err);});
+	console.log(`[write] ${dirPath}/aggregationByCategries.json`)
+	fs.writeFileSync(`${dirPath}/aggregationByProblemType.json`, JSON.stringify(aggregationByProblemType), (err)=>{console.log(err);});
+	console.log(`[write] ${dirPath}/aggregationByProblemType.json`)
 
+	logging(dirPath, langauges)
+	console.log(`[write] ${dirPath}/log.json`)
 }
 
 async function getTotalProblems(notion, langauges) {
@@ -152,14 +157,51 @@ function aggregateResult(result, countByTypes, langauges){
 	});
 	
 }
-function logging(dirPath){
+function logging(dirPath, langauges){
+	let date = new Date(Date.now()).toISOString().slice(0,10)
+	
+	let origin = {}
+	
+	if(fs.existsSync(`${dirPath}/log.json`)){
+		origin = origin= JSON.parse(fs.readFileSync(`${dirPath}/log.json`)) 
+	}
 
-	console.log("Hello World")
+	origin[date] = {}
+	
+	if (fs.existsSync(`${dirPath}/totalProblem.json`)){
+		let totalProblem = JSON.parse(fs.readFileSync(`${dirPath}/totalProblem.json`))
+		
+		for(let key of Object.keys(totalProblem)){
+			origin[date][key] = totalProblem[key]
+		}
+	}
+
+	if(fs.existsSync(`${dirPath}/aggregationByCategries.json`)){
+		let aggregationByCategries = JSON.parse(fs.readFileSync(`${dirPath}/aggregationByCategries.json`))
+
+		let aggregation = {}
+
+		for (let lang of langauges){
+			aggregation[lang] = 0;
+		}
+
+		for(let key of Object.keys(aggregationByCategries)){
+			for(let lang of langauges){
+				aggregation[lang] += aggregationByCategries[key][lang]
+			}
+		}
+
+		for(let lang of langauges){
+			origin[date][lang] = aggregation[lang]
+		}
+	}
+
+	fs.writeFile(`${dirPath}/log.json`, JSON.stringify(origin), console.log)
 
 	return;
 }
 
-module.exports = {getCodingPracticeAggregation, getAggregationByCategories, logging}
+module.exports = {getCodingPracticeAggregation, getAggregationByCategories}
 
 
 

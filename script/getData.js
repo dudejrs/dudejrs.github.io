@@ -5,10 +5,14 @@ const fs = require('fs');
 const {getDatabase, getPage} = require('./notion');
 const {getPlans} = require('./notion/plan');
 const {getDetailedPlansFromPlans} = require('./notion/detailedPlan')
-const {getCodingPracticeAggregation, getAggregationByCategories, logging} = require("./notion/codingPractice");
+const {getCodingPracticeAggregation} = require("./notion/codingPractice");
 const {cleanDirExcept, writeMetaData} = require('./util')
 
 require('dotenv').config();
+
+// const planDirPath = 'public/data_/plan';
+// const detailedPlanDirPath = 'public/data_/detailedPlan'
+// const codingPracticeDirPath = 'public/data_/codingPractice'
 
 const planDirPath = 'public/data/plan';
 const detailedPlanDirPath = 'public/data/detailedPlan'
@@ -18,7 +22,8 @@ const planFilterList = ['categories.json']
 
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
 
-const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin"]
+const langauges = ["Python","Javascript","C++","Java"]
+// const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin"]
 
 const notion = new Client({
 	auth : process.env.notion_integration_secret
@@ -50,7 +55,7 @@ const fetchDetailedPlans= ()=>{
 
 const fetchCodingPractice = async ()=>{
 	try {
-		cleanDirExcept(codingPracticeDirPath,['meta.json'])
+		cleanDirExcept(codingPracticeDirPath,['meta.json', 'log.json'])
 	}catch(error){
 		console.log(error);
 	}
