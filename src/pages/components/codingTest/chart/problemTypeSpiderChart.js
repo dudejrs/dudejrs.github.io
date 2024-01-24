@@ -51,7 +51,9 @@ export default function({type='count', types, fields}){
 		getFieldsByProgrammingType(fields, types_)
 				.then(d=> {setData(refineData(d, fields))
 				})
-	},[types_])
+
+	},[fields, types_])
+
 
 	return (<SpiderChart width={300} height={300} 
 					data={data} title={getTitle(type)}

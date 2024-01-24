@@ -12,7 +12,10 @@
 }
 
 .title {
-	font-size : 0.9rem;
 	margin : 0 0 0.5rem;
 }
 
+.landscape {
+	flex-direction: column;
+	text-align: center;
+}

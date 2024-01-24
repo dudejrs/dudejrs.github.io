@@ -31,7 +31,7 @@ function refineData(data, categories){
 }
 
 
-export default function ({language, categories, colors}) {
+export default function ({width, height, language, categories, colors, layout='portrait'}) {
 	
 	const [data, setData] = useState([])
 	const [items, setItems]  = useState([])
@@ -48,12 +48,15 @@ export default function ({language, categories, colors}) {
 				setData(data.map(d => d['count']))
 				setItems(data.map(d => genterateItems(d)))
 			})
-	},[])
+	},[language])
 
 	return (
 		<DonutChart title={<>카테고리 별 <br/> 풀은 문제의 수 ({language})</>} 
+					width={width} height={height}
 					data= {data} items= {items} 
 					programmingLanguages={[]} 
-					colors={colors} />
+					colors={colors} 
+					layout={layout}
+					/>
 		);
 }

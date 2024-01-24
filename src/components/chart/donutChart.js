@@ -2,7 +2,7 @@
 import * as d3 from "d3";
 
 
-export default function({className, children, data, width, height, radius, colors, colorFunc}){
+export default function({className, children, data, width, height, radius, colors, colorFunc, ratio= 0.67}){
 	
 	if (!colors && !colorFunc){
 		colorFunc = d3.scaleOrdinal(d3.schemeTableau10)
@@ -15,7 +15,7 @@ export default function({className, children, data, width, height, radius, color
 	}
 
 	const arc = d3.arc()
-				.innerRadius(radius * 0.67)
+				.innerRadius(radius * ratio)
 				.outerRadius(radius);
 
 	const pie = d3.pie()
