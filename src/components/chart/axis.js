@@ -29,6 +29,7 @@ export function getAxis(type, tickformat, x, data){
 							.tickFormat(x.tickFormat("%b %d"))
 			case 'month' : 
 				ticks = d3.timeMonths(data[0], data[data.length-1])
+
 				return d3.axisBottom(x).tickValues(ticks)
 					.tickFormat(x.tickFormat("%b"))
 

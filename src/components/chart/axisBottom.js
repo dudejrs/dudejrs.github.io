@@ -9,6 +9,7 @@ import styles from './axis.module.css'
 export default function({className, type, data, width, height, tickformat,
 	margin={top:0, right:0, left:0, bottom:0}, 
 	outer=6, inner=6, padding=10, offset=0,
+	color='black',
 	hideLine=false
 	}){
 	
@@ -32,7 +33,7 @@ export default function({className, type, data, width, height, tickformat,
 	},[])
 
 	return (
-		<svg className={`${styles.container} ${className}`} width={width} height={height}>
+		<svg className={`${styles.container} ${className}`} width={width} height={height} color={color}>
 			<g ref={gx} className={`${styles.container} ${className}`}/>
 		</svg>
 		);

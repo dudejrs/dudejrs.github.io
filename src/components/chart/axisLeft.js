@@ -10,6 +10,7 @@ export default function({data, width, height, nticks = 3,
 	margin={top:0, right:0, left:0, bottom:0},
 	offset=0,padding=0, inner=6, outer=6,
 	className,
+	color='black',
 	hideLine=false
 	}){
 
@@ -39,7 +40,7 @@ export default function({data, width, height, nticks = 3,
 
 	
 	return (
-		<svg width={width} height={height} className={`${styles.container} ${className ? className : ''}`}>
+		<svg width={width} height={height} className={`${styles.container} ${className ? className : ''}`} color={color}>
 			<g ref={gy} className={`${styles.container}`} transform={`translate(${width}, 0)`} />
 		</svg>
 	)

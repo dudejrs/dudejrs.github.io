@@ -16,7 +16,9 @@ function getX(type, axis, data, margin, width){
 	return d3.scaleLinear([0, data.length-1], [margin.left, width-margin.right]);
 }
 
-export default function ({data, type, axis, width, height, margin, children, color}){
+export default function ({data, type, axis, width, height, margin, children, color,
+		pointRadius = 2.5
+	}){
 
 	if(!color){
 		color = "#565656"
@@ -35,7 +37,7 @@ export default function ({data, type, axis, width, height, margin, children, col
 		<svg width={width} height={height}>
 			<path fill="none" stroke={color} stroke-width="1.5" d={line(data)} />
 			<g fill={color} stroke= {color} stroke-width="1.5">
-				{data.map((d,i) => (<circle key={i} cx={x(axis[i])} cy={y(d)} r="2.5"/>))}
+				{data.map((d,i) => (<circle key={i} cx={x(axis[i])} cy={y(d)} r={pointRadius}/>))}
 			</g>
 			{children}
 		</svg>

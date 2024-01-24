@@ -52,7 +52,7 @@ export default function({width=1000, keyword='count', height}){
 						type={'time'}
 						title={getTitle(keyword)}
 						width={1000} height={height}
-						nticks={3}
+						nticks={4}
 						axis={{ left:50, bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'month'}}
 			/>
 		)
