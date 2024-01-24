@@ -57,6 +57,61 @@ function refineTotalCountByProgrammingType(data, fields, types){
 	return ret
 }
 
+function refineLog(data, date, nDays){
+
+	let ret = []
+	let to;
+
+	if(!(date instanceof(Date))){
+		to = new Date(date)
+	} else {
+		to = date
+	}
+
+	let from = new Date(to)
+	from.setTime(from.getTime() - nDays * 24 * 60 * 60 * 1000)
+	to.setTime(to.getTime() + 24 * 60 * 60 * 1000)
+
+	let oldest = new Date(from)
+	let lastest = new Date(to)
+
+	for(let key of Object.keys(data)){
+		let time = new Date(key).getTime()
+
+		if( time <= from.getTime() && time < oldest.getTime() ){
+			oldest = new Date(key)
+		}
+
+		if ( time <= to.getTime()  && lastest.getTime() < time){
+			lastest = new Date(key)
+		}
+
+		if (from.getTime() <= time  && time <= to.getTime() ){
+			ret.push({ date : key , ...data[key]})
+		}
+	}
+
+
+	if(oldest.getTime() < from.getTime()){
+		oldest  = oldest.toISOString().slice(0,10)
+		ret.push({ date : from.toISOString().slice(0,10), ...data[oldest]})
+	}
+
+	if(to.getTime() < lastest.getTime()){
+		lastest = lastest.toISOString().slice(0,10)
+		ret.push({ date : to.toISOString().slice(0,10), ...data[lastest]})
+	}
+
+	ret.sort((d1, d2)=>{
+		if (d1.date < d2.date){
+			return -1;
+		}
+		return d1.date > d2.date ? 1 : 0
+	})
+
+	return ret
+}
+
 export async function getTotal() {
 
 	return await axios.get(`${codingPracticeDir}/totalProblem.json`)
@@ -103,6 +158,13 @@ export async function getProblemTypes(){
 	return await axios.get(`${codingPracticeDir}/aggregationByProblemType.json`)
 		.then(({data}) => {
 			return Object.keys(data)
+		});
+}
+
+export async function getLog(date, nDays){
+	return await axios.get(`${codingPracticeDir}/log.json`)
+		.then(({data})=>{
+			return refineLog(data, date, nDays)
 		});
 }
 

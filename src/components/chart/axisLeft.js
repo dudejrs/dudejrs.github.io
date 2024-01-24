@@ -13,7 +13,6 @@ export default function({data, width, height, nticks = 3,
 	hideLine=false
 	}){
 
-
 	const gy = useRef();
 
 	const y = d3.scaleLinear()
@@ -31,15 +30,20 @@ export default function({data, width, height, nticks = 3,
 	useEffect(()=>{
 		let group = d3.select(gy.current)
 			.call(axis)
+
+		console.log(group)
+		if(group.empty()){
+		}
+
 		if(hideLine){
 			group.select(".domain")
 				.attr("stroke-width",0)
 		}
-	},[])
+	},[data])
 
 	
 	return (
-		<svg width={width} height={height} className={`${className ? className : ''} ${styles.container}`}>
+		<svg width={width} height={height} className={`${styles.container} ${className ? className : ''}`}>
 			<g ref={gy} className={`${styles.container}`} transform={`translate(${width}, 0)`} />
 		</svg>
 	)

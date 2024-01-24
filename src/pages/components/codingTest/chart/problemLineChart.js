@@ -1,4 +1,8 @@
 
+import {useState, useEffect} from 'react'
+
+import {getLog} from '../../../../domain/codingPractice'
+
 import LineChart from './lineChart'
 
 
@@ -17,12 +21,26 @@ const defaultAxis = {
 
 
 export default function({width=1000, height}){
+
+	const [data, setData] =  useState([0,10])
+	const [axis, setAxis] = useState([])
+
+	useEffect(()=>{
+		getLog(Date.now(),365)
+			.then(t => {
+				setData(t.map(d => d['count']))
+				setAxis(t.map(d => new Date(d['date'])))
+			})
+	},[])
+
 	return (
-			<LineChart data={[1,2,3,4,5,6,7,8,9,10]} 
-						axisData={[new Date(2010, 0, 1),new Date(2010, 0, 7) ,new Date(2010, 2, 14)]}
+			<LineChart data={data} 
+						axisData={axis}
+						type={'time'}
 						title={'시간별 총 푼 문제 수'}
 						width={1000} height={height}
-						axis={{ left:50, bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'week'}}
+						nticks={3}
+						axis={{ left:50, bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'month'}}
 			/>
 		)
 }

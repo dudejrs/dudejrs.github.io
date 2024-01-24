@@ -19,8 +19,9 @@ const defaultAxis = {
 }
 
 
-export default function({data, axisData, title, width=400, height=220, 
+export default function({data, type, axisData, title, width=400, height=220, 
 		axis=defaultAxis, margin=defaultMargin, 
+		nticks,
 		ratio=[0.8, 0.5], className 
 	}){
 
@@ -33,8 +34,8 @@ export default function({data, axisData, title, width=400, height=220,
 			<h4 className={`${styles.title}`}>{title}</h4>
 			<div className={`${styles.subContainer}`}>
 				<AxisLeft data={data} width={axis.left} height={contentHeight} className={`${styles.axisLeft}`} 
-					margin={{top: 20, bottom: 20}} nticks={3} padding={5} hideLine={true}/>
-				<LinePlot data={data} width={contentWidth} height={contentHeight} margin={margin} />
+					margin={{top: 20, bottom: 20}} nticks={nticks} padding={5} hideLine={true}/>
+				<LinePlot data={data} type={type} axis={axisData} width={contentWidth} height={contentHeight} margin={margin} />
 				{
 					axisData && axisData.length && axis.bottom &&
 					<AxisBottom data={axisData} type={axis.type} tickformat={axis.tickformat} 
