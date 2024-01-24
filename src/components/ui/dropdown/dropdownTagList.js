@@ -29,7 +29,7 @@ export default function({className, width, names=[], tags=[], callback}){
 
 
 	return (
-			<Dropdown width={width} content={<TagList names={tags_} onTagClick={deSelect}/>}>
+			<Dropdown className={className} width={width} content={<TagList names={tags_} onTagClick={deSelect}/>}>
 				<TagList names={names_} onTagClick={select}/>
 			</Dropdown>
 		);

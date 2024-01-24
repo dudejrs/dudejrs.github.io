@@ -12,13 +12,11 @@
 	margin-left: 5rem;
 	transform: translateX(-2.5rem);
 
-	font-size: 0.8rem;
 }
 
 .item {
-	font-size: 0.8rem;
 	min-width: 3rem;
-	padding: 0.5rem;
+	padding: 0.5em;
 	border-radius: 0.5rem;
 	background-color: rgba(200,200,200,1);
 	text-align: center;
@@ -38,6 +36,5 @@
 
 	padding: 0.5rem;
 	font-weight: bold;
-	font-size: 0.8rem;
 	color : #777;
 }

@@ -39,7 +39,7 @@
 
 .description {
 	max-height: 2rem;
-	font-size : 0.8rem;
+	font-size : 0.8em;
 	transform: translateY(-30%);
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -52,14 +52,15 @@
 	flex-grow: 1;
 }
 .tags > * {
-	margin : 0.2rem;
+	margin : 0.2em;
+	font-size: 0.8em;
 }
 
 .term {
 	transform: translateY(-50%);
 	color : #888;
 	font-weight: bold;
-	font-size: 0.6rem;
+	font-size: 0.8em;
 	flex-grow: 1;
 	margin-bottom: 0.2rem;
 }

@@ -2,10 +2,12 @@
 .content {
 	display: flex;
 	flex-direction: column;
+	font-size: 0.9rem;
 }
 
 .section {
 	min-height: 50vh;
 	border : solid #eeeeee 3px;
 	margin-bottom: 5rem;
+	font-size: 0.9rem;
 }

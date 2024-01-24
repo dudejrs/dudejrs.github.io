@@ -23,8 +23,8 @@ export default function Loadmap({className, trackListMap, trackLists, updateDate
 
 	
 	return (
-			<div id="load-map" className={`${className} ${styles.section}`}>  
-				<h4>Loadmap</h4>
+			<div id="load-map" className={`${styles.section} ${className} `}>  
+				<h4 className={`${styles.title}`}>Loadmap</h4>
 
 				<div className={styles.container}>
 					<TrackNav title={trackList} onClick={setTrackList} trackLists={trackLists} />

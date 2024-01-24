@@ -13,6 +13,12 @@ const navigationList = [
     visible : true
   },
   {
+    name : "Practice",
+    link : "/practice",
+    visible : true
+
+  },
+  {
     name : "Projects",
     link : "/projects",
     sublist : [

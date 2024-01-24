@@ -3,6 +3,7 @@
 	flex-direction: row;
 	justify-content: space-between;	
 	min-width: 100px;
+	font-size: 0.9em;
 }
 
 .itemLanguage {

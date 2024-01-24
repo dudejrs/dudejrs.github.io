@@ -24,7 +24,7 @@ export default function(){
 			</div>
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`} >
 				<ProblemLineChart keyword={'count'} height={300} />
-		</div>
+			</div>
 		</Layout>
 		);
 }

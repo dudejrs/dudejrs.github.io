@@ -15,14 +15,13 @@
 .trackName {
 	color : #eee;
 	font-weight: bold;
-	font-size: 0.8rem;
 	text-align: center;
 }
 .trackName:hover{
 	color: blue;
 }
 .trackImg{
-	width: 5rem;
+	width: 5em;
 }
 
 .track_title{

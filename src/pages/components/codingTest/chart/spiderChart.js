@@ -8,7 +8,7 @@ import Legend from './legend'
 import styles from './spiderChart.module.css'
 
 export default function({data, title, items, children,
-						 width, height, ratio, textRatio,
+						 width=350, height=400, ratio, textRatio,
 						ticks, ntick, lower, upper, colors 
 					}){
 
@@ -17,12 +17,12 @@ export default function({data, title, items, children,
 	}
 
 	return (
-		<Box width={'400px'} height={'440px'} className={`${styles.container}`}>
+		<Box width={`${width}px`} height={`${height}px`} className={`${styles.container}`}>
 			<h4 className={`${styles.title}`}> {title} </h4>
 			{
 				children
 			}
-			<SpiderChart width={width} height={height} 
+			<SpiderChart width={250} height={250} 
 						data={data} 
 						ticks={ticks} ntick={ntick} lower={lower} upper={upper}
 						colors={colors}

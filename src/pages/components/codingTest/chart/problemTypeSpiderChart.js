@@ -6,6 +6,8 @@ import {getFieldsByProgrammingType, getProblemTypes} from '../../../../domain/co
 
 import SpiderChart from './spiderChart'
 
+import styles from './problemTypeSpiderChart.module.css'
+
 function refineData(data, fields){
 	
 	let ret = []
@@ -55,10 +57,10 @@ export default function({type='count', types, fields}){
 	},[fields, types_])
 
 
-	return (<SpiderChart width={300} height={300} 
+	return (<SpiderChart 
 					data={data} title={getTitle(type)}
 					ratio={0.5} textRatio={0.7} >
-					{ allTypes.length && <DropdownTagList names={allTypes} tags={types_} callback={setTypes}/> }
+					{ allTypes.length && <DropdownTagList className={styles.tagList} names={allTypes} tags={types_} callback={setTypes}/> }
 			</SpiderChart>
 			)
 }

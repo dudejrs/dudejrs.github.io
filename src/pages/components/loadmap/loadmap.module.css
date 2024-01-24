@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
+	font-size: 0.8rem;
 	position: relative;
 }
 
@@ -10,7 +10,7 @@
 	display: flex;
 	flex-direction: column;
 
-	max-width: 800px;
+	max-width: 720px;
 	width : 80%;
 	height: 80%;
 	border-radius: 0.5rem;
@@ -23,13 +23,17 @@
 .content {
 	width: max-content;
 	min-width: 100%;
-	min-height: 400px;
+	min-height: 350px;
 
 }
 .footer {
-	color : #838383;
-	font-size: 0.8rem;
-	font-weight: bold;
 	align-self: flex-end;
 	transform: translate(-0.5rem,-0.5rem);
+	color : #838383;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.title {
+	font-size: 1rem;
 }

@@ -11,7 +11,7 @@ export default function Skills({className, skills, colors, levelDescriptions}) {
 
 	return (
 			<div id="tech-stack" className={`${className} ${styles.skills_container}`}> 
-				<h4> Skills </h4>
+				<h4 className={`${styles.title}`}> Skills </h4>
 				
 				<div className={`${styles.container}`}>
 					<ul className={styles.mainStack}>

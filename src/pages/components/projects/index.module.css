@@ -17,7 +17,6 @@
 	overflow: hidden;
 
 	box-shadow: 00px 0px 20px rgba(0,0,0, 0.3);
-
 }
 
 .project_container:hover{
@@ -64,4 +63,5 @@
 	min-height: 350px;
 
 	overflow-x: scroll;
+	font-size: 0.9rem;
 }

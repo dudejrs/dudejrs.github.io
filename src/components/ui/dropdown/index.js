@@ -9,7 +9,7 @@ export default function({width='100%', content, children, className, clicked=fal
 	const [clicked_, setClicked] = useState(false)
 	
 	return (
-		<div className={`${styles.container}`} style={{width : width}} onClick={()=>setClicked(true)}>
+		<div className={`${styles.container} ${className}`} style={{width : width}} onClick={()=>setClicked(true)}>
 			{
 				content
 			}
