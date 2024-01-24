@@ -31,10 +31,6 @@ export default function({data, width, height, nticks = 3,
 		let group = d3.select(gy.current)
 			.call(axis)
 
-		console.log(group)
-		if(group.empty()){
-		}
-
 		if(hideLine){
 			group.select(".domain")
 				.attr("stroke-width",0)

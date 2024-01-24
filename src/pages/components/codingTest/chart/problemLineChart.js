@@ -20,7 +20,20 @@ const defaultAxis = {
 }
 
 
-export default function({width=1000, height}){
+function getTitle(keyword){
+
+	switch(keyword){
+		case 'count' :
+			return `시간별 총 푼 문제 수`;
+		case 'repetition' :
+			return `시간별 총 푼 문제 반복`;
+	}
+
+	return `시간별 총 푼 문제 수 (${keyword})`;
+}
+
+
+export default function({width=1000, keyword='count', height}){
 
 	const [data, setData] =  useState([0,10])
 	const [axis, setAxis] = useState([])
@@ -28,7 +41,7 @@ export default function({width=1000, height}){
 	useEffect(()=>{
 		getLog(Date.now(),365)
 			.then(t => {
-				setData(t.map(d => d['count']))
+				setData(t.map(d => d[keyword]))
 				setAxis(t.map(d => new Date(d['date'])))
 			})
 	},[])
@@ -37,7 +50,7 @@ export default function({width=1000, height}){
 			<LineChart data={data} 
 						axisData={axis}
 						type={'time'}
-						title={'시간별 총 푼 문제 수'}
+						title={getTitle(keyword)}
 						width={1000} height={height}
 						nticks={3}
 						axis={{ left:50, bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'month'}}

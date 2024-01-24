@@ -30,7 +30,10 @@ export default function(){
 				<ProblemTypeSpiderChart types={types} fields={['C++','Java','Python', 'Javascript']}/>
 			</div>
 			<div>
-				<ProblemLineChart height={500} />
+				<ProblemLineChart height={400} />
+				{
+					programmingLanguages.map((lang,i) => <ProblemLineChart key={i} keyword={lang} height={400} />)
+				}
 			</div>
 		</div>
 		);

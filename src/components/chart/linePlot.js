@@ -13,8 +13,6 @@ function getX(type, axis, data, margin, width){
 		}
 	}
 
-	axis =  [...Object(Array(data.length)).keys()]
-
 	return d3.scaleLinear([0, data.length-1], [margin.left, width-margin.right]);
 }
 
@@ -22,6 +20,10 @@ export default function ({data, type, axis, width, height, margin, children, col
 
 	if(!color){
 		color = "#565656"
+	}
+
+	if(!axis){
+		axis = [...Object(Array(data.length)).keys()]
 	}
 
 	const x = getX(type, axis, data, margin, width);

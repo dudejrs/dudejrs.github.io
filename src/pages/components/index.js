@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 
 import {Tooltip, Tag, Dropdown, DropdownTagList} from '../../components'
-import {DonutChart, LinePlot, PercentageBox, SpiderChart, AxisBottom, AxisLeft} from '../../components/chart'
+import {DonutChart, LinePlot, PercentageBox, SpiderChart, AxisBottom, AxisLeft, Grid} from '../../components/chart'
 
 	
 export default function(){
@@ -29,6 +29,7 @@ export default function(){
 				margin={{top: 20, right : 0, bottom : 20, left : 0 }}/>
 			<AxisBottom data={testTime} type={'time'} tickformat={'week'} 
 				width={1000} height={50} margin={{top: 0, right : 20, bottom : 0, left : 20 }} />
+			<Grid data={[1,2,3,4,5]} axisData={[1,2,3,4,5]} color={'#999'} nticks={3} width={200} height={200} margin={{top: 20, right : 20, bottom : 20, left : 20 }}/>
 		</div>
 		</div>
 		);
