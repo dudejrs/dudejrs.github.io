@@ -1,6 +1,6 @@
 import {ProblemDonutChart, LangaugeDonutChart,
 		ProblemPercentageBox, LangaugeSpiderChart,
-		ProblemTypeSpiderChart, ProblemLineChart} from '../components/codingTest/chart'
+		ProblemTypeSpiderChart, ProblemLineChart, CategoryDonutChart} from '../components/codingTest/chart'
 	
 export default function(){
 
@@ -12,6 +12,7 @@ export default function(){
 		<div style={{display : "flex", flexDirection: "column", flexWrap : "wrap"}}>
 			<ProblemDonutChart programmingLanguages={programmingLanguages}/>
 			<div style ={{display:"flex"}}>
+				<CategoryDonutChart languages={programmingLanguages} categories={categories} />
 				{
 					programmingLanguages.map((lang,i) => 
 						(<LangaugeDonutChart language={lang} categories={categories} key={i}/>)

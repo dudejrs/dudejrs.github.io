@@ -1,5 +1,4 @@
-import {ProblemDonutChart, LangaugeDonutChart,
-		ProblemPercentageBox, LangaugeSpiderChart,
+import {ProblemDonutChart, CategoryDonutChart,
 		ProblemTypeSpiderChart, ProblemLineChart} from '../components/codingTest/chart'
 
 
@@ -19,7 +18,7 @@ export default function(){
 		<Layout title={'코딩 연습'}>
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`}>
 				<ProblemDonutChart programmingLanguages={programmingLanguages} layout={'landscape'}/>
-				<LangaugeDonutChart language={lang} categories={categories} height={'440px'} layout={'landscape'}/>
+				<CategoryDonutChart languages={programmingLanguages} categories={categories} height={'440px'} layout={'landscape'}/>
 				<ProblemTypeSpiderChart types={types} fields={['count']}/>
 			</div>
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`} >
