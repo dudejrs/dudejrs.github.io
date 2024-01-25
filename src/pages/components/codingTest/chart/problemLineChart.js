@@ -33,7 +33,7 @@ function getTitle(keyword){
 }
 
 
-export default function({width=1000, keyword='count', height}){
+export default function({width=1000, keyword='count', height, className}){
 
 	const [data, setData] =  useState([0,10])
 	const [axis, setAxis] = useState([])
@@ -54,6 +54,7 @@ export default function({width=1000, keyword='count', height}){
 						width={1000} height={height}
 						nticks={4}
 						axis={{ left:50, bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'month'}}
+						className={className}
 			/>
 		)
 }

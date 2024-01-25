@@ -15,7 +15,7 @@ function genterateItems(item){
 		)
 }
 
-export default function({programmingLanguages}){
+export default function({programmingLanguages, className}){
 
 	const [data, setData] = useState([]);
 	const [items, setItems] = useState([]);
@@ -28,6 +28,6 @@ export default function({programmingLanguages}){
 	},[])
 
 	return (
-		<PercentageBox title={<>프로그래밍 언어 별<br/> 풀은 문제의 수</>} data={data} items={items}/>
+		<PercentageBox title={<>프로그래밍 언어 별<br/> 풀은 문제의 수</>} data={data} items={items} className={className} />
 		);
 }

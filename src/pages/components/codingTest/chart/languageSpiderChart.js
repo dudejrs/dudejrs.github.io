@@ -36,7 +36,7 @@ function genterateItems(data){
 		)
 }
 
-export default function({language, categories, colors}){
+export default function({language, categories, colors, className}){
 
 	const [data, setData] = useState({});
 	const [items, setItems] = useState([]);
@@ -53,6 +53,8 @@ export default function({language, categories, colors}){
 	return (
 		<SpiderChart title={<>카테고리 별 <br/> 풀은 문제의 수 ({language})</>}  
 					data={[data]} items={items} ticks={[0,5,10,50,100]}
-					ratio={0.5} textRatio={0.7} />
+					ratio={0.5} textRatio={0.7} 
+					className={className}
+					/>
 		);
 }

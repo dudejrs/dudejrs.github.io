@@ -18,7 +18,7 @@ function genterateItems(item){
 }
 
 
-export default function ({width, height, layout, programmingLanguages, colors}) {
+export default function ({width, height, layout, programmingLanguages, colors, className}) {
 	
 	const [data, setData] = useState([])
 	const [items, setItems]  = useState([])
@@ -36,6 +36,6 @@ export default function ({width, height, layout, programmingLanguages, colors}) 
 	},[])
 
 	return (
-		<DonutChart layout={layout} title={<>프로그래밍 언어 별<br/> 풀은 문제의 수</>} data= {data} items= {items} programmingLanguages={programmingLanguages} colors={colors}/>
+		<DonutChart layout={layout} title={<>프로그래밍 언어 별<br/> 풀은 문제의 수</>} data= {data} items= {items} programmingLanguages={programmingLanguages} colors={colors} className={className} />
 		);
 }

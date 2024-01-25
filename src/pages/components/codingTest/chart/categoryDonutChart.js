@@ -41,7 +41,7 @@ function refineData(data,categories){
 }
 
 
-export default function ({width, height, languages, categories, colors, layout='portrait'}) {
+export default function ({width, height, languages, className, categories, colors, layout='portrait'}) {
 	
 	const [data, setData] = useState([])
 	const [items, setItems]  = useState([])
@@ -54,7 +54,6 @@ export default function ({width, height, languages, categories, colors, layout='
 		getAggregationByProgrammingLanguages(languages)
 			.then(t => {
 				if(t.length == 0) return;
-				console.log(t)
 				let data = refineData(t, categories)
 				setData(data.map(d => d['count']))
 				setItems(data.map(d => genterateItems(d)))
@@ -68,6 +67,7 @@ export default function ({width, height, languages, categories, colors, layout='
 					programmingLanguages={[]} 
 					colors={colors} 
 					layout={layout}
+					className={className}
 					/>
 		);
 }

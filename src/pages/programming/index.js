@@ -12,17 +12,17 @@ export default function(){
 	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python']
 	const lang = 'C++'
 	const categories = ['디자인패턴','코딩테스트', '리팩토링', '알고리즘']
-	const types = ['Greedy', 'BFS', 'DFS', '완전탐색', '분할정복', '확률', "Back Tracking", "Branch and Bound", "정규표현식", "PriorityQueue", "부분합"]
+	const types = ['Greedy', 'BFS', 'DFS', '완전탐색', '분할정복', '확률', "Back Tracking", "Branch and Bound"]
 
 	return (
 		<Layout title={'코딩 연습'}>
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`}>
-				<ProblemDonutChart programmingLanguages={programmingLanguages} layout={'landscape'}/>
-				<CategoryDonutChart languages={programmingLanguages} categories={categories} height={'440px'} layout={'landscape'}/>
-				<ProblemTypeSpiderChart types={types} fields={['count']}/>
+				<ProblemDonutChart className={`${layoutStyles.item}`} programmingLanguages={programmingLanguages} layout={'landscape'}/>
+				<CategoryDonutChart className={`${layoutStyles.item}`} languages={programmingLanguages} categories={categories} height={'440px'} layout={'landscape'}/>
+				<ProblemTypeSpiderChart className={`${layoutStyles.item}`} types={types} fields={['count']}/>
 			</div>
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`} >
-				<ProblemLineChart keyword={'count'} height={300} />
+				<ProblemLineChart className={`${layoutStyles.item}`} keyword={'count'} height={300} />
 			</div>
 		</Layout>
 		);

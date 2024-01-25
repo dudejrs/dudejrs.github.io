@@ -4,13 +4,17 @@ import Dropdown from './index'
 import TagList from './taglist'
 
 
-export default function({className, width, names=[], tags=[], callback}){
+export default function({className, width, names=[], tags=[], callback, max = 8}){
 
 	const [tags_, setTags] = useState([])
 	const [names_, setNames]  = useState([])
 	const [clicked, setClicked] = useState(false)
 
 	const select = (name)=>{
+		if(tags_.length >= max){
+			alert(`최대 ${max}개 까지 입력이 가능합니다`)
+			return
+		}
 		setTags(tags_.concat(name))
 	}
 

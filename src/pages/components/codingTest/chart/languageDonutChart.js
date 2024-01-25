@@ -31,7 +31,7 @@ function refineData(data, categories){
 }
 
 
-export default function ({width, height, language, categories, colors, layout='portrait'}) {
+export default function ({width, height, language, categories, colors, layout='portrait', className}) {
 	
 	const [data, setData] = useState([])
 	const [items, setItems]  = useState([])
@@ -57,6 +57,7 @@ export default function ({width, height, language, categories, colors, layout='p
 					programmingLanguages={[]} 
 					colors={colors} 
 					layout={layout}
+					className={className}
 					/>
 		);
 }

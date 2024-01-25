@@ -40,14 +40,14 @@ function getLayout(layout){
 	return ''
 }
 
-export default function ({width, height, radius, data, items, title, rem=0.4, programmingLanguages, colors, key, layout = 'portrait'}) {
+export default function ({width, height, radius, data, items, title, rem=0.4, programmingLanguages, colors, key, layout = 'portrait', className}) {
 	
 	if(!colors){
 		colors = ["#d2d2d2","#b3d8e7","#80bed7","#4da4c7"];
 	}
 
 	return (
-		<Box className={`${styles.container} ${getLayout(layout)}`} width={width} height={height+'px'} key={key}>
+		<Box className={`${styles.container} ${getLayout(layout)} ${className}`} width={width} height={height+'px'} key={key}>
 		{
 			layoutChart(layout,(<h4 className={`${styles.title }`}> {title} </h4>)
 				,(<DonutChart width={140} height={140} data={data} radius={70} colors={colors} ratio={0.67}/>) 

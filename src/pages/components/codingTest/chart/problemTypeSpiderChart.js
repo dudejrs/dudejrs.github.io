@@ -36,7 +36,7 @@ function getTitle(type){
 	return (<></>)
 }
 
-export default function({type='count', types, fields}){
+export default function({type='count', types, fields, className}){
 
 
 	const [data, setData] = useState([{}])
@@ -59,7 +59,9 @@ export default function({type='count', types, fields}){
 
 	return (<SpiderChart 
 					data={data} title={getTitle(type)}
-					ratio={0.5} textRatio={0.7} >
+					ratio={0.5} textRatio={0.7} 
+					className={className}
+					>
 					{ allTypes.length && <DropdownTagList className={styles.tagList} names={allTypes} tags={types_} callback={setTypes}/> }
 			</SpiderChart>
 			)

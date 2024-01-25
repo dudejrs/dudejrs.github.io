@@ -37,3 +37,7 @@
 	align-content: center;
 	text-align: center;
 }
+
+.item {
+	box-shadow: 0 0 30px 30px rgba(230,230,230,0.2);
+}

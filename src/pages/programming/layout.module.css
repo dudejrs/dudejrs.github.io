@@ -12,6 +12,7 @@
 	justify-content: center;
 	margin-bottom: 2.5rem;
 	border-bottom: 1px solid #eee;
+	box-shadow: 0 0px 10px 10px rgba(230,230,230,0.1);
 }
 
 .navItem {
@@ -36,4 +37,8 @@
 .subcontainer {
 	margin-bottom: 2.5rem;
 	font-size: 1rem;
+}
+
+.item{
+	box-shadow: 0 0 10px 10px rgba(230,230,230,0.1);
 }

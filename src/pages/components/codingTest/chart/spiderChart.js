@@ -9,7 +9,8 @@ import styles from './spiderChart.module.css'
 
 export default function({data, title, items, children,
 						 width=350, height=400, ratio, textRatio,
-						ticks, ntick, lower, upper, colors 
+						ticks, ntick, lower, upper, colors,
+						className 
 					}){
 
 	if(!colors){
@@ -17,7 +18,7 @@ export default function({data, title, items, children,
 	}
 
 	return (
-		<Box width={`${width}px`} height={`${height}px`} className={`${styles.container}`}>
+		<Box width={`${width}px`} height={`${height}px`} className={`${styles.container} ${className}`}>
 			<h4 className={`${styles.title}`}> {title} </h4>
 			{
 				children
