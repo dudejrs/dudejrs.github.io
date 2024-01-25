@@ -1,8 +1,8 @@
 .picker {
-	width: 0.8rem;
-	height: 0.8rem;
-	border-radius: 0.4rem;
-	margin: 0 0.4rem 0 0.2rem;
+	width: 0.8em;
+	height: 0.8em;
+	border-radius: 0.4em;
+	margin: 0 0.4em 0 0.2em;
 	background-color: red;
 }
 
@@ -11,5 +11,5 @@
 	flex-direction: row;
 	align-items: center;
 	font-weight: bold;
-	margin: 0.4rem 0 ;
+	margin: 0.4em 0 ;
 }

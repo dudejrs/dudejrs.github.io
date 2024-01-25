@@ -1,8 +1,8 @@
 
 import Introduction from './introduction';
 import Experience from './experience';
-import Skills from '../components/skills';
-import Loadmap from '../components/loadmap';
+import Skills from './skills';
+import Study from './study';
 
 import {useEffect, useState} from 'react'
 
@@ -11,7 +11,12 @@ import styles from './index.module.css';
 import {getPlansUpdatedDate} from '../../domain/plans';
 
 const markdown_content = `
-> 안녕하세요. 웹 프로그래머를 희망하여 정진하고있는 개발자 지망생입니다. 
+
+### About Me
+안녕하세요. 웹 프로그래머를 희망하여 정진하고있는 개발자 지망생입니다.   
+실생활에 유용한 웹 서비스를 개발할 수 있는 Java 백엔드 개발자를 목표로 정진하고 있습니다.    
+Java, Javascript, Python 언어에 친숙하고, React.js와 Node.js를 통한 간단한 웹 어플리케이션에 대한 경험이 있습니다.   
+현재 Oracle DBMS 와 Spring 프레임워크에 대하여 학습 중이며, 웹 개발과 인프라 운영 관점에서 전문성 있는 개발자가 되고 싶습니다.   
 `;
 
 
@@ -95,7 +100,7 @@ const trackLists = ["Javascript","Java","DBMS","Backend","DevOps","Data Science"
 
 export default function Info() {
 
-	const [updateDate, setUpdateDate] = useState("201213213")
+	const [updateDate, setUpdateDate] = useState("1995-01-01")
 
 	useEffect(()=>{
 		getPlansUpdatedDate()
@@ -104,10 +109,10 @@ export default function Info() {
 	
 	return (
 		<div className={styles.content}> 
-			<Introduction className={styles.section} markdown_content={markdown_content}/>
+			<Introduction markdown_content={markdown_content}/>
 			<Experience projects={projects}/>
-			<Skills className={styles.section} skills={skills} levelDescriptions={levelDescriptions} colors= {colors}/>
-			<Loadmap className={styles.section} trackLists={trackLists} trackListMap={trackListMap} updateDate={updateDate}/>
+			<Skills skills={skills} levelDescriptions={levelDescriptions} colors= {colors}/>
+			<Study trackLists={trackLists} trackListMap={trackListMap} updateDate={updateDate}/>
 		</div>
 		);
 }

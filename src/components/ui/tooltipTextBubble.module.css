@@ -1,9 +1,12 @@
 .container {
 	position: absolute;
+	color: white;
+	font-weight: 700;
 }
 
 
 .bubble {
-	fill:#666;
-	stroke-width:0px;
+	stroke-width: 0px;
+	fill:rgba(26,115,233,255);
+	filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
 }

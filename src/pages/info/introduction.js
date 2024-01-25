@@ -1,13 +1,15 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import styles from './introduction.module.css'
 
+import Section from './section'
+
+import styles from './introduction.module.css'
 
 export default function Introduction({className, markdown_content}) {
 	
 
 	return (
-			<div id="introduction" className={`${styles.info_container} ${className}`}>
+			<Section className={`${styles.info_container} ${className}`} title={`Introduction`}>
 				<ReactMarkdown children={markdown_content} remarkPlugins={[remarkGfm]} />
 				<div className={styles.contact_container}>
 					<a href="https://dudejrs.tistory.com/" >
@@ -23,6 +25,6 @@ export default function Introduction({className, markdown_content}) {
 						<span>dudejrss@naver.com</span>
 					</a>
 				</div>
-			</div>
+			</Section>
 		);
 }

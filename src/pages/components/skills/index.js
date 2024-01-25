@@ -10,24 +10,18 @@ export default function Skills({className, skills, colors, levelDescriptions}) {
 
 
 	return (
-			<div id="tech-stack" className={`${className} ${styles.skills_container}`}> 
-				<h4 className={`${styles.title}`}> Skills </h4>
-				
-				<div className={`${styles.container}`}>
-					<ul className={styles.mainStack}>
-						{
-							Array.isArray(skills) && skills.map((skill)=> (<MainStackItem key={skill.title} title={skill.title} items={skill.items} levels={skill.levels} colors={colors}/>))
-						}
-
-					</ul>
+			<div className={`${styles.container}`}>
+				<ul className={styles.mainStack}>
 					{
-
-						Array.isArray(levelDescriptions) &&  <Legend className={styles.legend} descriptions={levelDescriptions} colors={colors} />
+						Array.isArray(skills) && skills.map((skill)=> (<MainStackItem key={skill.title} title={skill.title} items={skill.items} levels={skill.levels} colors={colors}/>))
 					}
-					
-				</div>
 
+				</ul>
+				{
 
+					Array.isArray(levelDescriptions) &&  <Legend className={styles.legend} descriptions={levelDescriptions} colors={colors} />
+				}
+				
 			</div>
 		);
 }

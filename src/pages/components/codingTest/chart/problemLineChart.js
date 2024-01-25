@@ -44,7 +44,7 @@ export default function({width=1000, keyword='count', height}){
 				setData(t.map(d => d[keyword]))
 				setAxis(t.map(d => new Date(d['date'])))
 			})
-	},[])
+	},[data, keyword])
 
 	return (
 			<LineChart data={data} 
