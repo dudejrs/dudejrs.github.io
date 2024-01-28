@@ -73,7 +73,7 @@ function refineLog(data, date, nDays){
 	to.setTime(to.getTime() + 24 * 60 * 60 * 1000)
 
 	let oldest = new Date(from)
-	let lastest = new Date(to)
+	let lastest = new Date(from)
 
 	for(let key of Object.keys(data)){
 		let time = new Date(key).getTime()
@@ -82,7 +82,7 @@ function refineLog(data, date, nDays){
 			oldest = new Date(key)
 		}
 
-		if ( time <= to.getTime()  && lastest.getTime() < time){
+		if ( time < to.getTime()  && lastest.getTime() < time){
 			lastest = new Date(key)
 		}
 
@@ -91,16 +91,16 @@ function refineLog(data, date, nDays){
 		}
 	}
 
-
 	if(oldest.getTime() < from.getTime()){
 		oldest  = oldest.toISOString().slice(0,10)
 		ret.push({ date : from.toISOString().slice(0,10), ...data[oldest]})
 	}
 
-	if(to.getTime() < lastest.getTime()){
+	if(lastest.getTime() < to.getTime()){
 		lastest = lastest.toISOString().slice(0,10)
 		ret.push({ date : to.toISOString().slice(0,10), ...data[lastest]})
 	}
+
 
 	ret.sort((d1, d2)=>{
 		if (d1.date < d2.date){

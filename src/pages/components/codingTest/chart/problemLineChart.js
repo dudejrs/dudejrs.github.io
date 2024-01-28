@@ -11,7 +11,7 @@ const defaultMargin = {
 		right : 20,
 		left : 20,
 		bottom : 20
-}
+}	
 
 const defaultAxis = {
 	left : 50,
@@ -41,13 +41,13 @@ export default function({width=1000, keyword='count', height, className}){
 	useEffect(()=>{
 		getLog(Date.now(),365)
 			.then(t => {
-				setData(t.map(d => d[keyword]))
+				setData(t.map(d => d))
 				setAxis(t.map(d => new Date(d['date'])))
 			})
-	},[data, keyword])
+	},[])
 
 	return (
-			<LineChart data={data} 
+			<LineChart data={data.map(d=> d[keyword])} 
 						axisData={axis}
 						type={'time'}
 						title={getTitle(keyword)}
