@@ -9,7 +9,7 @@ import styles from './perLanguage.module.css'
 	
 export default function(){
 
-	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python']
+	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'GO', 'Kotlin']
 	const {i} = useParams()
 
 	if(typeof(i) != Number && i < 0 || i >= programmingLanguages.length){

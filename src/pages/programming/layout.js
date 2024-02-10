@@ -5,7 +5,7 @@ import styles from './layout.module.css'
 
 export default function({title, children}) {
 
-	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python']
+	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'Go', 'Kotlin']
 
 	const className = ({isActive}) => isActive ? `${styles.navItem} ${styles.active}` : `${styles.navItem}`
 

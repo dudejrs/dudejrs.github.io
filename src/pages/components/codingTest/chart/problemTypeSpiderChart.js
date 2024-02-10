@@ -9,14 +9,15 @@ import SpiderChart from './spiderChart'
 import styles from './problemTypeSpiderChart.module.css'
 
 function refineData(data, fields){
-	
+	console.log(data)
 	let ret = []
 
 	for(let field of fields){
 		let r = {}
 		for(let d of  data){
 			let {name, ...other} = d
-			r[name] = other[field]
+			if(other[field])
+				r[name] = other[field]
 		}
 		ret.push(r)
 	}

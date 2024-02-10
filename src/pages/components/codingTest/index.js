@@ -23,7 +23,7 @@ export default function CodingTest(){
 	const [aggregationByCategories, setAggregationByCategories] = useState([])
 	const [aggregationByLanguage, setAggregationByLanguage] = useState([])
 	const [totalCountByLangauges, setTotalCountByLanguages] = useState([])
-	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python']
+	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'Go', 'Kotlin']
 
 
 	useEffect(()=>{

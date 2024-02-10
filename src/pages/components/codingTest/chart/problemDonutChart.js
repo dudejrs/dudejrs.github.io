@@ -30,9 +30,11 @@ export default function ({width, height, layout, programmingLanguages, colors, c
 	useEffect(()=>{
 		getTotalCountByProgrammingLanguages(programmingLanguages)
 			.then(t => {
-				setData(t.map(lang => lang["count"]))
-				setItems(t.map(lang =>  genterateItems(lang)))
-			})
+					t = t.filter( k => k["count"] )
+					setData(t.map(lang => lang["count"]))
+					setItems(t.map(lang =>  genterateItems(lang)))
+				}
+			)
 	},[])
 
 	return (

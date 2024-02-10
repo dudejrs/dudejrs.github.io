@@ -23,8 +23,12 @@ function refineData(data, categories){
 	let filtered = categories.filter(category => data.hasOwnProperty(category))
 
 	for (let category of filtered) {
-		if(data[category] > 0)
+		if(! data[category]){
+			ret.push({category: category, count : 0})
+		}
+		if(data[category] > 0){
 			ret.push({category : category, count : data[category]})		
+		}
 	}
 
 	return ret

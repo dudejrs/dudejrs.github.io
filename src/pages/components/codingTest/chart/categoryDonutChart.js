@@ -29,6 +29,7 @@ function refineData(data,categories){
 
 	for (let d of data){
 		for (let category of categories) {
+			if(!d[category]) continue
 			map[category] += d[category]
 		}
 	}
