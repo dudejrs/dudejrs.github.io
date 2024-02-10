@@ -35,8 +35,7 @@ function calculateTicks(data, ntick, lower, upper){
 
 		upper = unit * Math.ceil(max / unit)
 	}
-	const interval = Math.floor((upper - lower) / (ntick - 1))
-
+	const interval = Math.max(Math.floor((upper - lower) / (ntick - 1)), 1)
 
 	let ret = []
 	let cur = lower
@@ -44,7 +43,6 @@ function calculateTicks(data, ntick, lower, upper){
 		ret.push(cur)
 		cur += interval
 	}
-
 
 	return ret;
 }
@@ -104,7 +102,6 @@ export default function({width, height,
 	if(!ticks){
 		ticks = calculateTicks(data, ntick, lower, upper)
 	}
-
 
 	const angles = Array.from(Array(keys.length).keys()).map((i) => (Math.PI / 2) + (2 * Math.PI * i / keys.length))
 	

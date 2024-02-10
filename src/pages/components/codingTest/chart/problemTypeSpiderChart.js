@@ -9,7 +9,6 @@ import SpiderChart from './spiderChart'
 import styles from './problemTypeSpiderChart.module.css'
 
 function refineData(data, fields){
-	console.log(data)
 	let ret = []
 
 	for(let field of fields){
@@ -18,6 +17,8 @@ function refineData(data, fields){
 			let {name, ...other} = d
 			if(other[field])
 				r[name] = other[field]
+			else 
+				r[name] = 0
 		}
 		ret.push(r)
 	}
