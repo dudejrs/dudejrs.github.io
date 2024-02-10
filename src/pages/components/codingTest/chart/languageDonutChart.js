@@ -40,10 +40,6 @@ export default function ({width, height, language, categories, colors, layout='p
 	const [data, setData] = useState([])
 	const [items, setItems]  = useState([])
 
-	if(!colors){
-		colors = ["#d2d2d2","#b3d8e7","#80bed7","#4da4c7"];
-	}
-
 	useEffect(()=>{
 		getAggregationByProgrammingLanguages([language])
 			.then(t => {

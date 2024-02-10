@@ -2,10 +2,12 @@ import {useState, useEffect} from 'react'
 
 import {getTotalCountByProgrammingLanguages} from '../../../../domain/codingPractice'
 
+import Color from '../../../../components/color'
+
 import Legend from './legend'
+import DonutChart from './donutChart'
 
 import styles from './legendItem.module.css'
-import DonutChart from './donutChart'
 
 
 function genterateItems(item){
@@ -18,14 +20,11 @@ function genterateItems(item){
 }
 
 
-export default function ({width, height, layout, programmingLanguages, colors, className}) {
+export default function ({width, height, layout, programmingLanguages, className}) {
 	
 	const [data, setData] = useState([])
 	const [items, setItems]  = useState([])
-
-	if(!colors){
-		colors = ["#d2d2d2","#b3d8e7","#80bed7","#4da4c7"];
-	}
+	const [colors, setColors] = useState([])
 
 	useEffect(()=>{
 		getTotalCountByProgrammingLanguages(programmingLanguages)
@@ -33,6 +32,7 @@ export default function ({width, height, layout, programmingLanguages, colors, c
 					t = t.filter( k => k["count"] )
 					setData(t.map(lang => lang["count"]))
 					setItems(t.map(lang =>  genterateItems(lang)))
+					setColors(t.map(lang => Color.getColorLightBy(lang["language"])))
 				}
 			)
 	},[])

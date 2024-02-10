@@ -1,3 +1,4 @@
+import Color from '../../../../components/color'
 
 import {SpiderChart} from '../../../../components/chart'
 
@@ -14,7 +15,7 @@ export default function({data, title, items, children,
 					}){
 
 	if(!colors){
-		colors = ["#80bed7", "#EBB171", "#DE71EB", "#ACEB71"];
+		colors = Color.diverseLight()
 	}
 
 	return (

@@ -36,7 +36,7 @@ export default function({data, width, height, nticks = 3,
 			group.select(".domain")
 				.attr("stroke-width",0)
 		}
-		console.log(data)
+
 	},[data])
 
 	

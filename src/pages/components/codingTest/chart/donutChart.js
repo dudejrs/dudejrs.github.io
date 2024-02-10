@@ -6,6 +6,8 @@ import {DonutChart} from '../../../../components/chart';
 import Legend from './legend'
 import Box from './box'
 
+import Color from '../../../../components/color'
+
 import styles from './donutChart.module.css'
 
 
@@ -43,7 +45,9 @@ function getLayout(layout){
 export default function ({width, height, radius, data, items, title, rem=0.4, programmingLanguages, colors, key, layout = 'portrait', className}) {
 	
 	if(!colors){
-		colors = ["#d2d2d2","#b3d8e7","#80bed7","#4da4c7"];
+		if (data){
+			colors = Color.diverseLight(data.length)
+		}
 	}
 
 	return (
