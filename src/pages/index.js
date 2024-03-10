@@ -8,6 +8,7 @@ import ProgrammingPerLanguage from './programming/perLanguage'
 import CodingTest from './components/codingTest';
 import Resume from './resume';
 import Component from './components'
+import PDF from './pdf'
 
 function Pages() {
   return (
@@ -31,6 +32,7 @@ function Pages() {
           <Route path="programming" element={<ProgrammingTest />}/>
           <Route path="cote" element={<CodingTest />}/>
           <Route path="components" element= {<Component />}/>
+          <Route path="pdf" element={<PDF />} />
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="practice">

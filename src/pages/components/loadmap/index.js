@@ -20,7 +20,6 @@ export default function Loadmap({className, trackListMap, trackLists, updateDate
 		setTrack(title);
 		setIsOpend(true);
 	},[track, isOpened]);
-	console.log(trackLists)
 	
 	return (
 			<div className={styles.container}>
