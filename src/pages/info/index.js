@@ -84,7 +84,7 @@ const projects = [
 ];
 
 const trackListMap = {
-	"Javascript" : ["Javascript","Node.js","React.js", "Next.js"],
+	"Javascript" : ["Javascript","Node.js","React.js", "Nest.js"],
 	"Java" : ["Java","Spring Boot", "Spring", "JPA", "Spring WebFlux"],
 	"DBMS" : ["SQL","Oracle","MySQL", "MongoDB", "GraphQL"],
 	"Backend" : ["Basic", "Backend", "Kafka", "Redis"],

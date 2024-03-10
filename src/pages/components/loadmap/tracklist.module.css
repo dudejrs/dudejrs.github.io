@@ -36,4 +36,26 @@
 
 }
 
+.empty_track {
 
+}
+.folder {
+	position: relative;
+}
+.badge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute;
+	top: 0.3rem;
+	right: -0.3rem;
+
+	min-width: 1.2rem;
+	min-height: 1.2rem;
+	border-radius: 0.6rem;
+	text-align: center;
+
+	background-color: rgba(26, 115, 233, 255);
+	color: white;
+}
