@@ -23,7 +23,6 @@
 .trackImg{
 	width: 5em;
 }
-
 .track_title{
 	width: 5rem;
 	border:  #ddd solid 1px;
@@ -35,7 +34,6 @@
 	text-align: center;
 
 }
-
 .empty_track {
 
 }
@@ -56,6 +54,6 @@
 	border-radius: 0.6rem;
 	text-align: center;
 
-	background-color: rgba(26, 115, 233, 255);
+	background-color: rgba(0, 0, 0, 0.35);
 	color: white;
 }
