@@ -1,4 +1,4 @@
 import Printable from './printable'
-import Portrait from './portrait'
+import Page from './page'
 
-export  {Printable, Portrait}
+export  {Printable, Page}

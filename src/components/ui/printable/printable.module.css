@@ -4,6 +4,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: fit-content;
 }
 .container .section {
 	margin-bottom: 10%;
@@ -13,8 +14,16 @@
 /*	transform: scale(1.2);*/
 }
 
-.section {
+.landscape .section{
+	width: 297mm;
+	aspect-ratio: 1.414;
+}
+
+.portrait .section{
 	width: 210mm;
+	aspect-ratio: 1/1.4135;
+}
+
+.section {
 	box-sizing: border-box;
-	aspect-ratio: 1/1.4136;
 }

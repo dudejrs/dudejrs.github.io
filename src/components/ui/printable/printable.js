@@ -1,10 +1,11 @@
-import {useRef, useEffect} from 'react'
+import {useRef, useEffect, Children} from 'react'
 import html2pdf from 'html2pdf.js'
 
-import Portrait from './portrait'
+import Download from './download'
+
 import styles from './printable.module.css'
 
-export default function({className, children}) {
+export default function({className, children, filename='test', layout = 'portrait'}) {
 
 	const target = useRef()
 	const container = useRef()
@@ -12,21 +13,26 @@ export default function({className, children}) {
 	const print = () => {
 		container.current.classList.toggle(`${styles.container}`)
 		var worker = html2pdf()
+		var option = {
+			filename: filename,
+			jsPDF: {orientation: layout}
+		}
 		worker.from(target.current)
-		.from(target.current)
-		.save()
+			.set(option)
+			.from(target.current)
+			.save()
 		container.current.classList.toggle(`${styles.container}`)
 
 	}
 
 	return (
 		<div className={`${styles.container} ${className}`} ref={container}>
-			<div onClick={print}>
-				다운로드 
-			</div>
+			<Download onClick={print}/>
 			<div ref={target}>
 				{
-					children
+					Children.map(children, child => <div className={`${layout == 'landscape' ? styles.landscape : styles.portrait}`}>
+						{child}
+					</div>)
 				}
 			</div>
 		</div>

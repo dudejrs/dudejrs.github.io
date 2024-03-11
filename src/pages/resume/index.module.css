@@ -1,4 +1,8 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
 
-.container{
+.page{
 	padding: 0mm 20mm;
 }
