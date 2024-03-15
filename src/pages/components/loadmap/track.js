@@ -28,7 +28,7 @@ function Component({count, children, onClick, track}) {
 }
 
 
-export default function({count = Math.floor(Math.random() * 3), track, onClick}){
+export default function({count = 0, track, onClick}){
 	
 	return (
 		<li > 

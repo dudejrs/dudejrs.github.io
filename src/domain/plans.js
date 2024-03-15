@@ -31,9 +31,20 @@ async function getPlansFromIds(ids, fields){
 	return result;
 }
 
-
-export  async function getDetailedPlanList(id){
+export async function getDetailedPlanList(id){
 	return  await getPlan(id, ['단위계획'])
+}
+
+export function getCounts(categories) {
+	return axios.get(`${planDir}/categories.json`)
+		.then(({data}) => {
+			return Object.entries(data).filter(category => categories.includes(category[0]))
+				.map(category => [category[0], category[1].length])
+				.reduce((map, obj) => {
+					map.set(obj[0], obj[1])
+					return map;
+				}, new Map)
+			})
 }
 
 export function getPlans(category, fields){

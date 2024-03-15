@@ -84,12 +84,12 @@ const projects = [
 ];
 
 const trackListMap = {
-	"Javascript" : ["Javascript","Node.js","React.js", "Nest.js"],
-	"Java" : ["Java","Spring Boot", "Spring", "JPA", "Spring WebFlux"],
+	"Javascript" : ["Javascript","Typescript", "Node.js","React.js", "Angular.js", "Nest.js"],
+	"Java" : ["Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux"],
 	"DBMS" : ["SQL","Oracle","MySQL", "MongoDB", "GraphQL"],
-	"Backend" : ["Basic", "Backend", "Kafka", "Redis"],
-	"DevOps" : ["Linux", "Docker", "Kubernetices", "AWS"],
-	"Data Science" : ["Python","Tesnorflow","Pytorch", "Data Science", "Scrapping/Crawling"],
+	"Backend" : ["\bC++", "Basic", "Backend", "Kafka", "Redis"],
+	"DevOps" : ["Go", "Linux", "Docker", "Kubernetices", "AWS"],
+	"Data Science" : ["Python","Tensorflow","Pytorch", "Data Science", "Scrapping/Crawling"],
 	"Graphics" :["OpenGL", "WebGL", "Three.js", "D3.js"]
 }
 
