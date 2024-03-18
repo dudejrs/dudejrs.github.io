@@ -61,15 +61,16 @@ async function refinePlan(result, categories, secret){
 		output["완료"] = (result["properties"]["완료"]["checkbox"])? "true" : "false";
 		output["장기/단기"] = result["properties"]["장기/단기"]["multi_select"].map((item)=>item["name"]);
 
+		console.log(result["properties"])
 		output["완료율"] = await getProperty(result["id"], result["properties"]["완료율"]["id"], secret).then(({data})=>{
-			return data["results"][0]["formula"]["string"];
-		});;
+			return data["formula"]["string"];
+		});
 		
 		// output["properties"]["단위계획 수"] = await getProperty(result["id"], result["properties"]["단위계획 수"]["id"], secret);
 
-		output["단위계획"] = (await getProperty(result["id"], result["properties"]["단위계획"]["id"], secret).then(({data})=>{
-			return data["results"];
-		})).map((item) => item["relation"]["id"]);
+		// output["단위계획"] = (await getProperty(result["id"], result["properties"]["단위계획"]["id"], secret).then(({data})=>{
+			// return data["results"];
+		// })).map((item) => item["relation"]["id"]);
 
 		return output;
 }
