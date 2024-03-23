@@ -57,7 +57,7 @@ const projects = [
 			src : "img/experience/wear_os_application.png",
 			description : "WearOS기반 주식 어플리케이션 프로토타입과 웹 서비스 개발 프로젝트입니다.",
 			detailedDescription : "KB증권 공모전에 제출했던 WearOS기반 주식 어플리케이션과 어플리케이션을 위한 서비스 개발 프로젝트입니다. Android WearOS 디자인 가이드라인을 따라 주식 어플리케이션 UI를 설계하고, MVVM패턴에 맞게 어플리케이션을 구현하였습니다. 또한 어플리케이션이 동작하기 위한 실시간 주식 정보 스크래퍼 서버와 주식 api서버를 구현하였습니다.",
-			tags : "Kotlin Node.js Python",
+			tags : "Kotlin Node	.js Python",
 			term : "2021.05 ~ 2021.06",
 			page : "https://github.com/dudejrs/22capstone_wearOS_application"
 		},

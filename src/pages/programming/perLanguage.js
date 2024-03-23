@@ -7,9 +7,8 @@ import Layout from './layout'
 import layoutStyles from './layout.module.css'
 import styles from './perLanguage.module.css'
 	
-export default function(){
+export default function({programmingLanguages}){
 
-	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'Go', 'Kotlin']
 	const {i} = useParams()
 
 	if(typeof(i) != Number && i < 0 || i >= programmingLanguages.length){
@@ -21,7 +20,7 @@ export default function(){
 	const types = ['Greedy', 'BFS', 'DFS', '완전탐색', '분할정복', '확률', "Back Tracking", "Branch and Bound"]
 
 	return (
-		<Layout title={`${lang} 에 관한 코딩 연습`}>
+		<Layout title={`${lang} 에 관한 코딩 연습`} programmingLanguages={programmingLanguages}>
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`}>
 				<LangaugeDonutChart className={`${layoutStyles.item}`} language={lang} categories={categories} height={'440px'} layout={'landscape'}/>
 				<ProblemTypeSpiderChart className={`${layoutStyles.item}`} types={types} fields={[lang]}/>

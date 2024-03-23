@@ -11,6 +11,9 @@ import Component from './components'
 import PDF from './pdf'
 
 function Pages() {
+
+  const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'Go', 'Kotlin', 'Typescript']
+
   return (
       <Routes basename={process.env.PUBLIC_URL}>
         <Route path="" element={<Main />}/>
@@ -36,8 +39,8 @@ function Pages() {
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="practice">
-          <Route path=""  element={<Programming />} />
-          <Route path=":i" element={<ProgrammingPerLanguage />}/>
+          <Route path=""  element={<Programming programmingLanguages={programmingLanguages} />} />
+          <Route path=":i" element={<ProgrammingPerLanguage programmingLanguages={programmingLanguages} />}/>
           <Route path="*" default element={<div>준비중입니다..</div>} />
         </Route>
         <Route path="*" default element={<div> 준비중입니다.. </div>}/>

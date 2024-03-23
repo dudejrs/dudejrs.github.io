@@ -3,9 +3,7 @@ import {NavLink} from 'react-router-dom'
 
 import styles from './layout.module.css'
 
-export default function({title, children}) {
-
-	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'Go', 'Kotlin']
+export default function({programmingLanguages, title, children}) {
 
 	const className = ({isActive}) => isActive ? `${styles.navItem} ${styles.active}` : `${styles.navItem}`
 

@@ -23,7 +23,6 @@ export default class extends Color {
 
 	static getIndex(name, colors){
 		if (!this.map[name]) {
-			console.log(name, this.map[name])
 			this.map[name] = Math.floor(Math.random() * (colors.length))
 		}
 		return this.map[name]

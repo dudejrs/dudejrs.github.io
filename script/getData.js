@@ -22,8 +22,7 @@ const planFilterList = ['categories.json']
 
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
 
-// const langauges = ["Python","Javascript","C++","Java"]
-const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin"]
+const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"]
 
 const notion = new Client({
 	auth : process.env.notion_integration_secret
