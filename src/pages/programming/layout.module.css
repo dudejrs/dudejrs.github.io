@@ -8,6 +8,7 @@
 }
 
 .nav{
+	position: relative;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 2.5rem;
@@ -41,4 +42,22 @@
 
 .item{
 	box-shadow: 0 0 10px 10px rgba(230,230,230,0.1);
+}
+
+.footercontainer {
+	position: absolute;
+	top : 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	color: #bcbcbc;
+	font-weight: 900;
+	width: 100%;
+	transform: translateY(-100%);
+}
+
+.footercontainer > p > * {
+	margin-left: 0.25rem;
 }

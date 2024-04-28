@@ -22,7 +22,6 @@ function calculateAggregationByProgrammingLanguagesFrom(data, programmingLanguag
 	return ret
 }
 
-
 function refineAggregationByCategoriesToLagnaugesTotalCount(data, programmingLanguages){
 	const ret = [];
 	const map = new Map();
@@ -166,6 +165,11 @@ export async function getLog(date, nDays){
 		.then(({data})=>{
 			return refineLog(data, date, nDays)
 		});
+}
+
+export async function getPracticeUpdateTime() {
+	return await axios.get(`${codingPracticeDir}/meta.json`)
+		.then(({data})=>{return data['updated']});
 }
 
 export async function getTest(){

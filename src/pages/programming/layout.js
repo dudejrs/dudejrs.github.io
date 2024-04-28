@@ -1,9 +1,18 @@
+import {useEffect, useState} from 'react'
 
 import {NavLink} from 'react-router-dom'
+import {getPracticeUpdateTime} from '../../../src/domain/codingPractice' 
 
 import styles from './layout.module.css'
 
-export default function({programmingLanguages, title, children}) {
+export default function({programmingLanguages, title, children, updated}) {
+
+	const [date, setDate] = useState('')
+	
+	useEffect(()=>{
+		getPracticeUpdateTime()
+			.then(data => setDate(data))
+	},[])
 
 	const className = ({isActive}) => isActive ? `${styles.navItem} ${styles.active}` : `${styles.navItem}`
 
@@ -15,6 +24,12 @@ export default function({programmingLanguages, title, children}) {
 				{
 					programmingLanguages.map((lang,i) => (<NavLink className={className} to={`/practice/${i}`}>{lang}</NavLink>))
 				}
+				<div className={`${styles.footercontainer}`}>
+					<p>
+						last updated: 
+						<span> {date} </span>
+					</p>
+				</div>
 			</div>
 			{
 				children

@@ -22,6 +22,7 @@ export default function({programmingLanguages}){
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`} >
 				<ProblemLineChart className={`${layoutStyles.item}`} keyword={'count'} height={300} />
 			</div>
+			
 		</Layout>
 		);
 }
