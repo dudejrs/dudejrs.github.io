@@ -1,0 +1,15 @@
+.itemContainer {
+	position: relative;
+}
+
+.item {
+	position: absolute;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	transform: translateX(-50%);
+}

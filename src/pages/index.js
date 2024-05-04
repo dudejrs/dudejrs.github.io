@@ -8,7 +8,9 @@ import ProgrammingPerLanguage from './programming/perLanguage'
 import CodingTest from './components/codingTest';
 import Resume from './resume';
 import Component from './components'
+import Portfolio from './portfolio'
 import PDF from './pdf'
+import Timeline from './timeline'
 
 function Pages() {
 
@@ -24,8 +26,8 @@ function Pages() {
           <Route path="" element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="portfolio">
-          <Route path="" element={<div> 준비중입니다... </div>}/>        
-          <Route path="*" default element={<div> 준비중입니다.. </div>}/>
+          <Route path="" element ={<Portfolio />}/>
+          <Route path="*" defualt element ={<Portfolio />}/>
         </Route>
         <Route path="resume">
           <Route path="" element={<Resume />}/>        
@@ -36,6 +38,7 @@ function Pages() {
           <Route path="cote" element={<CodingTest />}/>
           <Route path="components" element= {<Component />}/>
           <Route path="pdf" element={<PDF />} />
+          <Route path="timeline" element={<Timeline />}/>
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>
         <Route path="practice">
@@ -43,7 +46,6 @@ function Pages() {
           <Route path=":i" element={<ProgrammingPerLanguage programmingLanguages={programmingLanguages} />}/>
           <Route path="*" default element={<div>준비중입니다..</div>} />
         </Route>
-        <Route path="*" default element={<div> 준비중입니다.. </div>}/>
       </Routes>
 
   );
