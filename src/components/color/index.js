@@ -19,7 +19,7 @@ function chooseRandom(n, colors) {
 }
 
 export default class extends Color {
-	static map = {"C++": 1, "Java" : 2, "Javascript" : 3, "Python" : 4, "Go" : 5, "Kotlin" : 6}
+	static map = {"C++": 1, "Java" : 2, "Javascript" : 3, "Python" : 4, "Go" : 5, "Kotlin" : 6, "Typescript" : 7}
 
 	static getIndex(name, colors){
 		if (!this.map[name]) {

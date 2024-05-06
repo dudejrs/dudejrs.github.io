@@ -9,16 +9,16 @@ const data = [
 ]
 
 const mapper = [
-			(d, i) => d.tag,
+			undefined,
 			(d, i) => d.date.split("~")[1],
-			(d, i) => d.date.split("~")[1],
-			(d, i) => d.tag,
+			undefined,
+			(d, i) => <div style={{marginLeft: 10, marginBottom: 10,  height:"100%", border :'1px solid #efefef'}}>..</div>,
 		]
 
 export default function(){
 	return (
-		<div>
-			<RatioSensibleTimeLine layout={"vertical"} data = {data} mapper={mapper} style={{height: '500px'}} ratios={[0, 0.25, 0, 0.75]	}/>
+		<div style={{width: '100%'}}>
+			<RatioSensibleTimeLine  data = {data} mapper={mapper} ratio={1.5} ratios={[0, 0.1, 0, 0.9]} stroke={3} radius={6} color={'#bbb'} minSize={[1200, 1000]}/>
 		</div>
 		);
 }

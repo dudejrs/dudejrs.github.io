@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import * as d3 from 'd3'
 
 import VerticalLine from './line'
@@ -25,20 +25,31 @@ export default function({
 	color = "#302eff",
 	mapper
 }) {
+
+	if (!data) {
+		return 
+		<div style={{width: width, margin: margin}}>
+		</div>
+	}
+
 	const vheight = height - (margin * 2)
 	const vwidth = Math.max(radius * 2, stroke)
 	const [widths, setWidths] = useState(applyRatio(width - (2* margin) - vwidth, ratios))
 
 	const scale = d3.scalePoint().domain([...data, {}]).range([radius + vmargin, vheight - radius -vmargin])
 
+	useEffect(()=>{
+		setWidths(applyRatio(width - (2* margin) - vwidth, ratios))
+	},[width])
+
 	return (
 			<div className={`${styles.container}`} style={{height : height, margin : margin}}>  
 				<Context.Provider value={{setWidths}}>
 					<BehindItem data={data} width={widths[0]} vheight={vheight} vmargin={vmargin} radius={radius} mapper={mapper[0]} scale={scale} itemHeight={itemHeight} />
 					<CenterItem data={data} width={widths[1]} vheight={vheight} vmargin={vmargin} radius={radius} mapper={mapper[1]} scale={scale} itemHeight={itemHeight} />
-					<VerticalLine width={vwidth} height={vheight} color={color}> 
+					<VerticalLine width={vwidth} height={vheight} color={color} stroke={stroke}> 
 					{
-						data.map((d, i)  => <Point key={i} color={color} cx={vwidth / 2} cy ={scale(d)} stroke={stroke * 2 / 3}/>)
+						data.map((d, i)  => <Point key={i} color={color} cx={vwidth / 2} cy ={scale(d)} radius={radius} stroke={stroke * 2 / 3}/>)
 					}
 					</VerticalLine>
 					<CenterItem data={data} width={widths[2]} vheight={vheight} vmargin={vmargin} radius={radius} mapper={mapper[2]} scale={scale} itemHeight={itemHeight} />

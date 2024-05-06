@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import * as d3 from 'd3'
 
 import HorizontalLine from './line'
@@ -38,6 +38,10 @@ export default function({
 	const [heights, setHeights] = useState(applyRatio(height - (margin * 2) - vheight, ratios))
 	
 	const scale = d3.scalePoint().domain([ ...data, {}]).range([radius + vmargin, vwidth - radius - vmargin])
+
+	useEffect(()=>{
+		setHeights(applyRatio(height - (margin * 2) - vheight, ratios))
+	},[height])
 
 	return (
 		<div style={{width: width, margin: margin}}>

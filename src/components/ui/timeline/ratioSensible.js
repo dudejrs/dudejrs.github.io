@@ -1,4 +1,4 @@
-import {useEffect, useContext} from 'react'
+import {useEffect, useState, useContext} from 'react'
 
 import VerticalTimeline from './vertical'
 import HorizontalTimeline from './horizontal'
@@ -17,24 +17,58 @@ function flip(ratios) {
 	return ret
 }
 
-export function RatioSensibleTimeline({data, mapper, ratio = 1.5, ratios=[1,1,1,1] }) {
-	const [width, height, partiallyCovered] = useContext(Context)
-	
-	if (!width || !height ) {
+function apply(flag, size, minSize) {
+	let [width, height] = size
+
+	if (flag) {
+		height = Math.max(height, Math.max(...minSize))
+		width = Math.min(width, Math.min(...minSize))
+	} else {
+		width = Math.max(width, Math.max(...minSize))
+		height = height === 0 ?  Math.min(...minSize) : Math.min(height, Math.min(...minSize))
+	}
+
+	return [width, height]
+}
+
+function isVertical(size, ratio, partiallyCovered, minSize) {
+	const [width, height] = size
+	const r = width / height
+
+	if (ratio <= Math.min(...minSize) / Math.max(...minSize)) {
+		return width < height || partiallyCovered
+	}
+
+	return (r < ratio || partiallyCovered);
+}
+
+export function RatioSensibleTimeline({ratio = 1.5, ratios=[1,1,1,1], mapper, minSize=[0, 0], ...props}) {
+	const {size, setSize, partiallyCovered} = useContext(Context)
+	const [width, height] = size
+
+	useEffect(()=>{
+		const newSize = apply(isVertical(size, ratio, partiallyCovered, minSize), size, minSize)
+
+		if (size.join("") !== newSize.join("")) {
+			setSize(newSize)
+		}
+	})
+
+	if (!width || !height || !minSize) {
 		return (<></>)
 	}
 
-	if (width / height < ratio || partiallyCovered){
-		return (<VerticalTimeline width={width} height={height} data={data} mapper={mapper} ratios={ratios} />)
+	if (isVertical(size, ratio, partiallyCovered, minSize)){
+		return (<VerticalTimeline width={width} height={height} ratios={ratios} mapper={mapper} {...props} />)
 	}
 
-	return (<HorizontalTimeline width={width} height={height} data={data} mapper={mapper} ratios={flip([...ratios])} />)
+	return (<HorizontalTimeline width={width} height={height} ratios={flip([...ratios])} mapper={flip([...mapper])} {...props} />)
 }
 
-export default function({data, width, height, mapper, style, ratios, color}) {
+export default function({style, ...props}) {
 	return (
 			<CurrentNodeSizeSensible style={style}>
-				<RatioSensibleTimeline data={data} width={width} height={height} mapper={mapper} ratios={ratios} color={color}/>
+				<RatioSensibleTimeline {...props}/>
 			</CurrentNodeSizeSensible>) 
 }
 
