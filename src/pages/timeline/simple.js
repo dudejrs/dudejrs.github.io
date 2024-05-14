@@ -1,4 +1,6 @@
-import {RatioSensibleTimeLine} from '../components/ui'
+import Item from './item'
+import Tick from './tick'
+import {RatioSensibleTimeLine} from '../../components/ui'
 
 const data = [
 	{ name : "[독서] SQL 자격 실전 문제 완독", date : "2024-02-26 ~ 2024-03-06", tag : ["Oracle", "DBMS"]},
@@ -8,17 +10,24 @@ const data = [
 	{ name : "[독서] 도메인 주도 설계 완독", date : "2023-12-16 ~ 2024-01-06", tag : ["Backend", "Basic"]}
 ]
 
+const date = (data) => {
+	let endDate = data.split("~")[1]
+	let nums = endDate.split("-")
+	
+	return `${nums[0].substring(3)}년 ${nums[1]}월 ${nums[2]}일`
+}
+
 const mapper = [
 			undefined,
-			(d, i) => d.date.split("~")[1],
+			(d, i) => <Tick d={date(d.date)} i={i} />,
 			undefined,
-			(d, i) => <div style={{marginLeft: 10, marginBottom: 10,  height:"100%", border :'1px solid #efefef'}}>..</div>,
+			(d, i) => <Item d={d} i={i}/>,
 		]
 
 export default function(){
 	return (
 		<div style={{width: '100%'}}>
-			<RatioSensibleTimeLine  data = {data} mapper={mapper} ratio={1.5} ratios={[0, 0.1, 0, 0.9]} stroke={3} radius={6} color={'#bbb'} minSize={[1200, 1000]}/>
+			<RatioSensibleTimeLine  data={data} mapper={mapper} ratio={1.2} ratios={[0, 0.5, 0, 2]} bmargin={50} stroke={2} radius={4} color={'#aaa'} minSize={[1000, 500]}/>
 		</div>
 		);
 }

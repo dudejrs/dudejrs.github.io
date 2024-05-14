@@ -4,6 +4,8 @@
 
 .item {
 	position: absolute;
+	display: flex;
+	flex-direction: column;
 }
 
 .center {
@@ -12,4 +14,12 @@
 	align-items: center;
 	height: 100%;
 	transform: translateX(-50%);
+}
+
+.upper {
+	justify-content: flex-start;
+}
+
+.lower {
+	justify-content: flex-end;
 }

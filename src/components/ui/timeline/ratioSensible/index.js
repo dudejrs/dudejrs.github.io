@@ -1,11 +1,12 @@
 import {useEffect, useState, useContext} from 'react'
 
-import VerticalTimeline from './vertical'
-import HorizontalTimeline from './horizontal'
+import VerticalTimeline from '../vertical'
+import HorizontalTimeline from '../horizontal'
 
-import {Context} from '../sensible/context/currentNodeSize'
+import {Context as CurrentNodeSizeContext} from '../../sensible/context/currentNodeSize'
+import {Context as IsVerticalContext} from './context'
 
-import {CurrentNodeSizeSensible} from '../sensible'
+import {CurrentNodeSizeSensible} from '../../sensible'
 
 function flip(ratios) {
 	const ret = []
@@ -43,7 +44,7 @@ function isVertical(size, ratio, partiallyCovered, minSize) {
 }
 
 export function RatioSensibleTimeline({ratio = 1.5, ratios=[1,1,1,1], mapper, minSize=[0, 0], ...props}) {
-	const {size, setSize, partiallyCovered} = useContext(Context)
+	const {size, setSize, partiallyCovered} = useContext(CurrentNodeSizeContext)
 	const [width, height] = size
 
 	useEffect(()=>{
@@ -59,10 +60,17 @@ export function RatioSensibleTimeline({ratio = 1.5, ratios=[1,1,1,1], mapper, mi
 	}
 
 	if (isVertical(size, ratio, partiallyCovered, minSize)){
-		return (<VerticalTimeline width={width} height={height} ratios={ratios} mapper={mapper} {...props} />)
+		return (
+			<IsVerticalContext.Provider value={true} >
+				<VerticalTimeline width={width} height={height} ratios={ratios} mapper={mapper} {...props} />
+			</IsVerticalContext.Provider>
+			)
 	}
 
-	return (<HorizontalTimeline width={width} height={height} ratios={flip([...ratios])} mapper={flip([...mapper])} {...props} />)
+	return (
+		<IsVerticalContext.Provider value={false} >
+			<HorizontalTimeline width={width} height={height} ratios={flip([...ratios])} mapper={flip([...mapper])} {...props} />
+		</IsVerticalContext.Provider>)
 }
 
 export default function({style, ...props}) {

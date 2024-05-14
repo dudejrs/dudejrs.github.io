@@ -1,0 +1,41 @@
+.container {
+	box-sizing: content-box;
+	border :1px solid #efefef;
+	font-size : 0.9em;
+	color: rgb(102, 102, 102);
+	box-shadow: 0 0 10px 10px rgba(230,230,230,0.1);
+}
+
+.container h4 {
+	color: rgb(102, 102, 102);
+	font-weight: bold;
+	text-overflow: ellipsis;
+	max-width: 30%;
+}
+
+.container * {
+	margin: 0.2rem 0.2rem;
+	align-items: center;
+}
+
+.container.vertical {	
+	width : 100%;
+
+}
+
+.subcontainer {
+	display: flex;
+	font-size: 0.8em;
+	color: #aaa;
+	justify-content: space-between;
+}
+
+.taglist {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 0.8em;
+}
+.tag {
+	margin-right: 0.2em
+}

@@ -31,3 +31,4 @@ yarn-error.log*
 ############## custom ############
 public/data_
 public/data/test/
+public/test
