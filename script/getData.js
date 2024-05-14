@@ -62,7 +62,7 @@ const fetchCodingPractice = async ()=>{
 	writeMetaData(codingPracticeDirPath);
 }
 
-const fetchRoutine=  ()=>{
+const fetchRoutine = ()=>{
 
 	switch(process.argv[2]){
 		case "plan":

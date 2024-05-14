@@ -18,8 +18,6 @@ function uniqueList(list){
 	return list.filter((item, index) => {return list.indexOf(item) == index;});
 }
 
-
-
 // const columns = ["Done","날짜","Date","진행상태","세부계획"];
 // const types = ["checkbox","rollup","date","select","title"];
 

@@ -26,7 +26,7 @@ async function getTotalProblems(notion, langauges) {
 	let query = {
 		database_id : process.env.notion_coding_practice_database_id,
 		filter : {
-			or : []
+			or : []	
 		}
 	}
 	langauges.forEach((langauge) => {
@@ -45,7 +45,7 @@ async function getTotalProblems(notion, langauges) {
 		query["start_cursor"] = next_cursor;
 		has_more_ = has_more;
 		count += results.length;
-		repetition += results.reduce((acc, result) => acc+ result["properties"]["Repetition"]["number"], 0);
+		repetition += results.reduce((acc, result) => acc + result["properties"]["Repetition"]["number"], 0);
 	}
 
 	return {count, repetition};

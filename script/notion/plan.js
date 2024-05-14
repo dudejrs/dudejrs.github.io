@@ -16,7 +16,6 @@ async function getPlans(notion,tags,dirPath,secret){
 		})
 	});
 
-
 	const {results} = await notion.databases.query({
 		database_id : process.env.notion_plan_database_id,	
 		filter : filter
@@ -36,8 +35,6 @@ async function getPlans(notion,tags,dirPath,secret){
 
 
 async function refinePlan(result, categories, secret){
-
-		
 
 		result["properties"]["Tag"]["multi_select"].forEach((tag)=>{
 			const tag_name = tag["name"];
