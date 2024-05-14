@@ -6,6 +6,6 @@ module.exports = class MultiSelectProperty extends Property {
 	}
 
 	convert(data) {
-		return data["properties"][this.propertyName][this.type].map(item => item["name"]);
+		return data[this.propertyName][this.type].map(item => item["name"]);
 	}
 }

@@ -8,6 +8,6 @@ module.exports = class TitleProperty extends Property {
 	}
 
 	convert(data) {
-		return data["properties"][this.propertyName][this.type].map(t => t["plain_text"]).join("")
+		return data[this.propertyName][this.type].map(t => t["plain_text"]).join("")
 	}
 }

@@ -1,4 +1,5 @@
 module.exports = class Property {
+
 	constructor(name, propertyName, type) {
 		this.name = name
 		this.propertyName = propertyName
@@ -6,5 +7,6 @@ module.exports = class Property {
 	}
 
 	convert(data) {
+		throw new Error("UnSupported")
 	}
 }

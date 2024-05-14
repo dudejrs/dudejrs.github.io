@@ -6,7 +6,7 @@ module.exports = class DateProperty extends Property {
 	}
 
 	convert(data) {
-		const {start, end} =  data["properties"][this.propertyName][this.type]
+		const {start, end} =  data[this.propertyName][this.type]
 		return {start, end}
 	}
 }

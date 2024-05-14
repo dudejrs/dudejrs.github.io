@@ -6,6 +6,6 @@ module.exports = class CheckboxProperty extends Property {
 	}
 
 	convert(data) {
-		return data["properties"][this.propertyName][this.type]
+		return data[this.propertyName][this.type]
 	}
 }

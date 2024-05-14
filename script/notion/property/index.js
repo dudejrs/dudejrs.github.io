@@ -6,3 +6,10 @@ const RollupProperty = require('./rollup')
 const RichTextProperty = require('./richText')
 const SelectProperty = require('./select')
 const StatusProperty = require('./status')
+const TitleProperty = require('./title')
+
+const NestedProperty = require('./nested')
+
+module.exports = {
+	CheckboxProperty, DateProperty, MultiSelectProperty, FormulaProperty, RollupProperty, RichTextProperty, SelectProperty, StatusProperty, TitleProperty, NestedProperty
+}
