@@ -13,7 +13,7 @@ module.exports = class Client {
 		throw new Error("Unsupported")
 	}
 
-	queryDatabase(database_id, filter, sorts, start_cursor){
+	queryDatabase(database_id, filter, sorts, start_cursor, filter_properties){
 		throw new Error("Unsupported")
 	}
 }

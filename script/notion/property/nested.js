@@ -1,48 +1,42 @@
-const CheckboxProperty = require('./checkbox')
-const DateProperty = require('./date')
-const MultiSelectProperty = require('./multiSelect')
-// const FormulaProperty = require('./formula')
-// const RollupProperty = require('./rollup')
-const RichTextProperty = require('./richText')
-const SelectProperty = require('./select')
-const StatusProperty = require('./status')
-const TitleProperty = require('./title')
+const {CheckboxType , DateType , MultiSelectType , RichTextType , SelectType , StatusType , TitleType } = require('./type')
 
 module.exports = class NestedProperty {
 
-	constructor(property) {
-		this.property = property
+	constructor(name, type, rename) {
+		this.name = name
+		this.type = type
+		this.rename = rename ? rename : name
 	}
 
-	static Checkbox(name, propertyName){
-		return new NestedProperty(new CheckboxProperty(name, propertyName))
+	static Checkbox(name) {
+		return new NestedProperty(name, new CheckboxType())
 	}
 
-	static Date(name, propertyName) {
-		return new NestedProperty(new DateProperty(name, propertyName))
+	static Date(name) {
+		return new NestedProperty(name, new DateType())
 	}
 
-	static MultiSelect(name, propertyName) {
-		return new NestedProperty(new MultiSelectProperty(name, propertyName))
+	static MultiSelect(name) {
+		return new NestedProperty(name, new MultiSelectType())
 	}
 
-	static RichText(name, propertyName) {
-		return new NestedProperty(new RichTextProperty(name, propertyName))
+	static RichText(name) {
+		return new NestedProperty(name, new RichTextType())
 	}
 
-	static Select(name, propertyName) {
-		return new NestedProperty(new SelectProperty(name, propertyName))
+	static Select(name) {
+		return new NestedProperty(name, new SelectType())
 	}
 
-	static Status(name, propertyName) {
-		return new NestedProperty(new SelectProperty(name, propertyName))
+	static Status(name) {
+		return new NestedProperty(name, new SelectType())
 	}
 
-	static Title(name, propertyName) {
-		return new NestedProperty(TitleProperty(name, propertyName))
+	static Title(name) {
+		return new NestedProperty(name, new TitleType())
 	}
 
 	convert(data) {
-		return this.property.convert(data["properties"])
+		return this.type.convert(data["properties"][this.name])
 	}
 }

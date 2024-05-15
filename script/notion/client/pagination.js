@@ -12,7 +12,7 @@ module.exports = class PaginationClient {
 		return this.client.retrievePage(page_id)
 	}
 
-	async retrievePageProperties(page_id, property_id, start_cursor){
+	async *retrievePageProperties(page_id, property_id){
 		let start_cursor = undefined
 		
 		while(true) {
@@ -28,11 +28,11 @@ module.exports = class PaginationClient {
 		}
 	}
 
-	async *queryDatabase(database_id, filter, sorts){
+	async *queryDatabase(database_id, filter, sorts, filter_properties){
 		let start_cursor = undefined
 		
 		while(true) {
-			const response = await this.client.queryDatabase(database_id, filter, sorts, start_cursor)
+			const response = await this.client.queryDatabase(database_id, filter, sorts, start_cursor, filter_properties)
 			const {has_more, next_cursor} = response
 			
 			if (has_more) {
