@@ -1,42 +1,41 @@
+const Property = require('./property')
 const {CheckboxType , DateType , MultiSelectType , RichTextType , SelectType , StatusType , TitleType } = require('./type')
 
-module.exports = class NestedProperty {
+module.exports = class NestedProperty extends Property {
 
-	constructor(name, type, rename) {
-		this.name = name
-		this.type = type
-		this.rename = rename ? rename : name
+	constructor(name, id, type, rename) {
+		super(name, id, type, rename)
 	}
 
-	static Checkbox(name) {
-		return new NestedProperty(name, new CheckboxType())
+	static Checkbox(name, id, rename) {
+		return new NestedProperty(name, id, new CheckboxType(), rename)
 	}
 
-	static Date(name) {
-		return new NestedProperty(name, new DateType())
+	static Date(name, id, rename) {
+		return new NestedProperty(name, id, new DateType(), rename)
 	}
 
-	static MultiSelect(name) {
-		return new NestedProperty(name, new MultiSelectType())
+	static MultiSelect(name, id, rename) {
+		return new NestedProperty(name, id, new MultiSelectType(), rename)
 	}
 
-	static RichText(name) {
-		return new NestedProperty(name, new RichTextType())
+	static RichText(name, id, rename) {
+		return new NestedProperty(name, id, new RichTextType(), rename)
 	}
 
-	static Select(name) {
-		return new NestedProperty(name, new SelectType())
+	static Select(name, id, rename) {
+		return new NestedProperty(name, id, new SelectType(), rename)
 	}
 
-	static Status(name) {
-		return new NestedProperty(name, new SelectType())
+	static Status(name, id, rename) {
+		return new NestedProperty(name, id, new StatusType(), rename)
 	}
 
-	static Title(name) {
-		return new NestedProperty(name, new TitleType())
+	static Title(name, id, rename) {
+		return new NestedProperty(name, id, new TitleType(), rename)
 	}
 
-	convert(data) {
+	async convert(data) {
 		return this.type.convert(data["properties"][this.name])
 	}
 }

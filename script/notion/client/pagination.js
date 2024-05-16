@@ -14,9 +14,8 @@ module.exports = class PaginationClient {
 
 	async *retrievePageProperties(page_id, property_id){
 		let start_cursor = undefined
-		
 		while(true) {
-			const response = await this.client.queryDatabase(database_id, filter, sorts, start_cursor)
+			const response = await this.client.retrievePageProperties(page_id, property_id, start_cursor)
 			const {has_more, next_cursor} = response
 			
 			if (has_more) {
