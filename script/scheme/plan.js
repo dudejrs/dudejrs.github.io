@@ -11,7 +11,10 @@ module.exports = new PageScheme("계획", {
 	"세부계획" : new NestedDatabaseScheme("세부계획", {
 		database_id : "6a9277ccfc4a42debbf70b254e462070",
 		scheme : new PageScheme("세부계획", {
-			"Date" : NestedProperty.Date("Date", "d%5CTz")
+			"세부계획" : NestedProperty.Title("세부계획", "title"),
+			"Date" : NestedProperty.Date("Date", "d%5CTz"),
+			"진행상태" : NestedProperty.Select("진행상태","%7Bh%7BP"),
+			"Done" : NestedProperty.Checkbox("Done","iQZ~")
 		})
 	})
 })
