@@ -9,11 +9,16 @@ module.exports = class Client {
 		throw new Error("Unsupported")
 	}
 
-	retrievePageProperties(page_id, property_id, start_cursor){
+	retrieveDatabase(database_id) {
+		throw new Error("Unsupported")
+		
+	}
+
+	*retrievePageProperties(page_id, property_id, start_cursor){
 		throw new Error("Unsupported")
 	}
 
-	queryDatabase(database_id, filter, sorts, start_cursor, filter_properties){
+	*queryDatabase(database_id, filter, sorts, start_cursor, filter_properties){
 		throw new Error("Unsupported")
 	}
 }

@@ -6,6 +6,9 @@ module.exports = class Date extends Type {
 	}
 
 	convert(data) {
+		if (!data || !data[this.name]) {
+			return {}
+		}
 		const {start, end} =  data[this.name]
 		return {start, end}
 	}

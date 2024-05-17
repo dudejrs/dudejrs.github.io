@@ -6,17 +6,21 @@ require('dotenv').config();
 const NotionSDKClient = require('./notion/client/notionSDK');
 const RateLimiterClient = require('./notion/client/rateLimiter')
 const PaginationClient = require('./notion/client/pagination')
+const AxiosClient = require('./notion/client/axios')
 
 
 const {NestedProperty} = require('./notion/property');
 
 const PlanScheme = require('./scheme/plan');
-const {TimestampFilter} = require('./notion/filter');
+const {TimestampFilter, RelationFilter, ANDFilter} = require('./notion/filter');
 
 // const {NestedDatabaseScheme} = require('./notion/scheme')
 
+
+const notion = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
+const axiosc = new PaginationClient(new RateLimiterClient(new AxiosClient(process.env.notion_integration_secret)));
+
 // (async ()=> {
-// 	const notion = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
 // 	const page_id = "01786a32-24c9-485e-8fac-12957b82406b"
 // 	const response = await notion.retrievePage(page_id)
 
@@ -24,30 +28,24 @@ const {TimestampFilter} = require('./notion/filter');
 // })()
 
 
+(async ()=> {
+
+	const page_id = "1a5e28c1-78a6-4d67-9a09-47b7b419ae4f"
+	const response = await notion.retrievePage(page_id)
+
+	let data = await PlanScheme.convert(response, axiosc)
+
+	await writeFileSync('public/test/c.json', JSON.stringify(data), {encoding : 'utf-8'})
+})();
+
+
 // (async ()=> {
-// 	const notion = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
+// 	const database_id = "12429ec59cb14e1ba82b3d77cedc7e9c"
 
-// 	const page_id = "1e5b05dc-00b5-4d9b-9012-b76f266b635e"
-// 	// const database_id = "12429ec59cb14e1ba82b3d77cedc7e9c"
-// 	const response = await notion.retrievePage(page_id)
+// 	const filter = ANDFilter.of (RelationFilter.Contains("관련일정", "24e0ccbd-9808-4a9e-9f53-32609795e365"), TimestampFilter.LastEditedTime("on_or_after", "2024-01-01")).build()
+// 	// console.log(filter)
+// 	const {value : response} = await notion.queryDatabase(database_id, filter, undefined, undefined).next()
 
-// 	let data = await PlanScheme.convert(response, notion)
-// 	// const response = await notion.queryDatabase(database_id, undefined, undefined, ["title"]).next()
-// 	console.log(data)
-// 	await writeFileSync('public/test/c.json', JSON.stringify(data), {encoding : 'utf-8'})
+// 	await writeFileSync('public/test/d.json', JSON.stringify(response), {encoding : 'utf-8'})
 // })();
 
-
-(async ()=> {
-	const notion = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
-
-	// const page_id = "1e5b05dc-00b5-4d9b-9012-b76f266b635e"
-	const database_id = "12429ec59cb14e1ba82b3d77cedc7e9c"
-
-
-	const filter = TimestampFilter.LastEditedTime("on_or_after", "2024-01-01").build()
-
-	const response = await notion.queryDatabase(database_id, filter, undefined, undefined).next()
-
-	await writeFileSync('public/test/d.json', JSON.stringify(response), {encoding : 'utf-8'})
-})();

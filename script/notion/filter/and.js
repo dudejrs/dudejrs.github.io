@@ -10,7 +10,9 @@ module.exports = class ANDFilter extends Filter {
 	static of(...filters) {
 		const ret = new ANDFilter()
 		for (let filter of filters) {
-			ret.addChild(filter)
+			if (filter) {
+				ret.addChild(filter)
+			}
 		}
 		return ret
 	}
@@ -25,7 +27,7 @@ module.exports = class ANDFilter extends Filter {
 			and : []
 		}
 
-		for (let child of children) {
+		for (let child of this.children) {
 			ret["and"].push(child.build())
 		}
 

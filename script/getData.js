@@ -47,7 +47,6 @@ const fetchDetailedPlans= ()=>{
 		console.log(error);
 	} 
 
-
 	getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, planFilterList, process.env.notion_integration_secret);
 	writeMetaData(detailedPlanDirPath);
 }
@@ -87,6 +86,6 @@ const fetchRoutine = ()=>{
 	}
 
 }
-
+	
 fetchRoutine();
 

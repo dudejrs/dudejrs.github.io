@@ -30,6 +30,14 @@ module.exports = class NotionSDKClient extends Client_ {
 		return response
 	}
 
+	async retrieveDatabase(database_id) {
+		const response = await this.client.databases.retrieve({
+			database_id
+		})
+		
+		return response
+	}
+
 	async retrievePageProperties(page_id, property_id, start_cursor){
 		const response = await this.client.pages.properties.retrieve({
 			page_id, property_id

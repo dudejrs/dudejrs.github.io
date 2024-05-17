@@ -6,6 +6,10 @@ module.exports = class Select extends Type {
 	}
 
 	convert(data) {
+		if (!data[this.name]) {
+			return ""
+		}
+
 		return data[this.name]["name"]
 	}
 }

@@ -25,6 +25,8 @@ module.exports = class PageScheme extends Scheme{
 	async convert(data, client, parent_id) {
 		const ret = {}
 
+		ret["id"] = data["id"]
+
 		for (let property of this._properties) {
 			ret[property.rename] = await property.convert(data, client)
 		}
