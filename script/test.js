@@ -21,7 +21,7 @@ const notion = new PaginationClient(new RateLimiterClient(new NotionSDKClient(pr
 const axiosc = new PaginationClient(new RateLimiterClient(new AxiosClient(process.env.notion_integration_secret)));
 
 const {fetchCategories} = require('./data/categories')
-const {fetchPlans} = require('./data/plans');
+const {fetchPlans, updatePlans} = require('./data/plans');
 
 // (async ()=> {
 // 	const page_id = "01786a32-24c9-485e-8fac-12957b	82406b"
@@ -69,5 +69,5 @@ const {fetchPlans} = require('./data/plans');
 /* 플랜 모두 패치하기 */
 
 (async()=> {
-	await fetchPlans.exec(notion)
+	await updatePlans.exec(notion)
 })()
