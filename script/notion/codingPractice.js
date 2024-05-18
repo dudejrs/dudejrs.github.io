@@ -78,7 +78,6 @@ async function getAggregationByCategories(notion, langauges, secret){
 	return results;
 }
 
-
 async function refineAggregation(result, langauges, secret){
 
 	const pageId = result["id"];
@@ -102,7 +101,6 @@ async function refineAggregation(result, langauges, secret){
 
 	return r;
 }
-
 
 async function getAggregationByProblemType(notion, langauges){
 
