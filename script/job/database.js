@@ -3,7 +3,7 @@ const Job = require('./job')
 module.exports = class DatabaseJob extends Job{
 	constructor({
 		name, 
-		file,
+		path,
 		target,
 		exec, 
 		handleError = (e)=>{throw e},
@@ -11,7 +11,7 @@ module.exports = class DatabaseJob extends Job{
 		finish = () => {}}) {
 		
 		super({name, exec, handleError, initialize, finish})
-		this.file = file
+		this.path = path
 		this.target = target
 	}
 
@@ -25,7 +25,7 @@ module.exports = class DatabaseJob extends Job{
 			this.handleError(e)
 		} finally {
 			if (data) {
-				this.finish({data, path: this.file })
+				this.finish({data, path: this.path })
 			}
 		}
 		console.log(`[Database Job] ${this.name} finish`)

@@ -21,6 +21,7 @@ const notion = new PaginationClient(new RateLimiterClient(new NotionSDKClient(pr
 const axiosc = new PaginationClient(new RateLimiterClient(new AxiosClient(process.env.notion_integration_secret)));
 
 const {fetchCategories} = require('./data/categories')
+const {fetchPlans} = require('./data/plans');
 
 // (async ()=> {
 // 	const page_id = "01786a32-24c9-485e-8fac-12957b	82406b"
@@ -54,9 +55,19 @@ const {fetchCategories} = require('./data/categories')
 // 	await writeFileSync('public/test/d.json', JSON.stringify(response), {encoding : 'utf-8'})
 // })();
 
-const categories = ["Javascript","Typescript", "Node.js","React.js", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "\bC++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","Pytorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
 
 
-(async ()=> {
-	await fetchCategories.exec(notion, categories)
+/* 카테고리 저장하기*/
+
+// const categories = ["Javascript","Typescript", "Node.js","React.js", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "\bC++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","Pytorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
+
+// (async ()=> {
+// 	await fetchCategories.exec(notion, categories)
+// })()
+
+
+/* 플랜 모두 패치하기 */
+
+(async()=> {
+	await fetchPlans.exec(notion)
 })()

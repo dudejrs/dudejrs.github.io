@@ -44,7 +44,7 @@ module.exports = class DirectoryJob extends Job {
 		this.#initialize()
 		this.initialize()
 		try {
-			await this._exec(...args)
+			await this._exec(this.path, ...args)
 		} catch (e) {
 			this.handleError(e)
 			this.#restore()
