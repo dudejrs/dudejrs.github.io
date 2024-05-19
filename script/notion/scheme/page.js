@@ -9,7 +9,6 @@ module.exports = class PageScheme extends Scheme{
 	}
 
 	static applyProperties(config) {
-		console.log(config)
 		return Object.entries(config)
 			.filter(e => e[1] instanceof Property)
 			.map(e => {

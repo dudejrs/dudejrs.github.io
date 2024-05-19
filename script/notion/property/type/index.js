@@ -5,6 +5,7 @@ const MultiSelectType = require('./multiSelect')
 const FormulaType = require('./formula')
 const RollupType = require('./rollup')
 const RichTextType = require('./richText')
+const RelationType = require('./relation')
 const NumberType = require('./number')
 const SelectType = require('./select')
 const StatusType = require('./status')
@@ -15,7 +16,7 @@ const URLType = require('./url')
 module.exports = {
 	ArrayType, CheckboxType, 
 	DateType, MultiSelectType,
-	FormulaType, RollupType,
+	FormulaType, RollupType, RelationType,
 	RichTextType, SelectType,
 	StatusType, StringType,
 	TitleType, URLType, NumberType
