@@ -22,6 +22,11 @@ module.exports = class RateLimiterClient {
 		return this.client.retrieveDatabase(database_id)
 	}
 
+	async updatePage(page_id, properties) {
+		await this.limiter.removeTokens(1);
+		return this.client.updatePage(page_id, properties)
+	}
+
 	async retrievePageProperties(page_id, property_id, start_cursor){
 		await this.limiter.removeTokens(1);
 	

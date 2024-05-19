@@ -1,5 +1,5 @@
 const Property = require('./property')
-const {CheckboxType , DateType , MultiSelectType , RichTextType , SelectType , StatusType , TitleType } = require('./type')
+const {CheckboxType , DateType , MultiSelectType , RichTextType , SelectType , StatusType , TitleType, NumberType } = require('./type')
 
 module.exports = class NestedProperty extends Property {
 
@@ -13,6 +13,10 @@ module.exports = class NestedProperty extends Property {
 
 	static Date(name, id, rename) {
 		return new NestedProperty(name, id, new DateType(), rename)
+	}
+
+	static Number(name, id, rename) {
+		return new NestedProperty(name, id, new NumberType(), rename)
 	}
 
 	static MultiSelect(name, id, rename) {
@@ -37,5 +41,11 @@ module.exports = class NestedProperty extends Property {
 
 	async convert(data) {
 		return this.type.convert(data["properties"][this.name])
+	}
+
+	build(value) {
+		return {
+			[this.name] : type.build(value)
+		}
 	}
 }

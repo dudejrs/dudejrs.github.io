@@ -9,4 +9,8 @@ module.exports = class Property {
 	convert() {
 		throw new Error("UnSupported")
 	}
+
+	build(value) {
+		throw new Error("UnSupported")
+	}
 }

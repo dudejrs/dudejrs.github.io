@@ -16,6 +16,10 @@ module.exports = class PaginationClient {
 		return this.client.retrieveDatabase(database_id)
 	}
 
+	updatePage(page_id, properties) {
+		return this.client.updatePage(page_id, properties)
+	}
+
 	async *retrievePageProperties(page_id, property_id){
 		let start_cursor = undefined
 		while(true) {

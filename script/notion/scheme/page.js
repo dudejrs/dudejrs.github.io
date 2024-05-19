@@ -9,6 +9,7 @@ module.exports = class PageScheme extends Scheme{
 	}
 
 	static applyProperties(config) {
+		console.log(config)
 		return Object.entries(config)
 			.filter(e => e[1] instanceof Property)
 			.map(e => {
@@ -34,7 +35,7 @@ module.exports = class PageScheme extends Scheme{
 		for (let child of this.children) {
 			ret[child.name] = await child.convert(data, client, data["id"])
 		}
-
+		
 		return ret
 	}
 

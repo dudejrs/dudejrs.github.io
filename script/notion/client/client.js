@@ -9,6 +9,10 @@ module.exports = class Client {
 		throw new Error("Unsupported")
 	}
 
+	updatePage(page_id, properties) {
+		throw new Error("Unsupported")
+	}
+
 	retrieveDatabase(database_id) {
 		throw new Error("Unsupported")
 		

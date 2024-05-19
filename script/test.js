@@ -22,6 +22,7 @@ const axiosc = new PaginationClient(new RateLimiterClient(new AxiosClient(proces
 
 const {fetchCategories} = require('./data/categories')
 const {fetchPlans, updatePlans} = require('./data/plans');
+const {getTotalProblem} = require('./data/codingPractice');
 
 // (async ()=> {
 // 	const page_id = "01786a32-24c9-485e-8fac-12957b	82406b"
@@ -68,6 +69,18 @@ const {fetchPlans, updatePlans} = require('./data/plans');
 
 /* 플랜 모두 패치하기 */
 
-(async()=> {
-	await updatePlans.exec(notion)
+// (async()=> {
+// 	await updatePlans.exec(notion)
+// })()
+
+
+/* 코딩 트렉리스트 */
+
+const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
+
+(async()=>{
+	await getTotalProblem.exec(notion, langauges)
 })()
+
+
+
