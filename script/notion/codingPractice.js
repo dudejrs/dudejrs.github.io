@@ -105,7 +105,7 @@ async function refineAggregation(result, langauges, secret){
 async function getAggregationByProblemType(notion, langauges){
 
 	let has_more_ = true;
-
+	
 	let query = {
 		database_id : process.env.notion_coding_practice_database_id,
 	}

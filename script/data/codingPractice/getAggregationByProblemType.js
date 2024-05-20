@@ -4,25 +4,52 @@ const {FileJob} = require('../../job')
 const {FormulaFilter} = require('../../notion/filter')
 const CodingPracticeScheme = require('../../scheme/codingPractice')
 
-async function getTotalProblem(path, client, languages){
+async function getProblemType(client) {
+	const {properties} = await client.retrieveDatabase(process.env.notion_coding_practice_database_id)
 
+	return properties["문제유형"]["multi_select"]["options"].map(option => option["name"])
+}
+
+async function getAggregationByProblemType(path, client, languages){
 	const filter = FormulaFilter.Checkbox("_풀었는지_유무", "equals", true).build()
+	const problemTypes = await getProblemType(client)
 
 	const data = client.queryDatabase(process.env.notion_coding_practice_database_id, filter)
 
-	let [count, repititon] = [0, 0]
+	const ret = {}
+	
+	for (let problemType of problemTypes) {
+		ret[problemType] = {
+			count : 0,
+			repetition: 0
+		}
+
+		for (let lang of languages) {
+			ret[problemType][lang] = 0
+		}
+	}
+
 	for await (let {results} of data) {
 		for (let page of results) {
 			const d = await CodingPracticeScheme.convert(page, client)
-			console.log(d)
-			break;
+			for (let problemType of d["문제유형"]) {
+				ret[problemType]["count"] += 1
+				ret[problemType]["repetition"] += d["Repetition"]
+				for (let lang of languages) {
+					ret[problemType][lang] += d[lang]
+				}
+			}
 		}
-		break;
 	}
+
+	await writeFileSync(path, JSON.stringify(ret), {encoding : 'utf-8', flag: 'w+'})
+
+	return
 }
 
 module.exports = new FileJob({
-	path: `${process.env.project_path}/public/test/codingPractice/totalProblem.json`,
-	exec: getTotalProblem,
+	name : 'aggregation by problem type을 도출'
+	path : `${process.env.project_path}/public/test/codingPractice/aggregationByProblemType.json`,
+	exec : getAggregationByProblemType,
 	handleError: console.log
 })

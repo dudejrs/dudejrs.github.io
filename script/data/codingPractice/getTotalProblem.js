@@ -25,6 +25,7 @@ async function getTotalProblem(path, client, languages){
 }
 
 module.exports = new FileJob({
+	name : 'total prolbem을 도출',
 	path: `${process.env.project_path}/public/test/codingPractice/totalProblem.json`,
 	exec: getTotalProblem
 })

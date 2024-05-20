@@ -6,7 +6,7 @@ module.exports = new PageScheme("codingPractice",{
 		"문제이름 " : NestedProperty.Title("문제이름", "title"),
 		"Repetition" :  ComputedProperty.Formula("Repetition", "XcSt", new NumberType()),
 		"문제유형" :  NestedProperty.MultiSelect("문제유형", "sEq%5C"),
-		"C++ " : NestedProperty.Number("C++", "%7DooA"),
+		"C++" : NestedProperty.Number("C++", "%7DooA"),
 		"Java" : NestedProperty.Number("Java", "w%40%7CA"),
 		"Javascript" : NestedProperty.Number("Javascript", "f~TP"),
 		"Python" : NestedProperty.Number("Python", "%7Ch%5EN"),

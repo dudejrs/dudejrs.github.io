@@ -41,6 +41,7 @@ module.exports = class FileJob extends Job {
 	}
 
 	async exec(...args) {
+		console.log(`[Database Job] ${this.name} start`)
 		this.#initialize()
 		this.initialize()
 		try {
@@ -52,6 +53,7 @@ module.exports = class FileJob extends Job {
 			this.finish()
 			this.#finish()
 		}
+		console.log(`[Database Job] ${this.name} finish`)
 	}
 
 	get tmpFile() {
