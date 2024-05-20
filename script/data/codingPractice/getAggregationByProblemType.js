@@ -2,7 +2,7 @@ const {writeFileSync} = require('fs')
 
 const {FileJob} = require('../../job')
 const {FormulaFilter} = require('../../notion/filter')
-const CodingPracticeScheme = require('../../scheme/codingPractice')
+const {CodingPracticeScheme} = require('../../scheme/codingPractice')
 
 async function getProblemType(client) {
 	const {properties} = await client.retrieveDatabase(process.env.notion_coding_practice_database_id)

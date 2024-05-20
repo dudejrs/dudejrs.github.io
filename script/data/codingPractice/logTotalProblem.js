@@ -9,7 +9,15 @@ async function findIDByDate(client, date) {
 	return data["results"][0] ? data["results"][0]["id"] : null
 }
 
-async function logTotalProblem({client, count, repetiton, path}) {
+function Count(lang) {
+	return `Count (${lang})`
+}
+
+function Repetiton(lang) {
+	return `Repetition (${lang})`
+}
+
+async function logTotalProblem({client, languages, count, repetiton, path, ...args}) {
 	const date = new Date(Date.now()).toISOString().slice(0,10)
 
 	const page_id = await findIDByDate(client, date)
@@ -27,6 +35,16 @@ async function logTotalProblem({client, count, repetiton, path}) {
 			number : repetiton
 		},
 	}
+
+	for (let lang of languages) {
+		properties[Count(lang)] = {
+			number : args[Count(lang)]
+		}
+		properties[Repetiton(lang)] = {
+			number : args[Repetiton(lang)]
+		}
+	}
+
 
 	if (page_id) {
 		const response = await client.updatePage(page_id, properties)
