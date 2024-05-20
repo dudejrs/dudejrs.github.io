@@ -79,7 +79,7 @@ const {getTotalProblem, getAggregationByProblemType} = require('./data/codingPra
 const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
 
 (async()=>{
-	await getAggregationByProblemType.exec(notion, langauges)
+	await getTotalProblem.exec({client : notion, langauges})
 })()
 
 

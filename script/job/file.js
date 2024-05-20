@@ -8,9 +8,10 @@ module.exports = class FileJob extends Job {
 		exec,
 		handleError,
 	 	initialize,
-		 finish}
+		 finish, 
+		 children}
 		) {
-		super({name, exec, handleError, initialize, finish})
+		super({name, exec, handleError, initialize, finish, children})
 		this.path = FileJob.applyPath(path)
 	}
 
@@ -40,12 +41,15 @@ module.exports = class FileJob extends Job {
 		rmSync(this.tmpFile, {recursive: true})
 	}
 
-	async exec(...args) {
+	async exec(args) {
 		console.log(`[Database Job] ${this.name} start`)
 		this.#initialize()
 		this.initialize()
 		try {
-			await this._exec(this.path, ...args)
+			const d = await this._exec({path : this.path, ...args})
+			this.children.forEach(
+				async child => await child.exec({...args, ...d})	
+			)
 		} catch (e) {
 			this.handleError(e)
 			this.#restore()

@@ -8,9 +8,10 @@ module.exports = class DirectoryJob extends Job {
 		exec,
 		handleError,
 	 	initialize,
-		 finish}
+		 finish, 
+		 children}
 		) {
-		super({name, exec, handleError, initialize, finish})
+		super({name, exec, handleError, initialize, finish, children})
 		this.path = DirectoryJob.applyPath(path)
 	}
 
@@ -40,11 +41,14 @@ module.exports = class DirectoryJob extends Job {
 		rmdirSync(this.tmpDir, {recursive: true})
 	}
 
-	async exec(...args) {
+	async exec(args) {
 		this.#initialize()
 		this.initialize()
 		try {
-			await this._exec(this.path, ...args)
+			await this._exec({ path : this.path, ...args})
+			this.children.forEach(
+				child => child.exec({...args})	
+			)
 		} catch (e) {
 			this.handleError(e)
 			this.#restore()

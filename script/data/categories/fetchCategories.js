@@ -6,7 +6,7 @@ const {MultiSelectFilter} = require('../../notion/filter')
 
 const {writeMetaData} = require('../../util')
 
-async function fetchCategories(path, client, categories) {
+async function fetchCategories({path, client, categories}) {
 	async function fetchCategory(category) {
 		const ret = []
 		const data = client.queryDatabase(process.env.notion_plan_database_id, MultiSelectFilter.Contains("Tag", category).build(), undefined, undefined, undefined)

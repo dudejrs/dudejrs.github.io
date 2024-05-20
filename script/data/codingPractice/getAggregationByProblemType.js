@@ -10,7 +10,7 @@ async function getProblemType(client) {
 	return properties["문제유형"]["multi_select"]["options"].map(option => option["name"])
 }
 
-async function getAggregationByProblemType(path, client, languages){
+async function getAggregationByProblemType({path, client, languages}){
 	const filter = FormulaFilter.Checkbox("_풀었는지_유무", "equals", true).build()
 	const problemTypes = await getProblemType(client)
 
@@ -48,7 +48,7 @@ async function getAggregationByProblemType(path, client, languages){
 }
 
 module.exports = new FileJob({
-	name : 'aggregation by problem type을 도출'
+	name : 'aggregation by problem type을 도출',
 	path : `${process.env.project_path}/public/test/codingPractice/aggregationByProblemType.json`,
 	exec : getAggregationByProblemType,
 	handleError: console.log
