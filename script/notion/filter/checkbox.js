@@ -9,7 +9,7 @@ module.exports = class CheckboxFilter extends Filter {
 		this.value = value
 	}
 
-	static Eqauls(property, value){
+	static Equals(property, value){
 		return new CheckboxFilter(property, "equals", value)
 	}
 

@@ -6,7 +6,7 @@ const {CheckBoxFilter} = require('../../notion/filter')
 const CertificateScheme = require('../../scheme/certificate')
 
 async function fetchCertificate({path, client}) {
-	const response = await client.queryDatabase(process.env.notion_certificate_database_id, CheckBoxFilter.Eqauls("_hidden",false).build())
+	const response = await client.queryDatabase(process.env.notion_certificate_database_id, CheckBoxFilter.Equals("_hidden",false).build())
 	const ret = []
 	for await (let {results} of response) {
 		for (let page of results) {
