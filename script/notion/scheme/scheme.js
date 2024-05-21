@@ -18,8 +18,13 @@ module.exports = class Scheme {
 		return this
 	}
 
-	async convert(data, client, parent_id) {
+	async convert(data, args) {
 		const ret = {}
+		
+		for (let child of this.children) {
+			ret[child.name] = await child.convert(data, args)
+		}
+
 		return ret
 	}
 }

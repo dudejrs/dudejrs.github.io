@@ -1,8 +1,8 @@
-const {DatbaseScheme, PageScheme} = require('../notion/scheme')
+const {DatabaseScheme, PageScheme} = require('../notion/scheme')
 const {NestedProperty, ComputedProperty} = require('../notion/property')
 const {DateType, StringType} = require('../notion/property/type')
 
-module.exports = new DatbaseScheme("카테고리", {
+module.exports = new DatabaseScheme("카테고리", {
 	scheme : new PageScheme("계획", {
 		"title" :  NestedProperty.Title("Name","title"),
 		"Status" : NestedProperty.Status("Status", "oz%3EA"),

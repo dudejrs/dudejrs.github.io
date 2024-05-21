@@ -9,7 +9,7 @@ async function getAggregationByCategories({path, client}){
 
 	for await (let {results} of data) {
 		for (let page of results) {
-			const d = await CodingPracticeCategoriesScheme.convert(page, client)
+			const d = await CodingPracticeCategoriesScheme.convert(page, {client})
 			ret.push(d)
 		}
 	}

@@ -36,10 +36,10 @@ module.exports = class PaginationClient {
 		return
 	}
 
-	async *queryDatabase(database_id, filter, sorts, start_cursor = undefined, filter_properties){
+	async *queryDatabase(database_id, filter, sorts, start_cursor = undefined, filter_properties = undefined, page_size = undefined){
 		
 		while(true) {
-			const response = await this.client.queryDatabase(database_id, filter, sorts, start_cursor, filter_properties)
+			const response = await this.client.queryDatabase(database_id, filter, sorts, start_cursor, filter_properties, page_size)
 			const {has_more, next_cursor} = response
 			yield response
 			

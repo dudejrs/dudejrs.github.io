@@ -19,7 +19,7 @@ async function fetchPlans(path, client){
 		for await (let {results} of data) {
 			if (results && Array.isArray(results)) {
 				for (page of results) {
-					let p = await PlanScheme.convert(page, client)
+					let p = await PlanScheme.convert(page, {client})
 					await save(p)
 				}
 			}

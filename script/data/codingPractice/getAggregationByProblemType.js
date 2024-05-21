@@ -31,7 +31,7 @@ async function getAggregationByProblemType({path, client, languages}){
 
 	for await (let {results} of data) {
 		for (let page of results) {
-			const d = await CodingPracticeScheme.convert(page, client)
+			const d = await CodingPracticeScheme.convert(page, {client})
 			for (let problemType of d["문제유형"]) {
 				ret[problemType]["count"] += 1
 				ret[problemType]["repetition"] += d["Repetition"]

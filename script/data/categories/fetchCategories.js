@@ -13,7 +13,7 @@ async function fetchCategories({path, client, categories}) {
 		
 		for await (let {results} of data) {
 			if (results && Array.isArray(results)) {
-				let d = await CategoriesScheme.convert(results, client)
+				let d = await CategoriesScheme.convert(results, {client})
 				ret.push(...d)
 			}
 		}

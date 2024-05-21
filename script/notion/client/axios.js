@@ -35,7 +35,7 @@ module.exports = class AxiosClient extends Client {
 		return response["data"]
 	}
 
-	async queryDatabase(database_id, filter, sorts, start_cursor, filter_properties){
+	async queryDatabase(database_id, filter, sorts, start_cursor, filter_properties, page_size){
 
 		const response = await axios.post(`https://api.notion.com/v1/databases/${database_id}/query`,{
 				filter,

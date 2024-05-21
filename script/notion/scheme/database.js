@@ -16,27 +16,11 @@ module.exports = class DatabaseScheme extends Scheme{
 		return config["scheme"] 
 	} 
 
-	static applyID(config) {
-		if (!(config["database_id"])) {
-			throw new Error("DatabaseScheme must have database_id") 
-		}
-
-		return config["database_id"]
-	}
-
-	static applyFilter(config) {
-		return config["filter"]
-	}
-
-	static applySorts(config) {
-		return config["sorts"]
-	}
-
-	async convert(data, client, parent_id = null) {
+	async convert(data, {client}) {
 		const ret = []
 
 		for await(let page of data) {
-			ret.push(await this.scheme.convert(page, client))
+			ret.push(await this.scheme.convert(page, {client}))
 		}
 
 		return ret

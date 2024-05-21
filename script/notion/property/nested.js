@@ -1,5 +1,5 @@
 const Property = require('./property')
-const {CheckboxType , DateType , MultiSelectType , RichTextType , SelectType , StatusType , TitleType, NumberType } = require('./type')
+const {CheckboxType , DateType , MultiSelectType , RichTextType , SelectType , StatusType , TitleType, NumberType, RollupType } = require('./type')
 
 module.exports = class NestedProperty extends Property {
 
@@ -37,6 +37,10 @@ module.exports = class NestedProperty extends Property {
 
 	static Title(name, id, rename) {
 		return new NestedProperty(name, id, new TitleType(), rename)
+	}
+
+	static Rollup(name, id, type, rename) {
+		return new NestedProperty(name, id, new RollupType(type), rename)
 	}
 
 	async convert(data) {

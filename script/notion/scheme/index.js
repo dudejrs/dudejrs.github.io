@@ -1,5 +1,8 @@
 const PageScheme = require('./page')
-const DatbaseScheme = require('./database')
+const DatabaseScheme = require('./database')
 const NestedDatabaseScheme = require('./nestedDatabase')
+const ContainerScheme = require('./container')
+const GeneratorScheme = require('./generator')
+const Scheme = require('./scheme')
 
-module.exports = {PageScheme, DatbaseScheme, NestedDatabaseScheme}
+module.exports = {PageScheme, DatabaseScheme, NestedDatabaseScheme, ContainerScheme, GeneratorScheme, Scheme}

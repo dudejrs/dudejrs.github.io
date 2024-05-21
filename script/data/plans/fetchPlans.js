@@ -15,7 +15,7 @@ async function fetchPlans(path, client){
 		for await (let {results} of data) {
 			if (results && Array.isArray(results)) {
 				for (page of results) {
-					let p = await PlanScheme.convert(page, client)
+					let p = await PlanScheme.convert(page, {client})
 					await save(p)
 				}
 			}
@@ -26,7 +26,6 @@ async function fetchPlans(path, client){
 		if (!page || !page.id){
 			throw new Error("Invalid page")
 		}
-
 		writeFileSync(`${path}/${page.id}.json`, JSON.stringify(page), {encoding : 'utf-8'})
 	}
 

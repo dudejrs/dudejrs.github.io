@@ -22,7 +22,7 @@ module.exports = class PageScheme extends Scheme{
 		return this
 	}
 
-	async convert(data, client, parent_id) {
+	async convert(data, {client, parent_id}) {
 		const ret = {}
 
 		ret["id"] = data["id"]
@@ -32,7 +32,7 @@ module.exports = class PageScheme extends Scheme{
 		}
 
 		for (let child of this.children) {
-			ret[child.name] = await child.convert(data, client, data["id"])
+			ret[child.name] = await child.convert(data, {client, parent_id : data["id"]})
 		}
 		
 		return ret

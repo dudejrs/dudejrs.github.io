@@ -7,10 +7,10 @@ module.exports = class PropertySort extends Sort{
 	}
 
 	static Ascending(value) {
-		return new Sort(value, Sort.Direction.Ascending)
+		return new PropertySort(value, Sort.Direction.Ascending)
 	}
 
 	static Decending(value) {
-		return new Sort(value, Sort.Direction.Descending)
+		return new PropertySort(value, Sort.Direction.Descending)
 	}
 }

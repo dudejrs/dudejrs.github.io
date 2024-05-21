@@ -30,7 +30,7 @@ async function getTotalProblem({path, client, languages}){
 
 	for await (let {results} of data) {
 		for (let page of results) {
-			const d = await CodingPracticeScheme.convert(page, client)
+			const d = await CodingPracticeScheme.convert(page, {client})
 
 			for (let lang of languages) {
 				ret[Count(lang)] += d[lang] > 0 ? 1 : 0

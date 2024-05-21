@@ -24,6 +24,8 @@ const {fetchCategories} = require('./data/categories')
 const {fetchPlans, updatePlans} = require('./data/plans');
 const {getTotalProblem, getAggregationByProblemType, getAggregationByCategories} = require('./data/codingPractice');
 
+const {fetchActivitiesPerQuarter} = require('./data/activities');
+
 // (async ()=> {
 // 	const page_id = "01786a32-24c9-485e-8fac-12957b	82406b"
 // 	const response = await notion.retrievePage(page_id)
@@ -38,7 +40,7 @@ const {getTotalProblem, getAggregationByProblemType, getAggregationByCategories}
 // 	const page_id = "1a5e28c1-78a6-4d67-9a09-47b7b419ae4f"
 // 	const response = await notion.retrievePage(page_id)
 
-// 	let data = await PlanScheme.convert(response, notion)
+// 	let data = await PlanScheme.convert(response, {notion})
 
 // 	await writeFileSync('public/test/c.json', JSON.stringify(data), {encoding : 'utf-8'})
 // })();
@@ -74,13 +76,15 @@ const {getTotalProblem, getAggregationByProblemType, getAggregationByCategories}
 // })()
 
 
-/* 코딩 트렉리스트 */
+/* 코딩 트랙리스트 */
 
-const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
+// const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
 
-(async()=>{
-	await getTotalProblem.exec({client : notion, languages})
+// (async()=>{
+// 	await getTotalProblem.exec({client : notion, languages})
+// })()
+
+;
+(async ()=>{
+	await fetchActivitiesPerQuarter.exec({client : notion})
 })()
-
-
-

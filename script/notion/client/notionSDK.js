@@ -52,13 +52,14 @@ module.exports = class NotionSDKClient extends Client_ {
 		return response
 	}
 
-	async queryDatabase(database_id, filter, sorts, start_cursor, filter_properties){
+	async queryDatabase(database_id, filter, sorts, start_cursor, filter_properties, page_size){
 		const response = await this.client.databases.query({
 			database_id,
 			filter,
 			sorts,
 			start_cursor,
-			filter_properties
+			filter_properties,
+			page_size
 		})
 
 		return response

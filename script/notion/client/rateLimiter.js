@@ -33,8 +33,8 @@ module.exports = class RateLimiterClient {
 		return await this.client.retrievePageProperties(page_id, property_id, start_cursor)
 	}
 
-	async queryDatabase(database_id, filter, sorts, start_cursor, filter_properties){
+	async queryDatabase(database_id, filter, sorts, start_cursor, filter_properties, page_size){
 		await this.limiter.removeTokens(1);
-		return await this.client.queryDatabase(database_id, filter, sorts, start_cursor, filter_properties)
+		return await this.client.queryDatabase(database_id, filter, sorts, start_cursor, filter_properties, page_size)
 	}
 }

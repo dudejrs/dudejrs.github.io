@@ -45,7 +45,7 @@ module.exports = class NestedDatabaseScheme extends Scheme{
 		return config["sorts"]
 	}
 
-	async convert(data, client, parent_id) {
+	async convert(data, {client, parent_id}) {
 		const ret = []
 		
 		let filter = ANDFilter.of(RelationFilter.Contains(this.relation_property_name, parent_id), this.filter).build()
