@@ -54,7 +54,7 @@ module.exports = class NestedDatabaseScheme extends Scheme{
 		
 		for await(let {results} of response) {
 			for (let page of results) {
-				ret.push(await this.scheme.convert(page))
+				ret.push(await this.scheme.convert(page, {client}))
 			}
 		}
 

@@ -24,7 +24,7 @@ const {fetchCategories} = require('./data/categories')
 const {fetchPlans, updatePlans} = require('./data/plans');
 const {getTotalProblem, getAggregationByProblemType, getAggregationByCategories} = require('./data/codingPractice');
 
-const {fetchCertificate} = require('./data/certificate')
+const {fetchProjects} = require('./data/experience')
 
 // (async ()=> {
 // 	const page_id = "01786a32-24c9-485e-8fac-12957b	82406b"
@@ -86,5 +86,5 @@ const {fetchCertificate} = require('./data/certificate')
 
 ;
 (async ()=>{
-	await fetchCertificate.exec({client : notion})
+	await fetchProjects.exec({client : notion})
 })()
