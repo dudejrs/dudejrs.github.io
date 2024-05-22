@@ -43,6 +43,7 @@ module.exports = class Sort {
 			cur = cur.next
 		}
 		cur.next = sort
+		return this
 	}
 
 	build(){

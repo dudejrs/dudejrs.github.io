@@ -30,7 +30,7 @@ const skills = [{
 ]
 },{
 	title : "Frontend",
-	items : ["Html+Css", "React.js"],
+	items : ["Html+Css", "React"],
 	levels : [2,1]
 },{
 	title : "Programing Language",
@@ -84,12 +84,12 @@ const projects = [
 ];
 
 const trackListMap = {
-	"Javascript" : ["Javascript","Typescript", "Node.js","React.js", "Angular.js", "Nest.js"],
+	"Javascript" : ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js"],
 	"Java" : ["Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux"],
 	"DBMS" : ["SQL","Oracle","MySQL", "MongoDB", "GraphQL"],
-	"Backend" : ["\bC++", "Basic", "Backend", "Kafka", "Redis"],
+	"Backend" : ["C++", "Basic", "Backend", "Kafka", "Redis"],
 	"DevOps" : ["Go", "Linux", "Docker", "Kubernetices", "AWS"],
-	"Data Science" : ["Python","Tensorflow","Pytorch", "Data Science", "Scrapping/Crawling"],
+	"Data Science" : ["Python","Tensorflow","Pytorch", "Data Science", "Scrapping"],
 	"Graphics" :["OpenGL", "WebGL", "Three.js", "D3.js"]
 }
 

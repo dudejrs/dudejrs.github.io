@@ -1,6 +1,7 @@
 const {PageScheme, NestedDatabaseScheme} = require('../notion/scheme')
 const {NestedProperty, ComputedProperty} = require('../notion/property')
 const {StringType, DateType} = require('../notion/property/type')
+const {PropertySort} = require('../notion/sort')
 
 module.exports = new PageScheme("계획", {
 	"title" :  NestedProperty.Title("Name","title"),
@@ -17,6 +18,7 @@ module.exports = new PageScheme("계획", {
 			"Date" : NestedProperty.Date("Date", "d%5CTz"),
 			"진행상태" : NestedProperty.Select("진행상태","%7Bh%7BP"),
 			"Done" : NestedProperty.Checkbox("Done","iQZ~"),
-		})
+		}),
+		sorts : PropertySort.Ascending("Date")
 	})
 })

@@ -6,10 +6,8 @@ import TableHeader from './tableHeader'
 
 
 
-export default function Table({columns,  types, data, titleOnClick, ratio}) {
-	
+export default function Table({columns, types, data, titleOnClick, ratio}) {	
 	const [widths, setWidths] = useState([]);	
-
 
 	useEffect(()=>{
 

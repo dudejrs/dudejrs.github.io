@@ -36,7 +36,11 @@ module.exports = class ContainerScheme extends Scheme {
 
 	async convert(data, {client}) {
 		const ret = []
-		const response = await client.queryDatabase(this.database_id, this.filter.build(), this.sorts)
+
+		const filter = this.filter?.build()
+		const sorts = this.sorts?.build()
+
+		const response = await client.queryDatabase(this.database_id, filter, sorts)
 
 		for await (let {results} of response) {
 			let d = await this.scheme.convert(results, {client})

@@ -4,7 +4,8 @@
 
 
 .typesTitle, .typesMultipleSelect, .typesRollup, .typesCheckbox, 
-.typesFormula, .typesSelect,.typesDate {
+.typesFormula, .typesSelect,.typesDate, .typesStatus, .typesURL,
+ .typesRelation, .typesText, .typesNumber, .typesFile {
 
 	height: 1.25em;
 

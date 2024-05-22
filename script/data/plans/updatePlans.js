@@ -8,7 +8,7 @@ const {TimestampSort} = require('../../notion/sort')
 const {writeMetaData} = require('../../util')
 
 
-async function fetchPlans(path, client){
+async function fetchPlans({path, client}){
 
 	const {updated} = JSON.parse(await readFileSync(`${path}/meta.json`, {encoding : 'utf-8'}))
 

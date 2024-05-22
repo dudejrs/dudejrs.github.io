@@ -50,7 +50,7 @@ module.exports = class NestedDatabaseScheme extends Scheme{
 		
 		let filter = ANDFilter.of(RelationFilter.Contains(this.relation_property_name, parent_id), this.filter).build()
 
-		const response = client.queryDatabase(this.database_id, filter, this.sorts, undefined, undefined)
+		const response = client.queryDatabase(this.database_id, filter, this.sorts.build(), undefined, undefined)
 		
 		for await(let {results} of response) {
 			for (let page of results) {

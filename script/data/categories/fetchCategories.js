@@ -8,6 +8,8 @@ const {MultiSelectFilter} = require('../../notion/filter')
 const {fetchSkillMap} = require('../skills')
 const {writeMetaData} = require('../../util')
 
+const calculateCount = require('./calculateCount')
+
 async function fetchCategories({path, client, categories}) {
 	
 	async function fetchCategory({category, client, skillMap}) {
@@ -41,7 +43,7 @@ async function fetchCategories({path, client, categories}) {
 
 module.exports = new DirectoryJob({
 	name: `categories를 fetch`,
-	path: `${process.env.project_path}/public/test/categories`,
+	path: `${process.env.project_path}/public/data/categories`,
 	exec: fetchCategories,
 	handleError: console.log
-})
+}).setChild(calculateCount)

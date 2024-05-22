@@ -2,15 +2,15 @@ const Sort = require('./sort')
 
 module.exports = class PropertySort extends Sort{
 	
-	constructor(value, direction, next = null){
-		super("property", value, direction, next)
+	constructor(name, direction, next = null){
+		super("property", name, direction, next)
 	}
 
-	static Ascending(value) {
-		return new PropertySort(value, Sort.Direction.Ascending)
+	static Ascending(name) {
+		return new PropertySort(name, Sort.Direction.Ascending)
 	}
 
-	static Decending(value) {
-		return new PropertySort(value, Sort.Direction.Descending)
+	static Descending(name) {
+		return new PropertySort(name, Sort.Direction.Descending)
 	}
 }

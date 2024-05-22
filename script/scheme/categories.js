@@ -2,6 +2,7 @@ const {Scheme, GeneratorScheme, ContainerScheme, DatabaseScheme, PageScheme} = r
 const {NestedProperty, ComputedProperty, RelationProperty} = require('../notion/property')
 const {DateType, StringType} = require('../notion/property/type')
 const {ANDFilter, CheckBoxFilter, MultiSelectFilter, RelationFilter} = require('../notion/filter')
+const {PropertySort} = require('../notion/sort')
 const CertificateScheme = require('./certificate')
 
 function generateScheme({category, skillID}) {
@@ -17,7 +18,8 @@ function generateScheme({category, skillID}) {
 				"완료율" : ComputedProperty.Formula("완료율", "kT%3D%7D", new StringType()),
 				})
 			}),
-			filter : MultiSelectFilter.Contains("Tag", category)
+			filter : MultiSelectFilter.Contains("Tag", category),
+			sorts : PropertySort.Descending("Status").add(PropertySort.Descending("EndDate"))
 		}))
 
 	scheme.addChild(new ContainerScheme("자격증", {
@@ -41,7 +43,8 @@ function generateScheme({category, skillID}) {
 						"프로젝트URL" : NestedProperty.URL("프로젝트URL", "PrOR")
 				})
 			}),
-			filter : ANDFilter.of(CheckBoxFilter.Equals("_hidden",false), RelationFilter.Contains("기술", skillID))
+			filter : ANDFilter.of(CheckBoxFilter.Equals("_hidden",false), RelationFilter.Contains("기술", skillID)),
+			sorts : PropertySort.Descending("_EndDate")
 		}))
 
 
@@ -57,14 +60,13 @@ function generateScheme({category, skillID}) {
 					"실습URL" : NestedProperty.URL("실습URL", "t%3ACR"),
 				})
 			}),
-			filter : ANDFilter.of(CheckBoxFilter.Equals("_hidden",false), RelationFilter.Contains("기술", skillID))
+			filter : ANDFilter.of(CheckBoxFilter.Equals("_hidden",false), RelationFilter.Contains("기술", skillID)),
+			sorts : PropertySort.Descending("_EndDate")
 		}))
 	}
 
 
-	return [
-		scheme
-	]
+	return [scheme]
 }
 
 

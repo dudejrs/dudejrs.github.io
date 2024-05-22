@@ -6,8 +6,7 @@ const PlanScheme = require('../../scheme/plan')
 const {writeMetaData} = require('../../util')
 
 
-async function fetchPlans(path, client){
-
+async function fetchPlans({path, client}){
 	async function fetch() {
 		let ret  = []
 		const data = client.queryDatabase(process.env.notion_plan_database_id)
@@ -42,7 +41,7 @@ async function fetchPlans(path, client){
 
 module.exports = new DirectoryJob({
 		name: 'plans를 fetch',
-		path: `${process.env.project_path}/public/test/plans`,
+		path: `${process.env.project_path}/public/data/plans`,
 		exec: fetchPlans,
 		handleError: console.log
 

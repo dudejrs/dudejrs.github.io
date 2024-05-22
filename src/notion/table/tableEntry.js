@@ -19,9 +19,9 @@ export default function TableEntry({data, columns, types, widths, titleOnClick})
 				columns.map((column, i) =>{
 
 					if(types[i]=="title")
-						return (<TitleComponent title={data[column]} width={widths[i]} onClick={()=>{titleOnClick(data)}}/>);
+						return (<TitleComponent key={i} title={data[column]} width={widths[i]} onClick={()=>{titleOnClick(data)}}/>);
 
-					return (<ValueEntry className={tableStyles.column} data = {data[column]}  style={{ width : widths[i] }} type= {types[i]}/>);
+					return (<ValueEntry key={i} className={tableStyles.column} data = {data[column]}  style={{ width : widths[i] }} type= {types[i]}/>);
 
 				})
 			}

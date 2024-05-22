@@ -3,53 +3,30 @@ const axios  = require('axios');
 const fs = require('fs');
 
 const {getDatabase, getPage} = require('./notion');
-const {getPlans} = require('./notion/plan');
-const {getDetailedPlansFromPlans} = require('./notion/detailedPlan')
 const {getCodingPracticeAggregation} = require("./notion/codingPractice");
 const {cleanDirExcept, writeMetaData} = require('./util')
-
 require('dotenv').config();
 
-// const planDirPath = 'public/data_/plan';
-// const detailedPlanDirPath = 'public/data_/detailedPlan'
-// const codingPracticeDirPath = 'public/data_/codingPractice'
+const {fetchPlans, updatePlans} = require('./data/plans')
+const {fetchCategories, calculateCount} = require('./data/categories')
 
-const planDirPath = 'public/data/plan';
-const detailedPlanDirPath = 'public/data/detailedPlan'
+
+const NotionSDKClient = require('./notion/client/notionSDK');
+const RateLimiterClient = require('./notion/client/rateLimiter')
+const PaginationClient = require('./notion/client/pagination')
+const AxiosClient = require('./notion/client/axios')
+
 const codingPracticeDirPath = 'public/data/codingPractice'
 
-const planFilterList = ['categories.json']
-
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
-
-const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"]
+const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
+const categories = ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "C++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","PyTorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
 
 const notion = new Client({
 	auth : process.env.notion_integration_secret
 });
 
-
-const fetchPlans= ()=>{
-	try{
-		cleanDirExcept(planDirPath, ['meta.json'])	
-	} catch (error) {
-		console.log(error)
-	} 
-
-	getPlans(notion, tags, planDirPath, process.env.notion_integration_secret);
-	writeMetaData(planDirPath);
-}
-
-const fetchDetailedPlans= ()=>{
-	try{
-		cleanDirExcept(detailedPlanDirPath, ['meta.json'])
-	} catch (error) {
-		console.log(error);
-	} 
-
-	getDetailedPlansFromPlans(planDirPath, detailedPlanDirPath, planFilterList, process.env.notion_integration_secret);
-	writeMetaData(detailedPlanDirPath);
-}
+const client = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
 
 const fetchCodingPractice = async ()=>{
 	try {
@@ -62,15 +39,29 @@ const fetchCodingPractice = async ()=>{
 }
 
 const fetchRoutine = ()=>{
+	const [maincommand, subcommand] = process.argv.slice(2,4)
 
-	switch(process.argv[2]){
+	switch(maincommand){
 		case "plan":
-			fetchPlans();
-			// fetchDetailedPlans();
+			if (subcommand == "all") {
+				fetchPlans.exec({client});
+				break;
+			}
+			updatePlans.exec({client})
 			break;
-		case "detailedPlan" :
-			fetchDetailedPlans();
+
+		case "categories" :
+			if (subcommand) {
+				fetchCategories.exec({client, categories : process.argv.slice(3)})
+				break;
+			}
+			fetchCategories.exec({client, categories})
 			break;
+
+		case "count" :
+			calculateCount.exec({client, categories})
+			break;
+
 		case "cote":
 			fetchCodingPractice();
 			break;

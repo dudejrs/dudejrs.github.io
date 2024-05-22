@@ -4,7 +4,6 @@ import SidePeek from './sidePeek';
 import styles from './sidePeekContainer.module.css'
 
 
-
 export default function SidePeekContainer({ id, className, children, sideContent, active, close}) {
 
 	return (
