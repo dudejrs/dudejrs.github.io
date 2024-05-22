@@ -12,26 +12,7 @@ const types = ["title", "select", "checkbox","date"];
 const ratio = [3,1,1,1];
 
 
-export default function DetailedPlanTable ({data}){
-
-	const [detailedPlan, setDetailedPlan] = useState([]);
-	const [loaded, setLoaded] = useState(false);
-
-
-	useEffect(()=>{
-		if(data.id && !loaded){
-			getDetailedPlanList(data.id)
-				.then((data)=>{
-					getDetailedPlans(data["단위계획"], columns)
-						.then((data)=>{
-							setDetailedPlan(data);
-							setLoaded(true);
-						});
-
-				});
-		}
-	});
-
+export default function DetailedPlanTable ({data, detailedPlan = []}){
 
 	return(
 		<div>

@@ -23,19 +23,19 @@ const skills = [{
 	title : "Backend",
 	items : [
 
-			{ title : "Framework", items : ["Node.js", "Spring & Spring Boot"], levels : [1,1]},
-			{ title : "Database", items : ["Oracle", "MySQL"], levels : [1,0]},
+			{ title : "Framework", items : ["Node.js", "Spring"], levels : [1,1, 1]},
+			{ title : "Database", items : ["Oracle", "MySQL"], levels : [1, 0]},
 			{ title : "Infra", items : ["Linux", "Aws"], levels : [1,0]}
 
 ]
 },{
 	title : "Frontend",
-	items : ["Html+Css", "React"],
-	levels : [2,1]
+	items : ["Html", "css", "React"],
+	levels : [1,1,1]
 },{
 	title : "Programing Language",
-	items : ["Javascript", "Java", "C++", "Python"],
-	levels : [2, 2, 2, 1]
+	items : ["Javascript", "Java", "C++", "Python", "Kotlin", "Go", "Typescript"],
+	levels : [2, 2, 1, 1, 0, 0, 0]
 
 }];
 

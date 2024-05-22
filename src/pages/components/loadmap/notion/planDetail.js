@@ -1,7 +1,7 @@
 
 import {useState, useEffect} from 'react';
 
-import {getPlanById} from '../../../../domain/plans';
+import {getPlan} from '../../../../domain/plans';
 import Detail from '../../../../notion/detail';
 import DetailedPlanTable from './detailedPlanTable';
 
@@ -10,36 +10,34 @@ import styles from './planDetail.module.css'
 
 const types = {
 	"title" : "title",
+	"기간" : "date",
 	"Tag" : "multiselect",
-	"남은 시간" : "rollup",
-	"완료" : "checkbox",
+	"분류" : "select",
 	"완료율" : "rollup",
-	"장기/단기" : "multiselect"
+	"Status" : "status"
 };
 
 export default function PlanDetail({target, children}){
 	
 	const[plan, setPlan] = useState({});
+	const[detailedPlan, setDetailedPlan] = useState([]);
 
 	useEffect(()=>{
 
-		getPlanById(target, Object.keys(types))
+		getPlan(target, Object.keys(types))
 			.then((plan)=> {
-				setPlan(plan);
+				const {id, 세부계획, ...p} = plan
+				setDetailedPlan(plan["세부계획"])
+				setPlan(p);
 			})
 
 	},[]);
 
-
-
-	const isContainFilter = (key ,filterList) => {
-		return !filterList.some((f)=>(key == f));
-	}
 	return (
 		<>
 		{ Object.keys(plan) && (
-			<Detail className={styles.container} data={plan} filterList={["id"]} types={types}>
-				<DetailedPlanTable />
+			<Detail className={styles.container} data={plan} types={types}>
+				<DetailedPlanTable detailedPlan={detailedPlan}/>
 			</Detail>
 			)
 		}

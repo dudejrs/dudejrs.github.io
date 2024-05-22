@@ -27,7 +27,6 @@ export default function NotionContainer({name}) {
 	useEffect(()=>{
 		getCategories(name)
 			.then((d) => {
-				console.log(d)
 				setPlans(d["계획"])
 				if (d["프로젝트"]) {
 					setProjects(d["프로젝트"])

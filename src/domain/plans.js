@@ -9,11 +9,11 @@ function getIdsFromCategroy(category){
 			});
 }
 
-async function getPlan(id, fields){
+export async function getPlan(id, fields){
 
 	return await axios.get(`${plansDir}/${id}.json`)
 					.then(({data})=>{
-						return filterData(data, fields);
+						return data
 					})
 					.catch((error)=>{ 
 						console.log(error);
@@ -21,19 +21,10 @@ async function getPlan(id, fields){
 					});
 }
 
-async function getPlansFromIds(ids, fields){
-	const result = [] 
-	
-	for(let i=0; i<ids.length ; i++){
-		let plan = await getPlan(ids[i], fields);
-		result.push(plan);
-	}
-
-	return result;
-}
-
-export async function getDetailedPlanList(id){
-	return  await getPlan(id, ['단위계획'])
+export async function getPlansUpdatedDate(){
+	return await axios.get(`${plansDir}/meta.json`)
+					.then(({data})=>{return data['updated']});
+	;
 }
 
 export function getCounts(categories) {
@@ -41,25 +32,4 @@ export function getCounts(categories) {
 		.then(({data}) => {
 				return new Map(Object.entries(data))
 			})
-}
-
-export function getPlans(category, fields){
-	return getIdsFromCategroy(category)
-			.then((ids)=>{
-				return  getPlansFromIds(ids, fields);
-			})
-			.catch((error)=>{
-				console.log(error);
-				return Promise.resolve([])
-			});
-}
-
-export function getPlanById(id, fields){
-	return getPlan(id, fields);
-}
-
-export async function getPlansUpdatedDate(){
-	return await axios.get(`${plansDir}/meta.json`)
-					.then(({data})=>{return data['updated']});
-	;
 }
