@@ -33,5 +33,6 @@ module.exports = class DatabaseJob extends Job{
 			}
 		}
 		console.log(`[Database Job] ${this.name} finish`)
+		return data
 	}
 }

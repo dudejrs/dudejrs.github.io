@@ -2,23 +2,19 @@ const {writeFileSync} = require('fs')
 
 const {DirectoryJob, DatabaseJob} = require('../../job')
 const CategoriesScheme = require('../../scheme/categories')
+const SkillScheme = require('../../scheme/skill')
 const {MultiSelectFilter} = require('../../notion/filter')
 
+const {fetchSkillMap} = require('../skills')
 const {writeMetaData} = require('../../util')
 
 async function fetchCategories({path, client, categories}) {
-	async function fetchCategory(category) {
-		const ret = []
-		const data = client.queryDatabase(process.env.notion_plan_database_id, MultiSelectFilter.Contains("Tag", category).build(), undefined, undefined, undefined)
-		
-		for await (let {results} of data) {
-			if (results && Array.isArray(results)) {
-				let d = await CategoriesScheme.convert(results, {client})
-				ret.push(...d)
-			}
-		}
+	
+	async function fetchCategory({category, client, skillMap}) {
 
-		return ret 
+		const skillID = skillMap.has(category) ? skillMap.get(category) : null
+
+		return await CategoriesScheme.convert(null, {category, client, skillID})
 	}
 
 	async function save({data, path}) {
@@ -27,6 +23,8 @@ async function fetchCategories({path, client, categories}) {
 		}
 	}
 
+	const skillMap = await fetchSkillMap.exec({client})
+
 	for (let category of categories) {
 		const myJob = new DatabaseJob({
 			name : `${category}에 관련된 계획 fetch`,
@@ -34,7 +32,7 @@ async function fetchCategories({path, client, categories}) {
 			exec : fetchCategory,
 			finish : save,
 		})
-		await myJob.exec(category)
+		await myJob.exec({category, client, skillMap})
 	}
 
 	writeMetaData(path)

@@ -13,8 +13,12 @@ module.exports = class Scheme {
 			});
 	}
 
-	addChildren(scheme) {
-		this.children.push(children)
+	static isFalsy(d) {
+		return !d || (Array.isArray(d) && d.length == 0) || (Object.keys(d).length == 0)
+	}
+
+	addChild(scheme) {
+		this.children.push(scheme)
 		return this
 	}
 
@@ -22,7 +26,10 @@ module.exports = class Scheme {
 		const ret = {}
 		
 		for (let child of this.children) {
-			ret[child.name] = await child.convert(data, args)
+			const d = await child.convert(data, args)
+			if (!Scheme.isFalsy(d)) {
+				ret[child.name] = d
+			}
 		}
 
 		return ret

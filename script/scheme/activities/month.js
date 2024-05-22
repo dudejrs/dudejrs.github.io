@@ -87,4 +87,4 @@ async function generateScheme({client}) {
 	return ret
 }
 
-module.exports = new GeneratorScheme ("분기별 활동 타임라인", generateScheme)
+module.exports = new GeneratorScheme ("월별 활동 타임라인", generateScheme)

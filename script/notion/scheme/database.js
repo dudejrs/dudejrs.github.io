@@ -20,7 +20,11 @@ module.exports = class DatabaseScheme extends Scheme{
 		const ret = []
 
 		for await(let page of data) {
-			ret.push(await this.scheme.convert(page, {client}))
+			let d = await this.scheme.convert(page, {client})
+			
+			if (!Scheme.isFalsy(d)) {
+				ret.push(d)
+			}
 		}
 
 		return ret

@@ -11,7 +11,7 @@ module.exports = new PageScheme("프습젝트", {
 	"프로젝트URL" : NestedProperty.URL("프로젝트URL", "PrOR"),
 	"세부 경험" : new NestedDatabaseScheme("세부 경험", {
 		relation_property_name : "🌳 프로젝트",
-		database_id : "c9cde8f2-c9d4-49d4-8c61-217f46f70024",
+		database_id : process.env.notion_experience_detail_database_id,
 		scheme : new PageScheme("세부사항", {
 			"이름" : NestedProperty.Title("Name", "title"),
 			"기간" : NestedProperty.Date("Date", "iCuT")

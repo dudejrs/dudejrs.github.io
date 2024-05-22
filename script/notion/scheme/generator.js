@@ -10,7 +10,11 @@ module.exports = class GeneratorScheme extends Scheme {
 		const ret = {}
 		
 		for (let scheme of await this.generateScheme(args)) {
-			ret[scheme.name] = await scheme.convert(data, args)
+			let d = await scheme.convert(data, args)
+
+			if (!Scheme.isFalsy(d)) {
+				ret[scheme.name] = d
+			}
 		}
 
 		return ret
