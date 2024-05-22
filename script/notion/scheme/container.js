@@ -41,7 +41,7 @@ module.exports = class ContainerScheme extends Scheme {
 		for await (let {results} of response) {
 			let d = await this.scheme.convert(results, {client})
 			if (!Scheme.isFalsy(d)) {
-				ret.push(d)
+				ret.push(...d)
 			}
 		}
 

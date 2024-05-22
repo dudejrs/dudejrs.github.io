@@ -1,7 +1,7 @@
-const {GeneratorScheme, ContainerScheme, DatabaseScheme, PageScheme} = require('../../notion/scheme')
-const {NestedProperty, ComputedProperty} = require('../../notion/property')
+const {Scheme, GeneratorScheme, ContainerScheme, DatabaseScheme, PageScheme} = require('../../notion/scheme')
+const {NestedProperty, ComputedProperty, RelationProperty} = require('../../notion/property')
 const {DateType} = require('../../notion/property/type')
-const {ANDFilter, RollupFilter} = require('../../notion/filter')
+const {ANDFilter, RollupFilter, CheckBoxFilter, FormulaFilter} = require('../../notion/filter')
 const {PropertySort} = require('../../notion/sort')
 
 const Quarters = Object.freeze([
@@ -48,9 +48,53 @@ function toString(date) {
 	return date.toISOString().slice(0,10)
 }
 
-async function hasNext(date, client) {
-	const {value} = await client.queryDatabase(process.env.notion_plan_database_id, RollupFilter.Date("EndDate", "before", date).build(), undefined, undefined, undefined, 1).next();
-	return value.results.length != 0
+function getScheme(cur){
+	const ret = new Scheme(`${currentQuarterString(cur)}`, {})
+
+	ret.addChild(new ContainerScheme("계획", {
+			database_id : process.env.notion_plan_database_id,
+			scheme : new DatabaseScheme("계획", {
+				scheme : new PageScheme("",{
+						"title" :  NestedProperty.Title("Name","title"),
+						"Status" : NestedProperty.Status("Status", "oz%3EA"),
+						"Tag" : NestedProperty.MultiSelect("Tag", "VPPQ"),
+						"기간" : ComputedProperty.Formula("기간","YTb%3D", new DateType()),
+				})
+			}),
+			filter : ANDFilter.of(RollupFilter.Date("EndDate","on_or_after", toString(lastQuarter(cur))), RollupFilter.Date("EndDate", "before", toString(cur)))
+		}))
+
+	ret.addChild(new ContainerScheme("프로젝트", {
+		database_id : process.env.notion_experience_project_database_id,
+		scheme : new DatabaseScheme("프로젝트", {
+			scheme : new PageScheme("", {
+					"이름" : NestedProperty.Title("이름", "title"),
+					"기간" : NestedProperty.Date("기간", "UocS"),
+					"태그" : NestedProperty.MultiSelect("태그", "yJPS"),
+					"기술" : new RelationProperty("기술", "YmTS", NestedProperty.Title("Name", "title")),
+			})
+		}),
+		filter : ANDFilter.of(CheckBoxFilter.Equals("_hidden",false), FormulaFilter.Date("_EndDate","on_or_after", toString(lastQuarter(cur))), FormulaFilter.Date("_EndDate", "before", toString(cur)))
+	}))
+
+	ret.addChild(new ContainerScheme("실습", {
+		database_id : process.env.notion_experience_practice_database_id,
+		scheme : new DatabaseScheme("실습", {
+			scheme : new PageScheme("", {
+					"이름" : NestedProperty.Title("이름", "title"),
+					"기간" : NestedProperty.Date("기간", "km%60%7C"),
+					"태그" : NestedProperty.MultiSelect("태그", "XAM%3F"),
+					"기술" : new RelationProperty("기술", "FsGX", NestedProperty.Title("Name", "title")),
+			})
+		}),
+		filter : ANDFilter.of(CheckBoxFilter.Equals("_hidden",false), FormulaFilter.Date("_EndDate","on_or_after", toString(lastQuarter(cur))), FormulaFilter.Date("_EndDate", "before", toString(cur)))
+	}))
+
+	return ret
+}
+
+async function hasNext(date) {
+	return date.getTime() >= new Date("2022-01-01")
 }
 
 async function generateScheme({client}) {
@@ -60,22 +104,11 @@ async function generateScheme({client}) {
 
 	while (true) {
 		console.log(cur)
-		 ret.push(new ContainerScheme(`${currentQuarterString(cur)}`, {
-				database_id : process.env.notion_plan_database_id,
-				scheme : new DatabaseScheme("", {
-					scheme : new PageScheme("",{
-							"title" :  NestedProperty.Title("Name","title"),
-							"Status" : NestedProperty.Status("Status", "oz%3EA"),
-							"Tag" : NestedProperty.MultiSelect("Tag", "VPPQ"),
-							"기간" : ComputedProperty.Formula("기간","YTb%3D", new DateType()),
-					})
-				}),
-				filter : ANDFilter.of(RollupFilter.Date("EndDate","on_or_after", toString(lastQuarter(cur))), RollupFilter.Date("EndDate", "before", toString(cur)))
-			}))
+		 ret.push(getScheme(cur))
 
 		cur = lastQuarter(cur)
 
-		if (!await hasNext(cur, client)) {
+		if (!await hasNext(cur)) {
 			break;
 		}
 	}
