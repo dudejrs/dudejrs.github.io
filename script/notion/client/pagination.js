@@ -42,6 +42,7 @@ module.exports = class PaginationClient {
 			const response = await this.client.queryDatabase(database_id, filter, sorts, start_cursor, filter_properties, page_size)
 			const {has_more, next_cursor} = response
 			yield response
+			console.log("..")
 			
 			if (has_more) {
 				start_cursor = next_cursor

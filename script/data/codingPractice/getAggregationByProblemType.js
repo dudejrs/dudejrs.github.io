@@ -49,7 +49,7 @@ async function getAggregationByProblemType({path, client, languages}){
 
 module.exports = new FileJob({
 	name : 'aggregation by problem type을 도출',
-	path : `${process.env.project_path}/public/test/codingPractice/aggregationByProblemType.json`,
+	path : `${process.env.project_path}/public/data/codingPractice/aggregationByProblemType.json`,
 	exec : getAggregationByProblemType,
 	handleError: console.log
 })

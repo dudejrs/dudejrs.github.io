@@ -8,6 +8,7 @@ module.exports = class NotionSDKClient extends Client_ {
 		this.client = new Client({
 			auth : secret
 		});
+
 	}
 
 	async createPage(database_id, properties){

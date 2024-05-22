@@ -19,7 +19,7 @@ async function getAggregationByCategories({path, client}){
 
 module.exports = new FileJob({
 	name : '',
-	path : `${process.env.project_path}/public/test/codingPractice/aggregationByCategories.json`,
+	path : `${process.env.project_path}/public/data/codingPractice/aggregationByCategories.json`,
 	exec : getAggregationByCategories,
 	handleError : console.log
 })

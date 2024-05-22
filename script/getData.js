@@ -9,6 +9,7 @@ require('dotenv').config();
 
 const {fetchPlans, updatePlans} = require('./data/plans')
 const {fetchCategories, calculateCount} = require('./data/categories')
+const {getTotalProblem, getAggregationByCategories, getAggregationByProblemType} = require('./data/codingPractice')
 
 
 const NotionSDKClient = require('./notion/client/notionSDK');
@@ -19,7 +20,7 @@ const AxiosClient = require('./notion/client/axios')
 const codingPracticeDirPath = 'public/data/codingPractice'
 
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
-const langauges = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
+const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
 const categories = ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "C++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","PyTorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
 
 const notion = new Client({
@@ -28,17 +29,17 @@ const notion = new Client({
 
 const client = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
 
-const fetchCodingPractice = async ()=>{
-	try {
-		cleanDirExcept(codingPracticeDirPath,['meta.json', 'log.json'])
-	}catch(error){
-		console.log(error);
-	}
-	await getCodingPracticeAggregation(notion, langauges, codingPracticeDirPath, process.env.notion_integration_secret);
-	writeMetaData(codingPracticeDirPath);
-}
+// const fetchCodingPractice = async ()=>{
+// 	try {
+// 		cleanDirExcept(codingPracticeDirPath,['meta.json', 'log.json'])
+// 	}catch(error){
+// 		console.log(error);
+// 	}
+// 	await getCodingPracticeAggregation(notion, languages, codingPracticeDirPath, process.env.notion_integration_secret);
+// 	writeMetaData(codingPracticeDirPath);
+// }
 
-const fetchRoutine = ()=>{
+const fetchRoutine = async ()=>{
 	const [maincommand, subcommand] = process.argv.slice(2,4)
 
 	switch(maincommand){
@@ -63,7 +64,10 @@ const fetchRoutine = ()=>{
 			break;
 
 		case "cote":
-			fetchCodingPractice();
+			await getTotalProblem.exec({client, languages})
+			await getAggregationByCategories.exec({client})
+			await getAggregationByProblemType.exec({client, languages})
+
 			break;
 		case "all" :
 			fetchPlans();
