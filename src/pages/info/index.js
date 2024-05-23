@@ -30,7 +30,7 @@ const skills = [{
 ]
 },{
 	title : "Frontend",
-	items : ["Html", "css", "React"],
+	items : ["HTML", "CSS", "React"],
 	levels : [1,1,1]
 },{
 	title : "Programing Language",
@@ -87,15 +87,13 @@ const trackListMap = {
 	"Javascript" : ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js"],
 	"Java" : ["Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux"],
 	"DBMS" : ["SQL","Oracle","MySQL", "MongoDB", "GraphQL"],
-	"Backend" : ["C++", "Basic", "Backend", "Kafka", "Redis"],
+	"Backend" : ["C++", "Basic", "Kafka", "Redis"],
 	"DevOps" : ["Go", "Linux", "Docker", "Kubernetices", "AWS"],
 	"Data Science" : ["Python","Tensorflow","Pytorch", "Data Science", "Scrapping"],
 	"Graphics" :["OpenGL", "WebGL", "Three.js", "D3.js"]
 }
 
 const trackLists = ["Javascript","Java","DBMS","Backend","DevOps","Data Science", "Graphics"];
-
-
 
 export default function Info() {
 

@@ -1,15 +1,14 @@
 .project_container{
-	height: 25vw;
-	width : 25vw;
-	max-width: 250px;
-	max-height: 250px;
-	min-width: 200px;
-	min-height: 200px;
+	height: 30%;
+	width : 30%;
+	min-width: 250px;
+	min-height: 250px;
 	margin: 0 1.5rem;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 
 	position: relative;
 	
@@ -21,8 +20,8 @@
 
 .project_container:hover{
 	position: relative;
-	height: 30vw;
-	width: 30vw;
+	height: 35%;
+	width: 35%;
 	min-height: 300px;
 	min-width: 300px;
 
@@ -58,10 +57,16 @@
 	position: relative;
 
 	text-align: center;
-	width: 80vw;
+	width: 100%;
 	height: 30vw;
 	min-height: 350px;
 
 	overflow-x: scroll;
 	font-size: 0.9rem;
+	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;  /* Firefox */
+}
+
+.projects_container::-webkit-scrollbar {
+  display: none;
 }

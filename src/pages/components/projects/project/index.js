@@ -12,10 +12,7 @@ export default function Project({
 	isClicked,
 	index
 }) {
-
 	if(!src) src = "img/experience/default_background.png";
-
-
 
 	return (
 
@@ -29,7 +26,7 @@ export default function Project({
 				<p className={styles.description}>{description}</p>
 				<div className={styles.tags}> 
 					{
-						tags.split(' ').map((tag)=>
+						tags.map((tag)=>
 							<Tag name={tag} key={tag}/>)
 					}
 				</div>

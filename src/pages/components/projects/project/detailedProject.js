@@ -42,7 +42,7 @@ export default function DetailedProject({
 					</div>
 					<div className={styles.tags}> 
 						{
-							tags.split(' ').map((tag)=>
+							tags.map((tag)=>
 								<Tag name={tag} />)
 						}
 					</div>

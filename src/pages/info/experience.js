@@ -1,5 +1,3 @@
-
-
 import Projects from '../components/projects';
 
 import Section from './section'
