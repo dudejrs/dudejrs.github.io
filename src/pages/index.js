@@ -11,7 +11,7 @@ import Component from './components'
 import Portfolio from './portfolio'
 import PDF from './pdf'
 import Timeline from './timeline'
-import { SimpleTimeline, MonthTimeline, YearTimeline} from './timeline'
+import {SimpleTimeline, MonthTimeline, QuarterTimeline, YearTimeline} from './timeline'
 
 function Pages() {
 
@@ -44,6 +44,7 @@ function Pages() {
             <Route path="recent" element={<Timeline />}/>
             <Route path="month" element={<MonthTimeline />}/>
             <Route path="year" element={<YearTimeline />}/>
+            <Route path="quarter" element={<QuarterTimeline />}/>
           </Route>
           <Route path="*" default element={<div> 준비중입니다.. </div>}/>
         </Route>

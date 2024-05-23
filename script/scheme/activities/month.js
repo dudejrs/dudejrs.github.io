@@ -59,9 +59,9 @@ async function hasNext(date) {
 function getScheme(cur) {
 	const ret = new Scheme(`${lastMonthString(cur)}`, {})
 
-	ret.addChild(new ContainerScheme(`${lastMonthString(cur)}`, {
+	ret.addChild(new ContainerScheme("계획", {
 				database_id : process.env.notion_plan_database_id,
-				scheme : new DatabaseScheme("", {
+				scheme : new DatabaseScheme("계획", {
 					scheme : new PageScheme("",{
 							"title" :  NestedProperty.Title("Name","title"),
 							"Status" : NestedProperty.Status("Status", "oz%3EA"),

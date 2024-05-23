@@ -2,13 +2,6 @@ import axios from 'axios';
 import {planDir, plansDir, categoriesDir} from './index'
 import {filterData} from './util';
 
-function getIdsFromCategroy(category){
-	return axios.get(`${planDir}/categories.json`)
-			.then(({data})=>{
-				return data[category];
-			});
-}
-
 export async function getPlan(id, fields){
 
 	return await axios.get(`${plansDir}/${id}.json`)

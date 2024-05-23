@@ -5,18 +5,29 @@ import {Tag} from '../../../components/ui'
 
 import styles from './item.module.css'
 
+function toString(date) {
+	if (!date["start"] || !date["end"]) {
+		return null
+	}
+
+	const start = date["start"].slice(0,10)
+	const end =date["end"].slice(0,10)
+
+	return `${start} ~ ${end}`
+}
+
 export default function ({d, i}) {
 	const isVertical = useContext(Context)
 
 	if (isVertical) {
 		return (
 		<div key={i} className={`${styles.container} ${styles.vertical}`}>
-			<h4> {d["name"]}</h4>	
+			<h4> {d["title"]}</h4>	
 			<div className={`${styles.subcontainer} ${styles.vertical}`}>
-				<p> {d["date"]} </p>
+				<p> {toString(d["기간"])} </p>
 				<div className={`${styles.taglist}`}> 
 					{
-						d["tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
+						Array.isArray(d["Tag"]) && d["Tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
 					}
 				</div>
 			</div>
@@ -25,13 +36,13 @@ export default function ({d, i}) {
 
 	return (
 		<div key={i} className={`${styles.container} `}>
-			<h4> {d["name"]}</h4>	
+			<h4> {d["title"]}</h4>	
 			<div className={`${styles.subcontainer} `}>
-				<p> {d["date"]} </p>
+				<p> {toString(d["기간"])} </p>
 			</div>
 			<div className={`${styles.taglist}`}> 
 				{
-					d["tag"].map((d, i) => <Tag name={d} className={`${styles.tag}`} />)	
+					Array.isArray(d["Tag"]) && d["Tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
 				}
 			</div>
 		</div>) 

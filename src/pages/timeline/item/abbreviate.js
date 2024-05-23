@@ -6,8 +6,12 @@ import {Tag} from '../../../components/ui'
 import styles from './abbreviate.module.css'
 
 const month = (date) => {
-	const startDate = date.split("~")[0].split("-")
-	const endDate = date.split("~")[1].split("-")
+	if (!date["start"] || !date["end"]) {
+		return null
+	}
+
+	const startDate = date["start"].split("-")
+	const endDate = date["end"].split("-")
 
 	if (startDate[1] === endDate[1]) {
 		return `${startDate[1]}월`
@@ -23,11 +27,11 @@ export default function ({d, i}) {
 		return (
 		<div key={i} className={`${styles.container} ${styles.vertical}`}>
 			<div className={`${styles.subcontainer} ${styles.vertical}`}>
-			<h4> {d["name"]}</h4>	
-				<p> {month(d["date"])} </p>
+			<h4> {d["title"]}</h4>	
+				<p> {month(d["기간"])} </p>
 				<div className={`${styles.taglist}`}> 
 					{
-						d["tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
+						Array.isArray(d["Tag"]) && d["Tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
 					}
 				</div>
 			</div>
@@ -37,11 +41,11 @@ export default function ({d, i}) {
 	return (
 		<div key={i} className={`${styles.container} `}>
 			<div className={`${styles.subcontainer} `}>
-				<h4> {d["name"]}</h4>	
-				<p> {month(d["date"])} </p>
+				<h4> {d["title"]}</h4>	
+				<p> {month(d["기간"])} </p>
 				<div className={`${styles.taglist}`}> 
 					{
-						d["tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
+						Array.isArray(d["Tag"]) && d["Tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
 					}
 				</div>
 			</div>

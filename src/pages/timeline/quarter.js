@@ -25,7 +25,7 @@ export default function(){
 
 	return (
 		<div style={{width: '100%'}}>
-			<RatioSensibleTimeLine  data={data} mapper={mapper} ratio={1.2} ratios={[0, 0.5, 0, 2]} bmargin={50} stroke={2} radius={4} color={'#aaa'} minSize={[1000, 500]}/>
+			<RatioSensibleTimeLine  data={data} mapper={mapper} ratio={0.8} ratios={[0, 0.5, 0, 2]} bmargin={50} stroke={2} radius={4} color={'#aaa'} minSize={[1300, 600]}/>
 		</div>
 		);
 }

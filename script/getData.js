@@ -1,66 +1,47 @@
-const { Client } = require('@notionhq/client');
-const axios  = require('axios');
-const fs = require('fs');
 
 const {getDatabase, getPage} = require('./notion');
-const {getCodingPracticeAggregation} = require("./notion/codingPractice");
-const {cleanDirExcept, writeMetaData} = require('./util')
+
 require('dotenv').config();
 
 const {fetchPlans, updatePlans} = require('./data/plans')
 const {fetchCategories, calculateCount} = require('./data/categories')
 const {getTotalProblem, getAggregationByCategories, getAggregationByProblemType} = require('./data/codingPractice')
-
+const {fetchActivitiesPerQuarter, fetchActivitiesPerMonth} = require('./data/activities')
 
 const NotionSDKClient = require('./notion/client/notionSDK');
 const RateLimiterClient = require('./notion/client/rateLimiter')
 const PaginationClient = require('./notion/client/pagination')
 const AxiosClient = require('./notion/client/axios')
 
-const codingPracticeDirPath = 'public/data/codingPractice'
-
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
 const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
 const categories = ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "C++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","PyTorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
 
-const notion = new Client({
-	auth : process.env.notion_integration_secret
-});
 
 const client = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
 
-// const fetchCodingPractice = async ()=>{
-// 	try {
-// 		cleanDirExcept(codingPracticeDirPath,['meta.json', 'log.json'])
-// 	}catch(error){
-// 		console.log(error);
-// 	}
-// 	await getCodingPracticeAggregation(notion, languages, codingPracticeDirPath, process.env.notion_integration_secret);
-// 	writeMetaData(codingPracticeDirPath);
-// }
-
-const fetchRoutine = async ()=>{
-	const [maincommand, subcommand] = process.argv.slice(2,4)
+const fetchRoutine = async (args)=>{
+	const [maincommand, subcommand] = args.slice(0,2)
 
 	switch(maincommand){
 		case "plan":
 			if (subcommand == "all") {
-				fetchPlans.exec({client});
+				await fetchPlans.exec({client});
 				break;
 			}
-			updatePlans.exec({client})
+			await updatePlans.exec({client})
 			break;
 
 		case "categories" :
 			if (subcommand) {
-				fetchCategories.exec({client, categories : process.argv.slice(3)})
+				await fetchCategories.exec({client, categories : args.slice(1)})
 				break;
 			}
-			fetchCategories.exec({client, categories})
+			await fetchCategories.exec({client, categories})
 			break;
 
 		case "count" :
-			calculateCount.exec({client, categories})
+			await calculateCount.exec({client, categories})
 			break;
 
 		case "cote":
@@ -69,18 +50,28 @@ const fetchRoutine = async ()=>{
 			await getAggregationByProblemType.exec({client, languages})
 
 			break;
-		case "all" :
-			fetchPlans();
-			fetchDetailedPlans();
-			fetchCodingPractice();
+
+		case "activities" :
+			if (!subcommand || subcommand === "quarter") {
+				await fetchActivitiesPerQuarter.exec({client})
+			}
+			if (!subcommand || subcommand === "month") {
+				await fetchActivitiesPerMonth.exec({client})
+			}
 			break;
+
+		case "all" :
+			["plan", "categories", "cote"].forEach(cmd => fetchRoutine(cmd))
+			break;
+
 		case "test" :
 			break;
+
 		default :
 			break;
 	}
 
 }
 	
-fetchRoutine();
+fetchRoutine(process.argv.slice(2));
 
