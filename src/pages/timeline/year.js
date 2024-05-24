@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react'
 import {getActivitesPerQuarter} from '../../domain/activities'
 
-import {Item, AbbreviateItem, ItemStack} from './item'
+import {Item, AbbreviateItem} from './item'
+import {ItemStack, AbbreviateItemStack} from './itemStack'
 import Tick from './tick'
 import {RatioSensibleTimeLine} from '../../components/ui'
 

@@ -1,12 +1,12 @@
 import {useContext} from 'react'
 
-import {Context} from '../../../components/ui/timeline/ratioSensible/context'
-import {Tag} from '../../../components/ui'
+import {Context} from '../../../../components/ui/timeline/ratioSensible/context'
+import {Tag} from '../../../../components/ui'
 
-import styles from './abbreviate.module.css'
+import styles from './index.module.css'
 
 const month = (date) => {
-	if (!date["start"] || !date["end"]) {
+	if (!date || !date["start"] || !date["end"]) {
 		return null
 	}
 
@@ -27,14 +27,14 @@ export default function ({d, i}) {
 		return (
 		<div key={i} className={`${styles.container} ${styles.vertical}`}>
 			<div className={`${styles.subcontainer} ${styles.vertical}`}>
-			<h4> {d["title"]}</h4>	
+				<h4> {d["title"]}</h4>	
 				<p> {month(d["기간"])} </p>
 				<div className={`${styles.taglist}`}> 
 					{
 						Array.isArray(d["Tag"]) && d["Tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
 					}
 				</div>
-			</div>
+			</div>	
 		</div>) 
 	}
 
@@ -48,6 +48,6 @@ export default function ({d, i}) {
 						Array.isArray(d["Tag"]) && d["Tag"].map((d, i) => <Tag key={i} name={d} className={`${styles.tag}`} />)	
 					}
 				</div>
-			</div>
+			</div> 
 		</div>) 
 }

@@ -1,9 +1,9 @@
 import {useContext} from 'react'
 
-import {Context} from '../../../components/ui/timeline/ratioSensible/context'
-import {Tag} from '../../../components/ui'
+import {Context} from '../../../../components/ui/timeline/ratioSensible/context'
+import {Tag} from '../../../../components/ui'
 
-import styles from './item.module.css'
+import styles from './index.module.css'
 
 function toString(date) {
 	if (!date["start"] || !date["end"]) {
