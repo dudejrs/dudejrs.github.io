@@ -16,7 +16,7 @@ export default function({d: data, i}) {
 	const [actived, setActived] = useState(null)
 
 	return (
-		<div key={i}> 
+		<div key={i} style={{width : "100%"}}> 
 			{
 				Object.entries(data).map((d, i) => <ItemHolder key={i} i={i} d={d} active={i === actived} setActived={setActived} Items={<Items data={d}/>}/>)
 		

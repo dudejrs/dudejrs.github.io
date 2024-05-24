@@ -10,7 +10,7 @@
 	color: rgb(102, 102, 102);
 	font-weight: bold;
 	text-overflow: ellipsis;
-	max-width: 30%;
+	font-size: 0.8em;
 }
 
 .container * {
@@ -20,14 +20,16 @@
 
 .container.vertical {	
 	width : 100%;
-
 }
 
 .subcontainer {
 	display: flex;
-	font-size: 0.8em;
 	color: #aaa;
 	justify-content: space-between;
+}
+
+.subcontainer .horizontal {
+	flex-wrap : wrap;
 }
 
 .taglist {
@@ -37,5 +39,6 @@
 	font-size: 0.8em;
 }
 .tag {
-	margin-right: 0.2em
+	margin-right: 0.2em;
+	font-size : 0.8em;
 }

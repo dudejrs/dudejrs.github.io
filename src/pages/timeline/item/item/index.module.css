@@ -12,11 +12,11 @@
 }
 
 .container.vertical {	
-	width : 100%;
 
 }
 
 .subcontainer {
+	width: 100%;
 	display: flex;
 	font-size: 0.8em;
 	color: #aaa;
