@@ -1,0 +1,299 @@
+{
+    "object": "database",
+    "id": "3532e10a-6707-46c0-8d9c-fd25d2bb17e0",
+    "cover": null,
+    "icon": {
+        "type": "external",
+        "external": {
+            "url": "https://www.notion.so/icons/activity_gray.svg"
+        }
+    },
+    "created_time": "2023-08-16T01:59:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-19T12:07:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "코딩연습 카테고리",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "코딩연습 카테고리",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+        "Typescript": {
+            "id": "%3Dxc%5C",
+            "name": "Typescript",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Typescript",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "X|uG",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "": {
+            "id": "B%40a%5E",
+            "name": "",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "Kotlin_": {
+            "id": "FQvU",
+            "name": "Kotlin_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:%5C%40Vm:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Go_": {
+            "id": "Fw%5DZ",
+            "name": "Go_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:ydVI:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Python": {
+            "id": "K%40%3A%5B",
+            "name": "Python",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Python",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "|h^N",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "count": {
+            "id": "N%7Cbg",
+            "name": "count",
+            "type": "formula",
+            "formula": {
+                "expression": "(({{notion:block_property:uRkI:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}} + {{notion:block_property:x%5Evs:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}) + {{notion:block_property:%5C%3A%5E%40:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}) + {{notion:block_property:K%40%3A%5B:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:ydVI:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:%5C%40Vm:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:%3Dxc%5C:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Java_": {
+            "id": "RTh%60",
+            "name": "Java_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:x%5Evs:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Repetition_": {
+            "id": "%5BZvN",
+            "name": "Repetition_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:x%7Csn:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Javascript": {
+            "id": "%5C%3A%5E%40",
+            "name": "Javascript",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Javascript",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "f~TP",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "Kotlin": {
+            "id": "%5C%40Vm",
+            "name": "Kotlin",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Kotlin",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "YX~d",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "📖 코딩테스트": {
+            "id": "c%5C%7B%3C",
+            "name": "📖 코딩테스트",
+            "type": "relation",
+            "relation": {
+                "database_id": "2301513c-36f6-4a4a-a8bd-7439f27cf989",
+                "type": "dual_property",
+                "dual_property": {
+                    "synced_property_name": "코딩연습 카테고리",
+                    "synced_property_id": "hA%40%5C"
+                }
+            }
+        },
+        "Problem_": {
+            "id": "dAmW",
+            "name": "Problem_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:t%7DrG:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Javascript_": {
+            "id": "j%60Nu",
+            "name": "Javascript_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:%5C%3A%5E%40:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Python_": {
+            "id": "pcyP",
+            "name": "Python_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:K%40%3A%5B:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "C++_": {
+            "id": "pmz%5B",
+            "name": "C++_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:uRkI:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "카테고리": {
+            "id": "pr%7Dd",
+            "name": "카테고리",
+            "type": "select",
+            "select": {
+                "options": [
+                    {
+                        "id": "dd8f53a2-3812-4daa-a6c5-a06f7af1215a",
+                        "name": "디자인패턴",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "0ba42745-3294-4728-944f-974376b28467",
+                        "name": "알고리즘",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "ef1de718-f9dc-4bdf-9bf4-634e7997b6bc",
+                        "name": "코테",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "0ead527c-e13f-4b87-96f4-937d18afd602",
+                        "name": "리팩토링",
+                        "color": "purple",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "Typescript_": {
+            "id": "renR",
+            "name": "Typescript_",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:%3Dxc%5C:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Problem": {
+            "id": "t%7DrG",
+            "name": "Problem",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "_풀었는지_유무",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "~TSQ",
+                "relation_property_id": "c\\{<",
+                "function": "checked"
+            }
+        },
+        "C++": {
+            "id": "uRkI",
+            "name": "C++",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "C++",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "}ooA",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "Java": {
+            "id": "x%5Evs",
+            "name": "Java",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Java",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "w@|A",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "Repetition": {
+            "id": "x%7Csn",
+            "name": "Repetition",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Repetition",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "XcSt",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "Go": {
+            "id": "ydVI",
+            "name": "Go",
+            "type": "rollup",
+            "rollup": {
+                "rollup_property_name": "Go",
+                "relation_property_name": "📖 코딩테스트",
+                "rollup_property_id": "Kw=g",
+                "relation_property_id": "c\\{<",
+                "function": "sum"
+            }
+        },
+        "Name": {
+            "id": "title",
+            "name": "Name",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "2a907b7c-8d10-435f-99d3-97ca2454aaa7"
+    },
+    "url": "https://www.notion.so/3532e10a670746c08d9cfd25d2bb17e0",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "d674ef52-3915-4337-b1fd-c37266b57d26"
+}

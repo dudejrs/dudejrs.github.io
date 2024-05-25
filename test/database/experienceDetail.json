@@ -1,0 +1,122 @@
+{
+    "object": "database",
+    "id": "c9cde8f2-c9d4-49d4-8c61-217f46f70024",
+    "cover": null,
+    "icon": {
+        "type": "emoji",
+        "emoji": "🍀"
+    },
+    "created_time": "2024-05-05T11:26:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-20T03:13:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "경험 상세",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "경험 상세",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+        "🪴 실습": {
+            "id": "%40x%3Cn",
+            "name": "🪴 실습",
+            "type": "relation",
+            "relation": {
+                "database_id": "c3771d30-2231-42f9-9992-71c0617d38b3",
+                "type": "single_property",
+                "single_property": {}
+            }
+        },
+        "_visible": {
+            "id": "HAKm",
+            "name": "_visible",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "기술": {
+            "id": "KxhV",
+            "name": "기술",
+            "type": "relation",
+            "relation": {
+                "database_id": "84e8b3c6-33b5-4326-a14f-20684fa5b96a",
+                "type": "single_property",
+                "single_property": {}
+            }
+        },
+        "경험 분류": {
+            "id": "Qn%60e",
+            "name": "경험 분류",
+            "type": "select",
+            "select": {
+                "options": [
+                    {
+                        "id": "3c4b3ae6-46d7-4b8a-a4e4-89d79f52b4cf",
+                        "name": "문제해결",
+                        "color": "red",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "경험": {
+            "id": "fLE%5C",
+            "name": "경험",
+            "type": "formula",
+            "formula": {
+                "expression": "if(!empty({{notion:block_property:qdZ%3C:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}),{{notion:block_property:qdZ%3C:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}},{{notion:block_property:%40x%3Cn:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}})"
+            }
+        },
+        "Date": {
+            "id": "iCuT",
+            "name": "Date",
+            "type": "date",
+            "date": {}
+        },
+        "🌳 프로젝트": {
+            "id": "qdZ%3C",
+            "name": "🌳 프로젝트",
+            "type": "relation",
+            "relation": {
+                "database_id": "09d3f0c3-7d19-467b-9b46-c5633794c4f5",
+                "type": "single_property",
+                "single_property": {}
+            }
+        },
+        "Name": {
+            "id": "title",
+            "name": "Name",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "07ddadbe-001e-44d2-9fd2-c464f696ba91"
+    },
+    "url": "https://www.notion.so/c9cde8f2c9d449d48c61217f46f70024",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "1f0e27f1-1d45-4e2e-b983-deea2bfef3e2"
+}

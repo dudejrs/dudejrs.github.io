@@ -1,0 +1,706 @@
+{
+    "object": "database",
+    "id": "2301513c-36f6-4a4a-a8bd-7439f27cf989",
+    "cover": null,
+    "icon": {
+        "type": "emoji",
+        "emoji": "📖"
+    },
+    "created_time": "2023-04-17T07:26:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-19T12:09:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "코딩연습",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "코딩연습",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+        "_visible": {
+            "id": "Cmuc",
+            "name": "_visible",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "Go": {
+            "id": "Kw%3Dg",
+            "name": "Go",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition": {
+            "id": "XcSt",
+            "name": "Repetition",
+            "type": "formula",
+            "formula": {
+                "expression": "{{notion:block_property:%7DooA:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:X%7CuG:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:Kw%3Dg:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:YX~d:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:f~TP:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:w%40%7CA:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}+{{notion:block_property:%7Ch%5EN:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}"
+            }
+        },
+        "Typescript": {
+            "id": "X%7CuG",
+            "name": "Typescript",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Kotlin": {
+            "id": "YX~d",
+            "name": "Kotlin",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "_비고": {
+            "id": "e%60og",
+            "name": "_비고",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "Javascript": {
+            "id": "f~TP",
+            "name": "Javascript",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "코딩연습 카테고리": {
+            "id": "hA%40%5C",
+            "name": "코딩연습 카테고리",
+            "type": "relation",
+            "relation": {
+                "database_id": "3532e10a-6707-46c0-8d9c-fd25d2bb17e0",
+                "type": "dual_property",
+                "dual_property": {
+                    "synced_property_name": "📖 코딩테스트",
+                    "synced_property_id": "c%5C%7B%3C"
+                }
+            }
+        },
+        "문제유형": {
+            "id": "sEq%5C",
+            "name": "문제유형",
+            "type": "multi_select",
+            "multi_select": {
+                "options": [
+                    {
+                        "id": "9e0d7135-f85b-4578-ae4b-4d334013324a",
+                        "name": "DP",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "3c3b7609-5618-4ba9-bc3f-37886fb864fd",
+                        "name": "구현",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "1c184be5-8ae0-4e37-b311-6f3d37c34edd",
+                        "name": "DFS",
+                        "color": "brown",
+                        "description": null
+                    },
+                    {
+                        "id": "a2cb4ad7-c8c9-46a6-a365-a4c9f6f6a43d",
+                        "name": "위상정렬",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "90e81abd-deb2-422f-8da6-a0eb732a184a",
+                        "name": "시뮬레이션",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "ebf74d62-8151-45b3-92b1-95a47d324443",
+                        "name": "Binary Search",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "711c747d-05a5-4304-babc-301b4ea55e40",
+                        "name": "Greedy",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "c84e97bb-8527-429b-affa-68fa1ae439c9",
+                        "name": "HashMap",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "ab59f915-ca7e-4170-bf6b-ab32bc33d47a",
+                        "name": "BFS",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "190eded1-63b3-4f8e-b82f-4175c23263e8",
+                        "name": "Queue",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "af50f65e-6ffa-444f-a8cb-a11a2f57bef9",
+                        "name": "Math",
+                        "color": "brown",
+                        "description": null
+                    },
+                    {
+                        "id": "4ccea4ec-7374-4cc0-a223-fa7dc4076752",
+                        "name": "기하학",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "a1efe1ba-57f1-4587-9fa0-a42429a3b2af",
+                        "name": "Deque",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "54bcd7ee-1456-4071-a20e-5be00daf4fca",
+                        "name": "자료구조",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "f7a3b792-a784-493e-a608-0d85c859eb15",
+                        "name": "Sorting",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "818593bd-ecc9-4681-9ad8-3060048e54e7",
+                        "name": "완전탐색",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "6b6c1ce5-46fd-4cd5-9830-84787d92485b",
+                        "name": "Back Tracking",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "242ab76d-3971-4727-bac1-8494d9b27ea0",
+                        "name": "Branch and Bound",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "5448b3f5-939d-4606-922a-8b3f38f9fb4d",
+                        "name": "Tree",
+                        "color": "brown",
+                        "description": null
+                    },
+                    {
+                        "id": "315a2fc1-e655-427a-a9e5-e83df42a6609",
+                        "name": "Graph",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "a68ecf9e-01a0-44b1-a3db-c96e02fe6419",
+                        "name": "분할정복",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "1258019b-f86a-411a-8d5f-05cf1d1ddf04",
+                        "name": "조합탐색",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "84cb0c2c-f3ee-4abc-b3d9-0c2da8d345bd",
+                        "name": "비트마스크",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "3ac6a849-9a04-4a92-8ec9-d7c4ecead611",
+                        "name": "부분합",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "a887d30d-6229-4f27-a352-a7068a7a08db",
+                        "name": "문자열",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "76e5012b-7bfc-43e3-86e0-80b9644a57f1",
+                        "name": "확률",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "2acae4cc-7e65-47e6-ade7-b404c2237b1f",
+                        "name": "Set",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "15c51bf0-791e-4a72-91ca-ad342509e06d",
+                        "name": "결정문제",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "8950bb87-cf5c-4b63-9172-c480d98a268f",
+                        "name": "이분법",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "f141128b-d7cb-459f-9992-162eb380ea3e",
+                        "name": "수치해석",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "62d28f7a-b84b-492a-8f31-eca5d7754022",
+                        "name": "정수론",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "0ba21a7c-55c2-4309-8f3e-5a9acc532de5",
+                        "name": "Bisection",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "69b3d0ae-6887-4c89-8b51-58b5ee314aaf",
+                        "name": "\bTenary Search",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "6b4281c6-dc82-4611-b175-a8eccf2c3fe5",
+                        "name": "Stack",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "0f77814c-99c7-4478-b0fa-4a78dd686be0",
+                        "name": "PriorityQueue",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "c936567b-678e-4d9a-9bfe-1362033180d1",
+                        "name": "\bLinkedList",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "937a3b2f-0d22-4116-8703-075baf805497",
+                        "name": "Sweeping",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "a796e30c-927f-484e-9656-e76c9703ae94",
+                        "name": "정규표현식",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "9e4d591e-97a0-420e-928a-ab707d0b7d6f",
+                        "name": "Sliding Window",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "f998e8f9-f500-45d1-90ef-742a5d59308d",
+                        "name": "Online Algorithm",
+                        "color": "brown",
+                        "description": null
+                    },
+                    {
+                        "id": "c5031032-91c3-438e-9b09-7f9c0f30c456",
+                        "name": "접미사배열",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "2a6015ef-a3b4-4c4f-aa1b-6d74fc60d4a3",
+                        "name": "경우의 수",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "02d4a049-bf90-4e2b-991f-1c4105823474",
+                        "name": "배열",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "ba6cadf7-6d01-41be-8f57-99d0a69f964e",
+                        "name": "Heap",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "01eb6f75-3351-4181-8bc1-b113fa21c20e",
+                        "name": "트라이",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "750f514c-88f7-4923-990e-fe8eddfc2f27",
+                        "name": "정렬",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "ebb43717-e306-4237-b8e3-21a4175ff8da",
+                        "name": "2 Pointer",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "4b465dd2-6170-44dd-a49c-c5a5d9981ca7",
+                        "name": "Treap",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "f43c5488-cb15-4bdc-9bb6-53cc4c523994",
+                        "name": "Disjoint Set",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "ab7c0b0b-540d-4ba6-8a4d-57b5b46b0c39",
+                        "name": "Runner",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "7600f5c0-4d1d-451a-94c9-4ee90327ed33",
+                        "name": "재귀",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "1597f175-08e2-45a9-8068-5def9691f1ee",
+                        "name": "MST",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "52619ba3-788d-423d-a3c7-0c3497e5508e",
+                        "name": "구간 트리",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "ecabb229-d3d5-45f9-8b67-3edeb34809bf",
+                        "name": "펜윅 트리",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "b96a7047-4c93-4ab0-b796-b3f04fa5447c",
+                        "name": "순환구조판별",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "20854014-77b3-4789-94da-17e15e13af5e",
+                        "name": "Dijkstra",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "1b3efe94-311b-497b-84e6-931bda5eb8a6",
+                        "name": "Trie",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "c9ee68f0-2902-4005-b9aa-45c1597d605c",
+                        "name": "오일러 경로",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "b00f27eb-6b97-4fe9-b802-6409dd054caf",
+                        "name": "간선 분류",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "a1f8875f-ca41-4a4e-8f08-45c50fa6523a",
+                        "name": "지배집합",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "17ff27a9-eee4-4962-80db-2c3cfc7f365d",
+                        "name": "SAT",
+                        "color": "brown",
+                        "description": null
+                    },
+                    {
+                        "id": "3a54edcb-b26b-43c8-8203-35d10c4e00bc",
+                        "name": "전처리",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "51c2bf95-c060-43ef-88ce-ab189e3ce4a3",
+                        "name": "Bellman-Ford",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "b681189d-a2c4-4f82-8417-dce9aad2e6be",
+                        "name": "Floyd",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "705800d2-8520-4da4-b1eb-3c270b3951f0",
+                        "name": "Prim",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "719fb9fe-a0b7-4dcc-9269-652123bb5354",
+                        "name": "Regex",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "d99030fd-3a67-42cc-9d5c-40dd7af1833c",
+                        "name": "Knapsack",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "f1facf64-14c2-4eb4-962e-5dd0e1366883",
+                        "name": "최소너비경로",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "d175eeb2-af35-42d8-bf22-d3b4b3f3f86d",
+                        "name": "최대유량",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "e3951ce5-845c-43e4-8f70-333ff127a404",
+                        "name": "Brute Force",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "6eafdd81-be8b-4abf-95bc-09f595ff0152",
+                        "name": "순열",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "bd14626f-a6eb-4012-bdcb-bc44f064b210",
+                        "name": "유량 네트워크",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "ec3e0f25-6dcf-4638-8266-fbe92f9dc826",
+                        "name": "이분매칭",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "8728549b-b4dd-4b26-8fbe-1b2086e46ead",
+                        "name": "최대독립집합",
+                        "color": "purple",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "💙": {
+            "id": "vfiL",
+            "name": "💙",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "Java": {
+            "id": "w%40%7CA",
+            "name": "Java",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "출처": {
+            "id": "wgnI",
+            "name": "출처",
+            "type": "multi_select",
+            "multi_select": {
+                "options": [
+                    {
+                        "id": "fed55193-ead2-45b3-9422-857d576d5d04",
+                        "name": "백준",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "6c6b300f-8747-4647-9e9a-3a411dc7b7ee",
+                        "name": "프로그래머스",
+                        "color": "brown",
+                        "description": null
+                    },
+                    {
+                        "id": "aab41c20-5dfd-4e3c-ab75-12b9b56385ea",
+                        "name": "네이버",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "2f552409-ece5-4d0f-989b-ed7f52a8a7c0",
+                        "name": "삼성",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "fc3abdba-9d9e-4ef5-9aa8-0d78c21c014b",
+                        "name": "디자인패턴",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "dfed19f8-66a2-4903-ab73-09a24153bee8",
+                        "name": "알고리즘",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "71b4a27e-985f-44c7-a9b1-ca917c6ad248",
+                        "name": "구종만",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "863d0ec1-da8f-4a43-a872-af343100cbaf",
+                        "name": "\bPCCP",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "a9f0a76e-3446-4e0b-8c58-7b74d6a0e71d",
+                        "name": "현대",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "c7ce5aed-b981-48b2-aad7-11639a33e0d8",
+                        "name": "카카오",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "cfab3b5e-c7a0-4c17-80b1-a55946fc046e",
+                        "name": "리트코드",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "32996e1c-4e94-4797-96c5-0aabdedc2bda",
+                        "name": "기타",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "dd15d57a-9ba2-4631-9a4e-1151341720c3",
+                        "name": "JOBDA",
+                        "color": "gray",
+                        "description": null
+                    },
+                    {
+                        "id": "912ae36e-d138-4cca-8eb2-1cf3398303ba",
+                        "name": "토스",
+                        "color": "blue",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "Python": {
+            "id": "%7Ch%5EN",
+            "name": "Python",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "C++": {
+            "id": "%7DooA",
+            "name": "C++",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "_풀었는지_유무": {
+            "id": "~TSQ",
+            "name": "_풀었는지_유무",
+            "type": "formula",
+            "formula": {
+                "expression": "find([{{notion:block_property:Kw%3Dg:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}},{{notion:block_property:X%7CuG:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}},{{notion:block_property:YX~d:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}},{{notion:block_property:f~TP:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}},{{notion:block_property:w%40%7CA:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}},{{notion:block_property:%7Ch%5EN:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}},{{notion:block_property:%7DooA:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}}], current > 0).empty().not()"
+            }
+        },
+        "문제이름": {
+            "id": "title",
+            "name": "문제이름",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "workspace",
+        "workspace": true
+    },
+    "url": "https://www.notion.so/2301513c36f64a4aa8bd7439f27cf989",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "3517dac1-3515-4bc2-9f97-e313bf6b10e8"
+}

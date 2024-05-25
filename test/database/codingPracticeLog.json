@@ -1,0 +1,193 @@
+{
+    "object": "database",
+    "id": "afa5a7aa-6b2c-4f1d-a154-1033683ed14f",
+    "cover": null,
+    "icon": {
+        "type": "external",
+        "external": {
+            "url": "https://www.notion.so/icons/stopwatch_gray.svg"
+        }
+    },
+    "created_time": "2024-05-20T00:59:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-20T01:10:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "코딩연습 로그",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "코딩연습 로그",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+        "Count (Python)": {
+            "id": "%3A%3D%3At",
+            "name": "Count (Python)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Count (Typescript)": {
+            "id": "%3B%3Efj",
+            "name": "Count (Typescript)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition (Javascript)": {
+            "id": "E%40WR",
+            "name": "Repetition (Javascript)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Count": {
+            "id": "FBry",
+            "name": "Count",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition (Go)": {
+            "id": "Gy%3Ca",
+            "name": "Repetition (Go)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Count (Kotlin)": {
+            "id": "U%3CWO",
+            "name": "Count (Kotlin)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition (Kotlin)": {
+            "id": "U%7C%60W",
+            "name": "Repetition (Kotlin)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition (Java)": {
+            "id": "ZYBm",
+            "name": "Repetition (Java)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Count (C++)": {
+            "id": "%5Drk%5B",
+            "name": "Count (C++)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Date": {
+            "id": "bvyh",
+            "name": "Date",
+            "type": "date",
+            "date": {}
+        },
+        "Count (Javascript)": {
+            "id": "fnbe",
+            "name": "Count (Javascript)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition": {
+            "id": "g~%3BV",
+            "name": "Repetition",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition (Typescript)": {
+            "id": "iN%3Cw",
+            "name": "Repetition (Typescript)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition (C++)": {
+            "id": "l%3Cv%60",
+            "name": "Repetition (C++)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Count (Java)": {
+            "id": "rQgM",
+            "name": "Count (Java)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Count (Go)": {
+            "id": "tssq",
+            "name": "Count (Go)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Repetition (Python)": {
+            "id": "%7DO%40S",
+            "name": "Repetition (Python)",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "Name": {
+            "id": "title",
+            "name": "Name",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "2a907b7c-8d10-435f-99d3-97ca2454aaa7"
+    },
+    "url": "https://www.notion.so/afa5a7aa6b2c4f1da1541033683ed14f",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "cc517e0c-45ec-4874-8cd8-b906223971ac"
+}

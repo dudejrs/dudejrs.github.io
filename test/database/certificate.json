@@ -1,0 +1,153 @@
+{
+    "object": "database",
+    "id": "a12bdb49-6c45-4467-9cb8-cae6db90601f",
+    "cover": null,
+    "icon": null,
+    "created_time": "2023-12-17T16:37:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-21T05:13:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "자격증",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "자격증",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": true,
+    "properties": {
+        "Tags": {
+            "id": "%40G_x",
+            "name": "Tags",
+            "type": "multi_select",
+            "multi_select": {
+                "options": [
+                    {
+                        "id": "2bb6076d-dc64-482c-ad15-829378c02c1e",
+                        "name": "Linux",
+                        "color": "pink",
+                        "description": null
+                    },
+                    {
+                        "id": "8c8214ab-d977-4d94-93d6-395c648cf9bd",
+                        "name": "SQL",
+                        "color": "green",
+                        "description": null
+                    },
+                    {
+                        "id": "449a2c98-4028-4d0b-bae8-0d66b9ed0b83",
+                        "name": "Basic",
+                        "color": "default",
+                        "description": null
+                    },
+                    {
+                        "id": "92dffce1-3e4c-4ae1-944c-2a7f1540baf2",
+                        "name": "Data Science",
+                        "color": "blue",
+                        "description": null
+                    },
+                    {
+                        "id": "3f7a06ab-9f9e-414a-8a84-f2e216dc40e4",
+                        "name": "Tensorflow",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "6c340edc-2502-407b-a179-c6290770add8",
+                        "name": "C++",
+                        "color": "purple",
+                        "description": null
+                    },
+                    {
+                        "id": "7017f43e-989f-4b43-b166-8354061fadf8",
+                        "name": "Java",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "b1cd565d-9359-4051-9093-1d50b16c159d",
+                        "name": "Python",
+                        "color": "red",
+                        "description": null
+                    },
+                    {
+                        "id": "2c2b2a19-5f08-4aef-9912-4b5b4a42362c",
+                        "name": "Javascript",
+                        "color": "brown",
+                        "description": null
+                    },
+                    {
+                        "id": "be6e3f9b-7ec2-4b9e-ac2a-8a4f7deba162",
+                        "name": "어학",
+                        "color": "gray",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "등급/점수": {
+            "id": "MpMP",
+            "name": "등급/점수",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "_hidden": {
+            "id": "WxfN",
+            "name": "_hidden",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "발급기관": {
+            "id": "%5C%3CL%3A",
+            "name": "발급기관",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "취득 일자": {
+            "id": "%5CzZQ",
+            "name": "취득 일자",
+            "type": "date",
+            "date": {}
+        },
+        "인증서번호": {
+            "id": "r%5EkV",
+            "name": "인증서번호",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "Name": {
+            "id": "title",
+            "name": "Name",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "c651ec39-e58a-4a95-9c3c-57187d59d023"
+    },
+    "url": "https://www.notion.so/a12bdb496c4544679cb8cae6db90601f",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "4855832d-e01a-4a72-b3c0-a4d041258532"
+}

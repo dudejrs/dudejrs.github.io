@@ -1,0 +1,154 @@
+{
+    "object": "database",
+    "id": "09d3f0c3-7d19-467b-9b46-c5633794c4f5",
+    "cover": null,
+    "icon": {
+        "type": "emoji",
+        "emoji": "🌳"
+    },
+    "created_time": "2024-05-05T11:22:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-22T02:37:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "프로젝트",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "프로젝트",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+        "요약(200자)": {
+            "id": "%3Aa%5D%5B",
+            "name": "요약(200자)",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "_EndDate": {
+            "id": "EJMA",
+            "name": "_EndDate",
+            "type": "formula",
+            "formula": {
+                "expression": "dateEnd({{notion:block_property:UocS:00000000-0000-0000-0000-000000000000:a40adbc0-eefb-4852-99a1-114884ee952b}})"
+            }
+        },
+        "이미지URL": {
+            "id": "MQRP",
+            "name": "이미지URL",
+            "type": "url",
+            "url": {}
+        },
+        "필요 경험": {
+            "id": "PfQp",
+            "name": "필요 경험",
+            "type": "relation",
+            "relation": {
+                "database_id": "4b50edb0-ecd6-441b-9897-7149fd6f2ef7",
+                "type": "single_property",
+                "single_property": {}
+            }
+        },
+        "프로젝트URL": {
+            "id": "PrOR",
+            "name": "프로젝트URL",
+            "type": "url",
+            "url": {}
+        },
+        "기간": {
+            "id": "UocS",
+            "name": "기간",
+            "type": "date",
+            "date": {}
+        },
+        "기술": {
+            "id": "YmTS",
+            "name": "기술",
+            "type": "relation",
+            "relation": {
+                "database_id": "84e8b3c6-33b5-4326-a14f-20684fa5b96a",
+                "type": "single_property",
+                "single_property": {}
+            }
+        },
+        "_hidden": {
+            "id": "%60%7C%3CC",
+            "name": "_hidden",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "태그": {
+            "id": "yJPS",
+            "name": "태그",
+            "type": "multi_select",
+            "multi_select": {
+                "options": [
+                    {
+                        "id": "bd4e6002-9648-4ce2-9778-d390c7c2dd8e",
+                        "name": "전공과제",
+                        "color": "yellow",
+                        "description": null
+                    },
+                    {
+                        "id": "e776b85e-d93d-4bdf-8b88-5a5c3e08f738",
+                        "name": "개인",
+                        "color": "orange",
+                        "description": null
+                    },
+                    {
+                        "id": "ba5c18c7-e9cc-40e9-af9e-31245874edff",
+                        "name": "부스트캠프",
+                        "color": "pink",
+                        "description": null
+                    }
+                ]
+            }
+        },
+        "요약(50자)": {
+            "id": "%7CN%3AE",
+            "name": "요약(50자)",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "관련 자료": {
+            "id": "%7C%5Cys",
+            "name": "관련 자료",
+            "type": "files",
+            "files": {}
+        },
+        "이름": {
+            "id": "title",
+            "name": "이름",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "07ddadbe-001e-44d2-9fd2-c464f696ba91"
+    },
+    "url": "https://www.notion.so/09d3f0c37d19467b9b46c5633794c4f5",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "070f8565-60f6-4a10-92bd-9182df086f11"
+}

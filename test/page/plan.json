@@ -1,0 +1,217 @@
+{
+    "object": "page",
+    "id": "1e5b05dc-00b5-4d9b-9012-b76f266b635e",
+    "created_time": "2022-10-17T01:53:00.000Z",
+    "last_edited_time": "2024-05-10T06:49:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+        "type": "database_id",
+        "database_id": "12429ec5-9cb1-4e1b-a82b-3d77cedc7e9c"
+    },
+    "archived": false,
+    "in_trash": false,
+    "properties": {
+        "hide": {
+            "id": "%3B%3CXI",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "StartDate": {
+            "id": "%3B%7BD%5E",
+            "type": "rollup",
+            "rollup": {
+                "type": "date",
+                "date": null,
+                "function": "earliest_date"
+            }
+        },
+        "결과물 (정리자료)": {
+            "id": "M%60dz",
+            "type": "url",
+            "url": null
+        },
+        "_완료율": {
+            "id": "QXnW",
+            "type": "rollup",
+            "rollup": {
+                "type": "number",
+                "number": null,
+                "function": "percent_checked"
+            }
+        },
+        "Tag": {
+            "id": "VPPQ",
+            "type": "multi_select",
+            "multi_select": [
+                {
+                    "id": "f5d2a46a-5ea5-453a-9721-0e0891793275",
+                    "name": "Frontend",
+                    "color": "yellow"
+                },
+                {
+                    "id": "aa458f79-3ec5-4eb8-8bee-9b805bef9952",
+                    "name": "Javascript",
+                    "color": "orange"
+                },
+                {
+                    "id": "264430b9-ee87-4566-966b-ce7c374827f5",
+                    "name": "React.js",
+                    "color": "gray"
+                },
+                {
+                    "id": "bd0e52c8-904a-42ed-92d3-9304b352e9a7",
+                    "name": "D3.js",
+                    "color": "green"
+                }
+            ]
+        },
+        "장기/단기": {
+            "id": "XBwf",
+            "type": "multi_select",
+            "multi_select": [
+                {
+                    "id": "3f69333d-82ad-4ccf-9f9b-77cc60085c0e",
+                    "name": "단기",
+                    "color": "blue"
+                }
+            ]
+        },
+        "기간": {
+            "id": "YTb%3D",
+            "type": "formula",
+            "formula": {
+                "type": "string",
+                "string": "@March 2, 2023 12:00 AM → November 26, 2023 12:00 AM"
+            }
+        },
+        "분류": {
+            "id": "%5B%5Eh_",
+            "type": "select",
+            "select": {
+                "id": "bcaf6492-b8e8-4220-ac60-ad657ec6f937",
+                "name": "독서",
+                "color": "purple"
+            }
+        },
+        "EndDate": {
+            "id": "dzR%3B",
+            "type": "rollup",
+            "rollup": {
+                "type": "date",
+                "date": null,
+                "function": "latest_date"
+            }
+        },
+        "완료율": {
+            "id": "kT%3D%7D",
+            "type": "formula",
+            "formula": {
+                "type": "string",
+                "string": "32%"
+            }
+        },
+        "Status": {
+            "id": "oz%3EA",
+            "type": "status",
+            "status": {
+                "id": "b939c0e7-6d0f-456c-ade2-740abfd1dbc2",
+                "name": "In progress",
+                "color": "blue"
+            }
+        },
+        "관련일정": {
+            "id": "p%3Cme",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "24e0ccbd-9808-4a9e-9f53-32609795e365"
+                }
+            ],
+            "has_more": false
+        },
+        "완료": {
+            "id": "pJum",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "_기간_관련일정": {
+            "id": "pLHk",
+            "type": "rollup",
+            "rollup": {
+                "type": "array",
+                "array": [
+                    {
+                        "type": "formula",
+                        "formula": {
+                            "type": "date",
+                            "date": {
+                                "start": "2023-03-02T00:00:00.000+00:00",
+                                "end": "2023-11-26T00:00:00.000+00:00",
+                                "time_zone": null
+                            }
+                        }
+                    }
+                ],
+                "function": "show_original"
+            }
+        },
+        "🕒 단위 계획": {
+            "id": "xTax",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+        },
+        "_완료율_관련일정": {
+            "id": "~Wpc",
+            "type": "rollup",
+            "rollup": {
+                "type": "array",
+                "array": [
+                    {
+                        "type": "formula",
+                        "formula": {
+                            "type": "string",
+                            "string": "32%"
+                        }
+                    }
+                ],
+                "function": "show_original"
+            }
+        },
+        "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "[프로젝트] 포트폴리오 깃헙 페이지 만들기",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "[프로젝트] 포트폴리오 깃헙 페이지 만들기",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/1e5b05dc00b54d9b9012b76f266b635e",
+    "public_url": null,
+    "request_id": "e1991b0a-6e34-4b49-bd5d-265a53e8555b"
+}

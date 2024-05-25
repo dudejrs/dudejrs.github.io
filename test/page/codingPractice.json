@@ -1,0 +1,147 @@
+{
+    "object": "page",
+    "id": "c1929fe9-5d76-4bf8-9a3f-499ede028b5c",
+    "created_time": "2024-05-19T05:05:00.000Z",
+    "last_edited_time": "2024-05-19T10:49:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+        "type": "database_id",
+        "database_id": "2301513c-36f6-4a4a-a8bd-7439f27cf989"
+    },
+    "archived": false,
+    "in_trash": false,
+    "properties": {
+        "_visible": {
+            "id": "Cmuc",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "Go": {
+            "id": "Kw%3Dg",
+            "type": "number",
+            "number": 0
+        },
+        "Repetition": {
+            "id": "XcSt",
+            "type": "formula",
+            "formula": {
+                "type": "number",
+                "number": 0
+            }
+        },
+        "Typescript": {
+            "id": "X%7CuG",
+            "type": "number",
+            "number": 0
+        },
+        "Kotlin": {
+            "id": "YX~d",
+            "type": "number",
+            "number": 0
+        },
+        "_비고": {
+            "id": "e%60og",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "Javascript": {
+            "id": "f~TP",
+            "type": "number",
+            "number": 0
+        },
+        "코딩연습 카테고리": {
+            "id": "hA%40%5C",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "917d1a5a-2bc6-4e3f-9fa1-fa78bd7e653b"
+                }
+            ],
+            "has_more": false
+        },
+        "문제유형": {
+            "id": "sEq%5C",
+            "type": "multi_select",
+            "multi_select": [
+                {
+                    "id": "3ac6a849-9a04-4a92-8ec9-d7c4ecead611",
+                    "name": "부분합",
+                    "color": "pink"
+                }
+            ]
+        },
+        "💙": {
+            "id": "vfiL",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "Java": {
+            "id": "w%40%7CA",
+            "type": "number",
+            "number": 0
+        },
+        "출처": {
+            "id": "wgnI",
+            "type": "multi_select",
+            "multi_select": [
+                {
+                    "id": "6c6b300f-8747-4647-9e9a-3a411dc7b7ee",
+                    "name": "프로그래머스",
+                    "color": "brown"
+                }
+            ]
+        },
+        "Python": {
+            "id": "%7Ch%5EN",
+            "type": "number",
+            "number": 0
+        },
+        "C++": {
+            "id": "%7DooA",
+            "type": "number",
+            "number": 0
+        },
+        "_풀었는지_유무": {
+            "id": "~TSQ",
+            "type": "formula",
+            "formula": {
+                "type": "string",
+                "string": null
+            }
+        },
+        "문제이름": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "생장력",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "생장력",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/c1929fe95d764bf89a3f499ede028b5c",
+    "public_url": null
+}

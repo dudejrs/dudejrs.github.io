@@ -1,0 +1,158 @@
+{
+    "object": "page",
+    "id": "5dd7a9ce-6741-4b56-9577-6c96c5178c92",
+    "created_time": "2024-05-05T10:08:00.000Z",
+    "last_edited_time": "2024-05-20T03:14:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+        "type": "database_id",
+        "database_id": "73387366-ae61-4921-8dd1-390bd24305e6"
+    },
+    "archived": false,
+    "in_trash": false,
+    "properties": {
+        "사용 기술": {
+            "id": "WPPk",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "c8498ce4-5bde-45dc-9539-df532427a862"
+                },
+                {
+                    "id": "18669848-94e4-421c-81f1-b9322091cb86"
+                }
+            ],
+            "has_more": false
+        },
+        "업무 상세": {
+            "id": "_%5BgJ",
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "키친보드 서비스를 위한 서버 개발; 백엔드 챕터 개발 총괄; 제품 조직의 업무 프로세스 관리;",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "키친보드 서비스를 위한 서버 개발; 백엔드 챕터 개발 총괄; 제품 조직의 업무 프로세스 관리;",
+                    "href": null
+                }
+            ]
+        },
+        "업무 내용": {
+            "id": "bDH%3E",
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "백엔드 개발팀 관리 및 키친보드 서버 개발",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": true,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "백엔드 개발팀 관리 및 키친보드 서버 개발",
+                    "href": null
+                }
+            ]
+        },
+        "프로젝트": {
+            "id": "cV%60I",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "b3327b6e-4e92-4fba-a868-f72b3ea8395d"
+                },
+                {
+                    "id": "0f028a31-0adc-456a-9c70-2e3bb6c56a84"
+                }
+            ],
+            "has_more": false
+        },
+        "_hidden": {
+            "id": "coX_",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "직무명": {
+            "id": "sXie",
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "웹 백엔드 개발자 (스쿼드장)",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "웹 백엔드 개발자 (스쿼드장)",
+                    "href": null
+                }
+            ]
+        },
+        "재직 기간": {
+            "id": "uhIK",
+            "type": "date",
+            "date": {
+                "start": "2022-01-31",
+                "end": null,
+                "time_zone": null
+            }
+        },
+        "기업 이름": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "Midasin (임시 데이터)",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "Midasin (임시 데이터)",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/Midasin-5dd7a9ce67414b5695776c96c5178c92",
+    "public_url": null
+}

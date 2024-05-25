@@ -1,0 +1,107 @@
+{
+    "object": "page",
+    "id": "e389134b-ee97-49e8-b49a-2075e19b55ae",
+    "created_time": "2024-05-10T07:30:00.000Z",
+    "last_edited_time": "2024-05-21T06:36:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+        "type": "database_id",
+        "database_id": "09d3f0c3-7d19-467b-9b46-c5633794c4f5"
+    },
+    "archived": false,
+    "in_trash": false,
+    "properties": {
+        "요약(200자)": {
+            "id": "%3Aa%5D%5B",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "필요 경험": {
+            "id": "PfQp",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+        },
+        "프로젝트URL": {
+            "id": "PrOR",
+            "type": "url",
+            "url": "https://assorted-splash-955.notion.site/2024-65099c3d7f5a45b1afd88d588df818c3?pvs=4"
+        },
+        "기간": {
+            "id": "UocS",
+            "type": "date",
+            "date": null
+        },
+        "기술": {
+            "id": "YmTS",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+        },
+        "_hidden": {
+            "id": "%60%7C%3CC",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "태그": {
+            "id": "yJPS",
+            "type": "multi_select",
+            "multi_select": [
+                {
+                    "id": "e776b85e-d93d-4bdf-8b88-5a5c3e08f738",
+                    "name": "개인",
+                    "color": "orange"
+                },
+                {
+                    "id": "ba5c18c7-e9cc-40e9-af9e-31245874edff",
+                    "name": "부스트캠프",
+                    "color": "pink"
+                }
+            ]
+        },
+        "요약(50자)": {
+            "id": "%7CN%3AE",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "관련 자료": {
+            "id": "%7C%5Cys",
+            "type": "files",
+            "files": []
+        },
+        "이름": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "우아한 테크코스 프리코스 2024",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "우아한 테크코스 프리코스 2024",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/2024-e389134bee9749e8b49a2075e19b55ae",
+    "public_url": null
+}

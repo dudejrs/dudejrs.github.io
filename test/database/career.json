@@ -1,0 +1,102 @@
+{
+    "object": "database",
+    "id": "73387366-ae61-4921-8dd1-390bd24305e6",
+    "cover": null,
+    "icon": {
+        "type": "external",
+        "external": {
+            "url": "https://www.notion.so/icons/invitation_blue.svg"
+        }
+    },
+    "created_time": "2024-05-05T10:08:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-20T03:21:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "경력",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "경력",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+        "업무 상세": {
+            "id": "_%5BgJ",
+            "name": "업무 상세",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "업무 내용": {
+            "id": "bDH%3E",
+            "name": "업무 내용",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "프로젝트": {
+            "id": "cV%60I",
+            "name": "프로젝트",
+            "type": "relation",
+            "relation": {
+                "database_id": "9fc064cd-84ef-49da-8dd9-73035160692a",
+                "type": "dual_property",
+                "dual_property": {
+                    "synced_property_name": "경력",
+                    "synced_property_id": "gxda"
+                }
+            }
+        },
+        "_visible": {
+            "id": "coX_",
+            "name": "_visible",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        "직무명": {
+            "id": "sXie",
+            "name": "직무명",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "재직 기간": {
+            "id": "uhIK",
+            "name": "재직 기간",
+            "type": "date",
+            "date": {}
+        },
+        "기업 이름": {
+            "id": "title",
+            "name": "기업 이름",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "35479e42-b99d-4800-b5ee-003596f0e8e0"
+    },
+    "url": "https://www.notion.so/73387366ae6149218dd1390bd24305e6",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "599f0b3f-4ce3-4f77-9f8d-5e288c7379a9"
+}

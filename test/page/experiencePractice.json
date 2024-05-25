@@ -1,0 +1,105 @@
+{
+    "object": "page",
+    "id": "7f1f65ab-0903-4a45-8c9e-2d0ab9702644",
+    "created_time": "2024-05-05T11:29:00.000Z",
+    "last_edited_time": "2024-05-21T09:21:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+        "type": "database_id",
+        "database_id": "c3771d30-2231-42f9-9992-71c0617d38b3"
+    },
+    "archived": false,
+    "in_trash": false,
+    "properties": {
+        "요약(200자)": {
+            "id": "%3CjHk",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "기술": {
+            "id": "FsGX",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "03302ce9-4f74-4660-b615-50ec4be62611"
+                }
+            ],
+            "has_more": false
+        },
+        "태그": {
+            "id": "XAM%3F",
+            "type": "multi_select",
+            "multi_select": [
+                {
+                    "id": "2dc256e5-1d67-44a1-84ba-51a0b880ec61",
+                    "name": "인턴십",
+                    "color": "pink"
+                }
+            ]
+        },
+        "_hidden": {
+            "id": "%5DHWd",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        " 필요 경험": {
+            "id": "k%5E%3Db",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+        },
+        "기간": {
+            "id": "km%60%7C",
+            "type": "date",
+            "date": {
+                "start": "2021-01-01",
+                "end": "2021-02-28",
+                "time_zone": null
+            }
+        },
+        "요약(50자)": {
+            "id": "lHUm",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "실습URL": {
+            "id": "t%3ACR",
+            "type": "url",
+            "url": null
+        },
+        "이름": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "자연어 전처리 실습",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "자연어 전처리 실습",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/7f1f65ab09034a458c9e2d0ab9702644",
+    "public_url": null
+}

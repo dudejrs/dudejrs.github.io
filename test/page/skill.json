@@ -1,0 +1,76 @@
+{
+    "object": "page",
+    "id": "86ce9333-16d1-45cb-afb4-e3ee55470390",
+    "created_time": "2024-04-21T08:14:00.000Z",
+    "last_edited_time": "2024-04-21T08:19:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "cover": null,
+    "icon": {
+        "type": "emoji",
+        "emoji": "🟡"
+    },
+    "parent": {
+        "type": "database_id",
+        "database_id": "84e8b3c6-33b5-4326-a14f-20684fa5b96a"
+    },
+    "archived": false,
+    "in_trash": false,
+    "properties": {
+        "Count": {
+            "id": "J%7Ct%5B",
+            "type": "rollup",
+            "rollup": {
+                "type": "number",
+                "number": 1,
+                "function": "count"
+            }
+        },
+        "🧑‍💼 직무": {
+            "id": "M%3Ei%3F",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "550ee708-30fb-4781-8c47-65316c12a4f4"
+                }
+            ],
+            "has_more": false
+        },
+        "Tags": {
+            "id": "%7Dtrb",
+            "type": "multi_select",
+            "multi_select": []
+        },
+        "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "Netty",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "Netty",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/Netty-86ce933316d145cbafb4e3ee55470390",
+    "public_url": null
+}

@@ -1,0 +1,125 @@
+{
+    "object": "database",
+    "id": "9fc064cd-84ef-49da-8dd9-73035160692a",
+    "cover": null,
+    "icon": {
+        "type": "external",
+        "external": {
+            "url": "https://www.notion.so/icons/gradebook_blue.svg"
+        }
+    },
+    "created_time": "2024-05-05T10:09:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "d7eb6fe5-743d-40ab-98c0-5adf6ae2d956"
+    },
+    "last_edited_time": "2024-05-21T09:45:00.000Z",
+    "title": [
+        {
+            "type": "text",
+            "text": {
+                "content": "프로젝트",
+                "link": null
+            },
+            "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+            },
+            "plain_text": "프로젝트",
+            "href": null
+        }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+        "기간": {
+            "id": "%3Ekgu",
+            "name": "기간",
+            "type": "date",
+            "date": {}
+        },
+        "성과": {
+            "id": "%3FRkJ",
+            "name": "성과",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "주요 내용": {
+            "id": "DMbh",
+            "name": "주요 내용",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "기여한 점": {
+            "id": "T%3Aiz",
+            "name": "기여한 점",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "경력": {
+            "id": "gxda",
+            "name": "경력",
+            "type": "relation",
+            "relation": {
+                "database_id": "73387366-ae61-4921-8dd1-390bd24305e6",
+                "type": "dual_property",
+                "dual_property": {
+                    "synced_property_name": "프로젝트",
+                    "synced_property_id": "cV%60I"
+                }
+            }
+        },
+        "_hidden": {
+            "id": "r%7D%7C%3D",
+            "name": "_hidden",
+            "type": "checkbox",
+            "checkbox": {}
+        },
+        " 필요 경험": {
+            "id": "w_nm",
+            "name": " 필요 경험",
+            "type": "relation",
+            "relation": {
+                "database_id": "4b50edb0-ecd6-441b-9897-7149fd6f2ef7",
+                "type": "dual_property",
+                "dual_property": {
+                    "synced_property_name": "프로젝트",
+                    "synced_property_id": "%3AN%5E%5C"
+                }
+            }
+        },
+        "기술": {
+            "id": "%7BN%5Cl",
+            "name": "기술",
+            "type": "relation",
+            "relation": {
+                "database_id": "84e8b3c6-33b5-4326-a14f-20684fa5b96a",
+                "type": "single_property",
+                "single_property": {}
+            }
+        },
+        "Name": {
+            "id": "title",
+            "name": "Name",
+            "type": "title",
+            "title": {}
+        }
+    },
+    "parent": {
+        "type": "page_id",
+        "page_id": "35479e42-b99d-4800-b5ee-003596f0e8e0"
+    },
+    "url": "https://www.notion.so/9fc064cd84ef49da8dd973035160692a",
+    "public_url": null,
+    "archived": false,
+    "in_trash": false,
+    "request_id": "b3b0e0ba-932f-4b13-9ba7-fbb660d73bb7"
+}
