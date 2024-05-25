@@ -11,7 +11,6 @@ export default function({children, className, style}){
 	const onResize = ()=> {
 		const rect = ref.current.getBoundingClientRect()
 		setSize([rect.width, rect.height])
-
 	}
 
 	useEffect(()=>{

@@ -20,7 +20,6 @@ export default function(){
 
 	useEffect(()=> {
 		getActivitesPerMonth().then((data) => {
-			console.log(data)
 			setData(data)
 		})
 	},[])

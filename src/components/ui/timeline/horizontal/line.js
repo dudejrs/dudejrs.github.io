@@ -8,7 +8,7 @@ export default function({
 	children
 }){
 	return (
-		<div style={{marginBottom : margin / 2, marginTop : margin / 2}}>
+		<div style={{width : width, marginBottom : margin / 2, marginTop : margin / 2}}>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${width} ${height}`} width={width} height={height}>
 				<g fill={"none"} stroke={color} strokeWidth={`${stroke}px`}>
 					<line y1={height / 2} x2={width} y2={height / 2}/>

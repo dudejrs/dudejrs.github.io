@@ -1,9 +1,7 @@
 .container {
 	box-sizing: content-box;
-	border :0.5px solid #efefef;
 	font-size : 0.9em;
 	color: rgb(102, 102, 102);
-	box-shadow: 0 0 10px 10px rgba(230,230,230,0.1);
 }
 
 .container h4 {

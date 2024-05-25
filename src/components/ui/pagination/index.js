@@ -9,11 +9,11 @@ function supplement(data, pageSize) {
 	return data
 }
 
-export default function ({children, data, pageSize}) {
+export default function ({children, data, pageSize, style}) {
 	const [p, setP] = useState(0)
 
 	return (
-		<div> 
+		<div style={style}> 
 			<Context.Provider value={{
 				p, setP,
 				hasPrev : p > 0,

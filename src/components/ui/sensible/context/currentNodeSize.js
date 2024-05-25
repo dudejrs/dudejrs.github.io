@@ -1,3 +1,3 @@
 import {createContext} from 'react'
 
-export const Context = createContext([0, 0])
+export const Context = createContext({size : [0, 0], partiallyCovered : false})

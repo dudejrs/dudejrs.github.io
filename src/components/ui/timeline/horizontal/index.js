@@ -45,7 +45,7 @@ export default function({
 	},[height])
 
 	return (
-		<div style={{width: width, margin: margin}}>
+		<div className={`${styles.container}`} style={{width: width, margin: margin}}>
 			<Context.Provider value={{setHeights}}>
 				<RightItem data={data} height= {heights[0]} vwidth={vwidth} radius={radius} vmargin={vmargin} mapper={mapper[0]} itemWidth={itemWidth} scale={scale} lower={true} {...props} />
 				<CenterItem data={data} height= {heights[1]} vwidth={vwidth} radius={radius} vmargin={vmargin} mapper={mapper[1]} itemWidth={itemWidth} scale={scale} lower={true} {...props} />

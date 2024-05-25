@@ -17,13 +17,13 @@ function Lower({width="1rem", color = "#b6b6b6"}) {
 		</div>
 }
 
-export default function({active, header, children, onClick, style, headerStyle, ...args}) {
+export default function({active, header, height = 200, headerHeight = 25, children, onClick, style, headerStyle, ...args}) {
 	return (
-		<div style={{maxHeight : "200px", ...style}} className={`${styles.container}`} {...args}> 
-			<div className={`${styles.header}`} onClick={onClick} style={headerStyle}> 
+		<div style={{maxHeight : height, ...style}} className={`${styles.container}`} {...args}> 
+			<div className={`${styles.header}`} onClick={onClick} style={{...headerStyle, height : headerHeight}}> 
 				<div>{header}</div>
 				{active ? <Upper /> : <Lower /> }
 			</div>
-			{active && children}
+			{active && (<div className={`${styles.content}`}style={{maxHeight : height - headerHeight}}> {children} </div>)}
 		</div>)
 }

@@ -1,14 +1,14 @@
 .container {
 	position: relative;
 	width: 100%;
-	overflow-y: scroll;
 	color : gray;
-	border-radius: 0.5rem;
+	border-radius: 0.5rem ;
 	border:  0.5px solid #eee;
 	-ms-overflow-style: none;  /* IE and Edge */
-  	scrollbar-width: none;  /* Firefox */
-  	margin: 0.5rem;
-	box-shadow: 0 0 10px 10px rgba(230, 230, 230, 0.1)
+  scrollbar-width: none;  /* Firefox */
+  margin: 0.5rem;
+	box-shadow: 0 0 10px 10px rgba(230, 230, 230, 0.1);
+	overflow: hidden;
 }
 
 .container::-webkit-scrollbar {
@@ -25,5 +25,10 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 0.5rem 0.5rem;
-	border-bottom: 1px solid #eee;
+	border-radius: 0.5rem 0.5rem 0 0;
+	cursor: pointer;
+}
+
+.content {
+	border-top: 0.5px solid #eee;
 }

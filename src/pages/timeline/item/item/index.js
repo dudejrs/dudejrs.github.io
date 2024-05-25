@@ -10,6 +10,9 @@ import {toString} from './util'
 
 
 export default function ({type, d, i}) {
+	if (Object.keys(d).length == 0) {
+		return <div className={`${styles.container}`}> </div>
+	}
 	const isVertical = useContext(Context)
 
 	if (isVertical) {
