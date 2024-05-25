@@ -5,7 +5,7 @@ import Accordian from '../../../components/ui/accordian'
 import Items from '../Items'
 
 export default function({d: data, i}) {
-	const [actived, setActived] = useState(null)
+	const [actived, setActived] = useState(0)
 
 	return (
 		<div key={i} style={{width : "100%"}}> 

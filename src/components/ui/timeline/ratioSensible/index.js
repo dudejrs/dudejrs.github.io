@@ -20,22 +20,42 @@ function flip(ratios) {
 }
 
 function calculateWidth(width) {
-	return Math.min(width, document.body.clientWidth * 0.9)
+	return Math.min(width, document.body.clientWidth * 0.8)
 }
+
+function calculate() {
+	const map = new Map()
+
+	return (size, layout, minSize) => {
+		const large = Math.max(...minSize)
+		const small = Math.min(...minSize)
+
+		if (!map.has(layout)) {
+			if (layout === "portrait") {
+				map.set(layout, [small, large])
+			} else {
+				map.set(layout, [large, small])
+			}
+		} 
+		return map.get(layout)
+	}
+}
+
+const calculateSize = calculate()
 
 export function RatioSensibleTimeline({ratio = 1.5, ratios=[1,1,1,1], mapper, minSize=[0, 0], ...props}) {
 	const {size, setSize, partiallyCovered} = useContext(CurrentNodeSizeContext)
 	const layout = useContext(LayoutContext)
-	const [width, height] = size
+	const [width, height] = calculateSize(size, layout, minSize)
 
 	useEffect(()=>{
 		setSize(minSize)
 	}, [])
 
-	if (layout === "portrait"){
+	if (layout === "portrait" && (window.innerWidth / window.innerHeight < ratio)){
 		return (
 			<IsVerticalContext.Provider value={true} >
-				<VerticalTimeline width={height} height={width} ratios={ratios} mapper={mapper} {...props} />
+				<VerticalTimeline width={calculateWidth(width)} height={height} ratios={ratios} mapper={mapper} {...props} />
 			</IsVerticalContext.Provider>
 			)
 	}

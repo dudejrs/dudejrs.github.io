@@ -9,7 +9,7 @@ function onClick(key, active, setActived) {
 }
 
 function Header({active, type, data}) {
-	return <>{!active && `${data.length}개의 ${type}`}</>
+	return <>{!active &&`${data.length}개의 ${type}`}</>
 }
 
 export default function ItemHolder({i : key, d : data, active, setActived, Items, Item, className}) {

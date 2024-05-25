@@ -1,23 +1,17 @@
 .container{	
+	position: relative;
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 
 	justify-content: space-between;
+	align-items: center;
 }
 .carousell {
 	width: 100%;
 	height: 50vh;
 	background-color: #efefef;
-}
-.section{
-	width: 48%;
-	min-width: 600px;
-	flex-grow: 1;
-	margin-bottom: 1.5rem;
-	overflow-y: hidden;
-/*	border :1px solid red;*/
 }
 
 .githubStats {
@@ -26,5 +20,32 @@
 
 .githubStats > img{
 	min-width: 500px;
-	width : 100%;
+	width : 50%;
+}
+
+.tab {
+	position: absolute;
+	display: flex;
+	top : 80px;
+	right: 0px;
+	flex-direction: row;
+	transform: translateX(-300%);
+	border-bottom: 2px solid rgba(100,100,100,0.1);
+}
+
+.tab > div {
+	cursor: pointer;
+	width: 3rem;
+	text-align: center;
+	font-weight: 700;
+	padding: 0.3rem 0.5rem;
+}
+
+.active {
+	color: red;
+	border-bottom: 2px solid red !important;
+	box-shadow: 0 10px 10px 0px rgba(230,0,0,0.05) !important;
+}
+.deactive {
+	color : #999;
 }

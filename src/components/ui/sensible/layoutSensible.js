@@ -14,7 +14,7 @@ function LayoutSensible({ratio, children, ...props}) {
 	const {size, setSize, partiallyCovered} = useContext(CurrentNodeSizeContext)
 	const [width, height] = size
 
-	let layout =  document.body.clientWidth / document.body.clientHeight  >=1 ? 'landscape' : 'portrait'
+	let layout =  document.body.clientWidth / document.body.clientHeight  >= 1 ? 'landscape' : 'portrait'
 	
 	if (partiallyCovered || isVertical(size, ratio)){
 		layout = 'portrait'
