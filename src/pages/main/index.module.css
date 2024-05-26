@@ -27,9 +27,8 @@
 	position: absolute;
 	display: flex;
 	top : 80px;
-	right: 0px;
+	right: 20%;
 	flex-direction: row;
-	transform: translateX(-300%);
 	border-bottom: 2px solid rgba(100,100,100,0.1);
 }
 
@@ -48,4 +47,23 @@
 }
 .deactive {
 	color : #999;
+}
+
+.title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.title > div {
+	margin-left : 0.3rem;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.tooltipContent {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
 }

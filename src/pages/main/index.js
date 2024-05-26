@@ -4,7 +4,18 @@ import Section from './section';
 import QuarterTimeline from '../timeline/quarter'
 import MonthTimeline from '../timeline/month'
 
+import {Tooltip} from '../../components/ui'
+
 import styles from './index.module.css'
+
+function Title ({title}) {
+	return (<div className={`${styles.title}`}> 
+				{title} 
+				<Tooltip position={"top"} widthpx={"300px"}> 
+					<div className={`${styles.tooltipContent}`}> 월/분기별 활동 내역에 대한 내용입니다. </div>
+				</Tooltip> 
+			</div>)
+}
 
 export default function Main({}){
 
@@ -12,7 +23,7 @@ export default function Main({}){
 
 	return (
 		<div className={styles.container}>
-			<Section title='Activites'>
+			<Section title={<Title title={`Activites`} />}>
 				<div className={`${styles.tab}`}> 
 					<div className={activity == 0 ? `${styles.active}` : `${styles.deactive}`}  onClick={() => setActivity(0)}> 분기 </div>
 					<div className={activity == 1 ? `${styles.active}` : `${styles.deactive}`} onClick={() => setActivity(1)}> 월 </div>

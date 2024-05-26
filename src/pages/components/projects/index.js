@@ -26,10 +26,6 @@ export default function Projects({data : data_}) {
 		fetchExperience().then(d => setData(d))
 	}, [])
 
-	useEffect(()=> {
-		console.log(data)
-	}, [data])
-
 	return (
 			<div className={styles.projects_container}> 
 			{
