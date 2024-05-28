@@ -26,6 +26,7 @@ export default function ItemHolder({i : key, d : data, active, setActived, Items
 				header={<Header type={type} active={active} data={d}/>}
 				active={active}
 				height={450}
+				style={{zIndex : 3}}
 				>
 				<Items type={type} data={d} Item={Item}/>
 		</Accordian>

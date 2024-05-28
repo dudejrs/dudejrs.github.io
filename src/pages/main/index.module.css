@@ -59,6 +59,7 @@
 	margin-left : 0.3rem;
 	font-size: 0.9rem;
 	text-align: center;
+	z-index: 2;
 }
 
 .tooltipContent {

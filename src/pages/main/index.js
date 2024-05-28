@@ -12,7 +12,7 @@ function Title ({title}) {
 	return (<div className={`${styles.title}`}> 
 				{title} 
 				<Tooltip position={"top"} widthpx={"300px"}> 
-					<div className={`${styles.tooltipContent}`}> 월/분기별 활동 내역에 대한 내용입니다. </div>
+					<div className={`${styles.tooltipContent}`}> 월/분기별 공부하고 경험한 내역입니다. </div>
 				</Tooltip> 
 			</div>)
 }
