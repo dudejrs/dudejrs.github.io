@@ -1,7 +1,7 @@
 const {writeFileSync} = require('fs')
 
 const {DirectoryJob, DatabaseJob} = require('../../job')
-const PlanScheme = require('../../scheme/plan')
+const {PlanScheme} = require('../../scheme/plan')
 
 const {writeMetaData} = require('../../util')
 

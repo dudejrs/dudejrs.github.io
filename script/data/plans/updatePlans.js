@@ -1,7 +1,7 @@
 const {readFileSync, writeFileSync} = require('fs')
 
 const {DirectoryJob, DatabaseJob} = require('../../job')
-const PlanScheme = require('../../scheme/plan')
+const {PlanScheme} = require('../../scheme/plan')
 const {TimestampFilter} = require('../../notion/filter')
 const {TimestampSort} = require('../../notion/sort')
 

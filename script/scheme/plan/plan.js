@@ -1,7 +1,7 @@
-const {PageScheme, NestedDatabaseScheme} = require('../notion/scheme')
-const {NestedProperty, ComputedProperty} = require('../notion/property')
-const {StringType, DateType} = require('../notion/property/type')
-const {PropertySort} = require('../notion/sort')
+const {PageScheme, NestedDatabaseScheme} = require('../../notion/scheme')
+const {NestedProperty, ComputedProperty} = require('../../notion/property')
+const {StringType, DateType} = require('../../notion/property/type')
+const {PropertySort} = require('../../notion/sort')
 
 module.exports = new PageScheme("계획", {
 	"title" :  NestedProperty.Title("Name","title"),

@@ -25,7 +25,7 @@ module.exports = class ORFilter extends Filter {
 			or : []
 		}
 
-		for (let child of children) {
+		for (let child of this.children) {
 			ret["or"].push(child.build())
 		}
 

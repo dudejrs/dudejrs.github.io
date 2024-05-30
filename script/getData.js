@@ -70,6 +70,13 @@ const fetchRoutine = async (args)=>{
 			}
 			break;
 
+		case "portfolio" :
+			if (args.slice(1).length == 2) {
+				const target = require(`${process.env.project_path}/script/data/portfolio/${args[1]}/${args[2]}`)
+				await target.exec({client})
+			}
+			break;
+
 		case "all" :
 			["plan", "categories", "cote"].forEach(cmd => fetchRoutine(cmd))
 			break;

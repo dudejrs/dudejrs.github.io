@@ -61,7 +61,7 @@ function getScheme(cur){
 						"기간" : ComputedProperty.Formula("기간","YTb%3D", new DateType()),
 				})
 			}),
-			filter : ANDFilter.of(RollupFilter.Date("EndDate","on_or_after", toString(lastQuarter(cur))), RollupFilter.Date("EndDate", "before", toString(cur)))
+			filter : ANDFilter.of(CheckBoxFilter.Equals("완료",true), RollupFilter.Date("EndDate","on_or_after", toString(lastQuarter(cur))), RollupFilter.Date("EndDate", "before", toString(cur)))
 		}))
 
 	ret.addChild(new ContainerScheme("프로젝트", {
