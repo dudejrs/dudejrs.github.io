@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const {fetchPlans, updatePlans} = require('./data/plans')
 const {fetchCategories, calculateCount} = require('./data/categories')
-const {getTotalProblem, getAggregationByCategories, getAggregationByProblemType} = require('./data/codingPractice')
+const {getTotalProblem, getAggregationByCategories, getAggregationByProblemType, fetchLog} = require('./data/codingPractice')
 const {fetchActivitiesPerQuarter, fetchActivitiesPerMonth} = require('./data/activities')
 const {fetchProjects, fetchPractices} = require('./data/experience')
 
@@ -46,8 +46,8 @@ const fetchRoutine = async (args)=>{
 			break;
 
 		case "cote":
-			if (!subcommand || subcommand === getTotalProblem)  {
-				
+			if (!subcommand || subcommand === "log")  {
+				await fetchLog.exec({client})
 				break
 			}
 
