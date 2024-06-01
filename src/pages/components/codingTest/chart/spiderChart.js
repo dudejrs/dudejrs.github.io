@@ -9,7 +9,7 @@ import Legend from './legend'
 import styles from './spiderChart.module.css'
 
 export default function({data, title, items, children,
-						 width=350, height=400, ratio, textRatio,
+						 width=350, height=400, radius=125, ratio, textRatio,
 						ticks, ntick, lower, upper, colors,
 						className 
 					}){
@@ -24,7 +24,7 @@ export default function({data, title, items, children,
 			{
 				children
 			}
-			<SpiderChart width={250} height={250} 
+			<SpiderChart width={radius*2} height={radius*2} 
 						data={data} 
 						ticks={ticks} ntick={ntick} lower={lower} upper={upper}
 						colors={colors}

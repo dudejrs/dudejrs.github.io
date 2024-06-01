@@ -33,13 +33,13 @@ function getTitle(keyword){
 }
 
 
-export default function({width=1000, keyword='count', height, className}){
+export default function({width=1000, day=365, keyword='count', height, className}){
 
 	const [data, setData] =  useState([0,10])
 	const [axis, setAxis] = useState([])
 
 	useEffect(()=>{
-		getLog(Date.now(),365)
+		getLog(Date.now(),day)
 			.then(t => {
 				setData(t.map(d => d))
 				setAxis(t.map(d => new Date(d['date'])))
@@ -51,7 +51,7 @@ export default function({width=1000, keyword='count', height, className}){
 						axisData={axis}
 						type={'time'}
 						title={getTitle(keyword)}
-						width={1000} height={height}
+						width={width} height={height}
 						nticks={4}
 						axis={{ left:50, bottom : 50, margin: defaultMargin, type: 'time', tickformat : 'month'}}
 						className={className}

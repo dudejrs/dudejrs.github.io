@@ -2,7 +2,6 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;	
-	min-width: 100px;
 	font-size: 0.9em;
 }
 
@@ -14,6 +13,6 @@
 }
 
 .Compact {
-	min-width: 80px;
+	min-width: 10em;
 	margin-right: 10px;
 }

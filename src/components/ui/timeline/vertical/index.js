@@ -24,9 +24,9 @@ export default function({
 	radius = 9, stroke = 6,
 	color = "#302eff",
 	mapper,
+	className,
 	...props
 }) {
-
 	if (!data) {
 		return 
 		<div style={{width: width, margin: margin}}>
@@ -44,7 +44,7 @@ export default function({
 	},[width])
 
 	return (
-			<div className={`${styles.container}`} style={{height : height, margin : margin}}>  
+			<div className={`${className} ${styles.container}`} style={{height : height, margin : margin}}>  
 				<Context.Provider value={{setWidths}}>
 					<BehindItem data={data} width={widths[0]} vheight={vheight} vmargin={vmargin} radius={radius} mapper={mapper[0]} scale={scale} itemHeight={itemHeight} right={true} {...props} />
 					<CenterItem data={data} width={widths[1]} vheight={vheight} vmargin={vmargin} radius={radius} mapper={mapper[1]} scale={scale} itemHeight={itemHeight} right={true} {...props} />

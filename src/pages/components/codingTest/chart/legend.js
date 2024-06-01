@@ -1,9 +1,7 @@
-
 import {Legend} from '../../../../components/chart';
 
-
-export default function({items, colors, rem, className}){
+export default function({items, height, colors, rem, className}){
 	return (
-			<Legend descriptions={items} colors = {colors} className={className} rem={rem} />
+			<Legend descriptions={items} height={height} colors = {colors} className={className} rem={rem} />
 		);
 }

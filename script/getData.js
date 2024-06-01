@@ -46,6 +46,11 @@ const fetchRoutine = async (args)=>{
 			break;
 
 		case "cote":
+			if (!subcommand || subcommand === getTotalProblem)  {
+				
+				break
+			}
+
 			await getTotalProblem.exec({client, languages})
 			await getAggregationByCategories.exec({client})
 			await getAggregationByProblemType.exec({client, languages})

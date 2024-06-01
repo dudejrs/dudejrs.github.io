@@ -27,7 +27,7 @@ export default function({programmingLanguages}){
 	return (
 		<Layout title={<Title title={'코딩 연습'} />} programmingLanguages={programmingLanguages}>
 			<div className={`${styles.subcontainer} ${layoutStyles.subcontainer}`}>
-				<ProblemDonutChart className={`${layoutStyles.item}`} programmingLanguages={programmingLanguages} layout={'landscape'}/>
+				<ProblemDonutChart className={`${layoutStyles.item}`} programmingLanguages={programmingLanguages} layout={'landscape'} lengendWidth={100} legendHeight={80}/>
 				<CategoryDonutChart className={`${layoutStyles.item}`} languages={programmingLanguages} categories={categories} height={'440px'} layout={'landscape'}/>
 				<ProblemTypeSpiderChart className={`${layoutStyles.item}`} types={types} fields={['count']}/>
 			</div>

@@ -7,9 +7,9 @@ import DonutChart from './donutChart'
 import styles from './legendItem.module.css'
 
 
-function genterateItems(data){
+function genterateItems(data, width = 100){
 	return ( 
-		<div className={`${styles.itemContainer}`}>
+		<div className={`${styles.itemContainer}`} style={{minWidth : width}}>
 			<span className={`${styles.itemLanguage}`}>{data["category"]}</span>
 			<span className= {`${styles.itemCount}`}>{data["count"]}</span>
 		</div>
@@ -42,7 +42,7 @@ function refineData(data,categories){
 }
 
 
-export default function ({width, height, languages, className, categories, colors, layout='portrait'}) {
+export default function ({width, height, radius, languages, className, categories, colors, layout='portrait'}) {
 	
 	const [data, setData] = useState([])
 	const [items, setItems]  = useState([])
@@ -59,7 +59,7 @@ export default function ({width, height, languages, className, categories, color
 
 	return (
 		<DonutChart title={<>카테고리 별 <br/> 풀은 문제의 수 </>} 
-					width={width} height={height}
+					width={width} height={height} radius={radius}
 					data= {data} items= {items} 
 					programmingLanguages={[]} 
 					colors={colors} 

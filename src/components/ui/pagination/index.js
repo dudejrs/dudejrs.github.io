@@ -9,8 +9,8 @@ function supplement(data, pageSize) {
 	return data
 }
 
-export default function ({children, data, pageSize, style}) {
-	const [p, setP] = useState(0)
+export default function ({children, data, offset = 0, pageSize, style}) {
+	const [p, setP] = useState(offset)
 
 	return (
 		<div style={style}> 

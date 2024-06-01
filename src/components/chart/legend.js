@@ -19,14 +19,10 @@ function itemStyle(rem){
 }
 
 
-export default function Legend({className, descriptions, colors, rem}){
-
-	if (!rem){
-		rem = 0.8;
-	}
+export default function Legend({className, height, descriptions, colors, rem = 0.8}){
 
 	return (
-		<div className={`${styles.container} ${className}`}>
+		<div className={`${styles.container} ${className}`} style={{height}}>
 			{
 				descriptions && descriptions.map((item, index)=> 
 					<div className={`${styles.item}`} key={index} style={itemStyle(rem)}> 

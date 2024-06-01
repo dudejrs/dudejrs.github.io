@@ -1,13 +1,13 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import {Printable, Page} from '../../components/ui/printable'
-import P from './2024'
+import {Printable, Page} from '../../../components/ui/printable'
+import NaverBoostCamp from './naverboostcamp'
 
 
 function Default() {
 	return (
 		<Printable layout='landscape'>
 			<Page>
-				Portfolio
+				2024
 			</Page>
 			<Page>
 				Hello World!
@@ -18,8 +18,8 @@ function Default() {
 
 export default function(){
 	return (
-		<Routes basename={`${process.env.PUBLIC_URL}/portfolio`}>
-			<Route path="2024/*" element ={<P />}/>
+		<Routes basename={`${process.env.PUBLIC_URL}`}>
+			<Route path="naverboostcamp" element={< NaverBoostCamp/>} />
 			<Route index path="*" element={<Default />} />
 		</Routes>
 	)

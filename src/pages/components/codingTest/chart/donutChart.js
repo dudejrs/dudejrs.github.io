@@ -42,7 +42,7 @@ function getLayout(layout){
 	return ''
 }
 
-export default function ({width, height, radius, data, items, title, rem=0.4, programmingLanguages, colors, key, layout = 'portrait', className}) {
+export default function ({width, height,legendHeight, radius = 70, data, items, title, rem=0.4, programmingLanguages, colors, key, layout = 'portrait', className}) {
 	
 	if(!colors){
 		if (data){
@@ -50,12 +50,13 @@ export default function ({width, height, radius, data, items, title, rem=0.4, pr
 		}
 	}
 
+
 	return (
 		<Box className={`${styles.container} ${getLayout(layout)} ${className}`} width={width} height={height+'px'} key={key}>
 		{
 			layoutChart(layout,(<h4 className={`${styles.title }`}> {title} </h4>)
-				,(<DonutChart width={140} height={140} data={data} radius={70} colors={colors} ratio={0.67}/>) 
-				,(<Legend items={items} colors={colors} className={styles.legend} rem={0.4} />))
+				,(<DonutChart width={radius * 2} height={radius * 2} data={data} radius={radius} colors={colors} ratio={0.67}/>) 
+				,(<Legend items={items} height={legendHeight} colors={colors} className={styles.legend} rem={rem} />))
 		}
 		</Box>
 		);

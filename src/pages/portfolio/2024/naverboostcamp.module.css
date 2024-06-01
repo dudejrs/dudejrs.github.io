@@ -1,0 +1,77 @@
+.container{
+	padding : 12mm;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.subcontainer{
+	display: flex;
+	height: 8cm;
+	overflow: hidden;
+}
+
+.title {
+	margin-bottom: 0.5rem;
+}
+
+.titleDescription {
+	color: #ababab;
+}
+
+.sections{
+	display: flex;
+}
+
+
+.section {
+	background-color: rgba(230,230,230,0.2);
+	border-radius: 1rem;
+	width : 100%;
+	padding: 1rem;
+	color: #666;
+	margin-left: 20px;
+}
+
+.description {
+	color : #ababab;
+	font-size: 0.8em;
+}
+
+.term {
+	font-size: 0.8rem;
+}
+
+.planNameContainer {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.planName {
+
+}
+
+.timeline {
+	color : #888;
+}
+
+.dot {
+	min-width: 20px;
+	height: 1rem;
+	flex-grow: 2;
+	border-top: 2px dotted #ccc;
+	transform: translateY(50%);
+	margin: 0 0.5em;
+}
+
+.number {
+	width: 1.2em;
+	height: 1.2em;
+	color : #ccc;
+	font-size: 0.8em;
+	border: 0.5px solid #ccc;
+	border-radius: 0.8em;
+	text-align: center;
+}
