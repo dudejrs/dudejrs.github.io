@@ -39,7 +39,7 @@ export default function({programmingLanguages}){
 				<ProblemTypeSpiderChart className={`${layoutStyles.item}`} types={types} fields={[lang]}/>
 			</div>
 			<div className={`${layoutStyles.subcontainer} ${layoutStyles.subcontainer}`}>
-				<ProblemLineChart className={`${layoutStyles.item}`} keyword={lang} height={300} />
+				<ProblemLineChart className={`${layoutStyles.item}`} keyword={`Count (${lang})`} lang={lang} height={300} />
 			</div>
 		</Layout>
 		);

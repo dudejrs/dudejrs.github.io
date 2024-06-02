@@ -60,6 +60,11 @@ async function logTotalProblem({client, languages, count, repetiton, path, ...ar
 
 	data[date] = {count, repetiton}
 
+	for (let lang of languages) {
+		data[Count(lang)] = args[Count(lang)]
+		data[Repetiton(lang)] = args[Repetiton(lang)]
+	}
+
 	await writeFileSync(path, JSON.stringify(data), {encoding : 'utf-8', flag : 'w+'})
 }
 

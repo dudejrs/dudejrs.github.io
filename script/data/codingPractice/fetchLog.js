@@ -11,10 +11,11 @@ async function fetchLog({client, path}){
 	
 	let response = await client.queryDatabase(process.env.notion_coding_practice_log_database_id, ANDFilter.of(DateFilter.Before("Date", end), DateFilter.After("Date", begin)).build())
 
-	let ret = []
+	let ret = {}
 	for await (let {results} of response) {
 		for (let page of results) {
-			ret.push(await CodingPracticeLog.convert(page, {client})) 
+			const {date, ...d}= await CodingPracticeLog.convert(page, {client})
+			ret[date.start] = d
 		}
 	}
 
@@ -23,7 +24,7 @@ async function fetchLog({client, path}){
 
 module.exports = new FileJob({
 	name : 'total problem log를 fetch',
-	path : `${process.env.project_path}/public/test/codingPractice/log.json`,
+	path : `${process.env.project_path}/public/data/codingPractice/log.json`,
 	exec : fetchLog,
 	handleError : console.log
 })

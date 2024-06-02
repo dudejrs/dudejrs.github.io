@@ -7,9 +7,9 @@ import DonutChart from './donutChart'
 import styles from './legendItem.module.css'
 
 
-function genterateItems(data){
+function genterateItems(data, width = 100){
 	return ( 
-		<div className={`${styles.itemContainer}`}>
+		<div className={`${styles.itemContainer}`} style={{minWidth : width}}>
 			<span className={`${styles.itemLanguage}`}>{data["category"]}</span>
 			<span className= {`${styles.itemCount}`}>{data["count"]}</span>
 		</div>

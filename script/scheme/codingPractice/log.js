@@ -2,7 +2,7 @@ const {PageScheme} = require('../../notion/scheme')
 const {NestedProperty, ComputedProperty, RelationProperty} = require('../../notion/property')
 
 module.exports = new PageScheme("codingPracticeLog", {
-	"Date" : NestedProperty.Date("Date", "bvyh"),
+	"date" : NestedProperty.Date("Date", "bvyh", "date"),
 	"Count" : NestedProperty.Number("Count", "FBry"),
 	"Count (C++)" : NestedProperty.Number("Count (C++)", "%5Drk%5B"),
 	"Count (Java)" : NestedProperty.Number("Count (Java)", "rQgM"),

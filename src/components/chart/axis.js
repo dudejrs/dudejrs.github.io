@@ -2,6 +2,8 @@ import * as d3 from 'd3'
 
 export function getScale(type, data, margin, width) {
 
+	data = data.filter(d => d)
+
 	switch(type){
 		case 'length' : 
 			return d3.scaleLinear().domain([0, data.length-1]).range([margin.left, width- margin.right]) 
@@ -14,6 +16,7 @@ export function getScale(type, data, margin, width) {
 
 export function getAxis(type, tickformat, x, data){
 	let ticks;
+	data = data.filter(d => d)
 
 	if (type == 'time'){
 		switch(tickformat){

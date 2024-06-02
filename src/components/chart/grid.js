@@ -21,6 +21,8 @@ export default function({
 	const gx = useRef();
 	const gy = useRef();
 
+	data = data.filter(d => d)
+
 	const x = getScale(type, axisData, margin, width)
 
 	const y = d3.scaleLinear([Math.max(...data), Math.min(...data)],[margin.top, height- margin.bottom])
@@ -53,7 +55,7 @@ export default function({
 
 		}
 		
-		if(! hide.x){
+		if(!hide.x){
 			let vertical = d3.select(gx.current)
 				.call(xAxis)
 

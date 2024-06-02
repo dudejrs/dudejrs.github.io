@@ -16,6 +16,8 @@ export default function({data, width, height, nticks = 3,
 
 	const gy = useRef();
 
+	data = data.filter(d => d)
+
 	const y = d3.scaleLinear()
 				.domain([Math.max(...data), Math.min(...data)])
 				.range([margin.top, height- margin.bottom])
