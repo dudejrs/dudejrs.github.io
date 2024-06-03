@@ -44,7 +44,7 @@
 
 .planNameContainer {
 	width: 100%;
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
@@ -58,6 +58,7 @@
 }
 
 .dot {
+	display: unset;
 	min-width: 20px;
 	height: 1rem;
 	flex-grow: 2;
@@ -74,4 +75,28 @@
 	border: 0.5px solid #ccc;
 	border-radius: 0.8em;
 	text-align: center;
+}
+
+.list {
+	padding-left: 1em;
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+.listTitle {
+	margin-bottom: 0.8em;
+}
+
+.listItem {
+	position: relative;
+	width: fit-content;
+}
+
+.numberList {
+	display: unset;
+	margin-left: 0.5em;
+	color: #aaa;
+}
+.numberList .number {
+	margin-right: 0.2em;
+	padding: 0em 0.3em;
 }

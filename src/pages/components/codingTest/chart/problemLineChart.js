@@ -41,7 +41,6 @@ export default function({width=1000, day=365, keyword='Count', height, lang, cla
 	useEffect(()=>{
 		getLog(Date.now(),day)
 			.then(t => {
-				console.log(t)
 				setData(t.map(d => d))
 				setAxis(t.map(d => new Date(d['date'])))
 			})
