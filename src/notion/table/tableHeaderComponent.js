@@ -5,10 +5,10 @@ import tableStyles from './table.module.css';
 import Component from '../component';
 
 
-export default function TableHeaderComponent({name, type, width, index, onDrag, onDragLeave}){
+export default function TableHeaderComponent({className, name, type, width, index, onDrag, onDragLeave}){
 	
 	return(
-			<Component name={name} className={`${tableStyles.column} ${styles.column}`} type={type} style={{width :`${width}px`}}>
+			<Component name={name} className={`${tableStyles.column} ${styles.column} ${className}`} type={type} style={{width :`${width}px`}}>
 				<div className={styles.columnHandle} onDrag={(e)=>{onDrag(e,index);}} onDragEnd={onDragLeave} ></div>
 			</Component>
 				

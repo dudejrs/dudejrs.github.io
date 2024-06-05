@@ -5,6 +5,14 @@ import {VerticalTimeLine} from '../../../components/ui/timeline'
 import {ProblemDonutChart, CategoryDonutChart,
 		ProblemTypeSpiderChart, ProblemLineChart} from '../../components/codingTest/chart'
 
+import Table from '../../../notion/table'
+
+import {fetchExperience} from '../../../domain/experience'
+
+import Certification from '../../resume/section/certification'
+import Info from '../../resume/section/info'
+import {AboutMe} from '../../components/aboutMe'
+
 import styles from './naverboostcamp.module.css'
 
 function Title({children}){
@@ -48,6 +56,20 @@ const planMapper = [undefined,
 			(d, i) => d && <p className={`${styles.planNameContainer}`}> <span className={`${styles.planName}`}>{d["title"]} </span> <span className={styles.dot}></span> <span className={styles.number}>{i + 1}</span></p>,
 			undefined]
 
+function ProjectTable({data}) {
+	const columns = ["이름", "기간", "기술", "요약(200자)"];
+	const types = ["title", "date", "multiselect", "text"];
+	const ratio = [1,1,1,5];
+	
+	console.log(data)
+
+	return (
+		<div id="notionContainer" className={`${styles.table}`}>
+				{ Array.isArray(data) && data.length > 0 && <Table columns={columns} types={types} data={data} ratio={ratio} wrap={true}/>}
+		</div>
+	)
+}
+
 export default function(){
 	const [data, setData] = useState({})
 	const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python','Go', 'Kotlin','Typescript']
@@ -56,22 +78,58 @@ export default function(){
 
 	useEffect(()=> {
 		axios.get(`/data/portfolio/2024/naverboostcamp/plan.json`)
-			.then(({data}) => setData(data))
-	}, [])
+			.then(({data}) => {
+				fetchExperience()
+					.then((d) => {
+						setData({experience: d,...data})
+					})
+				setData(data)
+			})
+	}, [])	
 
 	return (
 		<Printable filename='2024_네이버부스트캠프_포트폴리오' layout='landscape'>		
 			<Page className={`${styles.container}`}>
 				<Title> 자기소개 </Title>
+				<Info />
+				<div className={`${styles.info}`}>
+					<div> 
+						<h4> 자격증 </h4>
+						<Certification />
+					</div>
+					<div className={`${styles.chanel}`}>
+						<h4> Chanel </h4>
+						<ul className={`${styles.chanel_list}`}>
+							<li > 
+								<a className={`${styles.chanel_item}`} href="https://dudejrs.github.io/">
+									<img className={styles.contact_img} src={'/img/contact/github-mark.svg'}/>
+									<span>https://dudejrs.github.io/</span>
+								</a>
+							</li>
+							<li > 
+								<a className={`${styles.chanel_item}`} href="https://github.com/dudejrs">
+									<img className={styles.contact_img} src={'/img/contact/github-mark.svg'}/>
+									<span>https://github.com/dudejrs</span>
+								</a>
+							</li>
+							<li> 
+								<a className={`${styles.chanel_item}`} href="https://dudejrs.tistory.com/" >
+									<img className={styles.contact_img} src={'/img/contact/tistory.svg'}/>
+									<span>https://dudejrs.tistory.com/</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</Page>
 
 			<Page className={`${styles.container}`}>
 				<div className={`${styles.titleContainer}`}>
 					<Title> 웹개발자가 되기 위해 노력해온 과정1 : 코딩 테스트 공부 </Title>
-					<div className={`${styles.titleDescription}`}> Node.js, Spring 등의 웹 프레임워크에 대해 공부했던 내용입니다. </div>
+					<div className={`${styles.titleDescription}`}> 코딩테스트 문제를 다양한 언어로 풀면서 컴퓨팅 사고를 학습하려 하였습니다.</div>
 				</div>
 
-				<div>
+				<div className={`${styles.practice}`}>
 					<div className={`${styles.subcontainer}`}>
 						<ProblemDonutChart className={`${styles.item}`} width={250} radius={50} lengendWidth={60} legendHeight={80} programmingLanguages={programmingLanguages} layout={'landscape'}/>
 						<CategoryDonutChart className={`${styles.item}`} width={250} radius={50} languages={programmingLanguages} categories={categories} height={'440px'} layout={'landscape'}/>
@@ -117,7 +175,7 @@ export default function(){
 			<Page className={`${styles.container}`}>
 				<div className={`${styles.titleContainer}`}>
 					<Title> 웹개발자가 되기 위해 노력해온 과정3 : 인프라에 대한 공부 </Title>
-					<div className={`${styles.titleDescription}`}> Node.js, Spring 등의 웹 프레임워크에 대해 공부했던 내용입니다. </div>
+					<div className={`${styles.titleDescription}`}> 데이터베이스와 리눅스에 대해서 공부하였습니다. </div>
 				</div>
 				<div className={`${styles.sections}`}>
 				{Object.keys(data) != 0 && data["Infra"] && <VerticalTimeLine data={data["Infra"]["DBMS,SQL,Linux,Docker,Kubernetices"]} width={500} height={500} mapper={planMapper} ratio={1.5} ratios={[0, 0.5, 2, 0]} bmargin={50} stroke={2} radius={4} color={'#aaa'} minSize={[1000, 500]} className={`${styles.timeline}`}/>} 
@@ -145,8 +203,8 @@ export default function(){
 			
 			<Page className={`${styles.container}`}>
 				<div className={`${styles.titleContainer}`}>
-					<Title> 웹개발자가 되기 위해 노력해온 과정4 : 클린코드, 디자인패턴, 소프트웨어설계 </Title>
-					<div className={`${styles.titleDescription}`}> Node.js, Spring 등의 웹 프레임워크에 대해 공부했던 내용입니다. </div>
+					<Title> 웹개발자가 되기 위해 노력해온 과정4 : 객체 지향 개발 방법론 및 소프트웨어 설계 </Title>
+					<div className={`${styles.titleDescription}`}> 객체 지향 방법론, 클린 코드 작성 방법, 디자인 패턴, 소프트웨어 설계에 관한 8권의 책을 읽으며 관련 관점을 배웠습니다.</div>
 				</div>
 				<div className={`${styles.sections}`}>
 					{Object.keys(data) != 0 && <VerticalTimeLine data={data["Basic"].slice(0,8)} width={500} height={550} mapper={planMapper} ratio={1.5} ratios={[0, 0.5, 2, 0]} bmargin={50} stroke={2} radius={4} color={'#aaa'} minSize={[1000, 500]} className={`${styles.timeline}`}/>}
@@ -171,16 +229,17 @@ export default function(){
 							<ListItem title={`객체지향의 23가지 디자인 패턴 : 생성, 구조, 행위`} tags={[8]} />
 						</List>
 					</div>
-
 				</div>
 			</Page>
 			
-			<Page className={`${styles.container}`}>
+			<Page className={`${styles.container} ${styles.noBetween}`}>
 				<div className={`${styles.titleContainer}`}>
 					<Title> 프로젝트 경험 요약 </Title>
-					<div className={`${styles.titleDescription}`}> Node.js, Spring 등의 웹 프레임워크에 대해 공부했던 내용입니다. </div>
+					<div className={`${styles.titleDescription}`}> 여태까지 경험했던 프로젝트, 실습 내용을 요약하였습니다. </div>
 				</div>
-				<div className={`${styles.sections}`}></div>
+				<div className={`${styles.sections} ${styles.experience}`}>
+					<ProjectTable data={data["experience"]}/>
+				</div>
 			</Page>			
 
 		</Printable>

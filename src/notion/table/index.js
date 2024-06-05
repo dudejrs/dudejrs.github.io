@@ -6,7 +6,7 @@ import TableHeader from './tableHeader'
 
 
 
-export default function Table({columns, types, data, titleOnClick, ratio}) {	
+export default function Table({columns, types, data, titleOnClick, ratio, wrap=false}) {	
 	const [widths, setWidths] = useState([]);	
 
 	useEffect(()=>{
@@ -44,7 +44,7 @@ export default function Table({columns, types, data, titleOnClick, ratio}) {
 			<div>  
 				<TableHeader columns={columns} types={types} widths={widths} setWidthByIndex={setWidthByIndex}/>
 				{data.map(datum => {
-					return (<TableEntry columns={columns} types={types} data={datum} key={datum.id} widths={widths} titleOnClick={titleOnClick}/>);
+					return (<TableEntry columns={columns} types={types} data={datum} key={datum.id} widths={widths} titleOnClick={titleOnClick} wrap={wrap} />);
 				})}
 			</div>
 		);

@@ -7,14 +7,23 @@
 	white-space: nowrap;
 	font-size: 0.8rem;
 
-	height: 2rem;
 
 	padding: 0 8px;
+}
+
+.wrap {
+	min-height: 3rem ;
+	white-space: pre-wrap !important;
 }
 
 .row{
 	display: flex;
 	border-bottom:  1px solid rgba(55, 53, 47, 1);
+	height: 2rem;
+}
+
+.rowWrap {
+	height: fit-content;
 }
 
 .label{

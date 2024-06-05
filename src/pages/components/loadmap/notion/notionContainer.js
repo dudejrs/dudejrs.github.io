@@ -38,7 +38,6 @@ export default function NotionContainer({name}) {
 					setPractices(d["실습"])
 				}
 			})
-
 	},[]);
 		
 	return (
