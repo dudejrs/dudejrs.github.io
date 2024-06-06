@@ -41,11 +41,11 @@ const mapToComponent = (type, data)=>{
 		return (<>{data}</>);
 }
 
-export default function ValueEntry({data, className, type, style, wrap=false}){
+export default function ValueEntry({data, className, type, style, wrap=false, lineStyle}){
 	
 
 	return(
-		<div className={`${styles.container} ${className} ${wrap? styles.wrap :'' }`} style={style}>
+		<div className={`${styles.container} ${className} ${wrap? styles.wrap :'' }`} style={{ borderRight: lineStyle, ...style}}>
 		{
 			mapToComponent(type, data)
 		}

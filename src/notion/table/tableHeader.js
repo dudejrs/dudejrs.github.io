@@ -6,8 +6,7 @@ import styles from './tableHeader.module.css';
 import tableStyles from './table.module.css';
 
 
-
-export default function TableHeader({columns, types, widths, setWidthByIndex }){
+export default function TableHeader({columns, types, widths, setWidthByIndex, lineStyle}){
 
 	const [draged, setDragged] = useState(false);
 
@@ -18,9 +17,6 @@ export default function TableHeader({columns, types, widths, setWidthByIndex }){
 
 		setDragged(true);
 		setWidthByIndex(index,e.clientX - start);	
-
-
-		
 	});
 
 	const onDragLeave = useCallback((e)=> {
@@ -29,13 +25,13 @@ export default function TableHeader({columns, types, widths, setWidthByIndex }){
 
 
 
-	return(<div className={tableStyles.row}>
+	return(<div className={tableStyles.row} style={{borderBottom : `${lineStyle}`}}>
 					<label className={tableStyles.label}>
 					</label>
 
 					{
 						Array(columns.length).fill(1).map((_,i)=> {
-							return (<TableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i}   onDrag={onDrag} onDragLeave={onDragLeave}/>);
+							return (<TableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i} onDrag={onDrag} onDragLeave={onDragLeave} lineStyle={lineStyle}/>);
 						})
 					}
 

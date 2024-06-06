@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {Printable, Page} from '../../../components/ui/printable'
 import {VerticalTimeLine} from '../../../components/ui/timeline'
+import {TistoryLogo, GithubLogo} from '../../../components/logo'
 import {ProblemDonutChart, CategoryDonutChart,
 		ProblemTypeSpiderChart, ProblemLineChart} from '../../components/codingTest/chart'
 
@@ -65,7 +66,7 @@ function ProjectTable({data}) {
 
 	return (
 		<div id="notionContainer" className={`${styles.table}`}>
-				{ Array.isArray(data) && data.length > 0 && <Table columns={columns} types={types} data={data} ratio={ratio} wrap={true}/>}
+				{ Array.isArray(data) && data.length > 0 && <Table columns={columns} types={types} data={data} ratio={ratio} wrap={true} lineStyle={"rgba(150, 150, 150, 0.5) 1px solid"}/>}
 		</div>
 	)
 }
@@ -102,19 +103,19 @@ export default function(){
 						<ul className={`${styles.chanel_list}`}>
 							<li > 
 								<a className={`${styles.chanel_item}`} href="https://dudejrs.github.io/">
-									<img className={styles.contact_img} src={'/img/contact/github-mark.svg'}/>
+									<GithubLogo width={"1.5rem"} height={"1.5rem"} className={`${styles.contact_img}`}/>
 									<span>https://dudejrs.github.io/</span>
 								</a>
 							</li>
 							<li > 
 								<a className={`${styles.chanel_item}`} href="https://github.com/dudejrs">
-									<img className={styles.contact_img} src={'/img/contact/github-mark.svg'}/>
+									<GithubLogo width={"1.5rem"} height={"1.5rem"} className={`${styles.contact_img}`}/>
 									<span>https://github.com/dudejrs</span>
 								</a>
 							</li>
 							<li> 
 								<a className={`${styles.chanel_item}`} href="https://dudejrs.tistory.com/" >
-									<img className={styles.contact_img} src={'/img/contact/tistory.svg'}/>
+									<TistoryLogo className={styles.contact_img} width={"1.5rem"} height={"1.5rem"}/>
 									<span>https://dudejrs.tistory.com/</span>
 								</a>
 							</li>
@@ -158,7 +159,7 @@ export default function(){
 							<ListItem title={`Spring 프레임워크의 주요 개념 : 의존성 주입과 제어 역전(IOC/DI), 관점지향 프로그래밍(AOP)`} tags={[2, 4]} />
 							<ListItem title={`객체 관계 매핑(ORM) 및 영속성 관리`} tags={[2, 4]} />
 							<ListItem title={`Jest 및 JUnit을 이용하여 간단한 테스트 코드 작성하는 방법`} tags={[2]} />
-							<ListItem title={`JSX 문법과 리액트 상태관리`} tags={[5]} />
+							<ListItem title={`JSX 문법과 리액트 상태관리 방법 (Context API, Redux)`} tags={[5]} />
 							<ListItem title={``} tags={[]} />
 						</List>
 						<List title={`네이버 부스트 캠프에 활용할 수 있는 점`}>
