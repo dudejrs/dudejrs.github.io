@@ -48,7 +48,6 @@ const fetchRoutine = async (args)=>{
 		case "cote":
 			if (!subcommand || subcommand === "log")  {
 				await fetchLog.exec({client})
-				break
 			}
 
 			await getTotalProblem.exec({client, languages})

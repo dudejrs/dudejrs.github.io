@@ -127,7 +127,7 @@ export default function(){
 			<Page className={`${styles.container}`}>
 				<div className={`${styles.titleContainer}`}>
 					<Title> 웹개발자가 되기 위해 노력해온 과정1 : 코딩 테스트 공부 </Title>
-					<div className={`${styles.titleDescription}`}> 코딩테스트 문제를 다양한 언어로 풀면서 컴퓨팅 사고를 학습하려 하였습니다.</div>
+					<div className={`${styles.titleDescription}`}> 코딩테스트 문제를 다양한 언어로 풀면서 컴퓨팅 사고를 학습하려 하였습니다. 연습한 코드는 <a href="https://github.com/dudejrs/coding-practice">여기</a> 에서 볼 수 있습니다. </div>
 				</div>
 
 				<div className={`${styles.practice}`}>
@@ -160,14 +160,12 @@ export default function(){
 							<ListItem title={`객체 관계 매핑(ORM) 및 영속성 관리`} tags={[2, 4]} />
 							<ListItem title={`Jest 및 JUnit을 이용하여 간단한 테스트 코드 작성하는 방법`} tags={[2]} />
 							<ListItem title={`JSX 문법과 리액트 상태관리 방법 (Context API, Redux)`} tags={[5]} />
-							<ListItem title={``} tags={[]} />
 						</List>
 						<List title={`네이버 부스트 캠프에 활용할 수 있는 점`}>
 							<ListItem title={`SystemJS, Webpack 등 자바스크립트 모듈 로더/번들러를 이용하여 파일 크기 및 로딩 속도를 개선`} tags={[1]}/>
 							<ListItem title={`프레임워크를 이용한 SSR 및 Hydration 적용`} tags={[1, 5]}/>
 							<ListItem title={`웹 프레임워크를 이용하여 REST API 개발`} tags={[2, 3]} />
 							<ListItem title={`Express, JWT를 이용한 간단한 토큰 기반 인증`} tags={[3]} />
-							<ListItem title={``} tags={[]} />
 						</List>
 					</div>
 				</div>
@@ -236,7 +234,7 @@ export default function(){
 			<Page className={`${styles.container} ${styles.noBetween}`}>
 				<div className={`${styles.titleContainer}`}>
 					<Title> 프로젝트 경험 요약 </Title>
-					<div className={`${styles.titleDescription}`}> 여태까지 경험했던 프로젝트, 실습 내용을 요약하였습니다. </div>
+					<div className={`${styles.titleDescription}`}> 여태까지 경험했던 프로젝트, 실습 내용을 요약하였습니다. 더 자세한 내용은 <a href="https://assorted-splash-955.notion.site/9956366142d1485bb4ab5918168f2f74">여기</a>에서 보실 수 있습니다. </div>
 				</div>
 				<div className={`${styles.sections} ${styles.experience}`}>
 					<ProjectTable data={data["experience"]}/>
