@@ -4,7 +4,7 @@ const {DateFilter} = require('../../notion/filter')
 const {DatabaseJob} = require('../../job')
 
 async function findIDByDate(client, date) {
-	const {value : data} = await client.queryDatabase(process.env.notion_coding_practice_log_database_id, DateFilter.Equals("Date", date).build()).next()
+	const {value : data} = await client.queryDatabase(process.env.NOTION_CODING_PRACTICE_LOG_DATABASE_ID, DateFilter.Equals("Date", date).build()).next()
 
 	return data["results"][0] ? data["results"][0]["id"] : null
 }
@@ -49,7 +49,7 @@ async function logTotalProblem({client, languages, count, repetiton, path, ...ar
 	if (page_id) {
 		const response = await client.updatePage(page_id, properties)
 	} else {
-		const response = await client.createPage(process.env.notion_coding_practice_log_database_id, properties)
+		const response = await client.createPage(process.env.NOTION_CODING_PRACTICE_LOG_DATABASE_ID, properties)
 	}
 
 	let data = {}

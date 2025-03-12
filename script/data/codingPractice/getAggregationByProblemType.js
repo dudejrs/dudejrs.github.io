@@ -5,7 +5,7 @@ const {FormulaFilter} = require('../../notion/filter')
 const {CodingPracticeScheme} = require('../../scheme/codingPractice')
 
 async function getProblemType(client) {
-	const {properties} = await client.retrieveDatabase(process.env.notion_coding_practice_database_id)
+	const {properties} = await client.retrieveDatabase(process.env.NOTION_CODING_PRACTICE_DATABASE_ID)
 
 	return properties["문제유형"]["multi_select"]["options"].map(option => option["name"])
 }
@@ -14,7 +14,7 @@ async function getAggregationByProblemType({path, client, languages}){
 	const filter = FormulaFilter.Checkbox("_풀었는지_유무", "equals", true).build()
 	const problemTypes = await getProblemType(client)
 
-	const data = client.queryDatabase(process.env.notion_coding_practice_database_id, filter)
+	const data = client.queryDatabase(process.env.NOTION_CODING_PRACTICE_DATABASE_ID, filter)
 
 	const ret = {}
 	

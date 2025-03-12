@@ -15,11 +15,10 @@ const PaginationClient = require('./notion/client/pagination')
 const AxiosClient = require('./notion/client/axios')
 
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
-const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript"];
+const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript", "Rust"];
 const categories = ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "C++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","PyTorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
 
-
-const client = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
+const client = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.NOTION_INTEGRATION_SECRET)));
 
 const fetchRoutine = async (args)=>{
 	const [maincommand, subcommand] = args.slice(0,2)

@@ -18,7 +18,7 @@ async function getTotalProblem({path, client, languages}){
 
 	const filter = FormulaFilter.Checkbox("_풀었는지_유무", "equals", true).build()
 
-	const data = client.queryDatabase(process.env.notion_coding_practice_database_id, filter)
+	const data = client.queryDatabase(process.env.NOTION_CODING_PRACTICE_DATABASE_ID, filter)
 
 	let [count, repetiton] = [0, 0]
 	let ret = {}

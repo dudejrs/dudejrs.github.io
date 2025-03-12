@@ -9,7 +9,7 @@ async function fetchLog({client, path}){
 	const end = (new Date(Date.now() + 24 * 60 * 60 * 1000)).toISOString().slice(0, 10)
 	const begin = (new Date(Date.now() - 365 * 24 * 60 * 60 * 1000)).toISOString().slice(0, 10)
 	
-	let response = await client.queryDatabase(process.env.notion_coding_practice_log_database_id, ANDFilter.of(DateFilter.Before("Date", end), DateFilter.After("Date", begin)).build())
+	let response = await client.queryDatabase(process.env.NOTION_CODING_PRACTICE_LOG_DATABASE_ID, ANDFilter.of(DateFilter.Before("Date", end), DateFilter.After("Date", begin)).build())
 
 	let ret = {}
 	for await (let {results} of response) {

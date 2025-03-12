@@ -3,7 +3,7 @@ const {FileJob} = require('../../job')
 const {CodingPracticeCategoriesScheme} = require('../../scheme/codingPractice')
 
 async function getAggregationByCategories({path, client}){
-	const data = await client.queryDatabase(process.env.notion_coding_pracitce_categories_database_id)
+	const data = await client.queryDatabase(process.env.NOTION_CODING_PRACITCE_CATEGORIES_DATABASE_ID)
 
 	const ret = []
 
