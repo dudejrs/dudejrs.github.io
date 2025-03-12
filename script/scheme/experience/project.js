@@ -12,7 +12,7 @@ module.exports = new PageScheme("프로젝트", {
 	"이미지URL" : NestedProperty.URL("이미지URL", "MQRP"),
 	"세부 경험" : new NestedDatabaseScheme("세부 경험", {
 		relation_property_name : "🌳 프로젝트",
-		database_id : process.env.notion_experience_detail_database_id,
+		database_id : process.env.NOTION_EXPERIENCE_DETAIL_DATABASE_ID,
 		scheme : new PageScheme("세부사항", {
 			"이름" : NestedProperty.Title("Name", "title"),
 			"기간" : NestedProperty.Date("Date", "iCuT")

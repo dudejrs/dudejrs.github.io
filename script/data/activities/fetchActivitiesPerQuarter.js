@@ -11,7 +11,7 @@ async function fetchActivitiesPerQuarter({path, client}){
 
 module.exports = new FileJob({
 	name : `분기별 활동내역을 fetch`,
-	path : `${process.env.project_path}/public/data/activities/quarter.json`,
+	path : `${process.env.PWD}/public/data/activities/quarter.json`,
 	exec : fetchActivitiesPerQuarter,
 	handleError : console.log
 })

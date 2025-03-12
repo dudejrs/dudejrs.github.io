@@ -36,7 +36,7 @@ async function getData({client, path}) {
 
 module.exports = new DirectoryJob({
 	name : '[portfolio] 2024 naver boost camp',
-	path : `${process.env.project_path}/public/data/portfolio/2024/naverboostcamp`,
+	path : `${process.env.PWD}/public/data/portfolio/2024/naverboostcamp`,
 	exec : getData,
 	handleError : console.log
 })

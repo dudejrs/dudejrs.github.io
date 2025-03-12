@@ -47,7 +47,7 @@ async function fetchPlans({path, client}){
 
 module.exports = new DirectoryJob({
 		name: 'plans를 fetch',
-		path: `${process.env.project_path}/public/test/plans`,
+		path: `${process.env.PWD}/public/data/plans`,
 		exec: fetchPlans,
 		handleError: console.log
 

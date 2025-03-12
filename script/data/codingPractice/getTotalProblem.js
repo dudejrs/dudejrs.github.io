@@ -49,7 +49,7 @@ async function getTotalProblem({path, client, languages}){
 
 module.exports = new FileJob({
 	name : 'total problem을 도출',
-	path: `${process.env.project_path}/public/data/codingPractice/totalProblem.json`,
+	path: `${process.env.PWD}/public/data/codingPractice/totalProblem.json`,
 	exec: getTotalProblem,
 	handleError : console.log,
 }).setChild(logTotalProblem)

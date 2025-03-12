@@ -43,7 +43,7 @@ async function fetchCategories({path, client, categories}) {
 
 module.exports = new DirectoryJob({
 	name: `categories를 fetch`,
-	path: `${process.env.project_path}/public/data/categories`,
+	path: `${process.env.PWD}/public/data/categories`,
 	exec: fetchCategories,
 	handleError: console.log
 }).setChild(calculateCount)

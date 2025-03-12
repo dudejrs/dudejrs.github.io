@@ -24,7 +24,7 @@ async function fetchLog({client, path}){
 
 module.exports = new FileJob({
 	name : 'total problem log를 fetch',
-	path : `${process.env.project_path}/public/data/codingPractice/log.json`,
+	path : `${process.env.PWD}/public/data/codingPractice/log.json`,
 	exec : fetchLog,
 	handleError : console.log
 })

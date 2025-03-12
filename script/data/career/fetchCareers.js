@@ -22,7 +22,7 @@ async function fetchCareers({client, path}) {
 
 module.exports = new FileJob({
 	name : 'careers를 fetch',
-	path : `${process.env.project_path}/public/test/career/career.json`,
+	path : `${process.env.PWD}/public/test/career/career.json`,
 	exec : fetchCareers,
 	handleError : console.log
 })

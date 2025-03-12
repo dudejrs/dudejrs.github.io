@@ -70,6 +70,6 @@ async function logTotalProblem({client, languages, count, repetiton, path, ...ar
 
 module.exports = new DatabaseJob({
 	name : 'total problem을 notion에 push',
-	path : `${process.env.project_path}/public/data/codingPractice/log.json`,
+	path : `${process.env.PWD}/public/data/codingPractice/log.json`,
 	exec : logTotalProblem
 })

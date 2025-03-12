@@ -19,7 +19,7 @@ async function fetchCertificate({path, client}) {
 
 module.exports = new FileJob({
 	name : '자격증 목록을 fetch',
-	path : `${process.env.project_path}/public/test/certificate.json`,
+	path : `${process.env.PWD}/public/test/certificate.json`,
 	exec : fetchCertificate,
 	handleError : console.log
 })

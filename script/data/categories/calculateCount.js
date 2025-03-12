@@ -27,7 +27,7 @@ async function calculateCount({path, categories}) {
 
 module.exports = new FileJob({
 	name : `카테고리들의 count를 계산`,
-	path : `${process.env.project_path}/public/data/categories/count.json`,
+	path : `${process.env.PWD}/public/data/categories/count.json`,
 	exec : calculateCount,
 	handleError: console.log
 })

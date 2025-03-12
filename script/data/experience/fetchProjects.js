@@ -19,7 +19,7 @@ async function fetchProjects({client, path}) {
 
 module.exports = new FileJob({
 	name : 'projects를 fetch',
-	path : `${process.env.project_path}/public/data/experience/project.json`,
+	path : `${process.env.PWD}/public/data/experience/project.json`,
 	exec : fetchProjects,
 	handleError : console.log
 })

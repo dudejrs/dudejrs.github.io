@@ -86,6 +86,7 @@ const fetchRoutine = async (args)=>{
 			break;
 
 		case "test" :
+			console.log("Hello World")
 			break;
 
 		default :
