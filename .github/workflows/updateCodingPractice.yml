@@ -1,12 +1,23 @@
-name: Test
+name: Update Coding Practice
 on: 
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'
 jobs:
-  print-secret:
+  update:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Setup Node.js 
         uses: actions/setup-node@v3
@@ -17,8 +28,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: test 
-        run: node script/getData.js test
+      - name: fetch data
+        run: node script/getData.js cote
         env: 
           NOTION_CAREER_DATABASE_ID: ${{ secrets.NOTION_CAREER_DATABASE_ID }}
           NOTION_CAREER_PROJECT_DATABASE_ID: ${{ secrets.NOTION_CAREER_PROJECT_DATABASE_ID }}
@@ -33,3 +44,12 @@ jobs:
           NOTION_INTEGRATION_SECRET: ${{ secrets.NOTION_INTEGRATION_SECRET }}
           NOTION_PLAN_DATABASE_ID: ${{ secrets.NOTION_PLAN_DATABASE_ID }}
           NOTION_SKILLS_DATABASE_ID: ${{ secrets.NOTION_SKILLS_DATABASE_ID }}
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "data : update Data - $(date)" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push
+
