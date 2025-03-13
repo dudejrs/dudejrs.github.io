@@ -24,7 +24,7 @@ const fetchRoutine = async (args)=>{
 	const [maincommand, subcommand] = args.slice(0,2)
 
 	switch(maincommand){
-		case "plan":
+		case "plans":
 			if (subcommand == "all") {
 				await fetchPlans.exec({client});
 				break;
@@ -80,12 +80,8 @@ const fetchRoutine = async (args)=>{
 			}
 			break;
 
-		case "all" :
-			["plan", "categories", "cote"].forEach(cmd => fetchRoutine(cmd))
-			break;
-
-		case "test" :
-			console.log("Hello World")
+		case "plans_and_categories" :
+			["plans", "categories", "count"].forEach(cmd => fetchRoutine([cmd]))
 			break;
 
 		default :

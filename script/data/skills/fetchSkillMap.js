@@ -3,7 +3,7 @@ const {DatabaseJob} = require('../../job')
 
 async function fetchSkillMap({client}) {
 
-	const response = await client.queryDatabase(process.env.notion_skills_database_id)
+	const response = await client.queryDatabase(process.env.NOTION_SKILLS_DATABASE_ID)
 
 	const ret = new Map()
 	for await (let {results} of response) {

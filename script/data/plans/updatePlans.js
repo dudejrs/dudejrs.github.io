@@ -14,7 +14,7 @@ async function fetchPlans({path, client}){
 
 	async function fetch() {
 		let ret  = []
-		const data = client.queryDatabase(process.env.notion_plan_database_id, TimestampFilter.LastEditedTime("after", updated).build(), TimestampSort.LastEditedTimeDescending().build())
+		const data = client.queryDatabase(process.env.NOTION_PLAN_DATABASE_ID, TimestampFilter.LastEditedTime("after", updated).build(), TimestampSort.LastEditedTimeDescending().build())
 
 		for await (let {results} of data) {
 			if (results && Array.isArray(results)) {

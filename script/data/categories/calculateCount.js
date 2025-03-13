@@ -6,7 +6,7 @@ async function calculateCount({path, categories}) {
 	const ret = {}
 
 	for (let category of categories) {
-		const data = JSON.parse(await readFileSync(`${process.env.project_path}/public/data/categories/${category}.json`, {encoding : 'utf-8'}))
+		const data = JSON.parse(await readFileSync(`${process.env.PWD}/public/data/categories/${category}.json`, {encoding : 'utf-8'}))
 		
 		if (Object.keys(data).length == 0) {
 			ret[category] = 0

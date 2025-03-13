@@ -9,7 +9,7 @@ function generateScheme({category, skillID}) {
 	const scheme = new Scheme("카테고리", {})
 
 	scheme.addChild(new ContainerScheme("계획", {
-			database_id : process.env.notion_plan_database_id,
+			database_id : process.env.NOTION_PLAN_DATABASE_ID,
 			scheme : new DatabaseScheme("계획" ,{
 				scheme : new PageScheme("계획", {
 				"title" :  NestedProperty.Title("Name","title"),
@@ -23,7 +23,7 @@ function generateScheme({category, skillID}) {
 		}))
 
 	scheme.addChild(new ContainerScheme("자격증", {
-		database_id : process.env.notion_certificate_database_id,
+		database_id : process.env.NOTION_CERTIFICATE_DATABASE_ID,
 		scheme : new DatabaseScheme("자격증", {
 			scheme : CertificateScheme
 		}),
@@ -32,7 +32,7 @@ function generateScheme({category, skillID}) {
 
 	if (skillID) {
 		scheme.addChild(new ContainerScheme("프로젝트", {
-			database_id : process.env.notion_experience_project_database_id,
+			database_id : process.env.NOTION_EXPERIENCE_PROJECT_DATABASE_ID,
 			scheme : new DatabaseScheme("프로젝트", {
 				scheme : new PageScheme("프로젝트", {
 						"이름" : NestedProperty.Title("이름", "title"),
@@ -49,7 +49,7 @@ function generateScheme({category, skillID}) {
 
 
 		scheme.addChild(new ContainerScheme("실습", {
-			database_id : process.env.notion_experience_practice_database_id,
+			database_id : process.env.NOTION_EXPERIENCE_PRACTICE_DATABASE_ID,
 			scheme : new DatabaseScheme("실습", {
 				scheme : new PageScheme("실습", {
 					"이름" : NestedProperty.Title("이름", "title"),

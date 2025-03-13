@@ -1,8 +1,8 @@
-name: Update Coding Practice
+name: Update Studies
 on: 
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '1 0 2 * *'
 
 permissions:
   contents: write
@@ -11,7 +11,7 @@ jobs:
   fetch-data:
     uses: ./.github/workflows/fetchData.yml  
     with:
-      data: "cote"  
+      data: "plans_and_categories"  
     secrets:
       NOTION_CAREER_DATABASE_ID: ${{ secrets.NOTION_CAREER_DATABASE_ID }}
       NOTION_CAREER_PROJECT_DATABASE_ID: ${{ secrets.NOTION_CAREER_PROJECT_DATABASE_ID }}
