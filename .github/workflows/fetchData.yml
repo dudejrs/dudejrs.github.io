@@ -1,0 +1,84 @@
+name: Fetch Data
+on: 
+  workflow_call:
+    inputs:
+      data:
+        required: true
+        type: string
+    secrets:
+      NOTION_CAREER_DATABASE_ID:
+        required: true
+      NOTION_CAREER_PROJECT_DATABASE_ID:
+        required: true
+      NOTION_CERTIFICATE_DATABASE_ID:
+        required: true
+      NOTION_CODING_PRACITCE_CATEGORIES_DATABASE_ID:
+        required: true
+      NOTION_CODING_PRACTICE_DATABASE_ID:
+        required: true
+      NOTION_CODING_PRACTICE_LOG_DATABASE_ID:
+        required: true
+      NOTION_DETAILED_PLAN_DATABASE_ID:
+        required: true
+      NOTION_EXPERIENCE_DETAIL_DATABASE_ID:
+        required: true
+      NOTION_EXPERIENCE_PRACTICE_DATABASE_ID:
+        required: true
+      NOTION_EXPERIENCE_PROJECT_DATABASE_ID:
+        required: true
+      NOTION_INTEGRATION_SECRET:
+        required: true
+      NOTION_PLAN_DATABASE_ID:
+        required: true
+      NOTION_SKILLS_DATABASE_ID:
+        required: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Setup Node.js 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 23
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch data
+        run: node script/getData.js ${{ inputs.data }} 
+        env: 
+          NOTION_CAREER_DATABASE_ID: ${{ secrets.NOTION_CAREER_DATABASE_ID }}
+          NOTION_CAREER_PROJECT_DATABASE_ID: ${{ secrets.NOTION_CAREER_PROJECT_DATABASE_ID }}
+          NOTION_CERTIFICATE_DATABASE_ID: ${{ secrets.NOTION_CERTIFICATE_DATABASE_ID }}
+          NOTION_CODING_PRACITCE_CATEGORIES_DATABASE_ID: ${{ secrets.NOTION_CODING_PRACITCE_CATEGORIES_DATABASE_ID }}
+          NOTION_CODING_PRACTICE_DATABASE_ID: ${{ secrets.NOTION_CODING_PRACTICE_DATABASE_ID }}
+          NOTION_CODING_PRACTICE_LOG_DATABASE_ID: ${{ secrets.NOTION_CODING_PRACTICE_LOG_DATABASE_ID }}
+          NOTION_DETAILED_PLAN_DATABASE_ID: ${{ secrets.NOTION_DETAILED_PLAN_DATABASE_ID }}
+          NOTION_EXPERIENCE_DETAIL_DATABASE_ID: ${{ secrets.NOTION_EXPERIENCE_DETAIL_DATABASE_ID }}
+          NOTION_EXPERIENCE_PRACTICE_DATABASE_ID: ${{ secrets.NOTION_EXPERIENCE_PRACTICE_DATABASE_ID }}
+          NOTION_EXPERIENCE_PROJECT_DATABASE_ID: ${{ secrets.NOTION_EXPERIENCE_PROJECT_DATABASE_ID }}
+          NOTION_INTEGRATION_SECRET: ${{ secrets.NOTION_INTEGRATION_SECRET }}
+          NOTION_PLAN_DATABASE_ID: ${{ secrets.NOTION_PLAN_DATABASE_ID }}
+          NOTION_SKILLS_DATABASE_ID: ${{ secrets.NOTION_SKILLS_DATABASE_ID }}
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "data : update ${{inputs.data}} - $(date)" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push

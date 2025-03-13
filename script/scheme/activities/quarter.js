@@ -52,7 +52,7 @@ function getScheme(cur){
 	const ret = new Scheme(`${currentQuarterString(cur)}`, {})
 
 	ret.addChild(new ContainerScheme("계획", {
-			database_id : process.env.notion_plan_database_id,
+			database_id : process.env.NOTION_PLAN_DATABASE_ID,
 			scheme : new DatabaseScheme("계획", {
 				scheme : new PageScheme("",{
 						"title" :  NestedProperty.Title("Name","title"),
@@ -65,7 +65,7 @@ function getScheme(cur){
 		}))
 
 	ret.addChild(new ContainerScheme("프로젝트", {
-		database_id : process.env.notion_experience_project_database_id,
+		database_id : process.env.NOTION_EXPERIENCE_PROJECT_DATABASE_ID,
 		scheme : new DatabaseScheme("프로젝트", {
 			scheme : new PageScheme("", {
 					"이름" : NestedProperty.Title("이름", "title"),
@@ -78,7 +78,7 @@ function getScheme(cur){
 	}))
 
 	ret.addChild(new ContainerScheme("실습", {
-		database_id : process.env.notion_experience_practice_database_id,
+		database_id : process.env.NOTION_EXPERIENCE_PRACTICE_DATABASE_ID,
 		scheme : new DatabaseScheme("실습", {
 			scheme : new PageScheme("", {
 					"이름" : NestedProperty.Title("이름", "title"),
