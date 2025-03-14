@@ -13,5 +13,6 @@ module.exports = new PageScheme("codingPractice",{
 		"Go" : NestedProperty.Number("Go", "Kw%3Dg"),
 		"Kotlin" : NestedProperty.Number("Kotlin", "YX~d"),
 		"Typescript" : NestedProperty.Number("Typescript", "X%7CuG"),
+		"Rust" : NestedProperty.Number("Rust", "X%7CuG"),
 		"카테고리" : new RelationProperty("코딩연습 카테고리", "hA%40%5C", NestedProperty.Title("Name", "title")),
 	});
