@@ -64,7 +64,7 @@ const fetchRoutine = async (args)=>{
 			await calculateCount.exec({client, categories})
 			break;
 
-		case "cote":
+		case "cote":1
 			if (!subcommand || subcommand === "log")  {
 				await fetchLog.exec({client})
 				break;
