@@ -34,7 +34,6 @@ const databases = [
 	process.env.NOTION_SKILLS_DATABASE_ID
 ]
 
-
 const client = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.NOTION_INTEGRATION_SECRET)));
 
 const fetchRoutine = async (args)=>{
@@ -68,6 +67,7 @@ const fetchRoutine = async (args)=>{
 		case "cote":
 			if (!subcommand || subcommand === "log")  {
 				await fetchLog.exec({client})
+				break;
 			}
 
 			await getTotalProblem.exec({client, languages})

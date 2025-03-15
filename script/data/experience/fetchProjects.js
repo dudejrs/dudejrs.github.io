@@ -6,7 +6,7 @@ const {ExperienceProjectScheme} = require('../../scheme/experience')
 
 async function fetchProjects({client, path}) {
 
-	const d = await client.queryDatabase(process.env.notion_experience_project_database_id, CheckBoxFilter.Equals("_hidden", false).build())
+	const d = await client.queryDatabase(process.env.NOTION_EXPERIENCE_PROJECT_DATABASE_ID, CheckBoxFilter.Equals("_hidden", false).build())
 	const ret = []
 	for await (let {results} of d) {
 		for (let page of results) {

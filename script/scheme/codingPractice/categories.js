@@ -14,5 +14,5 @@ module.exports = new PageScheme("코딩연습 카테고리",{
 	"Go" : ComputedProperty.Formula("Go_", "Fw%5DZ", new NumberType()),
 	"Kotlin" : ComputedProperty.Formula("Kotlin_", "FQvU", new NumberType()),
 	"Typescript" : ComputedProperty.Formula("Typescript_", "renR", new NumberType()),
-	"Rust" : ComputedProperty.Formula("Rust_", "renR", new NumberType())
+	"Rust" : ComputedProperty.Formula("Rust_", "Bnza", new NumberType())
 })

@@ -2,6 +2,7 @@ const {readFileSync, writeFileSync} = require('fs')
 
 const {FileJob} = require('../../job')
 const {FormulaFilter} = require('../../notion/filter')
+const {writeMetaData} = require('../../util')
 
 const {CodingPracticeScheme} = require('../../scheme/codingPractice')
 const logTotalProblem = require('./logTotalProblem')
@@ -43,6 +44,7 @@ async function getTotalProblem({path, client, languages}){
 	}
 
 	await writeFileSync(path, JSON.stringify({count, repetiton, ...ret}), {encoding: "utf-8"})
+	await writeMetaData(path)
 
 	return {count, repetiton, ...ret}
 }

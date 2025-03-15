@@ -120,27 +120,27 @@ export async function getTotal() {
 }
 
 export async function getAggreagationByCategories() {
-	return await axios.get(`${codingPracticeDir}/aggregationByCategries.json`)
+	return await axios.get(`${codingPracticeDir}/aggregationByCategories.json`)
 		.then(({data}) => {
 			return data
 		})
 }
 export async function getAggregationByProblem() {
-	return await axios.get(`${codingPracticeDir}/aggregationByCategries.json`)
+	return await axios.get(`${codingPracticeDir}/aggregationByCategories.json`)
 		.then(({data}) => {
 			return data
 		})	
 }
 
 export async function getAggregationByProgrammingLanguages(programmingLanguages){
-	return await axios.get(`${codingPracticeDir}/aggregationByCategries.json`)
+	return await axios.get(`${codingPracticeDir}/aggregationByCategories.json`)
 		.then(({data})=> {
 			return calculateAggregationByProgrammingLanguagesFrom(data, programmingLanguages)
 		})
 }
 
 export async function getTotalCountByProgrammingLanguages(programmingLanguages){
-		return await axios.get(`${codingPracticeDir}/aggregationByCategries.json`)
+		return await axios.get(`${codingPracticeDir}/aggregationByCategories.json`)
 		.then(({data})=> {
 			return refineAggregationByCategoriesToLagnaugesTotalCount(data, programmingLanguages)
 		})

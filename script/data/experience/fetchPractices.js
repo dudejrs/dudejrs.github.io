@@ -6,7 +6,7 @@ const {CheckBoxFilter} = require('../../notion/filter')
 const {ExperiencePracticeScheme} = require('../../scheme/experience')
 
 async function fetchPractices({client, path}) {
-	const d = await client.queryDatabase(process.env.notion_experience_practice_database_id, CheckBoxFilter.Equals("_hidden", false).build())
+	const d = await client.queryDatabase(process.env.NOTION_EXPERIENCE_PRACTICE_DATABASE_ID, CheckBoxFilter.Equals("_hidden", false).build())
 
 	const ret = []
 	for await (let {results} of d) {
