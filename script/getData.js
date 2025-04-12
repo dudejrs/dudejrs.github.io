@@ -64,12 +64,12 @@ const fetchRoutine = async (args)=>{
 			await calculateCount.exec({client, categories})
 			break;
 
-		case "cote":1
-			if (!subcommand || subcommand === "log")  {
+		case "cote":
+			if (subcommand === "log")  {
 				await fetchLog.exec({client})
 				break;
 			}
-
+			
 			await getTotalProblem.exec({client, languages})
 			await getAggregationByCategories.exec({client})
 			await getAggregationByProblemType.exec({client, languages})

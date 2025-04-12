@@ -5,6 +5,7 @@ module.exports = class FileJob extends Job {
 	
 	constructor({name,
 		path,
+		metaPath,
 		exec,
 		handleError,
 	 	initialize,
@@ -13,6 +14,7 @@ module.exports = class FileJob extends Job {
 		) {
 		super({name, exec, handleError, initialize, finish, children})
 		this.path = FileJob.applyPath(path)
+		this.metaPath = metaPath
 	}
 
 	static applyPath(path) {
@@ -46,7 +48,7 @@ module.exports = class FileJob extends Job {
 		this.#initialize()
 		this.initialize()
 		try {
-			const d = await this._exec({path : this.path, ...args})
+			const d = await this._exec({path : this.path, metaPath : this.metaPath, ...args})
 			this.children.forEach(
 				async child => await child.exec({...args, ...d})	
 			)

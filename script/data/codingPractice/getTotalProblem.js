@@ -15,7 +15,7 @@ function Repetiton(lang) {
 	return `Repetition (${lang})`
 }
 
-async function getTotalProblem({path, client, languages}){
+async function getTotalProblem({path, metaPath, client, languages}){
 
 	const filter = FormulaFilter.Checkbox("_풀었는지_유무", "equals", true).build()
 
@@ -44,7 +44,7 @@ async function getTotalProblem({path, client, languages}){
 	}
 
 	await writeFileSync(path, JSON.stringify({count, repetiton, ...ret}), {encoding: "utf-8"})
-	await writeMetaData(path)
+	await writeMetaData(metaPath)
 
 	return {count, repetiton, ...ret}
 }
@@ -52,6 +52,7 @@ async function getTotalProblem({path, client, languages}){
 module.exports = new FileJob({
 	name : 'total problem을 도출',
 	path: `${process.env.PWD}/public/data/codingPractice/totalProblem.json`,
+	metaPath: `${process.env.PWD}/public/data/codingPractice`,
 	exec: getTotalProblem,
 	handleError : console.log,
 }).setChild(logTotalProblem)
