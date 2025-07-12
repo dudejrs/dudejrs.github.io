@@ -15,7 +15,7 @@ import {SimpleTimeline, MonthTimeline, QuarterTimeline, YearTimeline} from './ti
 
 function Pages() {
 
-  const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'Go', 'Kotlin', 'Typescript', 'Rust']
+  const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python', 'Go', 'Kotlin', 'Typescript', 'Rust', 'Swift']
 
   return (
       <Routes basename={process.env.PUBLIC_URL}>

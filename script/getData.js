@@ -16,7 +16,7 @@ const PaginationClient = require('./notion/client/pagination')
 const AxiosClient = require('./notion/client/axios')
 
 const tags = ["Javascript", "Java", "DBMS", "Backend", "DevOps", "Data Science", "Graphics"];
-const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript", "Rust"];
+const languages = ["Python","Javascript","C++","Java", "Go", "Kotlin", "Typescript", "Rust", "Swift"];
 const categories = ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "C++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","PyTorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
 
 const databases = [

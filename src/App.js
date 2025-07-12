@@ -3,7 +3,7 @@ import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import Info from './pages/info'
 import Pages from './pages';
-import NavigaionBar from './pages/components/navigationBar';
+import NavigationBar from './pages/components/navigationBar';
 
 
 const navigationList = [
@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App">
       <div id="header">
-        <NavigaionBar title={"dudejrs"} navigationList={navigationList} />
+        <NavigationBar title={"dudejrs"} navigationList={navigationList} />
       </div>
       <div id="content">
         <Pages />
