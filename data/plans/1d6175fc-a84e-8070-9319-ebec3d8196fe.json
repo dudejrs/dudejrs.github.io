@@ -1,1 +1,24 @@
-{"id":"1d6175fc-a84e-8070-9319-ebec3d8196fe","title":"[독서] AWS 공인 솔루션스 아키텍트 스터디 가이드 - 어소시에이트 4e","Status":"In progress","분류":"","Tag":["AWS"],"기간":{},"완료율":"0%","세부계획":[{"id":"1d6175fc-a84e-801f-ad70-fc67979f3c94","세부계획":"[AWS 아키텍쳐 설계] 13. 비용최적화 아키텍쳐","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-8097-bba5-ccee41e92291","세부계획":"[AWS 아키텍쳐 설계] 12. 보안성 아키텍쳐","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-80be-a428-ebc3be6829d8","세부계획":"[AWS 아키텍쳐 설계] 11. 고성능 아키텍쳐","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-80af-b966-c1426ce3637d","세부계획":"[AWS 아키텍쳐 설계] 10.  복원성 아키텍쳐","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-8027-969e-e0c887d24670","세부계획":"[AWS 서비스] 8. DNS와 CDN : Route53과 CloudFront","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-80f9-ba17-cfdb372ed295","세부계획":"[AWS 서비스] 7,. 모니터링 : CloudTrail, CloudWatch, AWS Config","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-8056-bd6f-f3351f41728a","세부계획":"[AWS 서비스] 6. 자격인증과 권한 부여","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-8018-972a-df47938986aa","세부계획":"[AWS 서비스] 5. 데이터베이스 서비스","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-80f1-90a4-d6f59aecf834","세부계획":"[AWS 서비스] 4. Amazon VPC","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-8045-9f85-ee59396e9fae","세부계획":"[AWS 서비스] 3. AWS 스토리지","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-807e-b0a5-c659a7a04aa6","세부계획":"[AWS 서비스] 9. 데이터 유입, 변환, 그리고 분석","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-800e-a8ad-f191f6cf8aa1","세부계획":"[AWS 서비스] 2. 컴퓨트 서비스","Date":{},"진행상태":"TODO","Done":false},{"id":"1d6175fc-a84e-8071-bb7d-feebd935f195","세부계획":"[AWS 서비스] 1. 클라우드 컴퓨팅과 AWS 개요","Date":{},"진행상태":"TODO","Done":false}]}
+{
+    "id": "1d6175fc-a84e-8070-9319-ebec3d8196fe",
+    "title": "[독서] AWS 공인 솔루션스 아키텍트 스터디 가이드 - 어소시에이트 4e",
+    "Status": "Not started",
+    "분류": "",
+    "Tag": ["AWS"],
+    "기간": {},
+    "완료율": "0%",
+    "세부계획": [
+        {"id": "1d6175fc-a84e-801f-ad70-fc67979f3c94", "세부계획": "[AWS 아키텍쳐 설계] 13. 비용최적화 아키텍쳐", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-8097-bba5-ccee41e92291", "세부계획": "[AWS 아키텍쳐 설계] 12. 보안성 아키텍쳐", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-80be-a428-ebc3be6829d8", "세부계획": "[AWS 아키텍쳐 설계] 11. 고성능 아키텍쳐", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-80af-b966-c1426ce3637d", "세부계획": "[AWS 아키텍쳐 설계] 10.  복원성 아키텍쳐", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-8027-969e-e0c887d24670", "세부계획": "[AWS 서비스] 8. DNS와 CDN : Route53과 CloudFront", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-80f9-ba17-cfdb372ed295", "세부계획": "[AWS 서비스] 7,. 모니터링 : CloudTrail, CloudWatch, AWS Config", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-8056-bd6f-f3351f41728a", "세부계획": "[AWS 서비스] 6. 자격인증과 권한 부여", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-8018-972a-df47938986aa", "세부계획": "[AWS 서비스] 5. 데이터베이스 서비스", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-80f1-90a4-d6f59aecf834", "세부계획": "[AWS 서비스] 4. Amazon VPC", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-8045-9f85-ee59396e9fae", "세부계획": "[AWS 서비스] 3. AWS 스토리지", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-807e-b0a5-c659a7a04aa6", "세부계획": "[AWS 서비스] 9. 데이터 유입, 변환, 그리고 분석", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-800e-a8ad-f191f6cf8aa1", "세부계획": "[AWS 서비스] 2. 컴퓨트 서비스", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1d6175fc-a84e-8071-bb7d-feebd935f195", "세부계획": "[AWS 서비스] 1. 클라우드 컴퓨팅과 AWS 개요", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

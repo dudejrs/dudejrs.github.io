@@ -1,0 +1,30 @@
+{
+    "id": "210175fc-a84e-80d4-a193-f593722c2b0c",
+    "title": "[독서] 마스터링 몽고 DB 7.0",
+    "Status": "Not started",
+    "분류": "",
+    "Tag": ["DBMS", "MongoDB", "NoSQL"],
+    "기간": {},
+    "완료율": "0%",
+    "세부계획": [
+        {"id": "210175fc-a84e-80fe-95ad-e3948c26b478", "세부계획": "[몽고DB] 19. 몽고DB 8.0 호환성 안내 및 주요 변경 사항", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80da-be4c-ffcfa3274cb0", "세부계획": "[몽고DB] 18 몽고 DB 8.0의 개솔운 기능과 개선사항 ", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8098-b38d-cd1346e3860b", "세부계획": "[몽고DB] 17. 암호화", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8098-9301-f9b5c987b183", "세부계획": "[몽고DB] 16. 감사", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8077-a4e7-c5cc3d73d8f6", "세부계획": "[몽고DB] 15. 보안", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-802a-8d62-c62cc2f5de96", "세부계획": "[몽고DB] 14. 몽고DB아 애플리케이션 통합", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8047-81ba-d3a59990f6a8", "세부계획": "[몽고DB] 13. 아틀라스 검색 ", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-806f-8a89-ee60501af12b", "세부계획": "[몽고DB] 12. 몽고 DB 모니터링과 백업", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8026-8739-e65e1a036f0e", "세부계획": "[몽고DB] 11. 몽고 DB 아틀라스", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8093-a236-eeeaac8e3dc4", "세부계획": "[몽고DB] 10. 인덱스 최적화", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80e9-9edf-fb00d4db9607", "세부계획": "[몽고DB] 9. 다중 문서 ACID 트랜잭션", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8035-8cb5-f01c918babc7", "세부계획": "[몽고DB] 8. 집계", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80a9-a122-cab21f8e9bd5", "세부계획": "[몽고DB] 7. 몽고DB 고급 쿼리", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80cd-b35a-ed3cedb62500", "세부계획": "[몽고DB] 6. 스키마 설계와 데이터 모델링", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80ab-81bb-db59e83c0dc2", "세부계획": "[몽고DB] 5. CRUD 작업과 기본 퀄", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-809e-875b-c074cba2e02b", "세부계획": "[몽고DB] 4. 몽고 DB 연결", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80b1-806a-e7291a9e6a05", "세부계획": "[몽고DB] 3. 개발자 도구", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-808c-b808-c0954718f9a2", "세부계획": "[몽고DB] 2. 몽고DB 아키텍쳐", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80ec-b214-f57ec0add22e", "세부계획": "[몽고DB] 1. 몽고DB 소개", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

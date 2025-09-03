@@ -1,1 +1,25 @@
-{"id":"2fc9756b-3dda-4389-b1ac-a5e287f2992d","title":"[독서] Go 마스터 하기 완독","Status":"Done","분류":"독서","Tag":["Go","DevOps"],"기간":{"start":"2024-01-25T00:00:00.000+00:00","end":"2024-02-09T00:00:00.000+00:00"},"완료율":"100%","세부계획":[{"id":"0e054888-4a1e-40cb-a2f7-25f6334c729a","세부계획":"[Go] 1. Go의 간략한 소개","Date":{"start":"2024-01-25","end":"2024-01-26"},"진행상태":"Done","Done":true},{"id":"d6e90f74-32d9-4451-9504-869eaa6f0102","세부계획":"[Go] 2. 기본 타입","Date":{"start":"2024-01-27","end":null},"진행상태":"Done","Done":true},{"id":"feb840a0-5908-4db8-a647-d46932136f80","세부계획":"[Go] 3. 합성 데이터 타입","Date":{"start":"2024-01-28","end":null},"진행상태":"Done","Done":true},{"id":"304f62f0-a821-43a5-b1ab-c3dc4ba5cf57","세부계획":"[Go] 4. 리플렉션과 인터페이스","Date":{"start":"2024-01-29","end":null},"진행상태":"Done","Done":true},{"id":"f80bad54-90e0-4dff-9ab6-d196139f15ac","세부계획":"[Go] 5. 패키지와 함수","Date":{"start":"2024-01-30","end":null},"진행상태":"Done","Done":true},{"id":"be4f6a9d-f1cc-4a72-950e-9aa6efdf9236","세부계획":"[Go] 6. 유닉스 시스템에게 작업 지시","Date":{"start":"2024-01-31","end":null},"진행상태":"Done","Done":true},{"id":"99b02936-8a3c-4ba7-be40-89451db6f1f9","세부계획":"[Go] 7. Go와 동시성","Date":{"start":"2024-02-01","end":null},"진행상태":"Done","Done":true},{"id":"0987d541-2398-40e4-b230-f00c2b1d82b9","세부계획":"[Go] 8. 웹 서비스 만들기","Date":{"start":"2024-02-02","end":null},"진행상태":"Done","Done":true},{"id":"825246ff-0b52-4d1d-a4cf-de6806cbb047","세부계획":"[Go] 9. TCP/IP 와 웹 소켓","Date":{"start":"2024-02-03","end":null},"진행상태":"Done","Done":true},{"id":"06a6107e-f7c2-495a-997d-54d4d2fe18d7","세부계획":"[Go] 10. REST API","Date":{"start":"2024-02-05","end":null},"진행상태":"Quit","Done":true},{"id":"bc733b7a-9967-4961-8181-98240d59a95f","세부계획":"[Go] 11. 코드 테스팅과 프로파일링","Date":{"start":"2024-02-06","end":null},"진행상태":"Done","Done":true},{"id":"166c044a-d870-4976-bf9d-7a0d9b6f766a","세부계획":"[Go] 12. gRPC","Date":{"start":"2024-02-07","end":null},"진행상태":"Done","Done":true},{"id":"d3804374-54e8-4ef5-b5ac-e587e22c3b46","세부계획":"[Go] 13. 제네릭","Date":{"start":"2024-02-08","end":null},"진행상태":"Done","Done":true},{"id":"e9279772-839f-48f1-a3dd-e7838bd6871d","세부계획":"[Go] 14. Go 가비지 컬렉터","Date":{"start":"2024-02-09","end":null},"진행상태":"Done","Done":true}]}
+{
+    "id": "2fc9756b-3dda-4389-b1ac-a5e287f2992d",
+    "title": "[독서] Go 마스터 하기 완독",
+    "Status": "Done",
+    "분류": "독서",
+    "Tag": ["Go", "DevOps"],
+    "기간": {"start": "2024-01-25T00:00:00.000+00:00", "end": "2024-02-09T00:00:00.000+00:00"},
+    "완료율": "100%",
+    "세부계획": [
+        {"id": "0e054888-4a1e-40cb-a2f7-25f6334c729a", "세부계획": "[Go] 1. Go의 간략한 소개", "Date": {"start": "2024-01-25", "end": "2024-01-26"}, "진행상태": "Done", "Done": true},
+        {"id": "d6e90f74-32d9-4451-9504-869eaa6f0102", "세부계획": "[Go] 2. 기본 타입", "Date": {"start": "2024-01-27", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "feb840a0-5908-4db8-a647-d46932136f80", "세부계획": "[Go] 3. 합성 데이터 타입", "Date": {"start": "2024-01-28", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "304f62f0-a821-43a5-b1ab-c3dc4ba5cf57", "세부계획": "[Go] 4. 리플렉션과 인터페이스", "Date": {"start": "2024-01-29", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "f80bad54-90e0-4dff-9ab6-d196139f15ac", "세부계획": "[Go] 5. 패키지와 함수", "Date": {"start": "2024-01-30", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "be4f6a9d-f1cc-4a72-950e-9aa6efdf9236", "세부계획": "[Go] 6. 유닉스 시스템에게 작업 지시", "Date": {"start": "2024-01-31", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "99b02936-8a3c-4ba7-be40-89451db6f1f9", "세부계획": "[Go] 7. Go와 동시성", "Date": {"start": "2024-02-01", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "0987d541-2398-40e4-b230-f00c2b1d82b9", "세부계획": "[Go] 8. 웹 서비스 만들기", "Date": {"start": "2024-02-02", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "825246ff-0b52-4d1d-a4cf-de6806cbb047", "세부계획": "[Go] 9. TCP/IP 와 웹 소켓", "Date": {"start": "2024-02-03", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "06a6107e-f7c2-495a-997d-54d4d2fe18d7", "세부계획": "[Go] 10. REST API", "Date": {"start": "2024-02-05", "end": null}, "진행상태": "Quit", "Done": true},
+        {"id": "bc733b7a-9967-4961-8181-98240d59a95f", "세부계획": "[Go] 11. 코드 테스팅과 프로파일링", "Date": {"start": "2024-02-06", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "166c044a-d870-4976-bf9d-7a0d9b6f766a", "세부계획": "[Go] 12. gRPC", "Date": {"start": "2024-02-07", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "d3804374-54e8-4ef5-b5ac-e587e22c3b46", "세부계획": "[Go] 13. 제네릭", "Date": {"start": "2024-02-08", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "e9279772-839f-48f1-a3dd-e7838bd6871d", "세부계획": "[Go] 14. Go 가비지 컬렉터", "Date": {"start": "2024-02-09", "end": null}, "진행상태": "Done", "Done": true}
+    ]
+}

@@ -1,1 +1,100 @@
-{"id":"5b3cf244-0d5a-4270-b7c5-5c512ad04534","title":"[독서]  Real MySQL 완독","Status":"Done","분류":"독서","Tag":["DBMS","MySQL"],"기간":{"start":"2023-06-24T00:00:00.000+00:00","end":"2023-09-20T00:00:00.000+00:00"},"완료율":"100%","세부계획":[{"id":"ecb9c9c1-a220-4d8a-9dfe-a9d76dcdfd02","세부계획":"[MYSQL] 2. 설치와 설정","Date":{"start":"2023-06-24","end":null},"진행상태":"Done","Done":true},{"id":"586120e8-6938-4bc2-a144-7b99978f751d","세부계획":"[MYSQL] 1. 소개","Date":{"start":"2023-06-24","end":null},"진행상태":"Done","Done":true},{"id":"52b4f57b-c2e0-4aed-8024-0219ac263efa","세부계획":"[MYSQL] 3. 사용자 및 권한","Date":{"start":"2023-06-25","end":null},"진행상태":"Done","Done":true},{"id":"41f1b726-a566-487f-832d-297061506aa8","세부계획":"[MYSQL] 4. 아키텍처 : MySQL 엔진 아키텍처","Date":{"start":"2023-06-26","end":null},"진행상태":"Done","Done":true},{"id":"e0e9c9da-11ba-4a9a-9832-f99a2fac1fb6","세부계획":"[MYSQL] 4. 아키텍처 : InnoDB 스토리지 엔진 아키텍처","Date":{"start":"2023-07-06","end":"2023-07-17"},"진행상태":"Done","Done":true},{"id":"be6ac163-fa8e-4df6-9c10-0dce4c5d8a29","세부계획":"[MYSQL] 4. 아키텍처 : MyISAM 스토리지 엔진 아키텍처 & MYSQL 로그 파일","Date":{"start":"2023-07-19","end":"2023-07-20"},"진행상태":"Done","Done":true},{"id":"3d757765-659f-4a24-a3b1-a89d5f7da93d","세부계획":"[MYSQL] 5. 트랜잭션과 잠금 : MYSQL엔진의 잠금","Date":{"start":"2023-07-21","end":null},"진행상태":"Done","Done":true},{"id":"7b4c8e4f-aff9-4169-abc6-aab2c73c7c88","세부계획":"[MYSQL] 5. 트랜잭션과 잠금 : MYSQL의 격리 수준","Date":{"start":"2023-07-23","end":null},"진행상태":"Done","Done":true},{"id":"e5579a7b-82f3-4b6f-b583-d09c665da95f","세부계획":"[MYSQL] 5. 트랜잭션과 잠금 : INNODB 스토리지 엔진 잠금","Date":{"start":"2023-07-23","end":"2023-07-23"},"진행상태":"Done","Done":true},{"id":"91741147-3716-4830-9d65-720a1b74e2fe","세부계획":"[MYSQL] 6. 데이터 압축","Date":{"start":"2023-07-24","end":null},"진행상태":"Done","Done":true},{"id":"fb7b8c46-36dd-4600-a859-0015d3a24ab8","세부계획":"[MYSQL] 7. 데이터 암호화","Date":{"start":"2023-07-25","end":null},"진행상태":"Done","Done":true},{"id":"8f60afa9-c5c8-4ad0-9b0a-84169bc48aa4","세부계획":"[MYSQL] 8. 인덱스 : 디스크 읽기 방식과 인덱스","Date":{"start":"2023-07-26","end":"2023-07-26"},"진행상태":"Done","Done":true},{"id":"a90baf70-4278-473f-85ed-58ce7fea8c3c","세부계획":"[MYSQL] 8. 인덱스 : B-Tree 인덱스","Date":{"start":"2023-07-28","end":null},"진행상태":"Done","Done":true},{"id":"4a637c54-7d0b-4180-aed1-47f653cefcaf","세부계획":"[MYSQL] 8. 인덱스 : R-Tree 인덱스 및 전문 검색 인덱스, 함수 기반 인덱스","Date":{"start":"2023-07-29","end":null},"진행상태":"Done","Done":true},{"id":"4928f79e-16ba-4184-ae46-8347f01da715","세부계획":"[MYSQL] 8. 인덱스 :  멀티벨류 인덱스, 클러스터링 인덱스, 유니크 인덱스, 외래키","Date":{"start":"2023-07-30","end":null},"진행상태":"Done","Done":true},{"id":"a438547f-e562-4731-8ecb-9e183a925671","세부계획":"[MYSQL] 9. 옵티마이저와 힌트 : 개요, 기본데이터 처리 - 스캔, 병렬처리, ORDER BY 처리","Date":{"start":"2023-07-31","end":"2023-08-01"},"진행상태":"Done","Done":true},{"id":"78c45546-5433-4bc6-9576-b7f82c4a36b6","세부계획":"[MYSQL] 9. 옵티마이저와 힌트 : 고급 최적화","Date":{"start":"2023-08-04","end":"2023-08-05"},"진행상태":"Done","Done":true},{"id":"71d49f2c-85c5-4f32-a2e7-4b951575fadd","세부계획":"[MYSQL] 9. 옵티마이저와 힌트 ","Date":{"start":"2023-08-06","end":null},"진행상태":"Done","Done":true},{"id":"b482fe02-c8cc-4270-9b37-3669ba322881","세부계획":"[MYSQL] 10. 실행계획 : 통계정보 및 실행 계획 확인","Date":{"start":"2023-08-15","end":"2023-08-15"},"진행상태":"Done","Done":true},{"id":"6a33c931-d845-49ee-afd0-01876489d8f2","세부계획":"[MYSQL] 10. 실행계획 : 실행 계획 분석 1","Date":{"start":"2023-08-19","end":"2023-08-19"},"진행상태":"Done","Done":true},{"id":"ab366c5b-d9d4-4577-8c0d-cc687dcf1390","세부계획":"[MYSQL] 10. 실행계획 : 실행 계획 분석 2","Date":{"start":"2023-08-20","end":"2023-08-21"},"진행상태":"Done","Done":true},{"id":"ea3b7c2c-817d-45d0-971e-ad7240c4a57d","세부계획":"[MYSQL] 11. 쿼리 작성 및 최적화","Date":{"start":"2023-08-22","end":"2023-08-27"},"진행상태":"Done","Done":true},{"id":"fbf1b417-c128-4f0e-b7b1-3a1ea720aa8d","세부계획":"[MYSQL] 12. 확장 검색","Date":{"start":"2023-08-31","end":"2023-09-02"},"진행상태":"Done","Done":true},{"id":"ec262fde-7a5a-4525-bcb3-45ffbd9886c4","세부계획":"[MYSQL] 13.  파티션","Date":{"start":"2023-09-03","end":"2023-09-10"},"진행상태":"Done","Done":true},{"id":"a7339650-02eb-453e-a1ed-f5caacc30be0","세부계획":"[MYSQL] 14. 스토어드 프로그램","Date":{"start":"2023-09-11","end":"2023-09-11"},"진행상태":"Done","Done":true},{"id":"da969523-ab3f-4208-8098-d299062254de","세부계획":"[MYSQL] 15. 데이터 타입","Date":{"start":"2023-09-12","end":"2023-09-13"},"진행상태":"Done","Done":true},{"id":"7ea0d0f1-a327-4f6e-8bf3-43dc0c1d4497","세부계획":"[MYSQL] 16. 레플리카","Date":{"start":"2023-09-13","end":"2023-09-16"},"진행상태":"Done","Done":true},{"id":"6362f6b7-0b57-4474-92e5-85bcbbc85617","세부계획":"[MYSQL] 17. InnoDB 클러스터","Date":{"start":"2023-09-16","end":"2023-09-18"},"진행상태":"Quit","Done":true},{"id":"f5e30f70-d124-459c-b14a-639611e2dbfd","세부계획":"[MYSQL] 18. Performance 스키마 & Sys 스키마","Date":{"start":"2023-09-17","end":"2023-09-20"},"진행상태":"Done","Done":true}]}
+{
+    "id": "5b3cf244-0d5a-4270-b7c5-5c512ad04534",
+    "title": "[독서]  Real MySQL 완독",
+    "Status": "Done",
+    "분류": "독서",
+    "Tag": ["DBMS", "MySQL"],
+    "기간": {"start": "2023-06-24T00:00:00.000+00:00", "end": "2023-09-20T00:00:00.000+00:00"},
+    "완료율": "100%",
+    "세부계획": [
+        {"id": "ecb9c9c1-a220-4d8a-9dfe-a9d76dcdfd02", "세부계획": "[MYSQL] 2. 설치와 설정", "Date": {"start": "2023-06-24", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "586120e8-6938-4bc2-a144-7b99978f751d", "세부계획": "[MYSQL] 1. 소개", "Date": {"start": "2023-06-24", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "52b4f57b-c2e0-4aed-8024-0219ac263efa", "세부계획": "[MYSQL] 3. 사용자 및 권한", "Date": {"start": "2023-06-25", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "41f1b726-a566-487f-832d-297061506aa8", "세부계획": "[MYSQL] 4. 아키텍처 : MySQL 엔진 아키텍처", "Date": {"start": "2023-06-26", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "e0e9c9da-11ba-4a9a-9832-f99a2fac1fb6",
+            "세부계획": "[MYSQL] 4. 아키텍처 : InnoDB 스토리지 엔진 아키텍처",
+            "Date": {"start": "2023-07-06", "end": "2023-07-17"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "be6ac163-fa8e-4df6-9c10-0dce4c5d8a29",
+            "세부계획": "[MYSQL] 4. 아키텍처 : MyISAM 스토리지 엔진 아키텍처 & MYSQL 로그 파일",
+            "Date": {"start": "2023-07-19", "end": "2023-07-20"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "3d757765-659f-4a24-a3b1-a89d5f7da93d", "세부계획": "[MYSQL] 5. 트랜잭션과 잠금 : MYSQL엔진의 잠금", "Date": {"start": "2023-07-21", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "7b4c8e4f-aff9-4169-abc6-aab2c73c7c88", "세부계획": "[MYSQL] 5. 트랜잭션과 잠금 : MYSQL의 격리 수준", "Date": {"start": "2023-07-23", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "e5579a7b-82f3-4b6f-b583-d09c665da95f",
+            "세부계획": "[MYSQL] 5. 트랜잭션과 잠금 : INNODB 스토리지 엔진 잠금",
+            "Date": {"start": "2023-07-23", "end": "2023-07-23"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "91741147-3716-4830-9d65-720a1b74e2fe", "세부계획": "[MYSQL] 6. 데이터 압축", "Date": {"start": "2023-07-24", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "fb7b8c46-36dd-4600-a859-0015d3a24ab8", "세부계획": "[MYSQL] 7. 데이터 암호화", "Date": {"start": "2023-07-25", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "8f60afa9-c5c8-4ad0-9b0a-84169bc48aa4",
+            "세부계획": "[MYSQL] 8. 인덱스 : 디스크 읽기 방식과 인덱스",
+            "Date": {"start": "2023-07-26", "end": "2023-07-26"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "a90baf70-4278-473f-85ed-58ce7fea8c3c", "세부계획": "[MYSQL] 8. 인덱스 : B-Tree 인덱스", "Date": {"start": "2023-07-28", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "4a637c54-7d0b-4180-aed1-47f653cefcaf",
+            "세부계획": "[MYSQL] 8. 인덱스 : R-Tree 인덱스 및 전문 검색 인덱스, 함수 기반 인덱스",
+            "Date": {"start": "2023-07-29", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "4928f79e-16ba-4184-ae46-8347f01da715",
+            "세부계획": "[MYSQL] 8. 인덱스 :  멀티벨류 인덱스, 클러스터링 인덱스, 유니크 인덱스, 외래키",
+            "Date": {"start": "2023-07-30", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "a438547f-e562-4731-8ecb-9e183a925671",
+            "세부계획": "[MYSQL] 9. 옵티마이저와 힌트 : 개요, 기본데이터 처리 - 스캔, 병렬처리, ORDER BY 처리",
+            "Date": {"start": "2023-07-31", "end": "2023-08-01"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "78c45546-5433-4bc6-9576-b7f82c4a36b6",
+            "세부계획": "[MYSQL] 9. 옵티마이저와 힌트 : 고급 최적화",
+            "Date": {"start": "2023-08-04", "end": "2023-08-05"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "71d49f2c-85c5-4f32-a2e7-4b951575fadd", "세부계획": "[MYSQL] 9. 옵티마이저와 힌트 ", "Date": {"start": "2023-08-06", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "b482fe02-c8cc-4270-9b37-3669ba322881",
+            "세부계획": "[MYSQL] 10. 실행계획 : 통계정보 및 실행 계획 확인",
+            "Date": {"start": "2023-08-15", "end": "2023-08-15"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "6a33c931-d845-49ee-afd0-01876489d8f2", "세부계획": "[MYSQL] 10. 실행계획 : 실행 계획 분석 1", "Date": {"start": "2023-08-19", "end": "2023-08-19"}, "진행상태": "Done", "Done": true},
+        {"id": "ab366c5b-d9d4-4577-8c0d-cc687dcf1390", "세부계획": "[MYSQL] 10. 실행계획 : 실행 계획 분석 2", "Date": {"start": "2023-08-20", "end": "2023-08-21"}, "진행상태": "Done", "Done": true},
+        {"id": "ea3b7c2c-817d-45d0-971e-ad7240c4a57d", "세부계획": "[MYSQL] 11. 쿼리 작성 및 최적화", "Date": {"start": "2023-08-22", "end": "2023-08-27"}, "진행상태": "Done", "Done": true},
+        {"id": "fbf1b417-c128-4f0e-b7b1-3a1ea720aa8d", "세부계획": "[MYSQL] 12. 확장 검색", "Date": {"start": "2023-08-31", "end": "2023-09-02"}, "진행상태": "Done", "Done": true},
+        {"id": "ec262fde-7a5a-4525-bcb3-45ffbd9886c4", "세부계획": "[MYSQL] 13.  파티션", "Date": {"start": "2023-09-03", "end": "2023-09-10"}, "진행상태": "Done", "Done": true},
+        {"id": "a7339650-02eb-453e-a1ed-f5caacc30be0", "세부계획": "[MYSQL] 14. 스토어드 프로그램", "Date": {"start": "2023-09-11", "end": "2023-09-11"}, "진행상태": "Done", "Done": true},
+        {"id": "da969523-ab3f-4208-8098-d299062254de", "세부계획": "[MYSQL] 15. 데이터 타입", "Date": {"start": "2023-09-12", "end": "2023-09-13"}, "진행상태": "Done", "Done": true},
+        {"id": "7ea0d0f1-a327-4f6e-8bf3-43dc0c1d4497", "세부계획": "[MYSQL] 16. 레플리카", "Date": {"start": "2023-09-13", "end": "2023-09-16"}, "진행상태": "Done", "Done": true},
+        {"id": "6362f6b7-0b57-4474-92e5-85bcbbc85617", "세부계획": "[MYSQL] 17. InnoDB 클러스터", "Date": {"start": "2023-09-16", "end": "2023-09-18"}, "진행상태": "Quit", "Done": true},
+        {
+            "id": "f5e30f70-d124-459c-b14a-639611e2dbfd",
+            "세부계획": "[MYSQL] 18. Performance 스키마 & Sys 스키마",
+            "Date": {"start": "2023-09-17", "end": "2023-09-20"},
+            "진행상태": "Done",
+            "Done": true
+        }
+    ]
+}

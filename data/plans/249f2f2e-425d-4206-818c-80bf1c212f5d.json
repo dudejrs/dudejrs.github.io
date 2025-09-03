@@ -1,1 +1,23 @@
-{"id":"249f2f2e-425d-4206-818c-80bf1c212f5d","title":"[우테코]  우테코 준비 ","Status":"Done","분류":"독서","Tag":[],"기간":{"start":"2022-12-09T00:00:00.000+00:00","end":"2022-12-14T00:00:00.000+00:00"},"완료율":"8%","세부계획":[{"id":"36b7b6e7-a622-45ff-8a48-f18bdf941777","세부계획":"[우테코] 리팩토링 6강복습","Date":{"start":"2022-12-09","end":null},"진행상태":"Suspended","Done":false},{"id":"47b8fd33-437e-44c3-bc0b-0d56ba87b28f","세부계획":"[우테코] 리팩토링 7강복습","Date":{"start":"2022-12-11","end":null},"진행상태":"Suspended","Done":true},{"id":"4af8087f-364a-45b5-8b02-1a34b77535ec","세부계획":"[우테코] 리팩토링 9강복습","Date":{"start":"2022-12-12","end":null},"진행상태":"Suspended","Done":false},{"id":"3b745058-293c-4041-a91c-83a554bb0985","세부계획":"[우테코] 리팩토링 10강복습","Date":{"start":"2022-12-12","end":null},"진행상태":"Suspended","Done":false},{"id":"051e2002-dd4e-4324-b8cd-f396421d95e6","세부계획":"[우테코] 리팩토링 8강복습","Date":{"start":"2022-12-12","end":null},"진행상태":"Suspended","Done":false},{"id":"fb3ec13e-c3c0-43ff-a598-5fc5752840f8","세부계획":"[우테코] java-bridge 복습","Date":{"start":"2022-12-13","end":null},"진행상태":"","Done":false},{"id":"d71ad3db-a2e7-49fc-8d87-532f88329f23","세부계획":"[우테코] 리팩토링 12강복습","Date":{"start":"2022-12-13","end":null},"진행상태":"Suspended","Done":false},{"id":"a36d671a-097f-4ce5-bda8-592eb2729fbd","세부계획":"[우테코] 리팩토링 11강복습","Date":{"start":"2022-12-13","end":null},"진행상태":"Suspended","Done":false},{"id":"2001d044-e497-42f7-9515-47d6a0355b62","세부계획":"[우테코] java-lotto 복습","Date":{"start":"2022-12-14","end":null},"진행상태":"","Done":false},{"id":"252d5740-ab0e-4d9c-a92b-f142c791f7cc","세부계획":"[우테코] java-baseball 복습","Date":{"start":"2022-12-14","end":null},"진행상태":"","Done":false},{"id":"6f7d9d52-5c2f-475f-bbd7-f8cb54fe8388","세부계획":"[우테코] java-vendingmachine","Date":{},"진행상태":"","Done":false},{"id":"a5d72ce8-6d02-4bdd-a39b-b3995f758f96","세부계획":"[우테코] java-chicken","Date":{},"진행상태":"","Done":false}]}
+{
+    "id": "249f2f2e-425d-4206-818c-80bf1c212f5d",
+    "title": "[우테코]  우테코 준비 ",
+    "Status": "Done",
+    "분류": "독서",
+    "Tag": [],
+    "기간": {"start": "2022-12-09T00:00:00.000+00:00", "end": "2022-12-14T00:00:00.000+00:00"},
+    "완료율": "8%",
+    "세부계획": [
+        {"id": "36b7b6e7-a622-45ff-8a48-f18bdf941777", "세부계획": "[우테코] 리팩토링 6강복습", "Date": {"start": "2022-12-09", "end": null}, "진행상태": "Suspended", "Done": false},
+        {"id": "47b8fd33-437e-44c3-bc0b-0d56ba87b28f", "세부계획": "[우테코] 리팩토링 7강복습", "Date": {"start": "2022-12-11", "end": null}, "진행상태": "Suspended", "Done": true},
+        {"id": "4af8087f-364a-45b5-8b02-1a34b77535ec", "세부계획": "[우테코] 리팩토링 9강복습", "Date": {"start": "2022-12-12", "end": null}, "진행상태": "Suspended", "Done": false},
+        {"id": "3b745058-293c-4041-a91c-83a554bb0985", "세부계획": "[우테코] 리팩토링 10강복습", "Date": {"start": "2022-12-12", "end": null}, "진행상태": "Suspended", "Done": false},
+        {"id": "051e2002-dd4e-4324-b8cd-f396421d95e6", "세부계획": "[우테코] 리팩토링 8강복습", "Date": {"start": "2022-12-12", "end": null}, "진행상태": "Suspended", "Done": false},
+        {"id": "fb3ec13e-c3c0-43ff-a598-5fc5752840f8", "세부계획": "[우테코] java-bridge 복습", "Date": {"start": "2022-12-13", "end": null}, "진행상태": "", "Done": false},
+        {"id": "d71ad3db-a2e7-49fc-8d87-532f88329f23", "세부계획": "[우테코] 리팩토링 12강복습", "Date": {"start": "2022-12-13", "end": null}, "진행상태": "Suspended", "Done": false},
+        {"id": "a36d671a-097f-4ce5-bda8-592eb2729fbd", "세부계획": "[우테코] 리팩토링 11강복습", "Date": {"start": "2022-12-13", "end": null}, "진행상태": "Suspended", "Done": false},
+        {"id": "2001d044-e497-42f7-9515-47d6a0355b62", "세부계획": "[우테코] java-lotto 복습", "Date": {"start": "2022-12-14", "end": null}, "진행상태": "", "Done": false},
+        {"id": "252d5740-ab0e-4d9c-a92b-f142c791f7cc", "세부계획": "[우테코] java-baseball 복습", "Date": {"start": "2022-12-14", "end": null}, "진행상태": "", "Done": false},
+        {"id": "6f7d9d52-5c2f-475f-bbd7-f8cb54fe8388", "세부계획": "[우테코] java-vendingmachine", "Date": {}, "진행상태": "", "Done": false},
+        {"id": "a5d72ce8-6d02-4bdd-a39b-b3995f758f96", "세부계획": "[우테코] java-chicken", "Date": {}, "진행상태": "", "Done": false}
+    ]
+}

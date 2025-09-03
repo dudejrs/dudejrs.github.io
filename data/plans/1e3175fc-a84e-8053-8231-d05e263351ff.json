@@ -1,1 +1,18 @@
-{"id":"1e3175fc-a84e-8053-8231-d05e263351ff","title":"[독서] 랭체인 완벽 입문 완독 ","Status":"Not started","분류":"","Tag":["Data Science","AI"],"기간":{},"완료율":"0%","세부계획":[{"id":"1e3175fc-a84e-800b-a667-e596d3bd268c","세부계획":"[랭체인] 7. Callbacks : 다양한 이벤트 발생 시 처리하기","Date":{},"진행상태":"TODO","Done":false},{"id":"1e3175fc-a84e-80a3-8d87-f16de762e048","세부계획":"[랭체인] 6. Agents : 자율적으로 외부와 상호작용해 언어 모델의 한계를 뛰어 넘기","Date":{},"진행상태":"TODO","Done":false},{"id":"1e3175fc-a84e-808e-ac2f-f5907cd1dd12","세부계획":"[랭체인] 5. Chains : 여러 프로세스를 통합","Date":{},"진행상태":"TODO","Done":false},{"id":"1e3175fc-a84e-8030-a8a2-edeb7accab58","세부계획":"[랭체인] 4. Memory : 과거의 대화를 장/단기 기억하기","Date":{},"진행상태":"TODO","Done":false},{"id":"1e3175fc-a84e-80cc-90fe-c8db4b082259","세부계획":"[랭체인] 3. Retrieval : 알지 못하는 데이터를 다루기","Date":{},"진행상태":"TODO","Done":false},{"id":"1e3175fc-a84e-808c-9421-fb94c920f4d1","세부계획":"[랭체인] 2. Model I/O : 언어모델을 다루기 쉽게 하기","Date":{},"진행상태":"TODO","Done":false},{"id":"1e3175fc-a84e-8001-b80b-c4dcf55efd66","세부계획":"[랭체인] 1. 챗지피티와 랭체인","Date":{},"진행상태":"TODO","Done":false}]}
+{
+    "id": "1e3175fc-a84e-8053-8231-d05e263351ff",
+    "title": "[독서] 랭체인 완벽 입문 완독 ",
+    "Status": "Not started",
+    "분류": "",
+    "Tag": ["Data Science", "AI"],
+    "기간": {},
+    "완료율": "0%",
+    "세부계획": [
+        {"id": "1e3175fc-a84e-800b-a667-e596d3bd268c", "세부계획": "[랭체인] 7. Callbacks : 다양한 이벤트 발생 시 처리하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1e3175fc-a84e-80a3-8d87-f16de762e048", "세부계획": "[랭체인] 6. Agents : 자율적으로 외부와 상호작용해 언어 모델의 한계를 뛰어 넘기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1e3175fc-a84e-808e-ac2f-f5907cd1dd12", "세부계획": "[랭체인] 5. Chains : 여러 프로세스를 통합", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1e3175fc-a84e-8030-a8a2-edeb7accab58", "세부계획": "[랭체인] 4. Memory : 과거의 대화를 장/단기 기억하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1e3175fc-a84e-80cc-90fe-c8db4b082259", "세부계획": "[랭체인] 3. Retrieval : 알지 못하는 데이터를 다루기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1e3175fc-a84e-808c-9421-fb94c920f4d1", "세부계획": "[랭체인] 2. Model I/O : 언어모델을 다루기 쉽게 하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1e3175fc-a84e-8001-b80b-c4dcf55efd66", "세부계획": "[랭체인] 1. 챗지피티와 랭체인", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

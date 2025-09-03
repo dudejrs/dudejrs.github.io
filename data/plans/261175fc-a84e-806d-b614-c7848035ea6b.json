@@ -1,0 +1,27 @@
+{
+    "id": "261175fc-a84e-806d-b614-c7848035ea6b",
+    "title": "[독서] 자바 ORM 표준 JPA 프로그래밍 ",
+    "Status": "In progress",
+    "분류": "",
+    "Tag": ["JPA"],
+    "기간": {},
+    "완료율": "0%",
+    "세부계획": [
+        {"id": "261175fc-a84e-80b5-bf23-ca3853f31aab", "세부계획": "[JPA] 16. 트랜잭션과 락, 2차 캐시", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8084-93b5-f73ba785d89d", "세부계획": "[JPA] 15. 고급 주제와 성능 최적화", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8024-9970-ce88cf2e4c6d", "세부계획": "[JPA] 14. 컬렉션과 부가 기능", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8047-a430-c8252f304adb", "세부계획": "[JPA] 13. 웹 애플리케이션과 영속성 관리", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8029-ab93-cf587e13b834", "세부계획": "[JPA] 12. 스프링 데이터 JPA", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8045-bfbd-fc9f0f9c4444", "세부계획": "[JPA] 11. 웹 애플리케이션 제작", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-80bf-b017-d4755d95a713", "세부계획": "[JPA] 10. 객체지향 쿼리언어", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-80f1-9f40-efc3f4ea63ce", "세부계획": "[JPA] 9. 값 타입", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-804f-be61-fe960300a33e", "세부계획": "[JPA] 8. 프록시와 연관관계 관리", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8079-bed4-fff511812205", "세부계획": "[JPA] 7. 고급 매핑", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-80b5-8d8b-c29c21082155", "세부계획": "[JPA] 6. 다양한 연관관계 매핑", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8060-aa7a-c3fdcfcc9a04", "세부계획": "[JPA] 5. 연관관계 매핑 기초", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-803f-899f-e770ed57853e", "세부계획": "[JPA] 4. 엔티티 매핑", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8023-a858-f3dfa711954c", "세부계획": "[JPA] 3. 영속성 관리", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8014-865e-f001df127661", "세부계획": "[JPA] 2. JPA 시작", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "261175fc-a84e-8012-988a-f1bebeccfc44", "세부계획": "[JPA] 1. JPA 소개", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

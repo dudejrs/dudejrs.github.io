@@ -1,1 +1,23 @@
-{"id":"9694b424-4b3b-4d4a-a883-159499ae829e","title":"[독서]  타입스크립트 프로그래밍 ","Status":"Done","분류":"독서","Tag":["Javascript","Typescript"],"기간":{"start":"2024-03-15T00:00:00.000+00:00","end":"2024-03-19T00:00:00.000+00:00"},"완료율":"83%","세부계획":[{"id":"302d005e-0273-4873-9611-0c46db11a861","세부계획":"[Typescript] 2. 데이터 타입","Date":{"start":"2024-03-15","end":null},"진행상태":"Done","Done":true},{"id":"f8fa8bd4-3abb-4bb1-8f6e-d53d703616da","세부계획":"[Typescript]  1. 타입스크립트 시작","Date":{"start":"2024-03-15","end":null},"진행상태":"Done","Done":true},{"id":"2132b8a6-1928-4e2b-ab7f-c5b4b1e3b925","세부계획":"[Typescript] 4. 함수","Date":{"start":"2024-03-16","end":null},"진행상태":"Done","Done":true},{"id":"64ad57ac-d1aa-433c-818e-ce11737cfe56","세부계획":"[Typescript] 3. 배열, 튜플, 열거형","Date":{"start":"2024-03-16","end":null},"진행상태":"Done","Done":true},{"id":"b2001d25-a314-4343-88a4-27eb0a96fe5e","세부계획":"[Typescript] 6. 인터페이스","Date":{"start":"2024-03-17","end":null},"진행상태":"Done","Done":true},{"id":"95ba0751-5303-49c0-b654-9ba16c23cdec","세부계획":"[Typescript] 5. 클래스","Date":{"start":"2024-03-17","end":null},"진행상태":"Done","Done":true},{"id":"0f264b5b-7168-4c1f-9a89-93b3c0e6b00d","세부계획":"[Typescript] 8. 타입 고급","Date":{"start":"2024-03-18","end":null},"진행상태":"Done","Done":true},{"id":"1a087ce0-bf31-41d0-95e9-8b583b178b2c","세부계획":"[Typescript] 7. 제네릭","Date":{"start":"2024-03-18","end":null},"진행상태":"Done","Done":true},{"id":"3db411e3-9c8d-43dd-a76c-3524e5aa6064","세부계획":"[Typescript] 10. 네임스페이스와 모듈","Date":{"start":"2024-03-19","end":null},"진행상태":"Done","Done":true},{"id":"5b8c9003-e7d1-4cf6-828c-2219a399ba5b","세부계획":"[Typescript] 9. 데코레이터","Date":{"start":"2024-03-19","end":null},"진행상태":"Done","Done":true},{"id":"1ec08679-51bb-410d-8095-d1bd56879001","세부계획":"[Typescript] 12. GraphQL API 구현 실습","Date":{},"진행상태":"Quit","Done":false},{"id":"fd3d7fa5-7420-4ec1-9bba-92dd965cf00c","세부계획":"[Typescript] 11. REST API 구현 실습","Date":{},"진행상태":"Quit","Done":false}]}
+{
+    "id": "9694b424-4b3b-4d4a-a883-159499ae829e",
+    "title": "[독서]  타입스크립트 프로그래밍 ",
+    "Status": "Done",
+    "분류": "독서",
+    "Tag": ["Javascript", "Typescript"],
+    "기간": {"start": "2024-03-15T00:00:00.000+00:00", "end": "2024-03-19T00:00:00.000+00:00"},
+    "완료율": "83%",
+    "세부계획": [
+        {"id": "302d005e-0273-4873-9611-0c46db11a861", "세부계획": "[Typescript] 2. 데이터 타입", "Date": {"start": "2024-03-15", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "f8fa8bd4-3abb-4bb1-8f6e-d53d703616da", "세부계획": "[Typescript]  1. 타입스크립트 시작", "Date": {"start": "2024-03-15", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "2132b8a6-1928-4e2b-ab7f-c5b4b1e3b925", "세부계획": "[Typescript] 4. 함수", "Date": {"start": "2024-03-16", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "64ad57ac-d1aa-433c-818e-ce11737cfe56", "세부계획": "[Typescript] 3. 배열, 튜플, 열거형", "Date": {"start": "2024-03-16", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "b2001d25-a314-4343-88a4-27eb0a96fe5e", "세부계획": "[Typescript] 6. 인터페이스", "Date": {"start": "2024-03-17", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "95ba0751-5303-49c0-b654-9ba16c23cdec", "세부계획": "[Typescript] 5. 클래스", "Date": {"start": "2024-03-17", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "0f264b5b-7168-4c1f-9a89-93b3c0e6b00d", "세부계획": "[Typescript] 8. 타입 고급", "Date": {"start": "2024-03-18", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "1a087ce0-bf31-41d0-95e9-8b583b178b2c", "세부계획": "[Typescript] 7. 제네릭", "Date": {"start": "2024-03-18", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "3db411e3-9c8d-43dd-a76c-3524e5aa6064", "세부계획": "[Typescript] 10. 네임스페이스와 모듈", "Date": {"start": "2024-03-19", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "5b8c9003-e7d1-4cf6-828c-2219a399ba5b", "세부계획": "[Typescript] 9. 데코레이터", "Date": {"start": "2024-03-19", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "1ec08679-51bb-410d-8095-d1bd56879001", "세부계획": "[Typescript] 12. GraphQL API 구현 실습", "Date": {}, "진행상태": "Quit", "Done": false},
+        {"id": "fd3d7fa5-7420-4ec1-9bba-92dd965cf00c", "세부계획": "[Typescript] 11. REST API 구현 실습", "Date": {}, "진행상태": "Quit", "Done": false}
+    ]
+}

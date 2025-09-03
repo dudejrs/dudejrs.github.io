@@ -1,1 +1,105 @@
-{"id":"11bcf0ce-0f53-452b-a600-9c927097302d","title":"[독서] 리액트를 다루는 기술 완독","Status":"Done","분류":"독서","Tag":["Frontend","React","Javascript"],"기간":{"start":"2022-09-06T00:00:00.000+00:00","end":"2022-12-02T00:00:00.000+00:00"},"완료율":"82%","세부계획":[{"id":"9c7213a4-1fd5-4d95-8a95-68d46a3301c2","세부계획":"[리액트] 3장 컴포넌트","Date":{"start":"2022-09-06","end":null},"진행상태":"Done","Done":true},{"id":"747e3afd-efee-4c1d-ad89-ff1a3cb484c9","세부계획":"[리액트] 2장 JSX","Date":{"start":"2022-09-06","end":null},"진행상태":"Done","Done":true},{"id":"4ee63ffe-2f62-49fe-9f62-dce202d2be03","세부계획":"[리액트] 1장 리액트 시작","Date":{"start":"2022-09-06","end":null},"진행상태":"Done","Done":true},{"id":"52b14015-cd19-4239-ab46-98e54e9f2633","세부계획":"[리액트] 7장 컴포넌트 라이프사이클 메서드","Date":{"start":"2022-09-08","end":null},"진행상태":"Done","Done":true},{"id":"b6954489-3224-4f81-bee9-c0e2bbaedeb2","세부계획":"[리액트] 6장 컴포넌트 반복","Date":{"start":"2022-09-08","end":null},"진행상태":"Done","Done":true},{"id":"5d009306-b0d2-42d8-9adb-880a68aae165","세부계획":"[리액트] 5장 ref:DOM 에 이름달기","Date":{"start":"2022-09-08","end":null},"진행상태":"Done","Done":true},{"id":"5f4d38d4-90c5-4fea-914f-8aeaf19831bc","세부계획":"[리액트] 4장 이벤트핸들링.","Date":{"start":"2022-09-08","end":null},"진행상태":"Done","Done":true},{"id":"a76da043-76a8-4d17-b8b9-52b936d413e1","세부계획":"[리액트] 8장 Hooks","Date":{"start":"2022-09-09","end":null},"진행상태":"Done","Done":true},{"id":"ddb0056b-e44a-4e6d-a2c7-80c59d4127b5","세부계획":"[리액트] 9장 컴포넌트 스타일링","Date":{"start":"2022-09-10","end":null},"진행상태":"Done","Done":true},{"id":"91d7efc3-a89a-40b5-a6f8-6d57ce5228c8","세부계획":"[리액트] 10장 일정관리 웹 애플리케이션 만들기","Date":{"start":"2022-09-13","end":null},"진행상태":"Done","Done":true},{"id":"a8834422-d49a-4946-83a8-c346d92ef9f5","세부계획":"[리액트] 11장 컴포넌트 성능 최적화","Date":{"start":"2022-09-15","end":null},"진행상태":"Done","Done":true},{"id":"10f20307-7f6d-49fc-8424-56c0dd4cbf5f","세부계획":"[리액트] 12장 immer를 사용하여 더 쉽게 불변성 유지하기","Date":{"start":"2022-09-16","end":null},"진행상태":"Done","Done":true},{"id":"c11ca19a-c97b-41a4-9fc4-075d35d54864","세부계획":"[리액트] 13장 리액트 라우터로 SPA 개발하기","Date":{"start":"2022-09-17","end":null},"진행상태":"Done","Done":true},{"id":"fa35ff96-0da4-4469-976f-1a9650a6aa3f","세부계획":"[리액트] 14장 외부 API를 연동하여 뉴스 뷰어 만들기","Date":{"start":"2022-09-18","end":null},"진행상태":"Done","Done":true},{"id":"258777d6-0aac-4dec-a5c4-e2bb2aa69e0b","세부계획":"[리액트] 16장 리덕스 라이브러리 이해하기","Date":{"start":"2022-09-23","end":null},"진행상태":"Done","Done":true},{"id":"2051fc7b-677e-4919-b62d-a36e2120169e","세부계획":"[리액트] 15장 ContextAPI","Date":{"start":"2022-09-23","end":null},"진행상태":"Done","Done":true},{"id":"d0cebbcc-bc3f-45f6-87f6-528cb0b38e24","세부계획":"[리액트] 18장 리덕스 미들웨어를 통한 비동기 작업 관리","Date":{"start":"2022-09-26","end":"2022-09-27"},"진행상태":"Done","Done":true},{"id":"21a85fd2-7cd3-4cf5-bd24-ba4ea4c64d43","세부계획":"[리액트] 17장 리덕스를 사용하여 리액트 애플리케이션 상태 관리하기","Date":{"start":"2022-09-26","end":null},"진행상태":"Done","Done":true},{"id":"d0cfddd5-2caf-4436-aa71-9da53a1b24d6","세부계획":"[리액트] 20장 서버사이드 렌더링","Date":{"start":"2022-10-04","end":"2022-10-10"},"진행상태":"Done","Done":true},{"id":"5c40209d-d8dc-4a6b-b69e-6d6d62847f2e","세부계획":"[리액트] 19장 코드 스플리팅","Date":{"start":"2022-10-04","end":"2022-10-05"},"진행상태":"Done","Done":true},{"id":"dc857c4a-3f4f-4855-8c83-d408192edbcc","세부계획":"[리액트] 21장 백엔드 프로그래밍 : Node.js의 Koa프레임워크","Date":{"start":"2022-10-10","end":null},"진행상태":"Done","Done":true},{"id":"7559bbdd-b6c0-4263-963d-c73594860857","세부계획":"[리액트] 22장 moongoose이용한  MongoDB 연동실습","Date":{"start":"2022-10-11","end":"2022-10-13"},"진행상태":"Done","Done":true},{"id":"7fe3c3e5-7da7-42da-ad03-8849e1cca655","세부계획":"[리액트] 23장 JWT를 통한 회원 인증 시스템 구현하기","Date":{"start":"2022-10-16","end":null},"진행상태":"Done","Done":true},{"id":"22fd3985-f536-4df3-970a-ee518b528459","세부계획":"[리액트] 24장 프런트엔드 프로젝트 : 시작 및 회원 인증 구현","Date":{"start":"2022-10-19","end":"2022-11-10"},"진행상태":"Suspended","Done":false},{"id":"98cedd89-389b-4f4f-be86-47c5a2569b08","세부계획":"[리액트] 28장 그다음은? ","Date":{"start":"2022-12-02","end":null},"진행상태":"Suspended","Done":false},{"id":"a597619a-8a2a-4b8d-bda1-a902ee602b6c","세부계획":"[리액트] 27장 프론트엔드 프로젝트 : 수정/삭제 기능 구현 및 마무리","Date":{"start":"2022-12-02","end":null},"진행상태":"Suspended","Done":false},{"id":"dc78ecd5-133a-43a3-9ccf-70d472c9ed60","세부계획":"[리액트] 26장 프런트 엔드 프로젝트 : 포스트 조회 기능 구현하기","Date":{"start":"2022-12-02","end":null},"진행상태":"Suspended","Done":false},{"id":"15eea860-4d1f-485d-b4bd-773d24b502cb","세부계획":"[리액트] 25장 프론트엔드 프로젝트 : 글쓰기 기능 구현하기","Date":{"start":"2022-12-02","end":null},"진행상태":"Suspended","Done":false}]}
+{
+    "id": "11bcf0ce-0f53-452b-a600-9c927097302d",
+    "title": "[독서] 리액트를 다루는 기술 완독",
+    "Status": "Done",
+    "분류": "독서",
+    "Tag": ["Frontend", "React", "Javascript"],
+    "기간": {"start": "2022-09-06T00:00:00.000+00:00", "end": "2022-12-02T00:00:00.000+00:00"},
+    "완료율": "82%",
+    "세부계획": [
+        {"id": "9c7213a4-1fd5-4d95-8a95-68d46a3301c2", "세부계획": "[리액트] 3장 컴포넌트", "Date": {"start": "2022-09-06", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "747e3afd-efee-4c1d-ad89-ff1a3cb484c9", "세부계획": "[리액트] 2장 JSX", "Date": {"start": "2022-09-06", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "4ee63ffe-2f62-49fe-9f62-dce202d2be03", "세부계획": "[리액트] 1장 리액트 시작", "Date": {"start": "2022-09-06", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "52b14015-cd19-4239-ab46-98e54e9f2633", "세부계획": "[리액트] 7장 컴포넌트 라이프사이클 메서드", "Date": {"start": "2022-09-08", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "b6954489-3224-4f81-bee9-c0e2bbaedeb2", "세부계획": "[리액트] 6장 컴포넌트 반복", "Date": {"start": "2022-09-08", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "5d009306-b0d2-42d8-9adb-880a68aae165", "세부계획": "[리액트] 5장 ref:DOM 에 이름달기", "Date": {"start": "2022-09-08", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "5f4d38d4-90c5-4fea-914f-8aeaf19831bc", "세부계획": "[리액트] 4장 이벤트핸들링.", "Date": {"start": "2022-09-08", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "a76da043-76a8-4d17-b8b9-52b936d413e1", "세부계획": "[리액트] 8장 Hooks", "Date": {"start": "2022-09-09", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "ddb0056b-e44a-4e6d-a2c7-80c59d4127b5", "세부계획": "[리액트] 9장 컴포넌트 스타일링", "Date": {"start": "2022-09-10", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "91d7efc3-a89a-40b5-a6f8-6d57ce5228c8", "세부계획": "[리액트] 10장 일정관리 웹 애플리케이션 만들기", "Date": {"start": "2022-09-13", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "a8834422-d49a-4946-83a8-c346d92ef9f5", "세부계획": "[리액트] 11장 컴포넌트 성능 최적화", "Date": {"start": "2022-09-15", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "10f20307-7f6d-49fc-8424-56c0dd4cbf5f",
+            "세부계획": "[리액트] 12장 immer를 사용하여 더 쉽게 불변성 유지하기",
+            "Date": {"start": "2022-09-16", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "c11ca19a-c97b-41a4-9fc4-075d35d54864", "세부계획": "[리액트] 13장 리액트 라우터로 SPA 개발하기", "Date": {"start": "2022-09-17", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "fa35ff96-0da4-4469-976f-1a9650a6aa3f",
+            "세부계획": "[리액트] 14장 외부 API를 연동하여 뉴스 뷰어 만들기",
+            "Date": {"start": "2022-09-18", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "258777d6-0aac-4dec-a5c4-e2bb2aa69e0b", "세부계획": "[리액트] 16장 리덕스 라이브러리 이해하기", "Date": {"start": "2022-09-23", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "2051fc7b-677e-4919-b62d-a36e2120169e", "세부계획": "[리액트] 15장 ContextAPI", "Date": {"start": "2022-09-23", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "d0cebbcc-bc3f-45f6-87f6-528cb0b38e24",
+            "세부계획": "[리액트] 18장 리덕스 미들웨어를 통한 비동기 작업 관리",
+            "Date": {"start": "2022-09-26", "end": "2022-09-27"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "21a85fd2-7cd3-4cf5-bd24-ba4ea4c64d43",
+            "세부계획": "[리액트] 17장 리덕스를 사용하여 리액트 애플리케이션 상태 관리하기",
+            "Date": {"start": "2022-09-26", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "d0cfddd5-2caf-4436-aa71-9da53a1b24d6", "세부계획": "[리액트] 20장 서버사이드 렌더링", "Date": {"start": "2022-10-04", "end": "2022-10-10"}, "진행상태": "Done", "Done": true},
+        {"id": "5c40209d-d8dc-4a6b-b69e-6d6d62847f2e", "세부계획": "[리액트] 19장 코드 스플리팅", "Date": {"start": "2022-10-04", "end": "2022-10-05"}, "진행상태": "Done", "Done": true},
+        {
+            "id": "dc857c4a-3f4f-4855-8c83-d408192edbcc",
+            "세부계획": "[리액트] 21장 백엔드 프로그래밍 : Node.js의 Koa프레임워크",
+            "Date": {"start": "2022-10-10", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "7559bbdd-b6c0-4263-963d-c73594860857",
+            "세부계획": "[리액트] 22장 moongoose이용한  MongoDB 연동실습",
+            "Date": {"start": "2022-10-11", "end": "2022-10-13"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "7fe3c3e5-7da7-42da-ad03-8849e1cca655",
+            "세부계획": "[리액트] 23장 JWT를 통한 회원 인증 시스템 구현하기",
+            "Date": {"start": "2022-10-16", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {
+            "id": "22fd3985-f536-4df3-970a-ee518b528459",
+            "세부계획": "[리액트] 24장 프런트엔드 프로젝트 : 시작 및 회원 인증 구현",
+            "Date": {"start": "2022-10-19", "end": "2022-11-10"},
+            "진행상태": "Suspended",
+            "Done": false
+        },
+        {"id": "98cedd89-389b-4f4f-be86-47c5a2569b08", "세부계획": "[리액트] 28장 그다음은? ", "Date": {"start": "2022-12-02", "end": null}, "진행상태": "Suspended", "Done": false},
+        {
+            "id": "a597619a-8a2a-4b8d-bda1-a902ee602b6c",
+            "세부계획": "[리액트] 27장 프론트엔드 프로젝트 : 수정/삭제 기능 구현 및 마무리",
+            "Date": {"start": "2022-12-02", "end": null},
+            "진행상태": "Suspended",
+            "Done": false
+        },
+        {
+            "id": "dc78ecd5-133a-43a3-9ccf-70d472c9ed60",
+            "세부계획": "[리액트] 26장 프런트 엔드 프로젝트 : 포스트 조회 기능 구현하기",
+            "Date": {"start": "2022-12-02", "end": null},
+            "진행상태": "Suspended",
+            "Done": false
+        },
+        {
+            "id": "15eea860-4d1f-485d-b4bd-773d24b502cb",
+            "세부계획": "[리액트] 25장 프론트엔드 프로젝트 : 글쓰기 기능 구현하기",
+            "Date": {"start": "2022-12-02", "end": null},
+            "진행상태": "Suspended",
+            "Done": false
+        }
+    ]
+}
