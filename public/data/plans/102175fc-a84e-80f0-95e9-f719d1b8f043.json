@@ -1,1 +1,21 @@
-{"id":"102175fc-a84e-80f0-95e9-f719d1b8f043","title":"[독서] 타입스크립트 교과서","Status":"Quit","분류":"","Tag":["Typescript"],"기간":{"start":"2024-09-15T00:00:00.000+00:00","end":"2024-09-22T00:00:00.000+00:00"},"완료율":"40%","세부계획":[{"id":"3dcf6daf-0698-429d-8228-e7fb66203cfe","세부계획":"[TS] 1. 타입스크립트 시작하기","Date":{"start":"2024-09-15","end":null},"진행상태":"Done","Done":true},{"id":"102175fc-a84e-8073-aa7d-dd61a3cba8b0","세부계획":"[TS] 2. 기본 문법 익히기","Date":{"start":"2024-09-16","end":"2024-09-20"},"진행상태":"Done","Done":true},{"id":"102175fc-a84e-80b4-99d8-d4b5023ce942","세부계획":"[TS] 8. Node.js 타입 분석하기","Date":{"start":"2024-09-21","end":null},"진행상태":"TODO","Done":false},{"id":"102175fc-a84e-801f-8403-e46bbd96586f","세부계획":"[TS] 4. 타입스크립트 프로젝트 설정하기","Date":{"start":"2024-09-21","end":null},"진행상태":"Done","Done":true},{"id":"102175fc-a84e-806c-9392-d19298de02b6","세부계획":"[TS] 3. lib.es5.d.ts 분석하기","Date":{"start":"2024-09-21","end":null},"진행상태":"Done","Done":true},{"id":"102175fc-a84e-803b-a852-fc9f412bed35","세부계획":"[TS] 10. 패키지 직접 타이핑하기","Date":{"start":"2024-09-22","end":null},"진행상태":"TODO","Done":false},{"id":"102175fc-a84e-80f6-a8f1-e1d9fa10f04c","세부계획":"[TS] 9. Express 타입 분석하기","Date":{"start":"2024-09-22","end":null},"진행상태":"TODO","Done":false},{"id":"40acd45c-52d7-4aea-8a19-5a8ca9366394","세부계획":"[TS] 7. React 타입 분석하기","Date":{},"진행상태":"TODO","Done":false},{"id":"102175fc-a84e-8053-8b1d-ced28c2a8042","세부계획":"[TS] 6. Axios 타입 분석하기","Date":{},"진행상태":"TODO","Done":false},{"id":"102175fc-a84e-8091-8eac-f2d792b46824","세부계획":"[TS] 5. jQuery 타입 분석하기","Date":{},"진행상태":"TODO","Done":false}]}
+{
+    "id": "102175fc-a84e-80f0-95e9-f719d1b8f043",
+    "title": "[독서] 타입스크립트 교과서",
+    "Status": "Quit",
+    "분류": "",
+    "Tag": ["Typescript"],
+    "기간": {"start": "2024-09-15T00:00:00.000+00:00", "end": "2024-09-22T00:00:00.000+00:00"},
+    "완료율": "40%",
+    "세부계획": [
+        {"id": "3dcf6daf-0698-429d-8228-e7fb66203cfe", "세부계획": "[TS] 1. 타입스크립트 시작하기", "Date": {"start": "2024-09-15", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "102175fc-a84e-8073-aa7d-dd61a3cba8b0", "세부계획": "[TS] 2. 기본 문법 익히기", "Date": {"start": "2024-09-16", "end": "2024-09-20"}, "진행상태": "Done", "Done": true},
+        {"id": "102175fc-a84e-80b4-99d8-d4b5023ce942", "세부계획": "[TS] 8. Node.js 타입 분석하기", "Date": {"start": "2024-09-21", "end": null}, "진행상태": "TODO", "Done": false},
+        {"id": "102175fc-a84e-801f-8403-e46bbd96586f", "세부계획": "[TS] 4. 타입스크립트 프로젝트 설정하기", "Date": {"start": "2024-09-21", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "102175fc-a84e-806c-9392-d19298de02b6", "세부계획": "[TS] 3. lib.es5.d.ts 분석하기", "Date": {"start": "2024-09-21", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "102175fc-a84e-803b-a852-fc9f412bed35", "세부계획": "[TS] 10. 패키지 직접 타이핑하기", "Date": {"start": "2024-09-22", "end": null}, "진행상태": "TODO", "Done": false},
+        {"id": "102175fc-a84e-80f6-a8f1-e1d9fa10f04c", "세부계획": "[TS] 9. Express 타입 분석하기", "Date": {"start": "2024-09-22", "end": null}, "진행상태": "TODO", "Done": false},
+        {"id": "40acd45c-52d7-4aea-8a19-5a8ca9366394", "세부계획": "[TS] 7. React 타입 분석하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "102175fc-a84e-8053-8b1d-ced28c2a8042", "세부계획": "[TS] 6. Axios 타입 분석하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "102175fc-a84e-8091-8eac-f2d792b46824", "세부계획": "[TS] 5. jQuery 타입 분석하기", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

@@ -1,31 +1,30 @@
 .container {
-	box-sizing: content-box;
-	padding: 0.5rem;
-	font-size : 0.9em;
+    box-sizing: content-box;
+    padding: 0.5rem;
+    font-size: 0.9em;
 }
 
 .container h4 {
-	margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 
-.container.vertical {	
-
+.container.vertical {
 }
 
 .subcontainer {
-	width: 100%;
-	display: flex;
-	font-size: 0.8em;
-	color: #aaa;
-	justify-content: space-between;
+    width: 100%;
+    display: flex;
+    font-size: 0.8em;
+    color: #aaa;
+    justify-content: space-between;
 }
 
 .taglist {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	font-size: 0.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8em;
 }
 .tag {
-	margin-right: 0.2em
+    margin-right: 0.2em;
 }

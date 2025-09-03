@@ -1,43 +1,40 @@
 .container {
-	position: relative;
-	display: flex;
-	box-shadow: 0 0 30px 30px rgba(230,230,230,0.2);
-	box-sizing: border-box;
-	padding: 0.25em;
+    position: relative;
+    display: flex;
+    box-shadow: 0 0 30px 30px rgba(230, 230, 230, 0.2);
+    box-sizing: border-box;
+    padding: 0.25em;
 }
 
 .container:hover {
-	background-color: rgba(230, 230, 230, 1);
+    background-color: rgba(230, 230, 230, 1);
 }
 
 .clicked {
-	background-color: rgba(230, 230, 230, 1);
+    background-color: rgba(230, 230, 230, 1);
 }
 
-
 .fakecontainer {
-	position: absolute;
-	width: 100%;
-	min-height: 100%;
-	transform: translate(-0.25em,-0.25em);
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    transform: translate(-0.25em, -0.25em);
 
-	z-index: 1;
+    z-index: 1;
 }
 
 .subcontainer {
-	position: absolute;
-	bottom : 0;
+    position: absolute;
+    bottom: 0;
 
-	width: 100%;
-	min-height: 50%;
+    width: 100%;
+    min-height: 50%;
 
-	transform: translate(0, 100%) translate(0,0.5rem);
-	backdrop-filter: blur(3px);
-	background-color: rgba(120, 120, 120, 0.1);
+    transform: translate(0, 100%) translate(0, 0.5rem);
+    backdrop-filter: blur(3px);
+    background-color: rgba(120, 120, 120, 0.1);
 
-
-	border : 1px solid rgba(230, 230, 230, 1);
-	box-shadow: 0px 0px 30px rgba(0,0,0, 0.2);
-	z-index: 1;
-
+    border: 1px solid rgba(230, 230, 230, 1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }

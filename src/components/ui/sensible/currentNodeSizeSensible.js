@@ -1,32 +1,35 @@
-import {useRef, useEffect, useState} from 'react'
+import {useRef, useEffect, useState} from 'react';
 
-import {Context} from './context/currentNodeSize'
+import {Context} from './context/currentNodeSize';
 
-export default function({children, className, style}){
+export default function ({children, className, style}) {
+    const ref = useRef();
+    const [size, setSize] = useState([0, 0]);
+    const [partiallyCovered, setPartiallyCovered] = useState(false);
 
-	const ref = useRef()
-	const [size, setSize] = useState([0, 0])
-	const [partiallyCovered, setPartiallyCovered] = useState(false)
+    const onResize = () => {
+        const rect = ref.current.getBoundingClientRect();
+        setSize([rect.width, rect.height]);
+    };
 
-	const onResize = ()=> {
-		const rect = ref.current.getBoundingClientRect()
-		setSize([rect.width, rect.height])
-	}
+    useEffect(() => {
+        window.addEventListener('resize', onResize);
+        return () => {
+            window.removeEventListener('resize', onResize);
+        };
+    }, []);
 
-	useEffect(()=>{
-		window.addEventListener("resize", onResize)
-		return ()=>{
-			window.removeEventListener('resize', onResize);
-		}
-	},[])
-
-	return (
-		<div ref={ref} className={`${className}`} style={{...style}}>
-			<Context.Provider value={{size, setSize, partiallyCovered : size[0] > window.innerWidth}} >
-				{
-					children
-				}
-			</Context.Provider>
-		</div>
-		)
+    return (
+        <div ref={ref} className={`${className}`} style={{...style}}>
+            <Context.Provider
+                value={{
+                    size,
+                    setSize,
+                    partiallyCovered: size[0] > window.innerWidth,
+                }}
+            >
+                {children}
+            </Context.Provider>
+        </div>
+    );
 }

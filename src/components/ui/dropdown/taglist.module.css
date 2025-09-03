@@ -1,9 +1,9 @@
 .container {
-	min-height: 1rem;
-	display: flex;
-	flex-wrap: wrap;
+    min-height: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 .tag {
-	margin-left : 0.2rem;
-	margin-bottom: 0.1rem;
+    margin-left: 0.2rem;
+    margin-bottom: 0.1rem;
 }

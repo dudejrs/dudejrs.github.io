@@ -1,7 +1,7 @@
 .container {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width : fit-content;
-	height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
 }

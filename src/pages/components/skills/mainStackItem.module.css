@@ -1,33 +1,31 @@
 .title {
-	padding: 0.5rem;
-	border-radius: 0.5rem;
-	border: #eee solid 1px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: #eee solid 1px;
 
-	position: absolute;
-	width: fit-content;
-	max-width: 5rem;
-	
+    position: absolute;
+    width: fit-content;
+    max-width: 5rem;
 
-	background-color: white;
-	font-weight: bold;
-	top: 50%;
-	left:0;
-	
-	transform: translate(-50%,-50%);
-	z-index: 1;
+    background-color: white;
+    font-weight: bold;
+    top: 50%;
+    left: 0;
 
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .mainStackItem {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	
-	position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
-	border:  black dashed 1px;
-	border-radius: 1rem;
-	padding: 0.4rem;
-	margin-bottom: 0.5rem;
+    position: relative;
+
+    border: black dashed 1px;
+    border-radius: 1rem;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
 }

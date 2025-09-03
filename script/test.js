@@ -1,13 +1,12 @@
-const {getDatabase, getPage, getProperty} = require('./notion')
-const {writeFileSync} = require('fs')
+const {getDatabase, getPage, getProperty} = require('./notion');
+const {writeFileSync} = require('fs');
 
 require('dotenv').config();
 
 const NotionSDKClient = require('./notion/client/notionSDK');
-const RateLimiterClient = require('./notion/client/rateLimiter')
-const PaginationClient = require('./notion/client/pagination')
-const AxiosClient = require('./notion/client/axios')
-
+const RateLimiterClient = require('./notion/client/rateLimiter');
+const PaginationClient = require('./notion/client/pagination');
+const AxiosClient = require('./notion/client/axios');
 
 const {NestedProperty} = require('./notion/property');
 
@@ -16,15 +15,29 @@ const {TimestampFilter, RelationFilter, ANDFilter} = require('./notion/filter');
 
 // const {NestedDatabaseScheme} = require('./notion/scheme')
 
+const notion = new PaginationClient(
+    new RateLimiterClient(
+        new NotionSDKClient(process.env.notion_integration_secret),
+    ),
+);
+const axiosc = new PaginationClient(
+    new RateLimiterClient(
+        new AxiosClient(process.env.notion_integration_secret),
+    ),
+);
 
-const notion = new PaginationClient(new RateLimiterClient(new NotionSDKClient(process.env.notion_integration_secret)));
-const axiosc = new PaginationClient(new RateLimiterClient(new AxiosClient(process.env.notion_integration_secret)));
-
-const {fetchCategories} = require('./data/categories')
+const {fetchCategories} = require('./data/categories');
 const {fetchPlans, updatePlans} = require('./data/plans');
-const {getTotalProblem, getAggregationByProblemType, getAggregationByCategories} = require('./data/codingPractice');
+const {
+    getTotalProblem,
+    getAggregationByProblemType,
+    getAggregationByCategories,
+} = require('./data/codingPractice');
 
-const {fetchActivitiesPerMonth, fetchActivitiesPerQuarter} = require('./data/activities')
+const {
+    fetchActivitiesPerMonth,
+    fetchActivitiesPerQuarter,
+} = require('./data/activities');
 // const {fetchCareers} = require('./data/career')
 // const {fetchSkillMap} = require('./data/skills');
 
@@ -34,7 +47,6 @@ const {fetchActivitiesPerMonth, fetchActivitiesPerQuarter} = require('./data/act
 
 // 	await writeFileSync('public/test/page/detailed_plan.json', JSON.stringify(response), {encoding : 'utf-8'})
 // })()
-
 
 /* 페이지 가져와서 사후작업*/
 
@@ -46,7 +58,6 @@ const {fetchActivitiesPerMonth, fetchActivitiesPerQuarter} = require('./data/act
 
 // 	await writeFileSync('public/test/c.json', JSON.stringify(data), {encoding : 'utf-8'})
 // })();
-
 
 /* 몇 일 이후의 데이터베이스 페이지들을 가져오기 */
 
@@ -60,23 +71,56 @@ const {fetchActivitiesPerMonth, fetchActivitiesPerQuarter} = require('./data/act
 // 	await writeFileSync('public/test/d.json', JSON.stringify(response), {encoding : 'utf-8'})
 // })();
 
-
-
 /* 카테고리 저장하기*/
 
-const categories = ["Javascript","Typescript", "Node.js","React", "Angular", "Nest.js", "Java", "Kotlin","Spring Boot", "Spring", "JPA", "Spring WebFlux", "SQL","Oracle","MySQL", "MongoDB", "GraphQL", "\bC++", "Basic", "Backend", "Kafka", "Redis", "Go", "Linux", "Docker", "Kubernetices", "AWS", "Python","Tensorflow","PyTorch", "Data Science", "Scrapping","OpenGL", "WebGL", "Three.js", "D3.js"];
+const categories = [
+    'Javascript',
+    'Typescript',
+    'Node.js',
+    'React',
+    'Angular',
+    'Nest.js',
+    'Java',
+    'Kotlin',
+    'Spring Boot',
+    'Spring',
+    'JPA',
+    'Spring WebFlux',
+    'SQL',
+    'Oracle',
+    'MySQL',
+    'MongoDB',
+    'GraphQL',
+    '\bC++',
+    'Basic',
+    'Backend',
+    'Kafka',
+    'Redis',
+    'Go',
+    'Linux',
+    'Docker',
+    'Kubernetices',
+    'AWS',
+    'Python',
+    'Tensorflow',
+    'PyTorch',
+    'Data Science',
+    'Scrapping',
+    'OpenGL',
+    'WebGL',
+    'Three.js',
+    'D3.js',
+];
 
 // (async ()=> {
 // 	await fetchCategories.exec({client : notion, categories})
 // })()
-
 
 /* 플랜 모두 패치하기 */
 
 // (async()=> {
 // 	await updatePlans.exec(notion)
 // })()
-
 
 /* 코딩 트랙리스트 */
 
@@ -86,7 +130,6 @@ const categories = ["Javascript","Typescript", "Node.js","React", "Angular", "Ne
 // 	await getTotalProblem.exec({client : notion, languages})
 // })()
 
-;
-(async ()=>{
-	await fetchActivitiesPerMonth.exec({client : notion})
-})()
+(async () => {
+    await fetchActivitiesPerMonth.exec({client: notion});
+})();

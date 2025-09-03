@@ -1,27 +1,27 @@
 .container {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .title {
-	margin-top : 0;
-	margin-bottom: 0;
-	text-align: center;	
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
 }
 .subContainer {
-	position: relative;
-	display: flex;
-	flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .axisLeft {
-	position: absolute;
-	left : 0;
-	transform: translate(-100%, 0);
+    position: absolute;
+    left: 0;
+    transform: translate(-100%, 0);
 }
 
 .grid {
-	position: absolute;
-	top : 0;
-	z-index: -1;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }

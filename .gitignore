@@ -32,3 +32,4 @@ yarn-error.log*
 public/data_
 public/data/test/
 public/test
+.idea

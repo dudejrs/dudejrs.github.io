@@ -1,5 +1,4 @@
-import AbbreviateItemHolder from './abbreviate'
-import ItemHolder from './itemHolder'
+import AbbreviateItemHolder from './abbreviate';
+import ItemHolder from './itemHolder';
 
-
-export {AbbreviateItemHolder, ItemHolder}
+export {AbbreviateItemHolder, ItemHolder};

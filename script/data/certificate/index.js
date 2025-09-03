@@ -1,3 +1,3 @@
-const fetchCertificate = require('./fetchCertificate')
+const fetchCertificate = require('./fetchCertificate');
 
-module.exports = {fetchCertificate}
+module.exports = {fetchCertificate};

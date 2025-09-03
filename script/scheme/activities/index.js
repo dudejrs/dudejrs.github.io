@@ -1,4 +1,4 @@
-const QuarterActivitesScheme = require('./quarter')
-const MonthActivitesScheme = require('./month')
+const QuarterActivitesScheme = require('./quarter');
+const MonthActivitesScheme = require('./month');
 
-module.exports = {QuarterActivitesScheme, MonthActivitesScheme}
+module.exports = {QuarterActivitesScheme, MonthActivitesScheme};

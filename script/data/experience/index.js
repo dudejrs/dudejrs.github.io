@@ -1,4 +1,4 @@
-const fetchProjects = require("./fetchProjects")
-const fetchPractices = require("./fetchPractices")
+const fetchProjects = require('./fetchProjects');
+const fetchPractices = require('./fetchPractices');
 
-module.exports = {fetchProjects, fetchPractices}
+module.exports = {fetchProjects, fetchPractices};

@@ -1,40 +1,48 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react';
 
-import Dropdown from './index'
-import TagList from './taglist'
+import Dropdown from './index';
+import TagList from './taglist';
 
+export default function ({
+    className,
+    width,
+    names = [],
+    tags = [],
+    callback,
+    max = 8,
+}) {
+    const [tags_, setTags] = useState([]);
+    const [names_, setNames] = useState([]);
+    const [clicked, setClicked] = useState(false);
 
-export default function({className, width, names=[], tags=[], callback, max = 8}){
+    const select = name => {
+        if (tags_.length >= max) {
+            alert(`최대 ${max}개 까지 입력이 가능합니다`);
+            return;
+        }
+        setTags(tags_.concat(name));
+    };
 
-	const [tags_, setTags] = useState([])
-	const [names_, setNames]  = useState([])
-	const [clicked, setClicked] = useState(false)
+    const deSelect = name => {
+        setTags(tags_.filter(n => n != name));
+    };
 
-	const select = (name)=>{
-		if(tags_.length >= max){
-			alert(`최대 ${max}개 까지 입력이 가능합니다`)
-			return
-		}
-		setTags(tags_.concat(name))
-	}
+    useEffect(() => {
+        setTags(tags);
+    }, []);
 
-	const deSelect = (name)=>{
-		setTags(tags_.filter(n => n != name))
-	}
+    useEffect(() => {
+        setNames(names.filter(name => !tags_.includes(name)));
+        callback && callback(tags_);
+    }, [tags_]);
 
-	useEffect(()=>{
-		setTags(tags)
-	},[])
-
-	useEffect(()=>{
-		setNames(names.filter(name => !tags_.includes(name)))
-		callback && callback(tags_)
-	}, [tags_])
-
-
-	return (
-			<Dropdown className={className} width={width} content={<TagList names={tags_} onTagClick={deSelect}/>}>
-				<TagList names={names_} onTagClick={select}/>
-			</Dropdown>
-		);
+    return (
+        <Dropdown
+            className={className}
+            width={width}
+            content={<TagList names={tags_} onTagClick={deSelect} />}
+        >
+            <TagList names={names_} onTagClick={select} />
+        </Dropdown>
+    );
 }

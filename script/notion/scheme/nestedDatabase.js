@@ -1,64 +1,73 @@
-const Scheme = require('./scheme')
-const PageScheme = require('./page')
-const {ANDFilter, RelationFilter} = require('../filter')
+const Scheme = require('./scheme');
+const PageScheme = require('./page');
+const {ANDFilter, RelationFilter} = require('../filter');
 
+module.exports = class NestedDatabaseScheme extends Scheme {
+    constructor(name, config) {
+        super(name, config);
+        this.relation_property_name =
+            NestedDatabaseScheme.applyRelationPropertyName(config);
+        this.scheme = NestedDatabaseScheme.applyPageScheme(config);
+        this.database_id = NestedDatabaseScheme.applyID(config);
+        this.filter = NestedDatabaseScheme.applyFilter(config);
+        this.sorts = NestedDatabaseScheme.applySorts(config);
+    }
 
-module.exports = class NestedDatabaseScheme extends Scheme{
-	constructor(name, config){
-		super(name, config)
-		this.relation_property_name = NestedDatabaseScheme.applyRelationPropertyName(config)
-		this.scheme = NestedDatabaseScheme.applyPageScheme(config)
-		this.database_id = NestedDatabaseScheme.applyID(config)
-		this.filter = NestedDatabaseScheme.applyFilter(config)
-		this.sorts = NestedDatabaseScheme.applySorts(config)
-	}
+    static applyRelationPropertyName(config) {
+        if (!config['relation_property_name']) {
+            throw new Error('DatabaseScheme must have relation_property_name');
+        }
 
-	static applyRelationPropertyName(config) {
-		if (!(config["relation_property_name"])) {
-			throw new Error("DatabaseScheme must have relation_property_name") 
-		}
+        return config['relation_property_name'];
+    }
 
-		return config["relation_property_name"]
-	}
+    static applyPageScheme(config) {
+        if (!(config['scheme'] instanceof PageScheme)) {
+            throw new Error('DatabaseScheme must have PageScheme');
+        }
 
-	static applyPageScheme(config) {
-		if(!(config["scheme"] instanceof PageScheme)) {
-			throw new Error("DatabaseScheme must have PageScheme")
-		}
+        return config['scheme'];
+    }
 
-		return config["scheme"] 
-	} 
+    static applyID(config) {
+        if (!config['database_id']) {
+            throw new Error('DatabaseScheme must have database_id');
+        }
 
-	static applyID(config) {
-		if (!(config["database_id"])) {
-			throw new Error("DatabaseScheme must have database_id") 
-		}
+        return config['database_id'];
+    }
 
-		return config["database_id"]
-	}
+    static applyFilter(config) {
+        return config['filter'];
+    }
 
-	static applyFilter(config) {
-		return config["filter"]
-	}
+    static applySorts(config) {
+        return config['sorts'];
+    }
 
-	static applySorts(config) {
-		return config["sorts"]
-	}
+    async convert(data, {client, parent_id}) {
+        const ret = [];
 
-	async convert(data, {client, parent_id}) {
-		const ret = []
-		
-		let filter = ANDFilter.of(RelationFilter.Contains(this.relation_property_name, parent_id), this.filter).build()
-		let sorts = this.sorts ? this.sorts.build() : undefined
+        let filter = ANDFilter.of(
+            RelationFilter.Contains(this.relation_property_name, parent_id),
+            this.filter,
+        ).build();
+        let sorts = this.sorts ? this.sorts.build() : undefined;
 
-		const response = client.queryDatabase(this.database_id, filter, sorts, undefined, undefined)
-		
-		for await(let {results} of response) {
-			for (let page of results) {
-				ret.push(await this.scheme.convert(page, {client}))
-			}
-		}
+        const response = client.queryDatabase(
+            this.database_id,
+            filter,
+            sorts,
+            undefined,
+            undefined,
+        );
 
-		return ret
-	}
-}
+        for await (let {results} of response) {
+            for (let page of results) {
+                ret.push(await this.scheme.convert(page, {client}));
+            }
+        }
+
+        return ret;
+    }
+};

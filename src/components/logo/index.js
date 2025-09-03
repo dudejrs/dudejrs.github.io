@@ -1,4 +1,4 @@
-import TistoryLogo from './tistory'
-import GithubLogo from './github'
+import TistoryLogo from './tistory';
+import GithubLogo from './github';
 
-export {TistoryLogo, GithubLogo}
+export {TistoryLogo, GithubLogo};

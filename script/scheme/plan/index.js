@@ -1,4 +1,4 @@
-const PlanScheme =  require('./plan')
-const PlanTagsScheme = require('./tags')
+const PlanScheme = require('./plan');
+const PlanTagsScheme = require('./tags');
 
-module.exports = {PlanScheme, PlanTagsScheme}
+module.exports = {PlanScheme, PlanTagsScheme};

@@ -1,4 +1,4 @@
-const ExperienceProjectScheme = require('./project')
-const ExperiencePracticeScheme = require('./practice')
+const ExperienceProjectScheme = require('./project');
+const ExperiencePracticeScheme = require('./practice');
 
-module.exports = {ExperienceProjectScheme, ExperiencePracticeScheme}
+module.exports = {ExperienceProjectScheme, ExperiencePracticeScheme};

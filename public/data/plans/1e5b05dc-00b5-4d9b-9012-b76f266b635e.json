@@ -1,1 +1,53 @@
-{"id":"1e5b05dc-00b5-4d9b-9012-b76f266b635e","title":"[프로젝트] 포트폴리오 깃헙 페이지 만들기","Status":"Suspend","분류":"독서","Tag":["Frontend","Javascript","React","D3.js"],"기간":{"start":"2023-04-18T00:00:00.000+00:00","end":"2024-05-26T00:00:00.000+00:00"},"완료율":"56%","세부계획":[{"id":"aa070ece-273c-4c56-9050-82353e3a3ad6","세부계획":"(/info) Experience 대표 이미지 수정하기","Date":{"start":"2023-04-18","end":null},"진행상태":"Done","Done":true},{"id":"99ce6f84-ff82-46f2-928f-db81373d807a","세부계획":"(/info) info 페이지 컴포넌트화","Date":{"start":"2023-04-21","end":null},"진행상태":"Done","Done":true},{"id":"e398c96a-b1d4-4af6-a346-65f9ce09dbd1","세부계획":"(/info) Skills 각 프로그래밍 언어를 객관적 지표로 표현하기 초안","Date":{"start":"2023-04-24","end":null},"진행상태":"TODO","Done":false},{"id":"4a8e23b6-640d-46b1-a907-54d45d92fb8b","세부계획":"(/) 네비게이션바 만들기","Date":{"start":"2023-04-27","end":null},"진행상태":"Done","Done":true},{"id":"f6ba8cb2-d156-48b7-97b8-6202d28bec9d","세부계획":"(/info) Skills 각 스킬 태그들 색상 채도로 숙련도 표기하기","Date":{"start":"2023-04-28","end":null},"진행상태":"Done","Done":true},{"id":"5a9572e9-682e-4234-94e1-e038e2c91e46","세부계획":"(/) footer에 hits 넣기","Date":{"start":"2023-05-06","end":"2023-05-08"},"진행상태":"TODO","Done":false},{"id":"876eed99-1906-4439-a19e-83224d4a818b","세부계획":"(/cote) 코테 페이지 만들기","Date":{"start":"2023-11-26","end":null},"진행상태":"Done","Done":true},{"id":"d4bd4a51-de22-4329-9720-c97bad952230","세부계획":"(/cote) totalProblem, aggregationByCategories 저장하기","Date":{"start":"2024-02-06","end":"2024-02-17"},"진행상태":"Done","Done":true},{"id":"be32d601-84d0-4cd2-bd03-061766251479","세부계획":"(/info) 각 섹션 제목 툴팁 각 내용 설명","Date":{"start":"2024-02-06","end":"2024-02-07"},"진행상태":"Done","Done":true},{"id":"ff9ab361-6eb4-4d66-b4e6-d12a796a68e9","세부계획":"(/portfolio) 포트폴리오화 할 수 있는 페이지 만들기","Date":{"start":"2024-02-17","end":null},"진행상태":"Done","Done":true},{"id":"2ac9443b-dc9b-441c-b148-6c61ee2366a5","세부계획":"(/) activites 활동 표시하기 ","Date":{"start":"2024-05-13","end":"2024-05-26"},"진행상태":"Done","Done":true},{"id":"47487d24-f012-4b18-bb42-a7bdabcb74e6","세부계획":"(/info/skills) 각 프로그래밍 언어에 관련된 지표","Date":{},"진행상태":"TODO","Done":false},{"id":"dfda070c-85fc-42eb-ba62-9433bae6ab19","세부계획":"(/info) LoadMap에 전공 정보도 추가하기","Date":{},"진행상태":"TODO","Done":false},{"id":"71efeeb6-8196-4303-807f-f533270f40f0","세부계획":"(/info) Loadmap 업데이트 날짜 표시하기","Date":{},"진행상태":"Done","Done":true},{"id":"30d07cb5-456b-4ddd-913f-d0f064e6815b","세부계획":"(/projects) 깃헙 블로그 프로젝트 상세페이지 만들기","Date":{},"진행상태":"TODO","Done":false},{"id":"56cedbdc-919d-4759-8003-841a25a0e750","세부계획":"(/) 로딩 ui 만들기 ","Date":{},"진행상태":"TODO","Done":false},{"id":"0d3f15b2-cc4a-45c6-a1bb-368505a0a21d","세부계획":"(/info) Skills 코딩테스트 연습한것 지표로 표현하기","Date":{},"진행상태":"TODO","Done":false},{"id":"bee8b320-ff4e-4c2f-822a-378248483906","세부계획":"(/) 깃헙 블로그 메인 화면 만들기","Date":{},"진행상태":"TODO","Done":false}]}
+{
+    "id": "1e5b05dc-00b5-4d9b-9012-b76f266b635e",
+    "title": "[프로젝트] 포트폴리오 깃헙 페이지 만들기",
+    "Status": "Suspend",
+    "분류": "독서",
+    "Tag": ["Frontend", "Javascript", "React", "D3.js"],
+    "기간": {"start": "2023-04-18T00:00:00.000+00:00", "end": "2024-05-26T00:00:00.000+00:00"},
+    "완료율": "56%",
+    "세부계획": [
+        {"id": "aa070ece-273c-4c56-9050-82353e3a3ad6", "세부계획": "(/info) Experience 대표 이미지 수정하기", "Date": {"start": "2023-04-18", "end": null}, "진행상태": "Done", "Done": true},
+        {"id": "99ce6f84-ff82-46f2-928f-db81373d807a", "세부계획": "(/info) info 페이지 컴포넌트화", "Date": {"start": "2023-04-21", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "e398c96a-b1d4-4af6-a346-65f9ce09dbd1",
+            "세부계획": "(/info) Skills 각 프로그래밍 언어를 객관적 지표로 표현하기 초안",
+            "Date": {"start": "2023-04-24", "end": null},
+            "진행상태": "TODO",
+            "Done": false
+        },
+        {"id": "4a8e23b6-640d-46b1-a907-54d45d92fb8b", "세부계획": "(/) 네비게이션바 만들기", "Date": {"start": "2023-04-27", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "f6ba8cb2-d156-48b7-97b8-6202d28bec9d",
+            "세부계획": "(/info) Skills 각 스킬 태그들 색상 채도로 숙련도 표기하기",
+            "Date": {"start": "2023-04-28", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "5a9572e9-682e-4234-94e1-e038e2c91e46", "세부계획": "(/) footer에 hits 넣기", "Date": {"start": "2023-05-06", "end": "2023-05-08"}, "진행상태": "TODO", "Done": false},
+        {"id": "876eed99-1906-4439-a19e-83224d4a818b", "세부계획": "(/cote) 코테 페이지 만들기", "Date": {"start": "2023-11-26", "end": null}, "진행상태": "Done", "Done": true},
+        {
+            "id": "d4bd4a51-de22-4329-9720-c97bad952230",
+            "세부계획": "(/cote) totalProblem, aggregationByCategories 저장하기",
+            "Date": {"start": "2024-02-06", "end": "2024-02-17"},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "be32d601-84d0-4cd2-bd03-061766251479", "세부계획": "(/info) 각 섹션 제목 툴팁 각 내용 설명", "Date": {"start": "2024-02-06", "end": "2024-02-07"}, "진행상태": "Done", "Done": true},
+        {
+            "id": "ff9ab361-6eb4-4d66-b4e6-d12a796a68e9",
+            "세부계획": "(/portfolio) 포트폴리오화 할 수 있는 페이지 만들기",
+            "Date": {"start": "2024-02-17", "end": null},
+            "진행상태": "Done",
+            "Done": true
+        },
+        {"id": "2ac9443b-dc9b-441c-b148-6c61ee2366a5", "세부계획": "(/) activites 활동 표시하기 ", "Date": {"start": "2024-05-13", "end": "2024-05-26"}, "진행상태": "Done", "Done": true},
+        {"id": "47487d24-f012-4b18-bb42-a7bdabcb74e6", "세부계획": "(/info/skills) 각 프로그래밍 언어에 관련된 지표", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "dfda070c-85fc-42eb-ba62-9433bae6ab19", "세부계획": "(/info) LoadMap에 전공 정보도 추가하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "71efeeb6-8196-4303-807f-f533270f40f0", "세부계획": "(/info) Loadmap 업데이트 날짜 표시하기", "Date": {}, "진행상태": "Done", "Done": true},
+        {"id": "30d07cb5-456b-4ddd-913f-d0f064e6815b", "세부계획": "(/projects) 깃헙 블로그 프로젝트 상세페이지 만들기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "56cedbdc-919d-4759-8003-841a25a0e750", "세부계획": "(/) 로딩 ui 만들기 ", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "0d3f15b2-cc4a-45c6-a1bb-368505a0a21d", "세부계획": "(/info) Skills 코딩테스트 연습한것 지표로 표현하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "bee8b320-ff4e-4c2f-822a-378248483906", "세부계획": "(/) 깃헙 블로그 메인 화면 만들기", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

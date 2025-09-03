@@ -1,95 +1,91 @@
 .icon {
-	width: 0rem;
-	height: 0rem;
-	
-	position: absolute;
-	top: 1rem;
+    width: 0rem;
+    height: 0rem;
 
-	right: 1rem;
-	z-index: 2;
-	opacity: 0;
+    position: absolute;
+    top: 1rem;
+
+    right: 1rem;
+    z-index: 2;
+    opacity: 0;
 }
-
-
 
 .container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.container:hover > img:first-child{
-	width: 2rem;
-	height: 2rem;
-	opacity: 0.5;
-	transition: ease-in 0.5s;
-	transition-property: opacity;
+.container:hover > img:first-child {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.5;
+    transition: ease-in 0.5s;
+    transition-property: opacity;
 }
-.container:hover > img:first-child:hover{
-	width: 2.5rem;
-	height: 2.5rem;
-	opacity: 1;
-	transition: ease-in 0.3s;
-}
-
-.img{
-	object-fit: cover;
-
+.container:hover > img:first-child:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 1;
+    transition: ease-in 0.3s;
 }
 
-.content{
-	padding: 4rem 1.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	flex-grow: 3;
-}
-.title{
-	font-weight: bold;
-	text-decoration: none;
+.img {
+    object-fit: cover;
 }
 
-.title > a{
-	text-decoration: none;
-	color: inherit;
+.content {
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 3;
+}
+.title {
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.title > a:hover{
-	text-decoration: none;
-	color: red;
+.title > a {
+    text-decoration: none;
+    color: inherit;
 }
 
+.title > a:hover {
+    text-decoration: none;
+    color: red;
+}
 
 .description {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	flex-grow: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 0.5;
 
-	max-height: 9.6rem;
-	overflow: hidden;
+    max-height: 9.6rem;
+    overflow: hidden;
 }
 
-.description > p{
-	font-size : 0.8rem;
-	text-overflow: ellipsis;
-	overflow: hidden;
+.description > p {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .tags {
-	height: fit-content;
-	font-size: 0.8em;
-	display: flex;
-	justify-content: center;
+    height: fit-content;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
 }
 .tags > * {
-	margin : 0.2rem;
-	height: 1rem;
+    margin: 0.2rem;
+    height: 1rem;
 }
 
 .term {
-	color : #888;
-	font-weight: bold;
-	font-size: 0.8rem;
-	margin-bottom: 0.2rem;
+    color: #888;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
 }

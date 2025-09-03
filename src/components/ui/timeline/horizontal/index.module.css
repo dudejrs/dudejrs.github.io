@@ -1,32 +1,32 @@
 .container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .itemContainer {
-	position: relative;
+    position: relative;
 }
 
 .item {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 
 .center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform: translateX(-50%);
 }
 
 .upper {
-	justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 .lower {
-	justify-content: flex-end;
+    justify-content: flex-end;
 }

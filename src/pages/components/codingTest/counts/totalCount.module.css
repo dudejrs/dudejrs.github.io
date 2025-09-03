@@ -1,6 +1,5 @@
-.totalContainerItem{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-
+.totalContainerItem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

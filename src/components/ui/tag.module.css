@@ -1,12 +1,11 @@
-.tag{
-	display: inline-block;
-	width:  fit-content;
-	height: fit-content;
-	color: white;
-	font-weight: bold;
-	padding: 0.2rem;
-	border-radius: 0.4em;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+.tag {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-weight: bold;
+    padding: 0.2rem;
+    border-radius: 0.4em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-

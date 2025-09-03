@@ -5,37 +5,48 @@ import TableHeaderComponent from './tableHeaderComponent';
 import styles from './tableHeader.module.css';
 import tableStyles from './table.module.css';
 
+export default function TableHeader({
+    columns,
+    types,
+    widths,
+    setWidthByIndex,
+    lineStyle,
+}) {
+    const [draged, setDragged] = useState(false);
 
-export default function TableHeader({columns, types, widths, setWidthByIndex, lineStyle}){
+    const onDrag = useCallback((e, index) => {
+        let start = e.target.parentElement.getBoundingClientRect().x;
 
-	const [draged, setDragged] = useState(false);
+        setDragged(true);
+        setWidthByIndex(index, e.clientX - start);
+    });
 
+    const onDragLeave = useCallback(e => {
+        console.log('a');
+    });
 
-	const onDrag = useCallback((e, index)=>{	
+    return (
+        <div className={tableStyles.row} style={{borderBottom: `${lineStyle}`}}>
+            <label className={tableStyles.label}></label>
 
-		let start = e.target.parentElement.getBoundingClientRect().x
+            {Array(columns.length)
+                .fill(1)
+                .map((_, i) => {
+                    return (
+                        <TableHeaderComponent
+                            name={columns[i]}
+                            type={types[i]}
+                            width={widths[i]}
+                            key={i}
+                            index={i}
+                            onDrag={onDrag}
+                            onDragLeave={onDragLeave}
+                            lineStyle={lineStyle}
+                        />
+                    );
+                })}
 
-		setDragged(true);
-		setWidthByIndex(index,e.clientX - start);	
-	});
-
-	const onDragLeave = useCallback((e)=> {
-		console.log('a');
-	});
-
-
-
-	return(<div className={tableStyles.row} style={{borderBottom : `${lineStyle}`}}>
-					<label className={tableStyles.label}>
-					</label>
-
-					{
-						Array(columns.length).fill(1).map((_,i)=> {
-							return (<TableHeaderComponent name={columns[i]} type={types[i]} width={widths[i]} key={i} index={i} onDrag={onDrag} onDragLeave={onDragLeave} lineStyle={lineStyle}/>);
-						})
-					}
-
-					<label className={tableStyles.label}>
-					</label>
-				</div>);
+            <label className={tableStyles.label}></label>
+        </div>
+    );
 }

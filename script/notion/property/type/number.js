@@ -1,17 +1,17 @@
-const Type = require('./type')
+const Type = require('./type');
 
 module.exports = class Number extends Type {
-	constructor(name = "number") {
-		super(name)
-	}
+    constructor(name = 'number') {
+        super(name);
+    }
 
-	convert(data) {
-		return data[this.name]
-	}
+    convert(data) {
+        return data[this.name];
+    }
 
-	build(value) {
-		return {
-			[this.name] : value
-		}
-	}
-}
+    build(value) {
+        return {
+            [this.name]: value,
+        };
+    }
+};

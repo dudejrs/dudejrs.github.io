@@ -1,42 +1,42 @@
 .container {
-	box-sizing: content-box;
-	font-size : 0.9em;
-	color: rgb(102, 102, 102);
+    box-sizing: content-box;
+    font-size: 0.9em;
+    color: rgb(102, 102, 102);
 }
 
 .container h4 {
-	color: rgb(102, 102, 102);
-	font-weight: bold;
-	text-overflow: ellipsis;
-	font-size: 0.8em;
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+    text-overflow: ellipsis;
+    font-size: 0.8em;
 }
 
 .container * {
-	margin: 0.2rem 0.2rem;
-	align-items: center;
+    margin: 0.2rem 0.2rem;
+    align-items: center;
 }
 
-.container.vertical {	
-	width : 100%;
+.container.vertical {
+    width: 100%;
 }
 
 .subcontainer {
-	display: flex;
-	color: #aaa;
-	justify-content: space-between;
+    display: flex;
+    color: #aaa;
+    justify-content: space-between;
 }
 
 .subcontainer .horizontal {
-	flex-wrap : wrap;
+    flex-wrap: wrap;
 }
 
 .taglist {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	font-size: 0.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8em;
 }
 .tag {
-	margin-right: 0.2em;
-	font-size : 0.8em;
+    margin-right: 0.2em;
+    font-size: 0.8em;
 }

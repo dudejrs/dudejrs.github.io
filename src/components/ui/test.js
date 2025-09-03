@@ -1,4 +1,3 @@
-
-export default function() {
-	return (<div> Test </div>);
+export default function () {
+    return <div> Test </div>;
 }

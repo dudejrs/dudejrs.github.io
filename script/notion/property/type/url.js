@@ -1,11 +1,11 @@
-const TYpe = require('./type')
+const TYpe = require('./type');
 
 module.exports = class URL extends TYpe {
-	constructor(name="url") {
-		super(name)
-	}
+    constructor(name = 'url') {
+        super(name);
+    }
 
-	convert(data) {
-		return data[this.name]
-	}
-}
+    convert(data) {
+        return data[this.name];
+    }
+};

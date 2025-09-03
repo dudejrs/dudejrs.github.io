@@ -2,17 +2,17 @@
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .item {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	font-weight: bold;
-	margin: 0.4em 0 ;
-	justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    margin: 0.4em 0;
+    justify-content: center;
 }

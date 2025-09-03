@@ -1,32 +1,31 @@
-const Scheme = require('./scheme')
-const PageScheme = require('./page')
+const Scheme = require('./scheme');
+const PageScheme = require('./page');
 
+module.exports = class DatabaseScheme extends Scheme {
+    constructor(name, config) {
+        super(name, config);
+        this.scheme = DatabaseScheme.applyPageScheme(config);
+    }
 
-module.exports = class DatabaseScheme extends Scheme{
-	constructor(name, config){
-		super(name, config)
-		this.scheme = DatabaseScheme.applyPageScheme(config)
-	}
+    static applyPageScheme(config) {
+        if (!(config['scheme'] instanceof PageScheme)) {
+            throw new Error('DatabaseScheme must have PageScheme');
+        }
 
-	static applyPageScheme(config) {
-		if(!(config["scheme"] instanceof PageScheme)) {
-			throw new Error("DatabaseScheme must have PageScheme")
-		}
+        return config['scheme'];
+    }
 
-		return config["scheme"] 
-	} 
+    async convert(data, {client}) {
+        const ret = [];
 
-	async convert(data, {client}) {
-		const ret = []
+        for await (let page of data) {
+            let d = await this.scheme.convert(page, {client});
 
-		for await(let page of data) {
-			let d = await this.scheme.convert(page, {client})
-			
-			if (!Scheme.isFalsy(d)) {
-				ret.push(d)
-			}
-		}
+            if (!Scheme.isFalsy(d)) {
+                ret.push(d);
+            }
+        }
 
-		return ret
-	}
-}
+        return ret;
+    }
+};

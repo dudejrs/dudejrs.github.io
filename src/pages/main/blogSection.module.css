@@ -1,19 +1,16 @@
-
 .container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.item{
-	display: flex;
-	flex-direction: column;
-	
-	width: 12rem;
-	height: 12rem;
-	overflow: hidden;
+.item {
+    display: flex;
+    flex-direction: column;
 
-	position: relative;
+    width: 12rem;
+    height: 12rem;
+    overflow: hidden;
 
-
+    position: relative;
 }

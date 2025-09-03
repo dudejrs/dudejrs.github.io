@@ -1,20 +1,20 @@
 .container {
-	display: flex;
-	flex-direction: row;
-	overflow-x: scroll;
-	-ms-overflow-style: none;  /* IE and Edge */
-  	scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 .wrap {
-	flex-wrap: wrap;
-	align-content: center;
-	row-gap : 0.2rem;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 0.2rem;
 }
 
 .container:-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .multiselect_item {
-	margin-right: 0.2rem;
+    margin-right: 0.2rem;
 }

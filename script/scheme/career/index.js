@@ -1,3 +1,3 @@
-const CareerScheme = require('./career')
+const CareerScheme = require('./career');
 
-module.exports = {CareerScheme}
+module.exports = {CareerScheme};

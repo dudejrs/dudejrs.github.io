@@ -1,59 +1,57 @@
-.trackline{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	list-style: none;
+.trackline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
 }
 .track {
-	margin-right: 2.5rem;
-	display: flex;
-	flex-direction: column;
-	text-decoration: none;
-	align-items: center;
-	justify-content: center;
+    margin-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
 }
 .trackName {
-	color : #eee;
-	font-weight: bold;
-	text-align: center;
+    color: #eee;
+    font-weight: bold;
+    text-align: center;
 }
-.trackName:hover{
-	color: blue;
+.trackName:hover {
+    color: blue;
 }
-.trackImg{
-	width: 5em;
+.trackImg {
+    width: 5em;
 }
-.track_title{
-	width: 5rem;
-	border:  #ddd solid 1px;
-	padding: 0.5rem;
-	border-radius: 0.5rem;
+.track_title {
+    width: 5rem;
+    border: #ddd solid 1px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 
-	font-weight: bold;
-	color: black;
-	text-align: center;
-
+    font-weight: bold;
+    color: black;
+    text-align: center;
 }
 .empty_track {
-
 }
 .folder {
-	position: relative;
+    position: relative;
 }
 .badge {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	position: absolute;
-	top: 0.3rem;
-	right: -0.3rem;
+    position: absolute;
+    top: 0.3rem;
+    right: -0.3rem;
 
-	min-width: 1.2rem;
-	min-height: 1.2rem;
-	border-radius: 0.6rem;
-	text-align: center;
+    min-width: 1.2rem;
+    min-height: 1.2rem;
+    border-radius: 0.6rem;
+    text-align: center;
 
-	background-color: rgba(0, 0, 0, 0.35);
-	color: white;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
 }

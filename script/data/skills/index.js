@@ -1,3 +1,3 @@
-const fetchSkillMap = require('./fetchSkillMap')
+const fetchSkillMap = require('./fetchSkillMap');
 
-module.exports = {fetchSkillMap}
+module.exports = {fetchSkillMap};

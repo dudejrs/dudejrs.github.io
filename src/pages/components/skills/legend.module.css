@@ -1,15 +1,15 @@
 .picker {
-	width: 0.8em;
-	height: 0.8em;
-	border-radius: 0.4em;
-	margin: 0 0.4em 0 0.2em;
-	background-color: red;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 0.4em;
+    margin: 0 0.4em 0 0.2em;
+    background-color: red;
 }
 
 .item {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	font-weight: bold;
-	margin: 0.4em 0 ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    margin: 0.4em 0;
 }

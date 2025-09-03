@@ -1,16 +1,16 @@
-.container{
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translate(50%, -50%);
-	transition: ease-in 0.5s;
+.container {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    transition: ease-in 0.5s;
 }
 
 .container:hover {
-	transform: scale(1.2, 1.2) translate(50%, -50%);
-	transition: ease-in 0.5s;
+    transform: scale(1.2, 1.2) translate(50%, -50%);
+    transition: ease-in 0.5s;
 }
-.icon {	
-/*	filter : drop-shadow(0 0 20px rgba(200, 200, 200, 0.5));*/
+.icon {
+    /*	filter : drop-shadow(0 0 20px rgba(200, 200, 200, 0.5));*/
 }

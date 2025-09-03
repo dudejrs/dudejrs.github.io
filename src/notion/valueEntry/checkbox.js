@@ -1,8 +1,5 @@
-import { Checkbox } from '../../components'
+import {Checkbox} from '../../components';
 
-
-export default function CheckboxWrapper({data}){
-	return (
-		<Checkbox value={data} />
-	);
+export default function CheckboxWrapper({data}) {
+    return <Checkbox value={data} />;
 }

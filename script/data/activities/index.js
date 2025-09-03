@@ -1,4 +1,4 @@
-const fetchActivitiesPerQuarter = require('./fetchActivitiesPerQuarter')
-const fetchActivitiesPerMonth = require('./fetchActivitiesPerMonth')
+const fetchActivitiesPerQuarter = require('./fetchActivitiesPerQuarter');
+const fetchActivitiesPerMonth = require('./fetchActivitiesPerMonth');
 
-module.exports = {fetchActivitiesPerQuarter, fetchActivitiesPerMonth}
+module.exports = {fetchActivitiesPerQuarter, fetchActivitiesPerMonth};

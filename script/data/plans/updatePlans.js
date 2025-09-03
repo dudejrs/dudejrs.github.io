@@ -1,54 +1,59 @@
-const {readFileSync, writeFileSync} = require('fs')
+const {readFileSync, writeFileSync} = require('fs');
 
-const {DirectoryJob, DatabaseJob} = require('../../job')
-const {PlanScheme} = require('../../scheme/plan')
-const {TimestampFilter} = require('../../notion/filter')
-const {TimestampSort} = require('../../notion/sort')
+const {DirectoryJob, DatabaseJob} = require('../../job');
+const {PlanScheme} = require('../../scheme/plan');
+const {TimestampFilter} = require('../../notion/filter');
+const {TimestampSort} = require('../../notion/sort');
 
-const {writeMetaData} = require('../../util')
+const {writeMetaData} = require('../../util');
 
+async function fetchPlans({path, client}) {
+    const {updated} = JSON.parse(
+        await readFileSync(`${path}/meta.json`, {encoding: 'utf-8'}),
+    );
 
-async function fetchPlans({path, client}){
+    async function fetch() {
+        let ret = [];
+        const data = client.queryDatabase(
+            process.env.NOTION_PLAN_DATABASE_ID,
+            TimestampFilter.LastEditedTime('after', updated).build(),
+            TimestampSort.LastEditedTimeDescending().build(),
+        );
 
-	const {updated} = JSON.parse(await readFileSync(`${path}/meta.json`, {encoding : 'utf-8'}))
+        for await (let {results} of data) {
+            if (results && Array.isArray(results)) {
+                for (page of results) {
+                    let p = await PlanScheme.convert(page, {client});
+                    await save(p);
+                }
+            }
+        }
+    }
 
-	async function fetch() {
-		let ret  = []
-		const data = client.queryDatabase(process.env.NOTION_PLAN_DATABASE_ID, TimestampFilter.LastEditedTime("after", updated).build(), TimestampSort.LastEditedTimeDescending().build())
+    async function save(page) {
+        if (!page || !page.id) {
+            throw new Error('Invalid page');
+        }
 
-		for await (let {results} of data) {
-			if (results && Array.isArray(results)) {
-				for (page of results) {
-					let p = await PlanScheme.convert(page, {client})
-					await save(p)
-				}
-			}
-		}
-	}
+        writeFileSync(`${path}/${page.id}.json`, JSON.stringify(page), {
+            encoding: 'utf-8',
+        });
+    }
 
-	async function save(page) {
-		if (!page || !page.id){
-			throw new Error("Invalid page")
-		}
+    const myJob = new DatabaseJob({
+        name: 'plans를 fetch',
+        path: path,
+        exec: fetch,
+    });
 
-		writeFileSync(`${path}/${page.id}.json`, JSON.stringify(page), {encoding : 'utf-8'})
-	}
+    await myJob.exec();
 
-	const myJob	= new DatabaseJob({
-		name : 'plans를 fetch',
-		path : path,
-		exec : fetch
-	})
-
-	await myJob.exec()
-
-	writeMetaData(path)
+    writeMetaData(path);
 }
 
 module.exports = new DirectoryJob({
-		name: 'plans를 fetch',
-		path: `${process.env.PWD}/public/data/plans`,
-		exec: fetchPlans,
-		handleError: console.log
-
-})
+    name: 'plans를 fetch',
+    path: `${process.env.PWD}/public/data/plans`,
+    exec: fetchPlans,
+    handleError: console.log,
+});

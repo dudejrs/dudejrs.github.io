@@ -1,70 +1,70 @@
-.container{	
-	position: relative;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-	justify-content: space-between;
-	align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 .carousell {
-	width: 100%;
-	height: 50vh;
-	background-color: #efefef;
+    width: 100%;
+    height: 50vh;
+    background-color: #efefef;
 }
 
 .githubStats {
-	overflow-x: scroll;
+    overflow-x: scroll;
 }
 
-.githubStats > img{
-	min-width: 500px;
-	width : 50%;
+.githubStats > img {
+    min-width: 500px;
+    width: 50%;
 }
 
 .tab {
-	position: absolute;
-	display: flex;
-	top : 80px;
-	right: 20%;
-	flex-direction: row;
-	border-bottom: 2px solid rgba(100,100,100,0.1);
+    position: absolute;
+    display: flex;
+    top: 80px;
+    right: 20%;
+    flex-direction: row;
+    border-bottom: 2px solid rgba(100, 100, 100, 0.1);
 }
 
 .tab > div {
-	cursor: pointer;
-	width: 3rem;
-	text-align: center;
-	font-weight: 700;
-	padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    width: 3rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 0.3rem 0.5rem;
 }
 
 .active {
-	color: red;
-	border-bottom: 2px solid red !important;
-	box-shadow: 0 10px 10px 0px rgba(230,0,0,0.05) !important;
+    color: red;
+    border-bottom: 2px solid red !important;
+    box-shadow: 0 10px 10px 0px rgba(230, 0, 0, 0.05) !important;
 }
 .deactive {
-	color : #999;
+    color: #999;
 }
 
 .title {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .title > div {
-	margin-left : 0.3rem;
-	font-size: 0.9rem;
-	text-align: center;
-	z-index: 2;
+    margin-left: 0.3rem;
+    font-size: 0.9rem;
+    text-align: center;
+    z-index: 2;
 }
 
 .tooltipContent {
-	display: flex;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }

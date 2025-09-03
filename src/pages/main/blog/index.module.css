@@ -1,28 +1,26 @@
-.container{
-	display: flex;
+.container {
+    display: flex;
 
-	flex-direction: column;
-	justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
 
-	min-width: 10rem;
+    min-width: 10rem;
 }
 
 .title {
-
-	font-weight: bolder;
-	color: #555555;
+    font-weight: bolder;
+    color: #555555;
 }
 
-.content{
-	display: block;
-	overflow: hidden;
+.content {
+    display: block;
+    overflow: hidden;
 
-	white-space: normal;
-	text-overflow: ellipsis;
-	line-height: 1.2rem;
-	height: 6rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    line-height: 1.2rem;
+    height: 6rem;
 }
 
 .date {
-
 }

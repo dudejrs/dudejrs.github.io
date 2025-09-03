@@ -1,4 +1,4 @@
-const fetchCategories = require('./fetchCategories')
-const calculateCount = require('./calculateCount')
+const fetchCategories = require('./fetchCategories');
+const calculateCount = require('./calculateCount');
 
-module.exports={fetchCategories, calculateCount}
+module.exports = {fetchCategories, calculateCount};

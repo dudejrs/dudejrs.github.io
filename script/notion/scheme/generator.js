@@ -1,22 +1,22 @@
-const Scheme = require('./scheme')
+const Scheme = require('./scheme');
 
 module.exports = class GeneratorScheme extends Scheme {
-	constructor(name, generateScheme){
-		super(name, {})
-		this.generateScheme = generateScheme
-	}
+    constructor(name, generateScheme) {
+        super(name, {});
+        this.generateScheme = generateScheme;
+    }
 
-	async convert(data, args) {
-		const ret = {}
-		
-		for (let scheme of await this.generateScheme(args)) {
-			let d = await scheme.convert(data, args)
+    async convert(data, args) {
+        const ret = {};
 
-			if (!Scheme.isFalsy(d)) {
-				ret[scheme.name] = d
-			}
-		}
+        for (let scheme of await this.generateScheme(args)) {
+            let d = await scheme.convert(data, args);
 
-		return ret
-	}
-}
+            if (!Scheme.isFalsy(d)) {
+                ret[scheme.name] = d;
+            }
+        }
+
+        return ret;
+    }
+};

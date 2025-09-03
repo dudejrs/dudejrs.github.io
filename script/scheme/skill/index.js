@@ -1,3 +1,3 @@
-const SkillShort = require("./short")
+const SkillShort = require('./short');
 
-module.exports = {SkillShort}
+module.exports = {SkillShort};

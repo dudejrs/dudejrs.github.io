@@ -1,3 +1,3 @@
-const fetchCareers = require('./fetchCareers')
+const fetchCareers = require('./fetchCareers');
 
-module.exports = {fetchCareers}
+module.exports = {fetchCareers};

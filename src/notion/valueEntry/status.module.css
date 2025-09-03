@@ -1,22 +1,22 @@
 .circle {
-	margin-right: 0.2rem;
-	border-radius: 99px;
-	height: 8px;
-	width: 8px;
-	background-color: rgba(200, 200, 200, 0.5);
-	backdrop-filter: saturate(500%);
-	display: inline-flex;
-	flex-shrink: 0;
+    margin-right: 0.2rem;
+    border-radius: 99px;
+    height: 8px;
+    width: 8px;
+    background-color: rgba(200, 200, 200, 0.5);
+    backdrop-filter: saturate(500%);
+    display: inline-flex;
+    flex-shrink: 0;
 }
 
 .container {
-	color : white;
-	border-radius: 0.8rem;
-	padding: 0.3rem;
-	opacity: 80%;
-	width: fit-content;
+    color: white;
+    border-radius: 0.8rem;
+    padding: 0.3rem;
+    opacity: 80%;
+    width: fit-content;
 }
 
 .container span {
-	opacity: 100%;
+    opacity: 100%;
 }

@@ -1,13 +1,12 @@
-const Type = require('./type')
+const Type = require('./type');
 
 module.exports = class Rollup extends Type {
+    constructor(type, name = 'rollup') {
+        super(name);
+        this.type = type;
+    }
 
-	constructor(type, name = "rollup") {
-		super(name)
-		this.type = type
-	}
-
-	convert(data) {
-		return this.type.convert(data[this.name])
-	}
-}
+    convert(data) {
+        return this.type.convert(data[this.name]);
+    }
+};

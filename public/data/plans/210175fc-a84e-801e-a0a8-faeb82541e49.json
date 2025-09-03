@@ -1,1 +1,19 @@
-{"id":"210175fc-a84e-801e-a0a8-faeb82541e49","title":"[독서] 쉽게 시작하는 Next.js 완독","Status":"Not started","분류":"","Tag":["Next.js"],"기간":{},"완료율":"0%","세부계획":[{"id":"210175fc-a84e-8039-b193-dba0c7d46f4a","세부계획":"[Next.js] 8. OpenAI 이용하기 ","Date":{},"진행상태":"TODO","Done":false},{"id":"210175fc-a84e-80a4-ab24-ec82b50f4608","세부계획":"[Next.js] 7. API 작성과 이용","Date":{},"진행상태":"TODO","Done":false},{"id":"210175fc-a84e-80a0-9b28-c2866802fb9a","세부계획":"[Next.js] 6. 데이터 액세스","Date":{},"진행상태":"TODO","Done":false},{"id":"210175fc-a84e-80c2-8ef8-f04ce57a36e1","세부계획":"[Next.js] 5. 페이지 렌더링","Date":{},"진행상태":"TODO","Done":false},{"id":"210175fc-a84e-8058-b590-d47ef0afb857","세부계획":"[Next.js] 4. 페이지 라우터 애플리케이션","Date":{},"진행상태":"TODO","Done":false},{"id":"210175fc-a84e-8001-bc16-fa1170493ba9","세부계획":"[Next.js] 3. Next.js 페이지 만들기","Date":{},"진행상태":"TODO","Done":false},{"id":"210175fc-a84e-80be-99b4-e327cf0cd889","세부계획":"[Next.js] 2. 리액트 컴포넌트 학습","Date":{},"진행상태":"TODO","Done":false},{"id":"210175fc-a84e-805b-ade2-dcbd1365d4af","세부계획":"[Next.js] 1. Next.js 기초지식","Date":{},"진행상태":"TODO","Done":false}]}
+{
+    "id": "210175fc-a84e-801e-a0a8-faeb82541e49",
+    "title": "[독서] 쉽게 시작하는 Next.js 완독",
+    "Status": "Not started",
+    "분류": "",
+    "Tag": ["Next.js"],
+    "기간": {},
+    "완료율": "0%",
+    "세부계획": [
+        {"id": "210175fc-a84e-8039-b193-dba0c7d46f4a", "세부계획": "[Next.js] 8. OpenAI 이용하기 ", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80a4-ab24-ec82b50f4608", "세부계획": "[Next.js] 7. API 작성과 이용", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80a0-9b28-c2866802fb9a", "세부계획": "[Next.js] 6. 데이터 액세스", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80c2-8ef8-f04ce57a36e1", "세부계획": "[Next.js] 5. 페이지 렌더링", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8058-b590-d47ef0afb857", "세부계획": "[Next.js] 4. 페이지 라우터 애플리케이션", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-8001-bc16-fa1170493ba9", "세부계획": "[Next.js] 3. Next.js 페이지 만들기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-80be-99b4-e327cf0cd889", "세부계획": "[Next.js] 2. 리액트 컴포넌트 학습", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "210175fc-a84e-805b-ade2-dcbd1365d4af", "세부계획": "[Next.js] 1. Next.js 기초지식", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

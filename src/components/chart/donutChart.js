@@ -1,37 +1,45 @@
+import * as d3 from 'd3';
 
-import * as d3 from "d3";
+export default function ({
+    className,
+    children,
+    data,
+    width,
+    height,
+    radius,
+    colors,
+    colorFunc,
+    ratio = 0.67,
+}) {
+    if (!colors && !colorFunc) {
+        colorFunc = d3.scaleOrdinal(d3.schemeTableau10);
+    }
 
+    if (colors && !colorFunc) {
+        colorFunc = i => {
+            return colors[i];
+        };
+    }
 
-export default function({className, children, data, width, height, radius, colors, colorFunc, ratio= 0.67}){
-	
-	if (!colors && !colorFunc){
-		colorFunc = d3.scaleOrdinal(d3.schemeTableau10)
-	}
+    const arc = d3
+        .arc()
+        .innerRadius(radius * ratio)
+        .outerRadius(radius);
 
-	if(colors && !colorFunc){
-		colorFunc = (i)=>{
-			return colors[i]
-		}
-	}
+    const pie = d3
+        .pie()
+        .padAngle((3 * 1) / radius)
+        .sort(null);
 
-	const arc = d3.arc()
-				.innerRadius(radius * ratio)
-				.outerRadius(radius);
+    return (
+        <svg className={`${className}`} width={width} height={height}>
+            <g transform={`translate(${width / 2}, ${height / 2})`}>
+                {pie(data).map((d, i) => (
+                    <path key={i} fill={colorFunc(i)} d={arc(d)} />
+                ))}
+            </g>
 
-	const pie = d3.pie()
-				.padAngle(3*1/radius)
-				.sort(null)
-
-
-	return (
-		<svg className={`${className}`} width={width} height={height}>
-			<g transform={`translate(${width/2}, ${height/2})`} >
-				{
-					pie(data).map((d,i) => (<path key={i} fill={colorFunc(i)}  d={arc(d)} />))
-				}
-			</g>
-
-			{children}
-		</svg>
-	);
+            {children}
+        </svg>
+    );
 }

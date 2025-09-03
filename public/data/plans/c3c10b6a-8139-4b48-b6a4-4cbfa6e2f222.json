@@ -1,1 +1,26 @@
-{"id":"c3c10b6a-8139-4b48-b6a4-4cbfa6e2f222","title":"[독서] 함수형 반응형 프로그래밍 완독","Status":"Not started","분류":"","Tag":["Javascript","Basic","FP"],"기간":{},"완료율":null,"세부계획":[{"id":"86be85fc-5384-415d-b3ef-2e18a903ac9b","세부계획":"[FRP] 15. 앞으로의 방향","Date":{},"진행상태":"TODO","Done":false},{"id":"dd6ca27c-b33f-423d-8ae6-ceba8f9cf504","세부계획":"[FRP] 14. 기존 프로젝트에 FRP 추가하기","Date":{},"진행상태":"TODO","Done":false},{"id":"d0932929-1c67-43ae-badd-7d16d7cb8e92","세부계획":"[FRP] 13. 리팩토링","Date":{},"진행상태":"TODO","Done":false},{"id":"f9afa212-cec0-47d7-b4c0-69166bd92b01","세부계획":"[FRP] 12. 도우미와 패턴","Date":{},"진행상태":"TODO","Done":false},{"id":"799713e8-7f63-444e-a9a4-6c0699c2b706","세부계획":"[FRP] 11. 실전 프로그래밍","Date":{},"진행상태":"TODO","Done":false},{"id":"a40dd8f5-2769-4e48-b91b-66988c59c8d6","세부계획":"[FRP] 10. 패러다임 간의 전투","Date":{},"진행상태":"TODO","Done":false},{"id":"6c6891e9-2e31-4356-9175-95ef5e0358c0","세부계획":"[FRP] 9. 연속적인 시간","Date":{},"진행상태":"TODO","Done":false},{"id":"2a05b164-ea58-4eef-909a-c9df2d88dd75","세부계획":"[FRP] 8. 조작적인 기본 연산","Date":{},"진행상태":"TODO","Done":false},{"id":"ae93d93e-89fe-4773-9e4d-d746c837fc28","세부계획":"[FRP] 7. 스위치 연산","Date":{},"진행상태":"TODO","Done":false},{"id":"1c62e9c6-a20c-400b-803f-19a302d7dc50","세부계획":"[FRP] 6. 웹에서의 FRP","Date":{},"진행상태":"TODO","Done":false},{"id":"284afbe2-da4b-4777-bd0c-ead2507f3c2f","세부계획":"[FRP] 5. 새로운 개념","Date":{},"진행상태":"TODO","Done":false},{"id":"c6cc92b5-53a3-460b-b705-f2dc3430a419","세부계획":"[FRP] 4. 실제 애플리케이션 작성하기","Date":{},"진행상태":"TODO","Done":false},{"id":"9cdbc9a6-b82d-4ced-93cc-53a37e847d1e","세부계획":"[FRP] 3. 자주 쓰는 위젯 만들기","Date":{},"진행상태":"TODO","Done":false},{"id":"dc17d6f0-c285-4b02-bd6f-dc858ed9cd51","세부계획":"[FRP] 2. FRP의 핵심","Date":{},"진행상태":"TODO","Done":false},{"id":"ab31b04e-1791-47b6-9e58-181598c82ed0","세부계획":"[FRP] 1. 듣기를 멈추자","Date":{},"진행상태":"TODO","Done":false}]}
+{
+    "id": "c3c10b6a-8139-4b48-b6a4-4cbfa6e2f222",
+    "title": "[독서] 함수형 반응형 프로그래밍 완독",
+    "Status": "Not started",
+    "분류": "",
+    "Tag": ["Javascript", "Basic", "FP"],
+    "기간": {},
+    "완료율": null,
+    "세부계획": [
+        {"id": "86be85fc-5384-415d-b3ef-2e18a903ac9b", "세부계획": "[FRP] 15. 앞으로의 방향", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "dd6ca27c-b33f-423d-8ae6-ceba8f9cf504", "세부계획": "[FRP] 14. 기존 프로젝트에 FRP 추가하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "d0932929-1c67-43ae-badd-7d16d7cb8e92", "세부계획": "[FRP] 13. 리팩토링", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "f9afa212-cec0-47d7-b4c0-69166bd92b01", "세부계획": "[FRP] 12. 도우미와 패턴", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "799713e8-7f63-444e-a9a4-6c0699c2b706", "세부계획": "[FRP] 11. 실전 프로그래밍", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "a40dd8f5-2769-4e48-b91b-66988c59c8d6", "세부계획": "[FRP] 10. 패러다임 간의 전투", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "6c6891e9-2e31-4356-9175-95ef5e0358c0", "세부계획": "[FRP] 9. 연속적인 시간", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "2a05b164-ea58-4eef-909a-c9df2d88dd75", "세부계획": "[FRP] 8. 조작적인 기본 연산", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "ae93d93e-89fe-4773-9e4d-d746c837fc28", "세부계획": "[FRP] 7. 스위치 연산", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "1c62e9c6-a20c-400b-803f-19a302d7dc50", "세부계획": "[FRP] 6. 웹에서의 FRP", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "284afbe2-da4b-4777-bd0c-ead2507f3c2f", "세부계획": "[FRP] 5. 새로운 개념", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "c6cc92b5-53a3-460b-b705-f2dc3430a419", "세부계획": "[FRP] 4. 실제 애플리케이션 작성하기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "9cdbc9a6-b82d-4ced-93cc-53a37e847d1e", "세부계획": "[FRP] 3. 자주 쓰는 위젯 만들기", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "dc17d6f0-c285-4b02-bd6f-dc858ed9cd51", "세부계획": "[FRP] 2. FRP의 핵심", "Date": {}, "진행상태": "TODO", "Done": false},
+        {"id": "ab31b04e-1791-47b6-9e58-181598c82ed0", "세부계획": "[FRP] 1. 듣기를 멈추자", "Date": {}, "진행상태": "TODO", "Done": false}
+    ]
+}

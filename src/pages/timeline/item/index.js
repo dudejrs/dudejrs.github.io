@@ -1,6 +1,6 @@
-import AbbreviateItem from './abbreviate'
-import Item from './item'
+import AbbreviateItem from './abbreviate';
+import Item from './item';
 
-export {AbbreviateItem, Item}
+export {AbbreviateItem, Item};
 
-export default Item
+export default Item;

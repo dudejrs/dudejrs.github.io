@@ -1,32 +1,31 @@
 name: Test
-on: 
-  workflow_dispatch:
+on:
+    workflow_dispatch:
 jobs:
-  print-secret:
-    runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
+    print-secret:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with: 
-          token: ${{ secrets.GITHUB_TOKEN}}
+        permissions:
+            contents: write
 
-      - name: Set up Git user
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN}}
 
-      - name: Make changes
-        run: echo "New change $(date)" >> changes.txt  # changes.txt 파일에 새로운 내용 추가
+            - name: Set up Git user
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit changes
-        run: |
-          git add .
-          git commit -m "Automated commit - $(date)" || echo "No changes to commit"
+            - name: Make changes
+              run: echo "New change $(date)" >> changes.txt # changes.txt 파일에 새로운 내용 추가
 
-      - name: Push changes
-        run: git push
+            - name: Commit changes
+              run: |
+                  git add .
+                  git commit -m "Automated commit - $(date)" || echo "No changes to commit"
 
+            - name: Push changes
+              run: git push

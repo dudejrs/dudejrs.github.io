@@ -1,71 +1,75 @@
-const {cpSync, existsSync, rmSync, statSync} = require('fs')
-const Job = require('./job')
+const {cpSync, existsSync, rmSync, statSync} = require('fs');
+const Job = require('./job');
 
 module.exports = class FileJob extends Job {
-	
-	constructor({name,
-		path,
-		metaPath,
-		exec,
-		handleError,
-	 	initialize,
-		 finish, 
-		 children}
-		) {
-		super({name, exec, handleError, initialize, finish, children})
-		this.path = FileJob.applyPath(path)
-		this.metaPath = metaPath
-	}
+    constructor({
+        name,
+        path,
+        metaPath,
+        exec,
+        handleError,
+        initialize,
+        finish,
+        children,
+    }) {
+        super({name, exec, handleError, initialize, finish, children});
+        this.path = FileJob.applyPath(path);
+        this.metaPath = metaPath;
+    }
 
-	static applyPath(path) {
-		if (!path) {
-			throw new Error('path must be given')
-		}
+    static applyPath(path) {
+        if (!path) {
+            throw new Error('path must be given');
+        }
 
-		if (!existsSync(path) || !statSync(path).isFile()) {
-			throw new Error(`Not a Valid Path: ${path}`)
-		}
+        if (!existsSync(path) || !statSync(path).isFile()) {
+            throw new Error(`Not a Valid Path: ${path}`);
+        }
 
-		return path
-	}
+        return path;
+    }
 
-	#initialize(){
-		cpSync(this.path, this.tmpFile, { overwrite: true }) 
-		return 
-	}
+    #initialize() {
+        cpSync(this.path, this.tmpFile, {overwrite: true});
+        return;
+    }
 
-	#restore() {
-		cpSync(this.tmpFile, this.path, { overwrite: true }) 
-		return 		
-	}
+    #restore() {
+        cpSync(this.tmpFile, this.path, {overwrite: true});
+        return;
+    }
 
-	#finish() {
-		rmSync(this.tmpFile, {recursive: true})
-	}
+    #finish() {
+        rmSync(this.tmpFile, {recursive: true});
+    }
 
-	async exec(args) {
-		console.log(`[File Job] ${this.name} start`)
-		this.#initialize()
-		this.initialize()
-		try {
-			const d = await this._exec({path : this.path, metaPath : this.metaPath, ...args})
-			this.children.forEach(
-				async child => await child.exec({...args, ...d})	
-			)
-		} catch (e) {
-			this.handleError(e)
-			this.#restore()
-		} finally {
-			this.finish()
-			this.#finish()
-		}
-		console.log(`[File Job] ${this.name} finish`)
-	}
+    async exec(args) {
+        console.log(`[File Job] ${this.name} start`);
+        this.#initialize();
+        this.initialize();
+        try {
+            const d = await this._exec({
+                path: this.path,
+                metaPath: this.metaPath,
+                ...args,
+            });
+            this.children.forEach(
+                async child => await child.exec({...args, ...d}),
+            );
+        } catch (e) {
+            this.handleError(e);
+            this.#restore();
+        } finally {
+            this.finish();
+            this.#finish();
+        }
+        console.log(`[File Job] ${this.name} finish`);
+    }
 
-	get tmpFile() {
-		 const p = this.path.split("/")
-		 p[p.length - 1] = `_${p[p.length - 1]}`
+    get tmpFile() {
+        const p = this.path.split('/');
+        p[p.length - 1] = `_${p[p.length - 1]}`;
 
-		return p.join("/")
-	}
-}
+        return p.join('/');
+    }
+};

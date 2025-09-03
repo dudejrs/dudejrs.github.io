@@ -1,6 +1,4 @@
-import CurrentNodeSizeSensible from './currentNodeSizeSensible'
-import LayoutSensible from './layoutSensible'
+import CurrentNodeSizeSensible from './currentNodeSizeSensible';
+import LayoutSensible from './layoutSensible';
 
-export  {
-	CurrentNodeSizeSensible, LayoutSensible
-}
+export {CurrentNodeSizeSensible, LayoutSensible};

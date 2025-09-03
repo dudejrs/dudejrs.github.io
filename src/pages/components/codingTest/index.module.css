@@ -1,16 +1,14 @@
 .countContainer {
-	width: 15rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .subCountContainer {
-	width: 13rem;
-	padding: 0 0 0 2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
+    width: 13rem;
+    padding: 0 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-

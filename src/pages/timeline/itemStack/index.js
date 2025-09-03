@@ -1,9 +1,6 @@
-import AbbreviateItemStack from './abbreviate'
-import ItemStack from './itemStack'
+import AbbreviateItemStack from './abbreviate';
+import ItemStack from './itemStack';
 
+export {ItemStack, AbbreviateItemStack};
 
-export {
-	ItemStack, AbbreviateItemStack
-}
-
-export default ItemStack
+export default ItemStack;

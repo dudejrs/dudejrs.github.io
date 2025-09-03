@@ -1,15 +1,15 @@
 .container {
-	flex-direction: column;
+    flex-direction: column;
 }
 
 .legend {
-	width : 80%;
-	justify-content: space-around;
-	flex-direction: row !important;
-	flex-wrap : wrap;
+    width: 80%;
+    justify-content: space-around;
+    flex-direction: row !important;
+    flex-wrap: wrap;
 }
 
 .title {
-	margin : 0;
-	text-align: center;
+    margin: 0;
+    text-align: center;
 }
