@@ -1,3 +1,4 @@
+import React from "react";
 import Color from '../../../../components/color';
 
 import {SpiderChart} from '../../../../components/chart';
@@ -7,7 +8,7 @@ import Legend from './legend';
 
 import styles from './spiderChart.module.css';
 
-export default function ({
+export default function CodingTestSpiderChart({
     data,
     title,
     items,

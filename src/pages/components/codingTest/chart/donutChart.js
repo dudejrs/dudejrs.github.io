@@ -1,6 +1,4 @@
-import {useState, useEffect} from 'react';
-
-import {getTotalCountByProgrammingLanguages} from '../../../../domain/codingPractice';
+import React from 'react';
 
 import {DonutChart} from '../../../../components/chart';
 import Legend from './legend';
@@ -11,7 +9,7 @@ import Color from '../../../../components/color';
 import styles from './donutChart.module.css';
 
 function layoutChart(type, title, donut, legend) {
-    if (type == 'landscape') {
+    if (type === 'landscape') {
         return (
             <>
                 {title}
@@ -33,11 +31,11 @@ function layoutChart(type, title, donut, legend) {
 }
 
 function getLayout(layout) {
-    if (layout == 'landscape') return styles.landscape;
+    if (layout === 'landscape') return styles.landscape;
     return '';
 }
 
-export default function ({
+export default function CodingTestDonutChart ({
     width,
     height,
     legendHeight,
@@ -46,7 +44,6 @@ export default function ({
     items,
     title,
     rem = 0.4,
-    programmingLanguages,
     colors,
     key,
     layout = 'portrait',

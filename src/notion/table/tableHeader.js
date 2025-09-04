@@ -1,8 +1,7 @@
-import {useCallback, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import TableHeaderComponent from './tableHeaderComponent';
 
-import styles from './tableHeader.module.css';
 import tableStyles from './table.module.css';
 
 export default function TableHeader({
@@ -12,7 +11,7 @@ export default function TableHeader({
     setWidthByIndex,
     lineStyle,
 }) {
-    const [draged, setDragged] = useState(false);
+    const [_dragged, setDragged] = useState(false);
 
     const onDrag = useCallback((e, index) => {
         let start = e.target.parentElement.getBoundingClientRect().x;
@@ -21,7 +20,7 @@ export default function TableHeader({
         setWidthByIndex(index, e.clientX - start);
     });
 
-    const onDragLeave = useCallback(e => {
+    const onDragLeave = useCallback(() => {
         console.log('a');
     });
 

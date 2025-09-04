@@ -1,3 +1,4 @@
+import React from "react";
 import {useState, useEffect} from 'react';
 
 import {DropdownTagList} from '../../../../components';
@@ -28,7 +29,7 @@ function refineData(data, fields) {
 }
 
 function getTitle(type) {
-    if ('count' == type) {
+    if ('count' === type) {
         return (
             <>
                 문제 유형 별 <br /> 풀은 문제의 수
@@ -36,7 +37,7 @@ function getTitle(type) {
         );
     }
 
-    if ('repetition' == type) {
+    if ('repetition' === type) {
         return (
             <>
                 문제 유형 별 <br /> 반복수
@@ -47,7 +48,7 @@ function getTitle(type) {
     return <></>;
 }
 
-export default function ({
+export default function ProblemTypeSpiderChart({
     type = 'count',
     width,
     height,

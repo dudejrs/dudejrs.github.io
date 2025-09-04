@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     LinePlot,
     AxisBottom,
@@ -23,7 +24,7 @@ const defaultAxis = {
     margin: defaultMargin,
 };
 
-export default function ({
+export default function LineChart({
     data,
     type,
     axisData,
@@ -32,7 +33,6 @@ export default function ({
     height = 220,
     axis = defaultAxis,
     margin = defaultMargin,
-    color = '',
     nticks = 3,
     ratio = [0.8, 0.5],
     className,

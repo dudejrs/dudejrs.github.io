@@ -1,8 +1,4 @@
-import {useEffect} from 'react';
-
-import Checkbox from '../../components';
-import {Tag} from '../../components';
-
+import React from 'react';
 import ValueEntry from '../valueEntry';
 import TitleComponent from './titleComponent';
 

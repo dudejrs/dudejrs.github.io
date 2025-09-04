@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState, useEffect} from 'react';
 
 import {getLog} from '../../../../domain/codingPractice';
@@ -11,7 +12,7 @@ const defaultMargin = {
     bottom: 20,
 };
 
-const defaultAxis = {
+const _defaultAxis = {
     left: 50,
     bottom: 50,
     margin: defaultMargin,
@@ -28,7 +29,7 @@ function getTitle(keyword, lang) {
     return `시간별 총 푼 문제 수 (${lang})`;
 }
 
-export default function ({
+export default function ProblemLineChart({
     width = 1000,
     day = 365,
     keyword = 'Count',

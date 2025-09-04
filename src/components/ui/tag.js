@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './tag.module.css';
 import Color from '../color';
 

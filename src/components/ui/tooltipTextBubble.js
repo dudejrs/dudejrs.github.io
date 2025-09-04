@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './tooltipTextBubble.module.css';
 
 function TooltipTop({width, height, children}) {
@@ -24,7 +25,7 @@ function TooltipTop({width, height, children}) {
                 width={`${width}px`}
             >
                 <g>
-                    <rect width={totalWidth} height={boxHeight} rx="30" />
+                    <rect width={totalWidth} height={boxHeight} rx="30"/>
                     <polygon
                         points={`${totalWidth / 2} ${totalHeight} ${totalWidth / 2} ${totalHeight} ${totalWidth / 2 - tailWidth / 2} ${boxHeight - 1} ${totalWidth / 2 + tailWidth / 2} ${boxHeight - 1} ${totalWidth / 2} ${totalHeight}`}
                     />
@@ -208,7 +209,7 @@ function TooltipBottom({width, height, children}) {
     );
 }
 
-export default function ({width, height, children, position}) {
+export default function TooltipTextBubble({width, height, children, position}) {
     const widthpx = width.split('px')[0];
     const heightpx = height.split('px')[0];
 
@@ -218,7 +219,9 @@ export default function ({width, height, children, position}) {
 
     if (position == 'top') {
         return (
-            <TooltipTop width={widthpx} height={heightpx} children={children} />
+            <TooltipTop width={widthpx} height={heightpx}>
+                {children}
+            </TooltipTop>
         );
     }
 
@@ -227,8 +230,9 @@ export default function ({width, height, children, position}) {
             <TooltipLeft
                 width={widthpx}
                 height={heightpx}
-                children={children}
-            />
+            >
+                {children}
+            </TooltipLeft>
         );
     }
 
@@ -237,12 +241,15 @@ export default function ({width, height, children, position}) {
             <TooltipBottom
                 width={widthpx}
                 height={heightpx}
-                children={children}
-            />
+            >
+                {children}
+            </TooltipBottom>
         );
     }
 
     return (
-        <TooltipRight width={widthpx} height={heightpx} children={children} />
+        <TooltipRight width={widthpx} height={heightpx}>
+            {children}
+        </TooltipRight>
     );
 }

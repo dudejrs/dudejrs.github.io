@@ -1,3 +1,4 @@
+import React from "react";
 import {useState, useEffect} from 'react';
 
 import {getTotalCountByProgrammingLanguages} from '../../../../domain/codingPractice';
@@ -15,7 +16,7 @@ function genterateItems(item) {
     );
 }
 
-export default function ({programmingLanguages, className}) {
+export default function ProblemPercentageBox({programmingLanguages, className}) {
     const [data, setData] = useState([]);
     const [items, setItems] = useState([]);
 
@@ -30,7 +31,7 @@ export default function ({programmingLanguages, className}) {
         <PercentageBox
             title={
                 <>
-                    프로그래밍 언어 별<br /> 풀은 문제의 수
+                    프로그래밍 언어 별<br/> 풀은 문제의 수
                 </>
             }
             data={data}

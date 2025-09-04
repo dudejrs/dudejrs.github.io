@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './accordian.module.css';
 
 function Upper({width = '1rem', color = '#b6b6b6'}) {
@@ -34,7 +35,7 @@ function Lower({width = '1rem', color = '#b6b6b6'}) {
     );
 }
 
-export default function ({
+export default function Accordian({
     active,
     header,
     height = 200,

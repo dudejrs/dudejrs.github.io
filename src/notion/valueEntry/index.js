@@ -1,3 +1,4 @@
+import React from "react";
 import Select from './select';
 import Multiselect from './multiselect';
 import Checkbox from './checkbox';
@@ -6,7 +7,7 @@ import Status from './status';
 import styles from './index.module.css';
 
 function date(data) {
-    if (Object.keys(data).length == 0) {
+    if (Object.keys(data).length === 0) {
         return '';
     }
 
@@ -25,11 +26,11 @@ function date(data) {
 
 const mapToComponent = (type, data) => {
     if (!data) return <></>;
-    if (type == 'multiselect') return <Multiselect data={data} />;
-    if (type == 'checkbox') return <Checkbox data={data} />;
-    if (type == 'date') return <>{date(data)}</>;
-    if (type == 'select') return <Select data={data} />;
-    if (type == 'status') return <Status data={data} />;
+    if (type === 'multiselect') return <Multiselect data={data} />;
+    if (type === 'checkbox') return <Checkbox data={data} />;
+    if (type === 'date') return <>{date(data)}</>;
+    if (type === 'select') return <Select data={data} />;
+    if (type === 'status') return <Status data={data} />;
     else return <>{data}</>;
 };
 

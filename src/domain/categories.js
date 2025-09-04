@@ -1,6 +1,5 @@
 import axios from 'axios';
 import {categoriesDir} from './index';
-import {filterData} from './util';
 
 export function getCategories(category) {
     return axios

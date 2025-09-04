@@ -1,3 +1,5 @@
+
+import React from 'react';
 import {useState, useEffect} from 'react';
 
 import {getAggregationByProgrammingLanguages} from '../../../../domain/codingPractice';
@@ -6,7 +8,7 @@ import DonutChart from './donutChart';
 
 import styles from './legendItem.module.css';
 
-function genterateItems(data, width = 100) {
+function generateItems(data, width = 100) {
     return (
         <div className={`${styles.itemContainer}`} style={{minWidth: width}}>
             <span className={`${styles.itemLanguage}`}>{data['category']}</span>
@@ -40,7 +42,7 @@ function refineData(data, categories) {
     return ret;
 }
 
-export default function ({
+export default function CategoryDonutChart ({
     width,
     height,
     radius,
@@ -58,7 +60,7 @@ export default function ({
             if (t.length == 0) return;
             let data = refineData(t, categories);
             setData(data.map(d => d['count']));
-            setItems(data.map(d => genterateItems(d)));
+            setItems(data.map(d => generateItems(d)));
         });
     }, [languages]);
 

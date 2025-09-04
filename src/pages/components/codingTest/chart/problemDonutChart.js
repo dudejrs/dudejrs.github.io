@@ -1,10 +1,10 @@
+import React from 'react';
 import {useState, useEffect} from 'react';
 
 import {getTotalCountByProgrammingLanguages} from '../../../../domain/codingPractice';
 
 import Color from '../../../../components/color';
 
-import Legend from './legend';
 import DonutChart from './donutChart';
 
 import styles from './legendItem.module.css';
@@ -18,9 +18,8 @@ function genterateItems(item, width = 100) {
     );
 }
 
-export default function ({
+export default function ProblemDonutChart({
     width,
-    height,
     lengendWidth,
     legendHeight,
     radius,

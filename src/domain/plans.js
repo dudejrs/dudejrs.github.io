@@ -1,8 +1,7 @@
 import axios from 'axios';
-import {planDir, plansDir, categoriesDir} from './index';
-import {filterData} from './util';
+import {plansDir, categoriesDir} from './index';
 
-export async function getPlan(id, fields) {
+export async function getPlan(id) {
     return await axios
         .get(`${plansDir}/${id}.json`)
         .then(({data}) => {
@@ -20,7 +19,7 @@ export async function getPlansUpdatedDate() {
     });
 }
 
-export function getCounts(categories) {
+export function getCounts() {
     return axios.get(`${categoriesDir}/count.json`).then(({data}) => {
         return new Map(Object.entries(data));
     });

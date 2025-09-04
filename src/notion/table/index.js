@@ -1,4 +1,4 @@
-import {useEffect, useState, useCallback} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 
 import TableEntry from './tableEntry';
 import TableHeader from './tableHeader';
@@ -15,7 +15,7 @@ export default function Table({
     const [widths, setWidths] = useState([]);
 
     useEffect(() => {
-        if (!ratio || !ratio.length || ratio.length != columns.length) {
+        if (!ratio || !ratio.length || ratio.length !== columns.length) {
             ratio = Array(columns.length).fill(1);
         }
         setWidthsByTableContainerSize();
@@ -42,7 +42,7 @@ export default function Table({
     const setWidthByIndex = useCallback((index, amount) => {
         setWidths(
             widths.map((width, i) => {
-                if (i == index) return amount;
+                if (i === index) return amount;
                 else return width;
             }),
         );

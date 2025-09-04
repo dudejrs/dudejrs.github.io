@@ -1,5 +1,4 @@
-import {useEffect, useState, useCallback} from 'react';
-
+import React from 'react';
 import SidePeek from './sidePeek';
 import styles from './sidePeekContainer.module.css';
 

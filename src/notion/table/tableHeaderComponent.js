@@ -1,3 +1,4 @@
+import React from "react";
 import styles from './tableHeader.module.css';
 import tableStyles from './table.module.css';
 

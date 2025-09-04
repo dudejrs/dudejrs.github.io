@@ -21,9 +21,19 @@ export default [
     pluginJs.configs.recommended,
     ...fixupConfigRules(pluginReactConfig),
     {
-        plugins : pluginReact,
+        plugins: pluginReact,
         rules: {
             "react/prop-types": "off",
         }
     },
+    {
+        rules: {
+            "no-unused-vars": ["error", {ignoreRestSiblings: true,
+                destructuredArrayIgnorePattern: "^_",
+                argsIgnorePattern: "^_",
+                varsIgnorePattern: "^_",
+                caughtErrorsIgnorePattern: "^_"
+            }],
+        }
+    }
 ];

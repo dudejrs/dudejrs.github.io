@@ -1,12 +1,11 @@
+import React from 'react';
 import {PercentageBox} from '../../../../components/chart';
 import Legend from './legend';
 import Box from './box';
 
 import styles from './percentageBox.module.css';
 
-export default function ({
-    width,
-    heigth,
+export default function CodingTestPercentageBox({
     data,
     title,
     items,

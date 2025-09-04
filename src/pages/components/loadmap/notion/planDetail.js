@@ -20,7 +20,7 @@ export default function PlanDetail({target, children}) {
     const [detailedPlan, setDetailedPlan] = useState([]);
 
     useEffect(() => {
-        getPlan(target, Object.keys(types)).then(plan => {
+        getPlan(target).then(plan => {
             const {id, 세부계획, ...p} = plan;
             setDetailedPlan(plan['세부계획']);
             setPlan(p);

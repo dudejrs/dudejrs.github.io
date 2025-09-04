@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState, useEffect} from 'react';
 
 import {getAggregationByProgrammingLanguages} from '../../../../domain/codingPractice';
@@ -35,7 +36,7 @@ function genterateItems(data) {
     );
 }
 
-export default function ({language, categories, colors, className}) {
+export default function LanguageSpiderChart ({language, categories, className}) {
     const [data, setData] = useState({});
     const [items, setItems] = useState([]);
 

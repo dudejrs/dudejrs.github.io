@@ -37,7 +37,6 @@ function refineAggregationByCategoriesToLagnaugesTotalCount(
     });
 
     for (let d of data) {
-        let name = d['name'];
         for (let language of programmingLanguages) {
             let i = map.get(language);
             ret[i]['count'] += d[language];

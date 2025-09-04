@@ -1,10 +1,11 @@
+import React from 'react';
 import {useState} from 'react';
 
 import TooltipTextBubble from './tooltipTextBubble';
 
 import styles from './tooltip.module.css';
 
-export default function ({
+export default function Tooltip({
     className,
     children,
     widthpx = '100px',

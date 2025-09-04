@@ -1,3 +1,4 @@
+import React from 'react';
 import Color from '../../components/color';
 import styles from './status.module.css';
 
@@ -17,7 +18,7 @@ function getColor(data) {
     return Color.getColorBy(data);
 }
 
-export default function ({data}) {
+export default function Status({data}) {
     return (
         <div
             className={`${styles.container}`}
