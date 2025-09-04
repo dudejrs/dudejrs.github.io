@@ -1,3 +1,4 @@
+import React from 'react';
 import {useRef, useEffect} from 'react';
 import * as d3 from 'd3';
 
@@ -5,7 +6,7 @@ import {getScale, getAxis} from './axis';
 
 import styles from './axis.module.css';
 
-export default function ({
+export default function Grid({
     className,
     width,
     height,

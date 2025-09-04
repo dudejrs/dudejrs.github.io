@@ -1,6 +1,7 @@
+import React from "react"
 import * as d3 from 'd3';
 
-export default function ({
+export default function DonutChart ({
     className,
     children,
     data,

@@ -1,9 +1,10 @@
+import React from 'react';
 import {useEffect, useState} from 'react';
 
 import Dropdown from './index';
 import TagList from './taglist';
 
-export default function ({
+export default function DropdownTagList({
     className,
     width,
     names = [],
@@ -13,8 +14,6 @@ export default function ({
 }) {
     const [tags_, setTags] = useState([]);
     const [names_, setNames] = useState([]);
-    const [clicked, setClicked] = useState(false);
-
     const select = name => {
         if (tags_.length >= max) {
             alert(`최대 ${max}개 까지 입력이 가능합니다`);
@@ -24,7 +23,7 @@ export default function ({
     };
 
     const deSelect = name => {
-        setTags(tags_.filter(n => n != name));
+        setTags(tags_.filter(n => n !== name));
     };
 
     useEffect(() => {

@@ -1,10 +1,9 @@
-import {useState, useEffect} from 'react';
-
+import React from 'react';
 import Tag from '../tag';
 
 import styles from './taglist.module.css';
 
-export default function ({names, defaults = [], onTagClick, className}) {
+export default function TagList({names, onTagClick, className}) {
     return (
         <div className={`${styles.container} ${className}`}>
             {names.map((name, i) => (

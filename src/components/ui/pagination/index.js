@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState} from 'react';
 
 import {Context} from './context/currentPageContext';
@@ -9,7 +10,7 @@ function supplement(data, pageSize) {
     return data;
 }
 
-export default function ({children, data, offset = 0, pageSize, style}) {
+export default function Pagination({children, data, offset = 0, pageSize, style}) {
     const [p, setP] = useState(offset);
 
     return (

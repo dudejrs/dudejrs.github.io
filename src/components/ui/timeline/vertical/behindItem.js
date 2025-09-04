@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './index.module.css';
 
-export default function ({
+export default function BehindItem({
     data,
     width,
     vheight,

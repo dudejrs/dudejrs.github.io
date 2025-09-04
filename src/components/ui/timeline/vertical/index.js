@@ -1,3 +1,4 @@
+import React from 'react'
 import {useState, useEffect} from 'react';
 import * as d3 from 'd3';
 
@@ -16,7 +17,7 @@ function itemHeight(height, radius, vmargin, length) {
     return h - radius;
 }
 
-export default function ({
+export default function VerticalItem({
     data,
     ratios,
     width,
@@ -31,10 +32,6 @@ export default function ({
     className,
     ...props
 }) {
-    if (!data) {
-        return;
-        <div style={{width: width, margin: margin}}></div>;
-    }
 
     const vheight = height - margin * 2;
     const vwidth = Math.max(radius * 2, stroke);

@@ -1,14 +1,12 @@
+import React from 'react';
 import styles from './index.module.css';
 
-export default function ({
+export default function CenterItem({
     data,
     width,
     vheight,
-    vmargin,
-    radius,
     mapper,
     scale,
-    itemHeight,
     left,
     right,
 }) {

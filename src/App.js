@@ -1,6 +1,5 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
-import Info from './pages/info';
+import React from 'react'
 import Pages from './pages';
 import NavigationBar from './pages/components/navigationBar';
 
@@ -9,8 +8,7 @@ const navigationList = [
         name: 'Info',
         link: '/info',
         visible: true,
-    },
-    {
+    }, {
         name: 'Practice',
         link: '/practice',
         visible: true,
@@ -47,7 +45,7 @@ function App() {
                 />
             </div>
             <div id="content">
-                <Pages />
+                <Pages/>
             </div>
             <div id="footer"></div>
         </div>

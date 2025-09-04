@@ -1,8 +1,9 @@
+import React from 'react';
 import {useContext} from 'react';
 import {NextLeftButton, NextRightButton} from '../button';
 import {Context} from './context/currentPageContext';
 
-export default function ({
+export default function PaginationButton({
     size = 1.5,
     offset = 0.5,
     backgroundColor = 'rgb(26, 115, 233)',
@@ -10,7 +11,7 @@ export default function ({
     children,
     style,
 }) {
-    const {p, setP, hasPrev, hasNext, items} = useContext(Context);
+    const {p, setP, hasPrev, hasNext} = useContext(Context);
 
     return (
         <div

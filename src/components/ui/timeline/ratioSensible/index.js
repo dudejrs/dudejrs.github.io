@@ -1,4 +1,5 @@
-import {useEffect, useState, useContext} from 'react';
+import React from "react";
+import {useEffect, useContext} from 'react';
 
 import VerticalTimeline from '../vertical';
 import HorizontalTimeline from '../horizontal';
@@ -7,7 +8,7 @@ import {Context as CurrentNodeSizeContext} from '../../sensible/context/currentN
 import {Context as LayoutContext} from '../../sensible/context/layout';
 import {Context as IsVerticalContext} from './context';
 
-import {CurrentNodeSizeSensible, LayoutSensible} from '../../sensible';
+import {LayoutSensible} from '../../sensible';
 
 function flip(ratios) {
     const ret = [];
@@ -50,7 +51,7 @@ export function RatioSensibleTimeline({
     minSize = [0, 0],
     ...props
 }) {
-    const {size, setSize, partiallyCovered} = useContext(
+    const {size, setSize} = useContext(
         CurrentNodeSizeContext,
     );
     const layout = useContext(LayoutContext);
@@ -90,7 +91,7 @@ export function RatioSensibleTimeline({
     );
 }
 
-export default function ({style, ...props}) {
+export default function RatioSensible ({style, ...props}) {
     return (
         <LayoutSensible ratio={2} style={style}>
             <RatioSensibleTimeline {...props} />

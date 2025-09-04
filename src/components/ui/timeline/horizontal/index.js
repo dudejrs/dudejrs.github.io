@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState, useEffect} from 'react';
 import * as d3 from 'd3';
 
@@ -16,7 +17,7 @@ function itemWidth(width, radius, vmargin, length) {
     return w - radius;
 }
 
-export default function ({
+export default function HorizontalTimeline ({
     data,
     width,
     height,
@@ -30,10 +31,6 @@ export default function ({
     mapper,
     ...props
 }) {
-    if (!data) {
-        return;
-        <div style={{width: width, margin: margin}}></div>;
-    }
 
     const vwidth = width - margin * 2;
     const vheight = Math.max(radius * 2, stroke);

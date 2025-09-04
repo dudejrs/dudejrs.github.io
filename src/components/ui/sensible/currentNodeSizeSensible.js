@@ -1,11 +1,11 @@
+import React from "react";
 import {useRef, useEffect, useState} from 'react';
 
 import {Context} from './context/currentNodeSize';
 
-export default function ({children, className, style}) {
+export default function CurrentNodeSizeSensible({children, className, style}) {
     const ref = useRef();
     const [size, setSize] = useState([0, 0]);
-    const [partiallyCovered, setPartiallyCovered] = useState(false);
 
     const onResize = () => {
         const rect = ref.current.getBoundingClientRect();

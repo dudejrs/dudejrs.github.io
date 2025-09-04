@@ -1,4 +1,5 @@
-import {useEffect, useState, useContext} from 'react';
+import React from 'react';
+import {useContext} from 'react';
 
 import {Context as CurrentNodeSizeContext} from './context/currentNodeSize';
 import {Context as LayoutContext} from './context/layout';
@@ -10,11 +11,10 @@ function isVertical(width, height, ratio) {
     return r < ratio;
 }
 
-function LayoutSensible({ratio, children, ...props}) {
-    const {size, setSize, partiallyCovered} = useContext(
+function LayoutSensible({ratio, children}) {
+    const {size,  partiallyCovered} = useContext(
         CurrentNodeSizeContext,
     );
-    const [width, height] = size;
 
     let layout =
         document.body.clientWidth / document.body.clientHeight >= 1
@@ -32,7 +32,7 @@ function LayoutSensible({ratio, children, ...props}) {
     );
 }
 
-export default function ({style, ratio, children, className, ...props}) {
+export default function LayoutSensibleContainer({style, ratio, children, className, ...props}) {
     return (
         <CurrentNodeSizeSensible className={className} style={style}>
             <LayoutSensible ratio={ratio} {...props}>

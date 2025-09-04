@@ -1,11 +1,12 @@
-import {useRef, useEffect, Children} from 'react';
+import React from "react";
+import {useRef, Children} from 'react';
 import html2pdf from 'html2pdf.js';
 
 import Download from './download';
 
 import styles from './printable.module.css';
 
-export default function ({
+export default function Printable({
     className,
     children,
     filename = 'test',

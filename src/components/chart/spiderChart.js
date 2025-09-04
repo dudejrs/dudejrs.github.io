@@ -1,3 +1,4 @@
+import React from 'react';
 import * as d3 from 'd3';
 
 function getValues(data, keys) {
@@ -90,7 +91,7 @@ function bisect(func, target) {
     return hi;
 }
 
-export default function ({
+export default function SpiderChart ({
     width,
     height,
     data,

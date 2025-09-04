@@ -1,4 +1,6 @@
-export default function ({
+import React from 'react';
+
+export default function Line({
     width = 3,
     height = 700,
     margin = 0,

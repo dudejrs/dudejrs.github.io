@@ -1,6 +1,7 @@
+import React from "react";
 import styles from './index.module.css';
 
-export default function ({
+export default function NextRight({
     size = 100,
     _size = 176.14,
     backgroundColor = 'black',

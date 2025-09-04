@@ -1,9 +1,9 @@
-import {useEffect, useState, useRef} from 'react';
+import React from 'react';
+import {useEffect, useRef} from 'react';
 
 import styles from './index.module.css';
-import tagStyles from '../tag.module.css';
 
-export default function ({children, content, setClicked}) {
+export default function Popup ({children, content, setClicked}) {
     const ref = useRef();
 
     const onClick = e => {

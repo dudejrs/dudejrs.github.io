@@ -1,17 +1,18 @@
 import * as d3 from 'd3';
+import React from 'react';
 import {useRef, useEffect} from 'react';
 
 import {getScale, getAxis} from './axis';
 
 import styles from './axis.module.css';
 
-export default function ({
+export default function AxisBottom({
     className,
     type,
     data,
     width,
     height,
-    tickformat,
+    tickFormat,
     margin = {top: 0, right: 0, left: 0, bottom: 0},
     outer = 6,
     inner = 6,
@@ -22,7 +23,7 @@ export default function ({
 }) {
     const gx = useRef();
     const x = getScale(type, data, margin, width);
-    const axis = getAxis(type, tickformat, x, data)
+    const axis = getAxis(type, tickFormat, x, data)
         .offset(offset)
         .tickSizeInner(inner)
         .tickSizeOuter(outer)

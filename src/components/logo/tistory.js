@@ -1,4 +1,6 @@
-export default function ({width, height, className, color = 'black'}) {
+import React from 'react';
+
+export default function TistoryLogo({width, height, className, color = 'black'}) {
     return (
         <div className={className}>
             <svg
