@@ -17,7 +17,7 @@ function toCategories(data, categories) {
     if (!data) return [];
 
     let ret = [];
-    let filtered = categories.filter(category => data.hasOwnProperty(category));
+    let filtered = categories.filter(category => Object.prototype.hasOwn(data,category));
 
     for (let category of filtered) {
         if (data[category] > 0)

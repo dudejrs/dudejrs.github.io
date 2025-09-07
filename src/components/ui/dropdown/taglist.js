@@ -10,7 +10,7 @@ export default function TagList({names, onTagClick, className}) {
                 <Tag
                     name={name}
                     key={i}
-                    onClick={e => {
+                    onClick={_ => {
                         onTagClick && onTagClick(name);
                     }}
                     className={`${styles.tag}`}

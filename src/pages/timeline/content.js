@@ -1,11 +1,9 @@
+import React from 'react';
 import {useContext} from 'react';
 
-import Pagination from '../../components/ui/pagination';
 import PaginationButtons from '../../components/ui/pagination/buttons';
 import {Context as CurrentPageContext} from '../../components/ui/pagination/context/currentPageContext';
 import {Context as LayoutContext} from '../../components/ui/sensible/context/layout';
-
-import {NextLeftButton, NextRightButton} from '../../components/ui/button';
 
 import {RatioSensibleTimeLine} from '../../components/ui';
 import {LayoutSensible} from '../../components/ui/sensible';
@@ -67,7 +65,7 @@ function LayoutSensibleContent({items, mapper}) {
 }
 
 export function Content({mapper}) {
-    const {p, setP, hasPrev, hasNext, items} = useContext(CurrentPageContext);
+    const {items} = useContext(CurrentPageContext);
 
     return (
         <LayoutSensible ratio={0.8} className={styles.container}>

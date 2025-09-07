@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './header.module.css';
 
-export default function ({text}) {
+export default function Header({text}) {
     if (!text) {
         return <></>;
     }

@@ -1,9 +1,9 @@
+import React from 'react';
 import {useState, useEffect} from 'react';
 
 import {
     getTotal,
     getAggreagationByCategories,
-    getAggregationByProblem,
     getAggregationByProgrammingLanguages,
     getTotalCountByProgrammingLanguages,
     getFieldsByProgrammingType,
@@ -11,16 +11,14 @@ import {
 
 import TotalCount from './counts/totalCount';
 import AggregationByCategories from './aggregationByCategories';
-import SomeCountAndRepetition from './counts/someCountAndRepititon';
-import SomeCount from './counts/someCount';
 
 import styles from './index.module.css';
 
 export default function CodingTest() {
     const [total, setTotal] = useState({});
     const [aggregationByCategories, setAggregationByCategories] = useState([]);
-    const [aggregationByLanguage, setAggregationByLanguage] = useState([]);
-    const [totalCountByLangauges, setTotalCountByLanguages] = useState([]);
+    const [_aggregationByLanguage, setAggregationByLanguage] = useState([]);
+    const [_totalCountByLangauges, setTotalCountByLanguages] = useState([]);
     const programmingLanguages = [
         'C++',
         'Java',

@@ -1,10 +1,10 @@
+import React from 'react';
 import {useState} from 'react';
-import {Item, AbbreviateItem} from '../item';
+import {Item} from '../item';
 import {ItemHolder} from '../itemHolder';
-import Accordian from '../../../components/ui/accordian';
 import Items from '../Items';
 
-export default function ({d: data, i, mapper}) {
+export default function ItemStack({d: data, i}) {
     const [actived, setActived] = useState(0);
 
     return (

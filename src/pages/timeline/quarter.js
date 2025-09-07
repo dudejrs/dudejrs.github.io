@@ -1,9 +1,9 @@
+import React from 'react';
 import {useEffect, useState} from 'react';
 import {getActivitesPerQuarter} from '../../domain/activities';
 
 import Pagination from '../../components/ui/pagination';
-import {Item, AbbreviateItem} from './item';
-import {ItemStack, AbbreviateItemStack} from './itemStack';
+import {AbbreviateItemStack} from './itemStack';
 import Tick from './tick';
 import {Content} from './content';
 
@@ -16,7 +16,7 @@ const mapper = [
         Object.keys(d).length > 0 && <AbbreviateItemStack d={d[1]} i={i} />,
 ];
 
-export default function () {
+export default function Quarter () {
     const [data, setData] = useState([]);
 
     useEffect(() => {

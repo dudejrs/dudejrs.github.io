@@ -1,3 +1,4 @@
+import React from 'react';
 import Accordian from '../../../components/ui/accordian';
 
 function onClick(key, active, setActived) {
@@ -8,7 +9,7 @@ function onClick(key, active, setActived) {
     setActived(key);
 }
 
-function Header({active, data}) {
+function Header({data}) {
     return <>{`${data[1].length}개의 ${data[0]}`}</>;
 }
 
@@ -21,7 +22,7 @@ export default function ItemHolder({
     Item,
     className,
 }) {
-    if (data[1].length == 0) {
+    if (data[1].length === 0) {
         return <> </>;
     }
 

@@ -1,8 +1,7 @@
+import React from 'react';
 import {Printable, Page} from '../components/ui/printable';
 
-import styles from './pdf.module.css';
-
-export default function ({}) {
+export default function PdfPage() {
     return (
         <Printable layout="landscape">
             <Page>Hello World!</Page>

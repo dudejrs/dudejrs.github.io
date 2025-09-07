@@ -1,10 +1,11 @@
-export default function ({
+import React from 'react';
+export default function Point({
     radius = 9,
     cx = 0,
     cy = 0,
     stroke = 6,
-    height = 9,
-    style,
+    _height = 9,
+    _style,
     color,
 }) {
     return (

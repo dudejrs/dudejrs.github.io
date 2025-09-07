@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './totalDesignCounts.module.css';
 
 export default function SomeCountAndRepetition({className, children, data}) {

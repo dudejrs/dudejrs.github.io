@@ -1,8 +1,9 @@
+import React from 'react';
 import Skills from '../components/skills';
 
 import Section from './section';
 
-export default function ({className, skills, levelDescriptions, colors}) {
+export default function SkillSection({className, skills, levelDescriptions, colors}) {
     return (
         <Section
             className={className}

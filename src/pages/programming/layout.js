@@ -1,3 +1,4 @@
+import React from 'react';
 import {useEffect, useState} from 'react';
 
 import {NavLink} from 'react-router-dom';
@@ -5,7 +6,7 @@ import {getPracticeUpdateTime} from '../../../src/domain/codingPractice';
 
 import styles from './layout.module.css';
 
-export default function ({programmingLanguages, title, children, updated}) {
+export default function Layout({programmingLanguages, title, children}) {
     const [date, setDate] = useState('');
 
     useEffect(() => {
@@ -23,7 +24,7 @@ export default function ({programmingLanguages, title, children, updated}) {
                     전체
                 </NavLink>
                 {programmingLanguages.map((lang, i) => (
-                    <NavLink className={className} to={`/practice/${i}`}>
+                    <NavLink className={className} key={i} to={`/practice/${i}`}>
                         {lang}
                     </NavLink>
                 ))}

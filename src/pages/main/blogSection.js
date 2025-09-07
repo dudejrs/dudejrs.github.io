@@ -1,3 +1,4 @@
+import React from "react";
 import BlogContainer from './blog';
 import Section from './section';
 import styles from './blogSection.module.css';
@@ -10,6 +11,7 @@ export default function BlogSection({className}) {
                     <BlogContainer
                         className={`${styles.item}`}
                         title={`Title ${i}`}
+                        key={i}
                     />
                 ))}
             </div>

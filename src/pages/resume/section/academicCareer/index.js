@@ -1,9 +1,10 @@
+import React from 'react';
 import Section from '../index';
 import Item from './item';
 
 import styles from './index.module.css';
 
-export default function ({header}) {
+export default function AcademicCareer({header}) {
     return (
         <Section header={header}>
             <div className={`${styles.container}`}>

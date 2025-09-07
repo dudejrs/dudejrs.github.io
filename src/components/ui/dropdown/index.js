@@ -1,16 +1,17 @@
-import {useEffect, useState} from 'react';
+import React from 'react';
+import {useState} from 'react';
 
 import Popup from './popup';
 
 import styles from './index.module.css';
 
-export default function ({
+export default function Dropdown({
     width = '100%',
-    height = '30px',
+    _height = '30px',
     content,
     children,
     className,
-    clicked = false,
+    _clicked = false,
 }) {
     const [clicked_, setClicked] = useState(false);
 

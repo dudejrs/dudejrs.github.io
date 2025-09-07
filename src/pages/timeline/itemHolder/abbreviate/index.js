@@ -1,4 +1,4 @@
-// import AccordianItemHolder from './accordian'
+import React from 'react';
 import Accordian from '../../../../components/ui/accordian';
 
 function onClick(key, active, setActived) {
@@ -24,7 +24,7 @@ export default function ItemHolder({
 }) {
     const [type, d] = data;
 
-    if (data.length == 0) {
+    if (data.length === 0) {
         return <> </>;
     }
 

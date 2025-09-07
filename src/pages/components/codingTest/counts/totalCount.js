@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './totalCount.module.css';
 
 export default function TotalCounts({className, total}) {

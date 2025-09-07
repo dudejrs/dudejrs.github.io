@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import React from 'react';
 
 import {Tooltip, Tag, Dropdown, DropdownTagList} from '../../components';
 import {
@@ -11,7 +11,7 @@ import {
     Grid,
 } from '../../components/chart';
 
-export default function () {
+export default function ComponentPage() {
     const testTime = [new Date(2010, 0, 1), new Date(2010, 2, 14)];
 
     return (

@@ -1,3 +1,4 @@
+import React from 'react';
 import SomeCountAndRepetition from './counts/someCountAndRepititon';
 import SomeCount from './counts/someCount';
 
@@ -9,7 +10,7 @@ export default function AggregationByCategories({
     programmingLanguages,
 }) {
     return (
-        <div className={`${styles.totalContainer} `}>
+        <div className={`${styles.totalContainer} ${className}`}>
             {data &&
                 data.map((category, i) => (
                     <SomeCountAndRepetition

@@ -1,8 +1,9 @@
+import React from 'react';
 import styles from '../index.module.css';
 import {Tag} from '../../../../../components/ui';
 import {month} from '../util';
 
-export default function ({i, d}) {
+export default function Plan({i, d}) {
     return (
         <div key={i} className={`${styles.container} `}>
             <div className={`${styles.subcontainer} ${styles.horizontal}`}>

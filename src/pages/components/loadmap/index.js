@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState, useEffect, useCallback} from 'react';
 
 import {getCounts} from '../../../domain/plans';
@@ -25,7 +26,7 @@ export default function Loadmap({
     }, []);
 
     const openDetailView = useCallback(
-        (title, makeOpen) => {
+        (title) => {
             setTrack(title);
             setIsOpened(true);
         },
@@ -33,7 +34,7 @@ export default function Loadmap({
     );
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${className}`}>
             <TrackNav
                 title={trackList}
                 onClick={setTrackList}

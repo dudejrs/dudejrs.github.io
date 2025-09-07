@@ -1,14 +1,14 @@
+import React from 'react';
 import {useContext} from 'react';
 import Pagniation from '../../../components/ui/pagination';
 import PagniationButtons from '../../../components/ui/pagination/buttons';
 import {Context} from '../../../components/ui/pagination/context/currentPageContext';
-import {NextLeftButton, NextRightButton} from '../../../components/ui/button';
 import Items from './items';
 
 import styles from './pagination.module.css';
 
 function Page({Item, type}) {
-    const {p, setP, hasPrev, hasNext, items: data} = useContext(Context);
+    const {items: data} = useContext(Context);
     return (
         <div>
             <div
@@ -33,7 +33,7 @@ function Page({Item, type}) {
     );
 }
 
-export default function ({data, Item, type, ...props}) {
+export default function Pagination({data, Item, type, ...props}) {
     return (
         <Pagniation data={data} pageSize={3}>
             <Page Item={Item} type={type} {...props} />

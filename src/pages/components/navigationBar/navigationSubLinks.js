@@ -1,3 +1,4 @@
+import React from 'react';
 import NavigationLinkItem from './navigationLinkItem';
 
 import styles from './index.module.css';

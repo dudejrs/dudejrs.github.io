@@ -1,3 +1,4 @@
+import React from 'react';
 import {useParams} from 'react-router-dom';
 
 import {
@@ -34,10 +35,10 @@ function Title({title}) {
     );
 }
 
-export default function ({programmingLanguages}) {
+export default function PerLanguage({programmingLanguages}) {
     const {i} = useParams();
 
-    if ((typeof i != Number && i < 0) || i >= programmingLanguages.length) {
+    if ((typeof i !== Number && i < 0) || i >= programmingLanguages.length) {
         return <div>준비중입니다...</div>;
     }
     const lang = programmingLanguages[i];

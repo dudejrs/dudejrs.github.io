@@ -1,4 +1,6 @@
-export default function ({data, Item, type, style}) {
+import React from 'react';
+
+export default function Items({data, Item, type, style}) {
     return (
         <div style={style}>
             {data.map((d, i) => (

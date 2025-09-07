@@ -1,4 +1,5 @@
 import axios from 'axios';
+import React from 'react';
 import {useState, useEffect} from 'react';
 import {Printable, Page} from '../../../components/ui/printable';
 import {VerticalTimeLine} from '../../../components/ui/timeline';
@@ -16,7 +17,6 @@ import {fetchExperience} from '../../../domain/experience';
 
 import Certification from '../../resume/section/certification';
 import Info from '../../resume/section/info';
-import {AboutMe} from '../../components/aboutMe';
 
 import styles from './naverboostcamp.module.css';
 
@@ -30,9 +30,9 @@ function ListItem({title, tags}) {
             {title}
             <div className={`${styles.numberList}`}>
                 {tags &&
-                    tags.map(t => (
-                        <span className={`${styles.number}`}>{t}</span>
-                    ))}
+                    tags.map(((t, i) => (
+                        <span className={`${styles.number}`} key={i}>{t}</span>
+                    )))}
             </div>
         </li>
     );
@@ -54,7 +54,7 @@ const planMapper = [
             return <></>;
         }
         return (
-            <div className={`${styles.term}`}>
+            <div className={`${styles.term}`} key={i}>
                 {' '}
                 {`${d['기간'].start.slice(0, 10)} ~ ${d['기간'].end.slice(0, 10)}`}{' '}
             </div>
@@ -95,7 +95,7 @@ function ProjectTable({data}) {
     );
 }
 
-export default function () {
+export default function NaverBoostCampPortfolio() {
     const [data, setData] = useState({});
     const programmingLanguages = [
         'C++',

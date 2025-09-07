@@ -1,3 +1,4 @@
+import React from 'react';
 import Section from '../index';
 import Item from './item';
 
@@ -24,17 +25,18 @@ const items = [
     {date: '2023.12.17', name: 'PCCP Lv.2 (Java)', organization: '(주) 그랩'},
 ];
 
-export default function ({header}) {
+export default function Certification({header}) {
     return (
         <Section header={header}>
             <div className={`${styles.container}`}>
-                {items.map(item => (
+                {items.map(((item,i) => (
                     <Item
+                        key={i}
                         date={item.date}
                         name={item.name}
                         organization={item.organization}
                     />
-                ))}
+                )))}
             </div>
         </Section>
     );

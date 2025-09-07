@@ -1,3 +1,4 @@
+import React from 'react';
 import Accordian from '../../../../components/ui/accordian';
 
 function onClick(key, active, setActived) {

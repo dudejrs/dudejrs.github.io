@@ -1,6 +1,6 @@
+import React from 'react';
 import SubStackItem from './subStackItem';
 
-import SkillsStyles from './index.module.css';
 import styles from './mainStackItem.module.css';
 
 function generateStackItems(items, levels, colors) {

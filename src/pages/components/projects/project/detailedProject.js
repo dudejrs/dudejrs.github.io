@@ -1,3 +1,4 @@
+import React from 'react';
 import {useEffect, useRef, useState} from 'react';
 import styles from './detailedProject.module.css';
 import {Tag} from '../../../../components';
@@ -11,7 +12,6 @@ export default function DetailedProject({
     tags,
     term,
     onClick,
-    isClicked,
 }) {
     if (!src) src = 'img/experience/default_background.png';
 
@@ -46,8 +46,8 @@ export default function DetailedProject({
                     <p>{description}</p>
                 </div>
                 <div className={styles.tags}>
-                    {tags.map(tag => (
-                        <Tag name={tag} />
+                    {tags.map((tag, i) => (
+                        <Tag key={i} name={tag} />
                     ))}
                 </div>
                 <span className={styles.term}>{term}</span>

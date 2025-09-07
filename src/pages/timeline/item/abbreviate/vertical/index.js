@@ -1,7 +1,8 @@
+import React from 'react';
 import Plan from './plan';
 import Project from './project';
 
-export default function ({type, ...props}) {
+export default function VerticalItem({type, ...props}) {
     if (type === '계획') {
         return <Plan {...props} />;
     }

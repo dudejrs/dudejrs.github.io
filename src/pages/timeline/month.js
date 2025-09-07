@@ -1,10 +1,10 @@
+import React from 'react';
 import {useEffect, useState} from 'react';
 import {getActivitesPerMonth} from '../../domain/activities';
 
 import Pagination from '../../components/ui/pagination';
-import {ItemStack, AbbreviateItemStack} from './itemStack';
+import {ItemStack} from './itemStack';
 import Tick from './tick';
-import {RatioSensibleTimeLine} from '../../components/ui';
 import {Content} from './content';
 
 const mapper = [
@@ -14,7 +14,7 @@ const mapper = [
     (d, i) => d && Object.keys(d).length > 0 && <ItemStack d={d[1]} i={i} />,
 ];
 
-export default function () {
+export default function Month() {
     const [data, setData] = useState([]);
 
     useEffect(() => {

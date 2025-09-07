@@ -1,8 +1,9 @@
+import React from 'react';
 import {Tooltip} from '../../components';
 
 import styles from './section.module.css';
 
-export default function ({className, children, title, description}) {
+export default function Section({className, children, title, description}) {
     return (
         <div className={`${styles.container} ${className}`}>
             <div className={`${styles.header}`}>

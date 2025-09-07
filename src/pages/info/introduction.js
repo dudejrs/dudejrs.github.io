@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -12,9 +13,10 @@ export default function Introduction({className, markdown_content}) {
             title={`Introduction`}
         >
             <ReactMarkdown
-                children={markdown_content}
                 remarkPlugins={[remarkGfm]}
-            />
+            >
+                {markdown_content}
+            </ReactMarkdown>
             <div className={styles.contact_container}>
                 <a href="https://dudejrs.tistory.com/">
                     <img

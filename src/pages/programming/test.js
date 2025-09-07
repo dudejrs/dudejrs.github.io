@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     ProblemDonutChart,
     LangaugeDonutChart,
@@ -8,7 +9,7 @@ import {
     CategoryDonutChart,
 } from '../components/codingTest/chart';
 
-export default function () {
+export default function Test() {
     const programmingLanguages = ['C++', 'Java', 'Javascript', 'Python'];
     const categories = ['디자인패턴', '코딩테스트', '리팩토링', '알고리즘'];
     const types = [

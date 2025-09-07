@@ -1,3 +1,4 @@
+import React from 'react';
 import Introduction from './introduction';
 import Experience from './experience';
 import Skills from './skills';

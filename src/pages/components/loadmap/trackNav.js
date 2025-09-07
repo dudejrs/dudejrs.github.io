@@ -1,4 +1,4 @@
-import loadMapStyles from './loadmap.module.css';
+import React from 'react';
 import styles from './trackNav.module.css';
 
 export default function TrackNav({title, onClick, trackLists}) {

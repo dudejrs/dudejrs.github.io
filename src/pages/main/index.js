@@ -1,3 +1,4 @@
+import React from "react";
 import {useState} from 'react';
 
 import Section from './section';
@@ -22,7 +23,7 @@ function Title({title}) {
     );
 }
 
-export default function Main({}) {
+export default function Main() {
     const [activity, setActivity] = useState(0);
 
     return (

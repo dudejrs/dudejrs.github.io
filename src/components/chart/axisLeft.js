@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 
 import styles from './axis.module.css';
 
-export default function ({
+export default function AxisLeft({
     data,
     width,
     height,

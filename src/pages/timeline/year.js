@@ -1,8 +1,9 @@
+import React from 'react';
 import {useEffect, useState} from 'react';
 import {getActivitesPerQuarter} from '../../domain/activities';
 
-import {Item, AbbreviateItem} from './item';
-import {ItemStack, AbbreviateItemStack} from './itemStack';
+import {AbbreviateItem} from './item';
+import {ItemStack} from './itemStack';
 import Tick from './tick';
 import {RatioSensibleTimeLine} from '../../components/ui';
 
@@ -15,7 +16,7 @@ const mapper = [
     (d, i) => <ItemStack d={d[1]['계획']} i={i} mapper={ItemMapper} />,
 ];
 
-export default function () {
+export default function Year() {
     const [data, setData] = useState([]);
 
     useEffect(() => {

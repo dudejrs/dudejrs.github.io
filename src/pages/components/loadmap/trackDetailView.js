@@ -1,3 +1,4 @@
+import React from 'react';
 import NotionContainer from './notion/notionContainer';
 import {Modal} from '../../../components';
 

@@ -13,7 +13,7 @@ function stackElement(data) {
     return ret;
 }
 
-export default function ({
+export default function PercentageBox({
     children,
     className,
     data,

@@ -1,3 +1,4 @@
+import React from 'react';
 import {useEffect, useState, useCallback} from 'react';
 
 import {fetchExperience} from '../../../domain/experience';
@@ -10,7 +11,7 @@ function term(date) {
     return `${date.start} ~ ${date.end || 'ongoing'}`;
 }
 
-export default function Projects({data: data_}) {
+export default function Projects() {
     const [data, setData] = useState([]);
 
     const [isClicked, setIsClicked] = useState(false);

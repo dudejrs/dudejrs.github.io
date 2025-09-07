@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './tracklist.module.css';
 
 function Folder({count, img}) {
@@ -33,7 +34,7 @@ function Component({count, children, onClick, track}) {
     );
 }
 
-export default function ({count = 0, track, onClick}) {
+export default function Track({count = 0, track, onClick}) {
     return (
         <li>
             <Component count={count} track={track} onClick={onClick}>

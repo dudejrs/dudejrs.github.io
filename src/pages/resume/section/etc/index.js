@@ -1,7 +1,8 @@
+import React from 'react';
 import Section from '../index';
 import Contact from './component/contact';
 
-export default function ({header}) {
+export default function Etc({header}) {
     const items = [
         {
             img: 'img/contact/github-mark.svg',

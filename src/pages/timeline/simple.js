@@ -1,3 +1,4 @@
+import React from 'react';
 import Item from './item';
 import Tick from './tick';
 import {RatioSensibleTimeLine} from '../../components/ui';
@@ -44,7 +45,7 @@ const mapper = [
     (d, i) => <Item d={d} i={i} />,
 ];
 
-export default function () {
+export default function Simple() {
     return (
         <div style={{width: '100%'}}>
             <RatioSensibleTimeLine

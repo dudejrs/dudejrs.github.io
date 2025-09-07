@@ -1,4 +1,4 @@
-import SkillsStyles from './index.module.css';
+import React from 'react';
 import styles from './subStackItem.module.css';
 
 export default function SubStackItem({title, items, levels, colors}) {

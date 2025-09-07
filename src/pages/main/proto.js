@@ -1,9 +1,10 @@
+import React from "react";
 import BlogSection from './blogSection';
 import Section from './section';
 
 import styles from './index.module.css';
 
-export default function Main({}) {
+export default function Main() {
     return (
         <div className={styles.container}>
             <div className={styles.carousell}></div>

@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './item.module.css';
 
-export default function ({duration, name, level}) {
+export default function Item({duration, name, level}) {
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles.duration}`}> {duration}</div>

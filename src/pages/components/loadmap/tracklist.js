@@ -1,9 +1,8 @@
-import loadmapStyles from './loadmap.module.css';
-
+import React from 'react';
 import Track from './track';
 import styles from './tracklist.module.css';
 
-export default function TrackList({counts, title, tracks, onClick}) {
+export default function TrackList({counts, tracks, onClick}) {
     return (
         <>
             <ul className={styles.trackline}>

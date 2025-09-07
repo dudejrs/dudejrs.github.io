@@ -1,12 +1,12 @@
+import React from 'react';
 import MainStackItem from './mainStackItem';
-import SubStackItem from './subStackItem';
 import Legend from './legend';
 
 import styles from './index.module.css';
 
 export default function Skills({className, skills, colors, levelDescriptions}) {
     return (
-        <div className={`${styles.container}`}>
+        <div className={`${styles.container} ${className}`}>
             <ul className={styles.mainStack}>
                 {Array.isArray(skills) &&
                     skills.map(skill => (

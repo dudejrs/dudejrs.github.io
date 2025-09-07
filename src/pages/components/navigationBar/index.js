@@ -1,11 +1,10 @@
+import React from 'react';
 import {useState, useCallback} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import Contact from './contact';
 import Title from './title';
 import NavigationLinks from './navigationLinks';
 import NavigationSubLinks from './navigationSubLinks';
-import NavigationLinkItem from './navigationLinkItem';
 
 import styles from './index.module.css';
 

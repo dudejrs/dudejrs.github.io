@@ -1,3 +1,4 @@
+import React from 'react';
 import {Printable, Page} from '../../components/ui/printable';
 import Info from './section/info';
 import AcademicCareer from './section/academicCareer';

@@ -1,4 +1,5 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import React from 'react';
+import { Routes, Route} from 'react-router-dom';
 import {Printable, Page} from '../../components/ui/printable';
 import P from './2024';
 
@@ -11,7 +12,7 @@ function Default() {
     );
 }
 
-export default function () {
+export default function Portfolio() {
     return (
         <Routes basename={`${process.env.PUBLIC_URL}/portfolio`}>
             <Route path="2024/*" element={<P />} />

@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './legend.module.css';
 
 export default function Legend({className, descriptions, colors}) {

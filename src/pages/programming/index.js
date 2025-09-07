@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     ProblemDonutChart,
     CategoryDonutChart,
@@ -32,8 +33,8 @@ function Title({title}) {
     );
 }
 
-export default function ({programmingLanguages}) {
-    const lang = 'C++';
+export default function ProgrammingPractice({programmingLanguages}) {
+    const _lang = 'C++';
     const categories = ['디자인패턴', '코딩테스트', '리팩토링', '알고리즘'];
     const types = [
         'Greedy',
