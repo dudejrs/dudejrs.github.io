@@ -35,7 +35,7 @@ function getLayout(layout) {
     return '';
 }
 
-export default function CodingTestDonutChart ({
+export default function CodingTestDonutChart({
     width,
     height,
     legendHeight,

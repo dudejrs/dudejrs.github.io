@@ -30,9 +30,11 @@ function ListItem({title, tags}) {
             {title}
             <div className={`${styles.numberList}`}>
                 {tags &&
-                    tags.map(((t, i) => (
-                        <span className={`${styles.number}`} key={i}>{t}</span>
-                    )))}
+                    tags.map((t, i) => (
+                        <span className={`${styles.number}`} key={i}>
+                            {t}
+                        </span>
+                    ))}
             </div>
         </li>
     );

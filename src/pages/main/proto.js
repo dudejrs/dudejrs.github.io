@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import BlogSection from './blogSection';
 import Section from './section';
 

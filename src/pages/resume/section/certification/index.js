@@ -29,14 +29,14 @@ export default function Certification({header}) {
     return (
         <Section header={header}>
             <div className={`${styles.container}`}>
-                {items.map(((item,i) => (
+                {items.map((item, i) => (
                     <Item
                         key={i}
                         date={item.date}
                         name={item.name}
                         organization={item.organization}
                     />
-                )))}
+                ))}
             </div>
         </Section>
     );

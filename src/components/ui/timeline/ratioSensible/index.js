@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {useEffect, useContext} from 'react';
 
 import VerticalTimeline from '../vertical';
@@ -51,9 +51,7 @@ export function RatioSensibleTimeline({
     minSize = [0, 0],
     ...props
 }) {
-    const {size, setSize} = useContext(
-        CurrentNodeSizeContext,
-    );
+    const {size, setSize} = useContext(CurrentNodeSizeContext);
     const layout = useContext(LayoutContext);
     const [width, height] = calculateSize(size, layout, minSize);
 
@@ -91,7 +89,7 @@ export function RatioSensibleTimeline({
     );
 }
 
-export default function RatioSensible ({style, ...props}) {
+export default function RatioSensible({style, ...props}) {
     return (
         <LayoutSensible ratio={2} style={style}>
             <RatioSensibleTimeline {...props} />

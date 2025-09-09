@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {Checkbox} from '../../components';
 
 export default function CheckboxWrapper({data}) {

@@ -12,8 +12,10 @@ export default function Info({header}) {
             <div className={`${styles.name} ${styles.item}`}> {name} </div>
             <div className={`${styles.email} ${styles.item}`}> {email} </div>
             <div className={`${styles.introduction} ${styles.item}`}>
-                {AboutMe.split('\n').map((s,i) => (
-                    <p key={i} className={styles.introductionItem}>{s}</p>
+                {AboutMe.split('\n').map((s, i) => (
+                    <p key={i} className={styles.introductionItem}>
+                        {s}
+                    </p>
                 ))}
             </div>
         </Section>

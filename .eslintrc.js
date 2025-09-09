@@ -1,8 +1,6 @@
 module.exports = {
     root: true,
-    ignorePatterns: [
-        'node_modules/**/*', 'build/**/*'
-    ],
+    ignorePatterns: ['node_modules/**/*', 'build/**/*'],
     env: {
         browser: true,
         node: true,
@@ -10,20 +8,15 @@ module.exports = {
     globals: {
         process: 'readonly',
     },
-    extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-    ],
-    plugins: [
-        'react',
-    ],
+    extends: ['eslint:recommended', 'plugin:react/recommended'],
+    plugins: ['react'],
     overrides: [
         {
             files: ['src/**/*.{js,jsx,ts,tsx}'],
             parserOptions: {
-                ecmaVersion: "latest",
+                ecmaVersion: 'latest',
                 sourceType: 'module',
-                ecmaFeatures: { jsx: true },
+                ecmaFeatures: {jsx: true},
             },
             env: {
                 es6: true,
@@ -33,7 +26,7 @@ module.exports = {
         {
             files: ['script/**/*.js'],
             parserOptions: {
-                ecmaVersion: "latest",
+                ecmaVersion: 'latest',
                 sourceType: 'commonjs',
             },
             env: {

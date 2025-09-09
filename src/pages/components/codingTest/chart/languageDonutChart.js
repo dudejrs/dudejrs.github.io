@@ -20,7 +20,9 @@ function refineData(data, categories) {
     if (!data) return [];
 
     let ret = [];
-    let filtered = categories.filter(category => Object.prototype.hasOwnProperty.call(data, category));
+    let filtered = categories.filter(category =>
+        Object.prototype.hasOwnProperty.call(data, category),
+    );
 
     for (let category of filtered) {
         if (!data[category]) {
@@ -34,7 +36,7 @@ function refineData(data, categories) {
     return ret;
 }
 
-export default function LanguageDonutChart ({
+export default function LanguageDonutChart({
     width,
     height,
     language,

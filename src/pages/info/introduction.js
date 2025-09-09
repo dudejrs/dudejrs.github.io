@@ -12,9 +12,7 @@ export default function Introduction({className, markdown_content}) {
             className={`${styles.info_container} ${className}`}
             title={`Introduction`}
         >
-            <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-            >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {markdown_content}
             </ReactMarkdown>
             <div className={styles.contact_container}>

@@ -1,8 +1,5 @@
 const {PageScheme, NestedDatabaseScheme} = require('../../notion/scheme');
-const {
-    NestedProperty,
-    RelationProperty,
-} = require('../../notion/property');
+const {NestedProperty, RelationProperty} = require('../../notion/property');
 
 module.exports = new PageScheme('프로젝트', {
     이름: NestedProperty.Title('이름', 'title'),

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Color from '../../../../components/color';
 
 import {SpiderChart} from '../../../../components/chart';

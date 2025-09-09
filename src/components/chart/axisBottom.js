@@ -12,7 +12,7 @@ export default function AxisBottom({
     data,
     width,
     height,
-    tickFormat,
+    tickformat,
     margin = {top: 0, right: 0, left: 0, bottom: 0},
     outer = 6,
     inner = 6,
@@ -23,7 +23,7 @@ export default function AxisBottom({
 }) {
     const gx = useRef();
     const x = getScale(type, data, margin, width);
-    const axis = getAxis(type, tickFormat, x, data)
+    const axis = getAxis(type, tickformat, x, data)
         .offset(offset)
         .tickSizeInner(inner)
         .tickSizeOuter(outer)

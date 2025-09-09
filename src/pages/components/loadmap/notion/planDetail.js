@@ -9,10 +9,10 @@ import styles from './planDetail.module.css';
 
 const types = {
     title: 'title',
-    "기간": 'date',
+    기간: 'date',
     Tag: 'multiselect',
-    "분류" : 'select',
-    "완료율": 'rollup',
+    분류: 'select',
+    완료율: 'rollup',
     Status: 'status',
 };
 

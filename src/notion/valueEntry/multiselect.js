@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {Tag} from '../../components';
 import styles from './index.module.css';
 

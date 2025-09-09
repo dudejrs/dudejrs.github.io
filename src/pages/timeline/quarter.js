@@ -16,7 +16,7 @@ const mapper = [
         Object.keys(d).length > 0 && <AbbreviateItemStack d={d[1]} i={i} />,
 ];
 
-export default function Quarter () {
+export default function Quarter() {
     const [data, setData] = useState([]);
 
     useEffect(() => {

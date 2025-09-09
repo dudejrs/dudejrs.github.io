@@ -17,7 +17,7 @@ function itemWidth(width, radius, vmargin, length) {
     return w - radius;
 }
 
-export default function HorizontalTimeline ({
+export default function HorizontalTimeline({
     data,
     width,
     height,
@@ -31,7 +31,6 @@ export default function HorizontalTimeline ({
     mapper,
     ...props
 }) {
-
     const vwidth = width - margin * 2;
     const vheight = Math.max(radius * 2, stroke);
     const [heights, setHeights] = useState(

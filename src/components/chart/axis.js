@@ -26,7 +26,7 @@ export function getAxis(type, tickformat, x, data) {
     let ticks;
     data = data.filter(d => d);
 
-    if (type == 'time') {
+    if (type === 'time') {
         switch (tickformat) {
             case 'day':
                 ticks = d3.timeDays(data[0], data[data.length - 1]);

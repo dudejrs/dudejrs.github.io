@@ -25,7 +25,7 @@ function TooltipTop({width, height, children}) {
                 width={`${width}px`}
             >
                 <g>
-                    <rect width={totalWidth} height={boxHeight} rx="30"/>
+                    <rect width={totalWidth} height={boxHeight} rx="30" />
                     <polygon
                         points={`${totalWidth / 2} ${totalHeight} ${totalWidth / 2} ${totalHeight} ${totalWidth / 2 - tailWidth / 2} ${boxHeight - 1} ${totalWidth / 2 + tailWidth / 2} ${boxHeight - 1} ${totalWidth / 2} ${totalHeight}`}
                     />
@@ -227,10 +227,7 @@ export default function TooltipTextBubble({width, height, children, position}) {
 
     if (position == 'left') {
         return (
-            <TooltipLeft
-                width={widthpx}
-                height={heightpx}
-            >
+            <TooltipLeft width={widthpx} height={heightpx}>
                 {children}
             </TooltipLeft>
         );
@@ -238,10 +235,7 @@ export default function TooltipTextBubble({width, height, children, position}) {
 
     if (position == 'bottom') {
         return (
-            <TooltipBottom
-                width={widthpx}
-                height={heightpx}
-            >
+            <TooltipBottom width={widthpx} height={heightpx}>
                 {children}
             </TooltipBottom>
         );

@@ -26,7 +26,7 @@ export default function Loadmap({
     }, []);
 
     const openDetailView = useCallback(
-        (title) => {
+        title => {
             setTrack(title);
             setIsOpened(true);
         },

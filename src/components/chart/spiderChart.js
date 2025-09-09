@@ -91,7 +91,7 @@ function bisect(func, target) {
     return hi;
 }
 
-export default function SpiderChart ({
+export default function SpiderChart({
     width,
     height,
     data,

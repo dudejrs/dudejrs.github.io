@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import styles from './download.module.css';
 
-export default function DownloadLogo ({
+export default function DownloadLogo({
     onClick,
     color = 'white',
     backgroundColor = 'rgb(26, 115, 233)',

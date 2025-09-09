@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import tableStyles from './table.module.css';
 import styles from './titleComponent.module.css';
 

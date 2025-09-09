@@ -10,7 +10,13 @@ function supplement(data, pageSize) {
     return data;
 }
 
-export default function Pagination({children, data, offset = 0, pageSize, style}) {
+export default function Pagination({
+    children,
+    data,
+    offset = 0,
+    pageSize,
+    style,
+}) {
     const [p, setP] = useState(offset);
 
     return (

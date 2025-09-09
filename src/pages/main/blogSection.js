@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import BlogContainer from './blog';
 import Section from './section';
 import styles from './blogSection.module.css';

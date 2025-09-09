@@ -1,7 +1,5 @@
 const {PageScheme} = require('../../notion/scheme');
-const {
-    NestedProperty,
-} = require('../../notion/property');
+const {NestedProperty} = require('../../notion/property');
 
 module.exports = new PageScheme('codingPracticeLog', {
     date: NestedProperty.Date('Date', 'bvyh', 'date'),

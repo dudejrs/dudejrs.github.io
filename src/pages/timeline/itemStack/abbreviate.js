@@ -4,7 +4,7 @@ import {AbbreviateItem} from '../item';
 import {AbbreviateItemHolder} from '../itemHolder';
 import Items from '../Items';
 
-export default function  AbbreviateItemStack({d: data, i}) {
+export default function AbbreviateItemStack({d: data, i}) {
     const [actived, setActived] = useState(0);
 
     return (

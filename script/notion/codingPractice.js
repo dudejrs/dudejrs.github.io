@@ -231,7 +231,6 @@ function logging(dirPath, langauges) {
     }
 
     fs.writeFile(`${dirPath}/log.json`, JSON.stringify(origin), console.log);
-
 }
 
 module.exports = {getCodingPracticeAggregation, getAggregationByCategories};

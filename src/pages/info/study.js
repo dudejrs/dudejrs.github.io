@@ -2,7 +2,12 @@ import React from 'react';
 import Section from './section';
 import Loadmap from '../components/loadmap';
 
-export default function StudySection({className, trackLists, trackListMap, updateDate}) {
+export default function StudySection({
+    className,
+    trackLists,
+    trackListMap,
+    updateDate,
+}) {
     return (
         <Section
             className={className}

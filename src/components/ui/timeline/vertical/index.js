@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {useState, useEffect} from 'react';
 import * as d3 from 'd3';
 
@@ -32,7 +32,6 @@ export default function VerticalItem({
     className,
     ...props
 }) {
-
     const vheight = height - margin * 2;
     const vwidth = Math.max(radius * 2, stroke);
     const [widths, setWidths] = useState(

@@ -17,7 +17,9 @@ function toCategories(data, categories) {
     if (!data) return [];
 
     let ret = [];
-    let filtered = categories.filter(category => Object.prototype.hasOwn(data,category));
+    let filtered = categories.filter(category =>
+        Object.prototype.hasOwn(data, category),
+    );
 
     for (let category of filtered) {
         if (data[category] > 0)
@@ -36,7 +38,7 @@ function genterateItems(data) {
     );
 }
 
-export default function LanguageSpiderChart ({language, categories, className}) {
+export default function LanguageSpiderChart({language, categories, className}) {
     const [data, setData] = useState({});
     const [items, setItems] = useState([]);
 

@@ -12,9 +12,7 @@ function isVertical(width, height, ratio) {
 }
 
 function LayoutSensible({ratio, children}) {
-    const {size,  partiallyCovered} = useContext(
-        CurrentNodeSizeContext,
-    );
+    const {size, partiallyCovered} = useContext(CurrentNodeSizeContext);
 
     let layout =
         document.body.clientWidth / document.body.clientHeight >= 1
@@ -32,7 +30,13 @@ function LayoutSensible({ratio, children}) {
     );
 }
 
-export default function LayoutSensibleContainer({style, ratio, children, className, ...props}) {
+export default function LayoutSensibleContainer({
+    style,
+    ratio,
+    children,
+    className,
+    ...props
+}) {
     return (
         <CurrentNodeSizeSensible className={className} style={style}>
             <LayoutSensible ratio={ratio} {...props}>

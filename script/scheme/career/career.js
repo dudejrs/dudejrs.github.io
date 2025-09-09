@@ -1,8 +1,5 @@
 const {PageScheme, NestedDatabaseScheme} = require('../../notion/scheme');
-const {
-    NestedProperty,
-    RelationProperty,
-} = require('../../notion/property');
+const {NestedProperty, RelationProperty} = require('../../notion/property');
 const {CheckBoxFilter} = require('../../notion/filter');
 
 module.exports = new PageScheme('경력', {

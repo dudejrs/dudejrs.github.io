@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import {Printable, Page} from '../../components/ui/printable';
 import P from './2024';
 

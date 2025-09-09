@@ -9,7 +9,9 @@ module.exports = class AxiosClient extends Client {
     }
 
     createPage(database_id, properties) {
-        throw new Error(`Unsupported Operation : create Page on ${database_id}} with ${properties}`);
+        throw new Error(
+            `Unsupported Operation : create Page on ${database_id}} with ${properties}`,
+        );
     }
 
     retrievePage(page_id) {
@@ -17,7 +19,9 @@ module.exports = class AxiosClient extends Client {
     }
 
     retrieveDatabase(database_id) {
-        throw new Error(`Unsupported Operation: retrieve Database on ${database_id}`);
+        throw new Error(
+            `Unsupported Operation: retrieve Database on ${database_id}`,
+        );
     }
 
     async retrievePageProperties(page_id, property_id, start_cursor) {

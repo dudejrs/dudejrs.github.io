@@ -17,7 +17,7 @@ export default function Detail({className, children, data, types}) {
     return (
         <div className={`${styles.container} ${className}`}>
             <div className={`${styles.subContainer}`}>
-                {Object.keys(data).map((key,i) => {
+                {Object.keys(data).map((key, i) => {
                     return (
                         <div
                             className={`${styles.component} ${styles[types[key]]}`}

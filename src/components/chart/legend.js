@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styles from './legend.module.css';
 
 function pickerStyle(color, rem) {
@@ -19,12 +19,12 @@ function itemStyle(rem) {
 }
 
 export default function Legend({
-                                   className,
-                                   height,
-                                   descriptions,
-                                   colors,
-                                   rem = 0.8,
-                               }) {
+    className,
+    height,
+    descriptions,
+    colors,
+    rem = 0.8,
+}) {
     return (
         <div className={`${styles.container} ${className}`} style={{height}}>
             {descriptions &&

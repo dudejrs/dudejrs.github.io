@@ -3,7 +3,7 @@ import {useEffect, useRef} from 'react';
 
 import styles from './index.module.css';
 
-export default function Popup ({children, content, setClicked}) {
+export default function Popup({children, content, setClicked}) {
     const ref = useRef();
 
     const onClick = e => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import * as d3 from 'd3';
 
@@ -35,7 +35,7 @@ function refineUndefined(data) {
     return d;
 }
 
-export default function LinePlot ({
+export default function LinePlot({
     data,
     type,
     axis,

@@ -24,7 +24,11 @@ export default function Layout({programmingLanguages, title, children}) {
                     전체
                 </NavLink>
                 {programmingLanguages.map((lang, i) => (
-                    <NavLink className={className} key={i} to={`/practice/${i}`}>
+                    <NavLink
+                        className={className}
+                        key={i}
+                        to={`/practice/${i}`}
+                    >
                         {lang}
                     </NavLink>
                 ))}

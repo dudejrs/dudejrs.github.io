@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {useState, useEffect} from 'react';
 
@@ -42,7 +41,7 @@ function refineData(data, categories) {
     return ret;
 }
 
-export default function CategoryDonutChart ({
+export default function CategoryDonutChart({
     width,
     height,
     radius,
