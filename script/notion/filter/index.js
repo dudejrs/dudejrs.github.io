@@ -19,7 +19,6 @@ module.exports = {
     DateFilter,
     FormulaFilter,
     MultiSelectFilter,
-    MultiSelectFilter,
     NumberFilter,
     RelationFilter,
     RichTextFilter,

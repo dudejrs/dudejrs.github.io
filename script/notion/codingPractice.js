@@ -67,8 +67,6 @@ async function getTotalProblems(notion, langauges) {
         });
     });
 
-    let next_cursor;
-
     while (has_more_) {
         let {has_more, next_cursor, results} =
             await notion.databases.query(query);
@@ -234,7 +232,6 @@ function logging(dirPath, langauges) {
 
     fs.writeFile(`${dirPath}/log.json`, JSON.stringify(origin), console.log);
 
-    return;
 }
 
 module.exports = {getCodingPracticeAggregation, getAggregationByCategories};

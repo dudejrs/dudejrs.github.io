@@ -1,5 +1,3 @@
-const {getDatabase, getPage} = require('./notion');
-
 require('dotenv').config();
 
 const {fetchPlans, updatePlans} = require('./data/plans');
@@ -20,9 +18,8 @@ const {getMetaData} = require('./data/meta');
 const NotionSDKClient = require('./notion/client/notionSDK');
 const RateLimiterClient = require('./notion/client/rateLimiter');
 const PaginationClient = require('./notion/client/pagination');
-const AxiosClient = require('./notion/client/axios');
 
-const tags = [
+const _tags = [
     'Javascript',
     'Java',
     'DBMS',

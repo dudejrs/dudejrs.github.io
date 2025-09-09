@@ -16,11 +16,11 @@ module.exports = class SelectFilter extends Filter {
         return new SelectFilter(property, 'does_not_equal', value);
     }
 
-    static IsEmpty(property, value) {
+    static IsEmpty(property) {
         return new SelectFilter(property, 'is_empty', true);
     }
 
-    static IsNotEmpty(property, value) {
+    static IsNotEmpty(property) {
         return new SelectFilter(property, 'is_not_empty', true);
     }
 

@@ -17,7 +17,6 @@ const {
     CheckBoxFilter,
     FormulaFilter,
 } = require('../../notion/filter');
-const {PropertySort} = require('../../notion/sort');
 
 const Quarters = Object.freeze([
     Object.freeze([-1, 9, 1]),
@@ -51,7 +50,7 @@ function lastQuarter(date) {
 function currentQuarterString(date) {
     const index = Math.floor(date.getMonth() / 3) + !isFirstOfQuarter(date);
 
-    if (index == 0) {
+    if (index === 0) {
         return `${date.getFullYear() - 1}년 ${4}Q`;
     }
 
@@ -153,11 +152,12 @@ async function hasNext(date) {
     return date.getTime() >= new Date('2022-01-01');
 }
 
-async function generateScheme({client}) {
+async function generateScheme() {
     const ret = [];
 
     let cur = new Date(Date.now());
 
+    // eslint-disable-next-line no-constant-condition
     while (true) {
         console.log(cur);
         ret.push(getScheme(cur));

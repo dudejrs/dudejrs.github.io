@@ -1,5 +1,5 @@
 const {PageScheme} = require('../notion/scheme');
-const {NestedProperty, ComputedProperty} = require('../notion/property');
+const {NestedProperty} = require('../notion/property');
 
 module.exports = new PageScheme('자격증', {
     name: NestedProperty.Title('Name', 'title'),

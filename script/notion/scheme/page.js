@@ -21,7 +21,7 @@ module.exports = class PageScheme extends Scheme {
         return this;
     }
 
-    async convert(data, {client, parent_id}) {
+    async convert(data, {client}) {
         const ret = {};
 
         ret['id'] = data['id'];

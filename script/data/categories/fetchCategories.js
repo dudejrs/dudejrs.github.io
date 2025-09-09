@@ -2,8 +2,6 @@ const {writeFileSync} = require('fs');
 
 const {DirectoryJob, DatabaseJob} = require('../../job');
 const CategoriesScheme = require('../../scheme/categories');
-const SkillScheme = require('../../scheme/skill');
-const {MultiSelectFilter} = require('../../notion/filter');
 
 const {fetchSkillMap} = require('../skills');
 const {writeMetaData} = require('../../util');

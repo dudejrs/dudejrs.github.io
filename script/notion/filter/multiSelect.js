@@ -16,11 +16,11 @@ module.exports = class MultiSelectFilter extends Filter {
         return new MultiSelectFilter(property, 'does_not_contain', value);
     }
 
-    static IsEmpty(property, value) {
+    static IsEmpty(property) {
         return new MultiSelectFilter(property, 'is_empty', true);
     }
 
-    static IsNotEmpty(property, value) {
+    static IsNotEmpty(property) {
         return new MultiSelectFilter(property, 'is_not_empty', true);
     }
 

@@ -63,7 +63,7 @@ module.exports = class NestedProperty extends Property {
 
     build(value) {
         return {
-            [this.name]: type.build(value),
+            [this.name]: this.type.build(value),
         };
     }
 };

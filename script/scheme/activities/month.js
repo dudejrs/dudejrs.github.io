@@ -17,10 +17,9 @@ const {
     CheckBoxFilter,
     FormulaFilter,
 } = require('../../notion/filter');
-const {PropertySort} = require('../../notion/sort');
 
 function isFirstOfMonth(date) {
-    return date.getDate() == 1;
+    return date.getDate() === 1;
 }
 
 function lastMonth(date) {
@@ -37,7 +36,7 @@ function lastMonth(date) {
 
     const currentMonth = date.getMonth();
 
-    if (currentMonth == 0) {
+    if (currentMonth === 0) {
         ret.setYear(date.getFullYear() - 1);
         ret.setMonth(11);
     } else {
@@ -157,11 +156,12 @@ function getScheme(cur) {
     return ret;
 }
 
-async function generateScheme({client}) {
+async function generateScheme() {
     const ret = [];
 
     let cur = new Date(Date.now());
 
+    // eslint-disable-next-line no-constant-condition
     while (true) {
         console.log(cur);
         ret.push(getScheme(cur));

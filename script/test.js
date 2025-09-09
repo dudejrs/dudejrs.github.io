@@ -1,3 +1,4 @@
+/* eslint-disable */
 const {getDatabase, getPage, getProperty} = require('./notion');
 const {writeFileSync} = require('fs');
 

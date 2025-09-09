@@ -1,4 +1,5 @@
 const Filter = require('./filter');
+const CheckboxFilter = require('./checkbox');
 
 module.exports = class RichTextFilter extends Filter {
     constructor(property, field, value) {

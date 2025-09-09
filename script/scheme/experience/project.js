@@ -1,7 +1,6 @@
 const {PageScheme, NestedDatabaseScheme} = require('../../notion/scheme');
 const {
     NestedProperty,
-    ComputedProperty,
     RelationProperty,
 } = require('../../notion/property');
 

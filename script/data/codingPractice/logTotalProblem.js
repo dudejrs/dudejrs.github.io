@@ -58,9 +58,9 @@ async function logTotalProblem({
     }
 
     if (page_id) {
-        const response = await client.updatePage(page_id, properties);
+        await client.updatePage(page_id, properties);
     } else {
-        const response = await client.createPage(
+        await client.createPage(
             process.env.NOTION_CODING_PRACTICE_LOG_DATABASE_ID,
             properties,
         );

@@ -9,15 +9,15 @@ module.exports = class AxiosClient extends Client {
     }
 
     createPage(database_id, properties) {
-        throw new Error('Unsupported');
+        throw new Error(`Unsupported Operation : create Page on ${database_id}} with ${properties}`);
     }
 
     retrievePage(page_id) {
-        throw new Error('Unsupported');
+        throw new Error(`Unsupported Operation: retrieve Page on ${page_id}`);
     }
 
     retrieveDatabase(database_id) {
-        throw new Error('Unsupported');
+        throw new Error(`Unsupported Operation: retrieve Database on ${database_id}`);
     }
 
     async retrievePageProperties(page_id, property_id, start_cursor) {
@@ -43,7 +43,7 @@ module.exports = class AxiosClient extends Client {
         sorts,
         start_cursor,
         filter_properties,
-        page_size,
+        _page_size,
     ) {
         const response = await axios.post(
             `https://api.notion.com/v1/databases/${database_id}/query`,

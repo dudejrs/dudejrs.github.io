@@ -21,12 +21,10 @@ module.exports = class DirectoryJob extends Job {
 
     #initialize() {
         cpSync(this.path, this.tmpDir, {recursive: true, overwrite: true});
-        return;
     }
 
     #restore() {
         cpSync(this.tmpDir, this.path, {recursive: true, overwrite: true});
-        return;
     }
 
     #finish() {

@@ -16,11 +16,11 @@ module.exports = class StatusFilter extends Filter {
         return new StatusFilter(property, 'does_not_equal', value);
     }
 
-    static IsEmpty(property, value) {
+    static IsEmpty(property) {
         return new StatusFilter(property, 'is_empty', true);
     }
 
-    static IsNotEmpty(property, value) {
+    static IsNotEmpty(property) {
         return new StatusFilter(property, 'is_not_empty', true);
     }
 

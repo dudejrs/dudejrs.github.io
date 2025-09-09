@@ -1,4 +1,4 @@
-const {readFileSync, writeFileSync} = require('fs');
+const {writeFileSync} = require('fs');
 
 const {FileJob} = require('../../job');
 

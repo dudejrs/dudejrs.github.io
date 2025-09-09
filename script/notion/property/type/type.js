@@ -4,6 +4,6 @@ module.exports = class Type {
     }
 
     convert(data) {
-        throw new Error('UnSupported');
+        throw new Error(`UnSupported Operation : ${JSON.stringify(data)}`);
     }
 };

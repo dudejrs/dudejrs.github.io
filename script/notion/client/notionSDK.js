@@ -38,13 +38,13 @@ module.exports = class NotionSDKClient extends Client_ {
     }
 
     async updatePage(page_id, properties) {
-        const response = await this.client.pages.update({
+        await this.client.pages.update({
             page_id,
             properties,
         });
     }
 
-    async retrievePageProperties(page_id, property_id, start_cursor) {
+    async retrievePageProperties(page_id, property_id) {
         const response = await this.client.pages.properties.retrieve({
             page_id,
             property_id,

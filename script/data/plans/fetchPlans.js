@@ -7,12 +7,11 @@ const {writeMetaData} = require('../../util');
 
 async function fetchPlans({path, client}) {
     async function fetch() {
-        let ret = [];
         const data = client.queryDatabase(process.env.NOTION_PLAN_DATABASE_ID);
 
         for await (let {results} of data) {
             if (results && Array.isArray(results)) {
-                for (page of results) {
+                for (let page of results) {
                     let p = await PlanScheme.convert(page, {client});
                     await save(p);
                 }

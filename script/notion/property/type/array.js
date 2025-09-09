@@ -7,6 +7,6 @@ module.exports = class Array extends Type {
     }
 
     convert(data) {
-        return data[this.name].map(item => type.convert(item));
+        return data[this.name].map(item => this.type.convert(item));
     }
 };

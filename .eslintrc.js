@@ -1,7 +1,7 @@
 module.exports = {
     root: true,
     ignorePatterns: [
-        'node_modules/**/*',
+        'node_modules/**/*', 'build/**/*'
     ],
     env: {
         browser: true,

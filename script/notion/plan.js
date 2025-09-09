@@ -20,7 +20,7 @@ async function getPlans(notion, tags, dirPath, secret) {
         filter: filter,
     });
 
-    categories = {};
+    let categories = {};
 
     results.forEach(async result => {
         const output = await refinePlan(result, categories, secret);
@@ -90,7 +90,7 @@ function saveCategories(result, dirPath) {
     });
 }
 
-function saveDetailPlans(detailedPlanList, dirPath) {
+function _saveDetailPlans(detailedPlanList, dirPath) {
     const uniqueDetailedPlanList = detailedPlanList.filter((p, i) => {
         return detailedPlanList.indexOf(p) == i;
     });

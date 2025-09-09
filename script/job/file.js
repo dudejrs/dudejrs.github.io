@@ -31,12 +31,10 @@ module.exports = class FileJob extends Job {
 
     #initialize() {
         cpSync(this.path, this.tmpFile, {overwrite: true});
-        return;
     }
 
     #restore() {
         cpSync(this.tmpFile, this.path, {overwrite: true});
-        return;
     }
 
     #finish() {

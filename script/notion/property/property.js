@@ -10,7 +10,7 @@ module.exports = class Property {
         throw new Error('UnSupported');
     }
 
-    build(value) {
+    build(_value) {
         throw new Error('UnSupported');
     }
 };

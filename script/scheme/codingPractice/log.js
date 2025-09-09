@@ -1,8 +1,6 @@
 const {PageScheme} = require('../../notion/scheme');
 const {
     NestedProperty,
-    ComputedProperty,
-    RelationProperty,
 } = require('../../notion/property');
 
 module.exports = new PageScheme('codingPracticeLog', {
