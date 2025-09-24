@@ -23,6 +23,10 @@ export default function Month() {
         });
     }, []);
 
+    useEffect(() => {
+        console.log(data)
+    }, [data]);
+
     return (
         <div style={{width: '100%'}}>
             <Pagination data={data} pageSize={3}>

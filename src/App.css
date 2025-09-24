@@ -1,27 +1,38 @@
-@font-face {
-    font-family: 'font';
-    src: url('../public/font/NotoSansKR-VariableFont_wght.ttf')
-        format('truetype');
-}
+/*@import "tailwindcss"*/
 
-@font-face {
-    font-family: 'font';
-    src: url('../public/font/Roboto-Bold.ttf') format('truetype');
-    unicode-range: U+0020-007E;
-    font-weight: 700;
-}
-@font-face {
-    font-family: 'font';
-    src: url('../public/font/Roboto-Medium.ttf') format('truetype');
-    unicode-range: U+0020-007E;
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'font';
-    src: url('../public/font/Roboto-Regular.ttf') format('truetype');
-    unicode-range: U+0020-007E;
-    font-weight: 400;
-}
+/* index.css 또는 main.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*@tailwind utilities;*/
+
+
+
+/*@font-face {*/
+/*    font-family: 'NotoSans';*/
+/*    src: url('../public/font/NotoSansKR-VariableFont_wght.ttf')*/
+/*        format('truetype');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    src: url('../public/font/Roboto-Bold.ttf') format('truetype');*/
+/*    unicode-range: U+0020-007E;*/
+/*    font-weight: 700;*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    src: url('../public/font/Roboto-Medium.ttf') format('truetype');*/
+/*    unicode-range: U+0020-007E;*/
+/*    font-weight: 500;*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    src: url('../public/font/Roboto-Regular.ttf') format('truetype');*/
+/*    unicode-range: U+0020-007E;*/
+/*    font-weight: 400;*/
+/*}*/
+
 
 .App {
     min-height: 100vh;
@@ -29,7 +40,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    font-family: font;
+    /*font-family: 'NotoSans', sans-serif;*/
     font-weight: 500;
 }
 
@@ -43,6 +54,3 @@
     flex-grow: 5;
 }
 
-#id {
-    display: relative;
-}

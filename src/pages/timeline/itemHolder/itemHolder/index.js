@@ -24,7 +24,7 @@ export default function ItemHolder({
 }) {
     const [type, d] = data;
 
-    if (data[1].length == 0) {
+    if (data[1].length === 0) {
         return <> </>;
     }
 
