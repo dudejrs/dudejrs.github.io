@@ -7,7 +7,7 @@ import PracticeTable from './practiceTable';
 import CertificateTable from './certificateTable';
 import PlanDetail from './planDetail';
 import {SidePeekContainer} from '../../../../components';
-import {getCategories} from '../../../../domain/categories';
+import {getCategory} from '../../../../domain/categories';
 
 import styles from './notionContainer.module.css';
 
@@ -25,7 +25,7 @@ export default function NotionContainer({name}) {
     });
 
     useEffect(() => {
-        getCategories(name).then(d => {
+        getCategory(name).then(d => {
             setPlans(d['계획']);
             if (d['프로젝트']) {
                 setProjects(d['프로젝트']);

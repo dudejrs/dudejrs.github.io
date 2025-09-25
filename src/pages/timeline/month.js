@@ -24,7 +24,7 @@ export default function Month() {
     }, []);
 
     useEffect(() => {
-        console.log(data)
+        console.log(data);
     }, [data]);
 
     return (

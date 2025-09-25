@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {categoriesDir} from './index';
 
-export function getCategories(category) {
+export function getCategory(category) {
     return axios
         .get(`${categoriesDir}/${category}.json`)
         .then(({data}) => {
@@ -11,4 +11,8 @@ export function getCategories(category) {
             console.log(error);
             return Promise.resolve([]);
         });
+}
+
+export function gatCategories(categories) {
+    return categories.map(category => getCategory(category));
 }

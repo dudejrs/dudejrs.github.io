@@ -1,7 +1,7 @@
 import React from 'react';
 import Plan from './plan';
 import Project from './project';
-import Practice from "./practice";
+import Practice from './practice';
 
 export default function HorizontalItem({type, ...props}) {
     if (type === '계획') {

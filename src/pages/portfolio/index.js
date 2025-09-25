@@ -17,7 +17,7 @@ export default function Portfolio() {
     return (
         <Routes basename={`${process.env.PUBLIC_URL}/portfolio`}>
             <Route path="2024/*" element={<P2024 />} />
-            <Route path="2025/" element={<P2025 />} />
+            <Route path="2025/*" element={<P2025 />} />
             <Route index path="*" element={<Default />} />
         </Routes>
     );

@@ -14,6 +14,7 @@ const {
 } = require('./data/activities');
 const {fetchProjects, fetchPractices} = require('./data/experience');
 const {getMetaData} = require('./data/meta');
+const {fetchCertificate} = require('./data/certificate');
 
 const NotionSDKClient = require('./notion/client/notionSDK');
 const RateLimiterClient = require('./notion/client/rateLimiter');
@@ -108,7 +109,7 @@ const fetchRoutine = async args => {
             break;
 
         case 'plans':
-            if (subcommand == 'all') {
+            if (subcommand === 'all') {
                 await fetchPlans.exec({client});
                 break;
             }
@@ -121,6 +122,10 @@ const fetchRoutine = async args => {
                 break;
             }
             await fetchCategories.exec({client, categories});
+            break;
+
+        case 'certificate':
+            await fetchCertificate.exec({client});
             break;
 
         case 'count':
@@ -158,7 +163,7 @@ const fetchRoutine = async args => {
             break;
 
         case 'portfolio':
-            if (args.slice(1).length == 2) {
+            if (args.slice(1).length === 2) {
                 const target = require(
                     `${process.env.PWD}/script/data/portfolio/${args[1]}/${args[2]}`,
                 );

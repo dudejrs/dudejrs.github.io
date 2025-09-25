@@ -1,22 +1,31 @@
-.container {
-    display: flex;
-    font-size: 15px;
-    margin-bottom: 2mm;
-}
-
 .date {
     color: #999999;
     font-weight: 700;
-    margin-right: 10mm;
 }
 
 .name {
-    width: 35mm;
     color: #666666;
     font-weight: 700;
-    margin-right: 10mm;
+}
+
+.grade {
+    color: #999999;
 }
 
 .organization {
     color: #999999;
+}
+
+.container {
+    display: grid;
+    row-gap: 1mm;
+    column-gap: 1mm;
+    grid-template-columns: auto auto auto;
+    font-size: 15px;
+    margin-bottom: 2mm;
+}
+
+.cell {
+    padding: 0 8px;
+    text-align: left;
 }

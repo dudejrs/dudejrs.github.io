@@ -79,8 +79,6 @@ function ProjectTable({data}) {
     const types = ['title', 'date', 'multiselect', 'text'];
     const ratio = [1, 1, 1, 5];
 
-    console.log(data);
-
     return (
         <div id="notionContainer" className={`${styles.table}`}>
             {Array.isArray(data) && data.length > 0 && (

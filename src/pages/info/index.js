@@ -25,7 +25,11 @@ const skills = [
                 items: ['Node.js', 'Spring', 'FastAPI'],
                 levels: [1, 1, 0],
             },
-            {title: 'Database', items: ['Oracle', 'MySQL', 'MongoDB'], levels: [1, 0, 0]},
+            {
+                title: 'Database',
+                items: ['Oracle', 'MySQL', 'MongoDB'],
+                levels: [1, 0, 0],
+            },
             {title: 'Infra', items: ['Linux', 'Aws'], levels: [1, 0]},
             {title: 'Etc', items: ['GraphQL', 'JPA'], levels: [0, 0]},
         ],
@@ -47,7 +51,7 @@ const skills = [
             'Typescript',
             'Rust',
             'Swift',
-            'Julia'
+            'Julia',
         ],
         levels: [1, 1, 1, 0, 0, 0, 0, 0, 0],
     },
@@ -71,7 +75,7 @@ const trackListMap = {
         'Nest.js',
     ],
     Java: ['Java', 'Kotlin', 'Spring Boot', 'Spring', 'JPA', 'Spring WebFlux'],
-    DBMS: ['SQL', 'Oracle', 'MySQL', 'MongoDB', ],
+    DBMS: ['SQL', 'Oracle', 'MySQL', 'MongoDB'],
     Backend: ['C++', 'Basic', 'Kafka', 'Redis', 'GraphQL'],
     DevOps: ['Go', 'Linux', 'Docker', 'Kubernetes', 'AWS'],
     'Data Science': [

@@ -7,7 +7,7 @@ const CertificateScheme = require('../../scheme/certificate');
 
 async function fetchCertificate({path, client}) {
     const response = await client.queryDatabase(
-        process.env.notion_certificate_database_id,
+        process.env.NOTION_CERTIFICATE_DATABASE_ID,
         CheckBoxFilter.Equals('_hidden', false).build(),
     );
     const ret = [];
@@ -25,7 +25,7 @@ async function fetchCertificate({path, client}) {
 
 module.exports = new FileJob({
     name: '자격증 목록을 fetch',
-    path: `${process.env.PWD}/public/test/certificate.json`,
+    path: `${process.env.PWD}/public/data/certificate.json`,
     exec: fetchCertificate,
     handleError: console.log,
 });

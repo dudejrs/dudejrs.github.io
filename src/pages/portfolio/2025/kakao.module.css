@@ -1,0 +1,17 @@
+.page {
+    padding: 12mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.titleContainer {
+    display: flex;
+    height: 8cm;
+    overflow: hidden;
+}
+.title {
+    margin-bottom: 8mm;
+}
+.titleDescription {
+    color: #ababab;
+}
