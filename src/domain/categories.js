@@ -14,5 +14,5 @@ export function getCategory(category) {
 }
 
 export function gatCategories(categories) {
-    return categories.map(category => getCategory(category));
+    return Promise.all(categories.flatMap(category => getCategory(category)));
 }

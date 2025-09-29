@@ -5,11 +5,16 @@ import Table from './table';
 import styles from './index.module.css';
 import getCertificates from '../../../../domain/certificates';
 
-export default function Certification({header}) {
+export default function Certification({
+                                          header,
+    filterList= []
+}) {
     const [certifications, setCertifications] = useState([]);
 
     useEffect(() => {
-        getCertificates().then(setCertifications);
+        getCertificates()
+            .then(data => data.filter(c => filterList.includes(c["name"]) ? undefined : c))
+            .then(setCertifications);
     }, []);
 
     return (

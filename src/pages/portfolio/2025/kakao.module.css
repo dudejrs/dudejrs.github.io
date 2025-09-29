@@ -1,17 +1,29 @@
 .page {
     padding: 12mm;
+    height: 210mm;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .titleContainer {
     display: flex;
-    height: 8cm;
     overflow: hidden;
+    flex-grow: 0;
 }
 .title {
-    margin-bottom: 8mm;
+    /*margin-bottom: 8mm;*/
 }
 .titleDescription {
     color: #ababab;
+}
+
+.coteContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow : 1;
+}
+.item {
+    height: 120mm;
 }

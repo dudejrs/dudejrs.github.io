@@ -84,10 +84,6 @@
 .planName {
 }
 
-.timeline {
-    color: #888;
-}
-
 .dot {
     display: unset;
     min-width: 20px;
@@ -108,20 +104,6 @@
     text-align: center;
 }
 
-.list {
-    padding-left: 1em;
-    margin-top: 0;
-    margin-bottom: 2em;
-}
-.listTitle {
-    margin-bottom: 0.8em;
-}
-
-.listItem {
-    position: relative;
-    width: fit-content;
-}
-
 .numberList {
     display: unset;
     margin-left: 0.5em;
@@ -138,4 +120,8 @@
 
 .experience {
     margin-top: 3rem;
+}
+
+.timeline {
+    color: #888;
 }

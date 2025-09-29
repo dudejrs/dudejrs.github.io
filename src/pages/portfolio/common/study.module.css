@@ -1,0 +1,63 @@
+.timeline {
+    color: #888;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.dot {
+    display: unset;
+    min-width: 20px;
+    height: 1rem;
+    flex-grow: 2;
+    border-top: 2px dotted #ccc;
+    transform: translateY(50%);
+    margin: 0 0.5em;
+}
+
+.planNameContainer {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.planName {
+}
+
+.number {
+    width: 1.2em;
+    height: 1.2em;
+    color: #ccc;
+    font-size: 0.8em;
+    border: 0.5px solid #ccc;
+    border-radius: 0.8em;
+    text-align: center;
+}
+
+.numberList {
+    display: unset;
+    margin-left: 0.5em;
+    color: #aaa;
+}
+
+.numberList .number {
+    margin-right: 0.2em;
+    padding: 0em 0.3em;
+}
+
+
+.term {
+    font-size: 0.8rem;
+}

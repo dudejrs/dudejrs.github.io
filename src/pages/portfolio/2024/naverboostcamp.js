@@ -3,7 +3,6 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import {Printable, Page} from '../../../components/ui/printable';
 import {VerticalTimeLine} from '../../../components/ui/timeline';
-import {TistoryLogo, GithubLogo} from '../../../components/logo';
 import {
     ProblemDonutChart,
     CategoryDonutChart,
@@ -15,38 +14,14 @@ import Table from '../../../notion/table';
 
 import {fetchExperience} from '../../../domain/experience';
 
-import Certification from '../../resume/section/certification';
-import Info from '../../resume/section/info';
+import {Profile} from '../common'
 
 import styles from './naverboostcamp.module.css';
+import List from '../common/list';
+import ListItem from '../common/listItem';
 
 function Title({children}) {
     return <h3 className={`${styles.title}`}>{children}</h3>;
-}
-
-function ListItem({title, tags}) {
-    return (
-        <li className={`${styles.listItem}`}>
-            {title}
-            <div className={`${styles.numberList}`}>
-                {tags &&
-                    tags.map((t, i) => (
-                        <span className={`${styles.number}`} key={i}>
-                            {t}
-                        </span>
-                    ))}
-            </div>
-        </li>
-    );
-}
-
-function List({title, children}) {
-    return (
-        <>
-            <h4 className={`${styles.listTitle}`}> {title} </h4>
-            <ul className={`${styles.list}`}> {children}</ul>
-        </>
-    );
 }
 
 const planMapper = [
@@ -127,57 +102,7 @@ export default function NaverBoostCampPortfolio() {
         >
             <Page className={`${styles.container}`}>
                 <Title> 자기소개 </Title>
-                <Info />
-                <div className={`${styles.info}`}>
-                    <div>
-                        <h4> 자격증 </h4>
-                        <Certification />
-                    </div>
-                    <div className={`${styles.chanel}`}>
-                        <h4> Chanel </h4>
-                        <ul className={`${styles.chanel_list}`}>
-                            <li>
-                                <a
-                                    className={`${styles.chanel_item}`}
-                                    href="https://dudejrs.github.io/"
-                                >
-                                    <GithubLogo
-                                        width={'1.5rem'}
-                                        height={'1.5rem'}
-                                        className={`${styles.contact_img}`}
-                                    />
-                                    <span>https://dudejrs.github.io/</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className={`${styles.chanel_item}`}
-                                    href="https://github.com/dudejrs"
-                                >
-                                    <GithubLogo
-                                        width={'1.5rem'}
-                                        height={'1.5rem'}
-                                        className={`${styles.contact_img}`}
-                                    />
-                                    <span>https://github.com/dudejrs</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className={`${styles.chanel_item}`}
-                                    href="https://dudejrs.tistory.com/"
-                                >
-                                    <TistoryLogo
-                                        className={styles.contact_img}
-                                        width={'1.5rem'}
-                                        height={'1.5rem'}
-                                    />
-                                    <span>https://dudejrs.tistory.com/</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <Profile styles={styles}/>
             </Page>
 
             <Page className={`${styles.container}`}>
@@ -259,7 +184,7 @@ export default function NaverBoostCampPortfolio() {
                     </div>
                 </div>
                 <div className={`${styles.sections}`}>
-                    {Object.keys(data) != 0 && (
+                    {Object.keys(data).length !== 0 && (
                         <VerticalTimeLine
                             data={data['Node.js,Spring,React,Angular']}
                             width={500}
@@ -337,7 +262,7 @@ export default function NaverBoostCampPortfolio() {
                     </div>
                 </div>
                 <div className={`${styles.sections}`}>
-                    {Object.keys(data) != 0 && data['Infra'] && (
+                    {Object.keys(data).length !== 0 && data['Infra'] && (
                         <VerticalTimeLine
                             data={
                                 data['Infra'][
@@ -429,7 +354,7 @@ export default function NaverBoostCampPortfolio() {
                     </div>
                 </div>
                 <div className={`${styles.sections}`}>
-                    {Object.keys(data) != 0 && (
+                    {Object.keys(data).length !== 0 && (
                         <VerticalTimeLine
                             data={data['Basic'].slice(0, 8)}
                             width={500}

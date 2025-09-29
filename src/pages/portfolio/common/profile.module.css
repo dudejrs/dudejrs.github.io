@@ -1,0 +1,28 @@
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+}
+
+.chanel {
+    width: 40%;
+}
+
+.chanel_list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.chanel_item {
+    display: inline-flex;
+    align-items: center;
+    color: #ababab;
+}
+
+.contact_img {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}

@@ -1,0 +1,24 @@
+.experiences {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-grow: 1;
+    gap: 5%;
+    margin-top: 2cm;
+}
+.expereince {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 50%;
+}
+.name {
+    margin-bottom: 10mm;
+    font-weight: bold;
+}
+
+.light {
+    color: #555555;
+}
