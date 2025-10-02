@@ -1,10 +1,1 @@
-{
-    "id": "c8b87ad5-55d1-424c-b4ba-667523bce80b",
-    "title": "[프로젝트] WearOS 기반 주식 어플리케이션 리팩토링 및 디벨롭",
-    "Status": "Quit",
-    "분류": "프로젝트",
-    "Tag": ["Android", "Kotlin", "Java"],
-    "기간": {},
-    "완료율": null,
-    "세부계획": []
-}
+{"id":"c8b87ad5-55d1-424c-b4ba-667523bce80b","title":"[프로젝트] WearOS 기반 주식 어플리케이션 리팩토링 및 디벨롭","Status":"Quit","분류":"프로젝트","Tag":["Android","Kotlin","Java"],"기간":{},"완료율":"0%","세부계획":[]}
